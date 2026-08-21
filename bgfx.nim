@@ -15,11 +15,14 @@ export defines
 type
   BGFX* = object  # namespace marker (zero-size)
   bgfx_va_list_t* {.importc: "va_list", header: "<stdarg.h>", bycopy.} = object
+  bgfx_const_char_ptr_t* {.importc: "const char *", nodecl.} = cstring
+  bgfx_const_void_ptr_t* {.importc: "const void *", nodecl.} = pointer
   bgfx_allocator_interface_s* {.importc: "bgfx_allocator_interface_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     vtbl*: ptr bgfx_allocator_vtbl_s
   bgfx_allocator_vtbl_s* {.importc: "bgfx_allocator_vtbl_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     realloc*: proc(this: ptr bgfx_allocator_interface_s; `ptr`: pointer;
-      size: csize_t; align: csize_t; file: cstring; line: uint32): pointer {.cdecl.}
+      size: csize_t; align: csize_t; file: bgfx_const_char_ptr_t;
+      line: uint32): pointer {.cdecl.}
   bgfx_interface_vtbl* {.importc: "bgfx_interface_vtbl_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     attachment_init*: proc(this: ptr bgfx_attachment_t; handle: bgfx_texture_handle_t; access: bgfx_access_t; layer: uint16; numLayers: uint16; mip: uint16; resolve: uint8) {.cdecl.}
     vertex_layout_begin*: proc(this: ptr bgfx_vertex_layout_t; rendererType: bgfx_renderer_type_t): ptr bgfx_vertex_layout_t {.cdecl.}
@@ -231,29 +234,34 @@ type
   bgfx_callback_interface_s* {.importc: "bgfx_callback_interface_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     vtbl*: ptr bgfx_callback_vtbl_s
   bgfx_callback_vtbl_s* {.importc: "bgfx_callback_vtbl_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
-    fatal*: proc(this: ptr bgfx_callback_interface_s; filePath: cstring;
-      line: uint16; code: bgfx_fatal_t; str: cstring) {.cdecl.}
-    trace_vargs*: proc(this: ptr bgfx_callback_interface_s; filePath: cstring;
-      line: uint16; format: cstring; argList: bgfx_va_list_t) {.cdecl.}
-    profiler_begin*: proc(this: ptr bgfx_callback_interface_s; name: cstring;
-      abgr: uint32; filePath: cstring; line: uint16) {.cdecl.}
-    profiler_begin_literal*: proc(this: ptr bgfx_callback_interface_s; name: cstring;
-      abgr: uint32; filePath: cstring; line: uint16) {.cdecl.}
+    fatal*: proc(this: ptr bgfx_callback_interface_s;
+      filePath: bgfx_const_char_ptr_t; line: uint16; code: bgfx_fatal_t;
+      str: bgfx_const_char_ptr_t) {.cdecl.}
+    trace_vargs*: proc(this: ptr bgfx_callback_interface_s;
+      filePath: bgfx_const_char_ptr_t; line: uint16;
+      format: bgfx_const_char_ptr_t; argList: bgfx_va_list_t) {.cdecl.}
+    profiler_begin*: proc(this: ptr bgfx_callback_interface_s;
+      name: bgfx_const_char_ptr_t; abgr: uint32;
+      filePath: bgfx_const_char_ptr_t; line: uint16) {.cdecl.}
+    profiler_begin_literal*: proc(this: ptr bgfx_callback_interface_s;
+      name: bgfx_const_char_ptr_t; abgr: uint32;
+      filePath: bgfx_const_char_ptr_t; line: uint16) {.cdecl.}
     profiler_end*: proc(this: ptr bgfx_callback_interface_s) {.cdecl.}
     cache_read_size*: proc(this: ptr bgfx_callback_interface_s; id: uint64): uint32 {.cdecl.}
     cache_read*: proc(this: ptr bgfx_callback_interface_s; id: uint64;
       data: pointer; size: uint32): bool {.cdecl.}
     cache_write*: proc(this: ptr bgfx_callback_interface_s; id: uint64;
-      data: pointer; size: uint32) {.cdecl.}
-    screen_shot*: proc(this: ptr bgfx_callback_interface_s; filePath: cstring;
+      data: bgfx_const_void_ptr_t; size: uint32) {.cdecl.}
+    screen_shot*: proc(this: ptr bgfx_callback_interface_s;
+      filePath: bgfx_const_char_ptr_t;
       width: uint32; height: uint32; pitch: uint32; format: bgfx_texture_format_t;
-      data: pointer; size: uint32; yflip: bool) {.cdecl.}
+      data: bgfx_const_void_ptr_t; size: uint32; yflip: bool) {.cdecl.}
     capture_begin*: proc(this: ptr bgfx_callback_interface_s; width: uint32;
       height: uint32; pitch: uint32; format: bgfx_texture_format_t;
       yflip: bool) {.cdecl.}
     capture_end*: proc(this: ptr bgfx_callback_interface_s) {.cdecl.}
-    capture_frame*: proc(this: ptr bgfx_callback_interface_s; data: pointer;
-      size: uint32) {.cdecl.}
+    capture_frame*: proc(this: ptr bgfx_callback_interface_s;
+      data: bgfx_const_void_ptr_t; size: uint32) {.cdecl.}
   bgfx_dynamic_index_buffer_handle_s* {.importc: "bgfx_dynamic_index_buffer_handle_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     idx*: uint16
   bgfx_dynamic_vertex_buffer_handle_s* {.importc: "bgfx_dynamic_vertex_buffer_handle_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object

@@ -11,6 +11,11 @@ static bool s_shutdown;
 static bool s_varargs_validated;
 static uint32_t s_debug_flags;
 static uint8_t s_frame_flags;
+static uint8_t s_memory_data[64];
+static bgfx_memory_t s_memory;
+static bgfx_release_fn_t s_release_fn;
+static void* s_release_ptr;
+static void* s_release_user_data;
 
 void bgfx_init_ctor(bgfx_init_t* init)
 {
@@ -95,9 +100,8 @@ uint8_t bgfx_get_supported_renderers(uint8_t max, bgfx_renderer_type_t* result)
     if (0 != max && NULL != result)
     {
         result[0] = BGFX_RENDERER_TYPE_NOOP;
-        return 1;
     }
-    return 0;
+    return 1;
 }
 
 const char* bgfx_get_renderer_name(bgfx_renderer_type_t type)
@@ -117,6 +121,98 @@ const bgfx_caps_t* bgfx_get_caps(void)
     caps.vendorId = UINT16_C(0xbeef);
     caps.limits.maxDrawCalls = UINT32_C(321);
     return &caps;
+}
+
+const bgfx_memory_t* bgfx_alloc(uint32_t size)
+{
+    if (0 == size || sizeof(s_memory_data) < size)
+    {
+        return NULL;
+    }
+
+    memset(s_memory_data, 0, sizeof(s_memory_data));
+    s_memory.data = s_memory_data;
+    s_memory.size = size;
+    return &s_memory;
+}
+
+const bgfx_memory_t* bgfx_copy(const void* data, uint32_t size)
+{
+    if (NULL == data || 0 == size || sizeof(s_memory_data) < size)
+    {
+        return NULL;
+    }
+
+    memcpy(s_memory_data, data, size);
+    s_memory.data = s_memory_data;
+    s_memory.size = size;
+    return &s_memory;
+}
+
+const bgfx_memory_t* bgfx_make_ref_release(
+    const void* data,
+    uint32_t size,
+    bgfx_release_fn_t release_fn,
+    void* user_data)
+{
+    if (NULL == data || 0 == size || NULL == release_fn)
+    {
+        return NULL;
+    }
+
+    s_memory.data = (uint8_t*)data;
+    s_memory.size = size;
+    s_release_fn = release_fn;
+    s_release_ptr = (void*)data;
+    s_release_user_data = user_data;
+    return &s_memory;
+}
+
+bool bgfx_is_texture_valid(
+    uint16_t depth,
+    bool cube_map,
+    uint16_t num_layers,
+    bgfx_texture_format_t format,
+    uint64_t flags)
+{
+    if (BGFX_TEXTURE_FORMAT_COUNT <= format
+    ||  0 == num_layers
+    ||  (cube_map && 1 < depth)
+    ||  (0 != (flags & BGFX_TEXTURE_RT_MASK)
+        && 0 != (flags & BGFX_TEXTURE_READ_BACK))
+    ||  (0 != (flags & BGFX_TEXTURE_COMPUTE_WRITE)
+        && 0 != (flags & BGFX_TEXTURE_READ_BACK)))
+    {
+        return false;
+    }
+    return true;
+}
+
+bool bgfx_is_video_codec_valid(
+    bgfx_video_codec_t codec,
+    uint8_t chroma,
+    uint8_t bit_depth,
+    uint16_t coded_width,
+    uint16_t coded_height,
+    uint8_t max_dpb_slots,
+    uint8_t max_active_references)
+{
+    return BGFX_VIDEO_CODEC_H264 == codec
+        && 0 == chroma
+        && 8 == bit_depth
+        && 1920 == coded_width
+        && 1080 == coded_height
+        && 4 == max_dpb_slots
+        && max_active_references <= max_dpb_slots;
+}
+
+bool bgfx_is_frame_buffer_valid(
+    uint8_t num,
+    const bgfx_attachment_t* attachment)
+{
+    return 0 != num
+        && NULL != attachment
+        && UINT16_MAX != attachment[0].handle.idx;
 }
 
 uint32_t bgfx_frame(uint8_t flags)
@@ -155,4 +251,51 @@ uint32_t bgfxim_test_debug_flags(void)
 uint8_t bgfxim_test_frame_flags(void)
 {
     return s_frame_flags;
+}
+
+bool bgfxim_test_trigger_release(void)
+{
+    if (NULL == s_release_fn)
+    {
+        return false;
+    }
+
+    bgfx_release_fn_t release_fn = s_release_fn;
+    s_release_fn = NULL;
+    release_fn(s_release_ptr, s_release_user_data);
+    return true;
+}
+
+void* bgfxim_test_call_allocator(
+    bgfx_allocator_interface_t* allocator,
+    size_t size,
+    size_t align)
+{
+    if (NULL == allocator
+    ||  NULL == allocator->vtbl
+    ||  NULL == allocator->vtbl->realloc)
+    {
+        return NULL;
+    }
+
+    return allocator->vtbl->realloc(
+        allocator, NULL, size, align, "runtime_stub.c", UINT32_C(0xffffffff));
+}
+
+bool bgfxim_test_trigger_fatal(bgfx_callback_interface_t* callback)
+{
+    if (NULL == callback
+    ||  NULL == callback->vtbl
+    ||  NULL == callback->vtbl->fatal)
+    {
+        return false;
+    }
+
+    callback->vtbl->fatal(
+        callback,
+        "runtime_stub.c",
+        UINT16_C(0xffff),
+        BGFX_FATAL_INVALID_SHADER,
+        "synthetic fatal path");
+    return true;
 }

@@ -81,12 +81,23 @@ python3 tools/generate_defines.py \
   <path-to-bgfx>/include/bgfx/defines.h bgfx/defines.nim
 python3 tools/update_bindings.py \
   <path-to-bgfx>/include/bgfx/c99/bgfx.h bgfx.nim
+python3 tools/generate_abi_test.py bgfx.nim tests/test_abi.nim
+python3 tools/generate_value_test.py \
+  bgfx.nim bgfx/defines.nim tests/test_values.nim
+tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 ```
 
-Compile and run `tests/test_api.nim` and `tests/test_runtime.nim` with the
-matching bgfx and bx include directories. Generate and C-compile the all-call
-signature test. Changes affecting ownership, resources, encoders, or platform
-data should also run the real NOOP or SDL3 demos as appropriate.
+The runner compiles and executes the API, exhaustive layout/value, normal and
+error FFI, generator rejection, and all-call signature checks with the matching
+headers. CI repeats it across the supported OS, Nim, architecture, compiler,
+memory-management, and optimization matrix. Changes affecting ownership,
+resources, encoders, validation, or platform data should also run the real
+NOOP or SDL3 demos as appropriate.
+
+Do not test a documented assertion, fatal condition, or undefined precondition
+against the real bgfx library. Use the C stub for those ABI paths. Real-library
+negative tests should be limited to APIs documented to return a validation or
+negotiation failure without terminating the process.
 
 ## Ground Rules
 
