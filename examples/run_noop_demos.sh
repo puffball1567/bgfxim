@@ -30,10 +30,24 @@ build_dir=$(mktemp -d "${TMPDIR:-/tmp}/bgfxim-noop.XXXXXX")
 trap 'rm -rf -- "$build_dir"' EXIT HUP INT TERM
 
 cxx=${CXX:-c++}
+archiver=${AR:-ar}
 nim_compiler=${NIM:-nim}
 simd_flag=
 case $(uname -m) in
   x86_64|amd64) simd_flag=-msse4.1 ;;
+esac
+
+dynamic_loader_lib=
+case $(uname -s) in
+  Darwin) cxx_runtime_lib=-lc++ ;;
+  Linux)
+    cxx_runtime_lib=-lstdc++
+    dynamic_loader_lib=-ldl
+    ;;
+  *)
+    echo "unsupported host for this helper: $(uname -s)" >&2
+    exit 2
+    ;;
 esac
 
 echo "bgfxim: BSD-2-Clause"
@@ -69,15 +83,18 @@ do
     -c "$astc_source" -o "$build_dir/${astc_name%.cpp}.o"
 done
 
-ar rcs "$build_dir/libbimg.a" "$build_dir/bimg.o" \
+"$archiver" rcs "$build_dir/libbimg.a" "$build_dir/bimg.o" \
   "$build_dir"/astcenc_*.o
 
-for demo in noop_basic noop_resources
+for demo in noop_basic noop_resources noop_validation
 do
+  set -- "--passL:$cxx_runtime_lib" --passL:-pthread --passL:-lm
+  if [ -n "$dynamic_loader_lib" ]; then
+    set -- "$@" "--passL:$dynamic_loader_lib"
+  fi
   "$nim_compiler" c -r --path:. \
     --nimcache:"$build_dir/nim-$demo" -o:"$build_dir/$demo" \
     --passC:"-I$bgfx_dir/include" --passC:"-I$bx_dir/include" \
     --passL:"$build_dir/bgfx.o" --passL:"$build_dir/libbimg.a" \
-    --passL:"$build_dir/bx.o" --passL:-lstdc++ --passL:-pthread \
-    --passL:-ldl --passL:-lm "examples/$demo.nim"
+    --passL:"$build_dir/bx.o" "$@" "examples/$demo.nim"
 done

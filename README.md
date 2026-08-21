@@ -17,14 +17,14 @@ platform and renderer backends.
   and interface vtables, 350 object-like constants, and 17 state helpers are
   available.
 - **Auditable ABI.** Imported objects use the C typedef names from bgfx's
-  generated header, and the test suite compares every public struct size with
-  the C compiler.
+  generated header. The test suite compares all 40 complete public types for
+  size and alignment and all 418 fields for byte offset with the C compiler.
 - **Mechanical updates.** Checked-in generators update declarations and
   constants from upstream generated headers instead of relying on manual
   transcription.
 - **Real execution coverage.** Tests cross the Nim/C boundary, initialize the
-  real NOOP renderer, exercise resource and encoder paths, and open an SDL3
-  window through the OpenGL backend.
+  real NOOP renderer, exercise resource, encoder, and non-fatal validation
+  paths, and open an SDL3 window through the OpenGL backend.
 - **Thin by design.** The binding preserves bgfx ownership and threading rules;
   higher-level rendering APIs can be built independently.
 
@@ -44,7 +44,7 @@ detailed scope and contribution criteria.
 
 ## Status
 
-Version `0.1.0` targets bgfx API version 155 at revision
+Version `0.2.0` targets bgfx API version 155 at revision
 `d8db55f8123a4a0871b1290fec2e5d0caae01bbf`.
 
 The release has been exercised with:
@@ -54,6 +54,13 @@ The release has been exercised with:
 - bimg revision `371d90098b1fd017cd00205979d5ef74b8c3ed62`;
 - the real bgfx NOOP and OpenGL 4.3 renderers;
 - SDL 3.3.0 with X11 native-window integration.
+
+CI also runs the complete compile/ABI/value/FFI suite across Linux, macOS, and
+Windows with Nim 2.0 and 2.2. Its focused matrix covers x86, x86_64, and arm64;
+GCC and Clang; `refc`, `arc`, and `orc`; and debug and release builds. Real
+NOOP integration runs on Linux x86_64 plus macOS x86_64 and arm64. The Linux
+Clang error-path test additionally runs under AddressSanitizer and
+UndefinedBehaviorSanitizer.
 
 The API is complete for the pinned revision, but not every function has been
 executed on every renderer or platform. See [Current Boundaries](#current-boundaries).
@@ -73,7 +80,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#v0.1.0
+nimble install https://github.com/puffball1567/bgfxim@#v0.2.0
 ```
 
 The repository contains the source bindings, generators, documentation, tests,
@@ -155,22 +162,31 @@ examples/run_noop_demos.sh <path-to-bgfx> <path-to-bx> <path-to-bimg>
 `noop_basic.nim` covers initialization, capabilities, views, frames, and
 shutdown. `noop_resources.nim` covers vertex layouts, copied memory, typed
 handles, vertex/index buffers, textures, uniforms, and an encoder.
+`noop_validation.nim` covers API-version rejection, count-only queries,
+conflicting texture flags, unsupported video decoding, excessive array layers,
+and invalid framebuffer attachments through bgfx's non-fatal validation APIs.
 
 ## Verification
 
-The release checks cover complementary failure modes:
+The verification checks cover complementary failure modes:
 
 | Check | Coverage |
 | --- | --- |
-| `tests/test_api.nim` | Compile-time constants plus C/Nim struct-size ABI assertions |
+| `tests/test_api.nim` | Representative declarations, callback slots, helpers, aliases, and compile-time values |
+| `tests/test_abi.nim` | Size and alignment of all 40 complete types plus offsets of all 418 fields, including 207 interface-vtable slots |
+| `tests/test_values.nim` | Direct C/Nim comparison of 350 constants, 444 enum values, and all 17 state helpers |
 | `tests/test_runtime.nim` | Executed Nim/C FFI calls, values, pointers, varargs, aliases, and ordering |
-| Generated signature test | C compilation of calls to all 208 functions |
-| NOOP demos | Real bgfx initialization and resource/encoder lifecycle |
+| `tests/test_errors.nim` | Executed null, rejected-init, version mismatch, boundary flags, allocation failure, callback, invalid-handle, and validation-error paths |
+| `tests/test_generators.py` | Missing and duplicate types, fields, constants, and enum values must be rejected; output must remain deterministic |
+| All-signatures compile test | C compilation of calls to all 208 functions |
+| NOOP demos | Real initialization, resource/encoder lifecycle, and safe validation failures on Linux and macOS |
 | SDL3 demo | Real native-window handoff and OpenGL frame execution |
 
-CI regenerates checked-in declarations, runs the API and runtime tests,
-compiles every function signature, and executes both real NOOP demos against
-the pinned upstream revisions.
+`tests/run_validation.sh` runs the compile, ABI, value, normal/error FFI,
+generator rejection, and all-signatures checks against supplied bgfx and bx
+trees. CI first reproduces the checked-in declarations and exhaustive test
+sources, then runs that suite through the platform matrix and executes all
+three real NOOP demos against the pinned upstream revisions.
 
 ## Updating the Binding
 
@@ -184,6 +200,10 @@ python3 tools/update_bindings.py \
   <path-to-bgfx>/include/bgfx/c99/bgfx.h bgfx.nim
 python3 tools/generate_signature_test.py \
   <path-to-bgfx>/include/bgfx/c99/bgfx.h <output-test.nim>
+python3 tools/generate_abi_test.py bgfx.nim tests/test_abi.nim
+python3 tools/generate_value_test.py \
+  bgfx.nim bgfx/defines.nim tests/test_values.nim
+tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 ```
 
 An upstream update must change the recorded revision, API version, generated
@@ -191,14 +211,23 @@ files, tests, and third-party notice together.
 
 ## Current Boundaries
 
-Version 0.1.0 is a low-level developer release.
+Version 0.2.0 is a low-level developer release.
 
-- Linux x86_64 is the only platform exercised with a real renderer so far.
+- The visible OpenGL renderer demo has only been exercised on Linux x86_64;
+  macOS coverage currently uses the headless NOOP renderer.
+- Windows coverage executes the synthetic FFI suite but does not yet build and
+  run a real bgfx renderer.
+- CI targets Nim's C backend. The C++20 check verifies type layout and values
+  against the native headers, but full Nim C++-backend compatibility is not
+  currently claimed.
 - Direct3D, Metal, Vulkan, OpenGL ES, WebGPU, mobile, and WebAssembly runtime
   paths still need platform-specific validation.
 - Shader/program submission, compute, framebuffer, screenshot, video, and
   custom allocator/callback behavior have compile coverage but incomplete real
   runtime coverage.
+- Calls that bgfx documents as fatal, asserted, or undefined precondition
+  violations are intentionally not sent to the real library; equivalent ABI
+  failure paths are exercised with the C stub instead.
 - bgfxim does not build native dependencies automatically for applications and
   does not provide a high-level renderer, window framework, or shader pipeline.
 - The binding follows one pinned bgfx revision; mixing headers and libraries
