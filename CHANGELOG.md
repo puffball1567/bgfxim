@@ -27,7 +27,8 @@ All notable changes to bgfxim are documented in this file.
 
 - Preserved `const` qualifiers for callback string and data parameters so
   user callbacks compile cleanly with strict Clang and GCC toolchains.
-- Added the bx compatibility include required by the real NOOP demos on macOS.
+- Added the bx compatibility include and native framework links required by the
+  real NOOP demos on macOS.
 
 ## [0.1.0] - 2026-08-21
 

@@ -38,10 +38,12 @@ case $(uname -m) in
 esac
 
 dynamic_loader_lib=
+darwin_link=false
 set --
 case $(uname -s) in
   Darwin)
     cxx_runtime_lib=-lc++
+    darwin_link=true
     set -- "-I$bx_dir/include/compat/osx"
     ;;
   Linux)
@@ -99,6 +101,10 @@ do
   set -- "--passL:$cxx_runtime_lib" --passL:-pthread --passL:-lm
   if [ -n "$dynamic_loader_lib" ]; then
     set -- "$@" "--passL:$dynamic_loader_lib"
+  fi
+  if [ "$darwin_link" = true ]; then
+    set -- "$@" --passL:-framework --passL:Foundation \
+      --passL:-framework --passL:CoreFoundation --passL:-lobjc
   fi
   "$nim_compiler" c -r --path:. \
     --nimcache:"$build_dir/nim-$demo" -o:"$build_dir/$demo" \
