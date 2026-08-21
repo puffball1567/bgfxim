@@ -38,8 +38,12 @@ case $(uname -m) in
 esac
 
 dynamic_loader_lib=
+set --
 case $(uname -s) in
-  Darwin) cxx_runtime_lib=-lc++ ;;
+  Darwin)
+    cxx_runtime_lib=-lc++
+    set -- "-I$bx_dir/include/compat/osx"
+    ;;
   Linux)
     cxx_runtime_lib=-lstdc++
     dynamic_loader_lib=-ldl
@@ -56,6 +60,7 @@ echo "building a temporary NOOP-only bgfx library..."
 
 "$cxx" -std=c++20 -O2 -fPIC -pthread \
   -DBX_CONFIG_DEBUG=0 \
+  "$@" \
   -I"$bx_dir/include" -I"$bx_dir/3rdparty" \
   -c "$bx_dir/src/amalgamated.cpp" -o "$build_dir/bx.o"
 
@@ -63,12 +68,14 @@ echo "building a temporary NOOP-only bgfx library..."
 # unspecified GPU backends become disabled while bgfx's NOOP backend remains.
 "$cxx" -std=c++20 -O2 -fPIC -pthread \
   -DBX_CONFIG_DEBUG=0 -DBGFX_CONFIG_RENDERER_VULKAN=0 \
+  "$@" \
   -I"$bgfx_dir/include" -I"$bgfx_dir/src" -I"$bgfx_dir/3rdparty" \
   -I"$bx_dir/include" -I"$bx_dir/3rdparty" -I"$bimg_dir/include" \
   -c "$bgfx_dir/src/amalgamated.cpp" -o "$build_dir/bgfx.o"
 
 "$cxx" -std=c++20 -O2 -fPIC -pthread $simd_flag \
   -DBX_CONFIG_DEBUG=0 -DASTCENC_F16C=0 -DASTCENC_NEON=0 \
+  "$@" \
   -I"$bimg_dir/include" -I"$bimg_dir/3rdparty/astc-encoder/include" \
   -I"$bx_dir/include" -I"$bx_dir/3rdparty" \
   -c "$bimg_dir/src/image.cpp" -o "$build_dir/bimg.o"
@@ -78,6 +85,7 @@ do
   astc_name=${astc_source##*/}
   "$cxx" -std=c++20 -O2 -fPIC -pthread $simd_flag \
     -DASTCENC_F16C=0 -DASTCENC_NEON=0 \
+    "$@" \
     -I"$bimg_dir/3rdparty/astc-encoder/include" \
     -I"$bimg_dir/3rdparty/astc-encoder/source" \
     -c "$astc_source" -o "$build_dir/${astc_name%.cpp}.o"

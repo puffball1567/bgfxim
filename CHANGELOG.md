@@ -23,6 +23,12 @@ All notable changes to bgfxim are documented in this file.
 - Added AddressSanitizer and UndefinedBehaviorSanitizer execution for the
   synthetic error-path suite.
 
+### Fixed
+
+- Preserved `const` qualifiers for callback string and data parameters so
+  user callbacks compile cleanly with strict Clang and GCC toolchains.
+- Added the bx compatibility include required by the real NOOP demos on macOS.
+
 ## [0.1.0] - 2026-08-21
 
 ### Added

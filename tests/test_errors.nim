@@ -27,7 +27,8 @@ proc releaseCallback(data, userData: pointer) {.cdecl.} =
   releasedUserData = userData
 
 proc rejectingRealloc(this: ptr bgfx_allocator_interface_t; old: pointer;
-    size, align: csize_t; file: cstring; line: uint32): pointer {.cdecl.} =
+    size, align: csize_t; file: bgfx_const_char_ptr_t;
+    line: uint32): pointer {.cdecl.} =
   doAssert this != nil
   doAssert old == nil
   doAssert size == high(csize_t)
@@ -37,8 +38,9 @@ proc rejectingRealloc(this: ptr bgfx_allocator_interface_t; old: pointer;
   allocatorCalled = true
   result = nil
 
-proc fatalCallback(this: ptr bgfx_callback_interface_t; filePath: cstring;
-    line: uint16; code: bgfx_fatal_t; message: cstring) {.cdecl.} =
+proc fatalCallback(this: ptr bgfx_callback_interface_t;
+    filePath: bgfx_const_char_ptr_t; line: uint16; code: bgfx_fatal_t;
+    message: bgfx_const_char_ptr_t) {.cdecl.} =
   doAssert this != nil
   doAssert $filePath == "runtime_stub.c"
   doAssert line == high(uint16)
