@@ -20,24 +20,24 @@ jobs:
 
     steps:
       - name: Checkout bgfxim
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Checkout bgfx
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: bkaradzic/bgfx
           ref: d8db55f8123a4a0871b1290fec2e5d0caae01bbf
           path: _deps/bgfx
 
       - name: Checkout bx
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: bkaradzic/bx
           ref: 9e3fadf6f11380031486be704d2ff46ca143664f
           path: _deps/bx
 
       - name: Checkout bimg
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: bkaradzic/bimg
           ref: 371d90098b1fd017cd00205979d5ef74b8c3ed62
