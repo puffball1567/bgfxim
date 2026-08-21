@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier: BSD-2-Clause */
+
 #ifndef BX_PLATFORM_H_HEADER_GUARD
 #define BX_PLATFORM_H_HEADER_GUARD
 

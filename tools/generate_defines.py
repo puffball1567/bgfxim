@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-2-Clause
 """Generate Nim constants from bgfx's generated defines.h.
 
 Usage: tools/generate_defines.py <path-to-bgfx>/include/bgfx/defines.h bgfx/defines.nim

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-2-Clause
 """Generate a compile-only test that references every bgfx C99 function."""
 
 from __future__ import annotations

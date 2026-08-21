@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: BSD-2-Clause
+
 {.compile: "runtime_stub.c".}
 
 import bgfx

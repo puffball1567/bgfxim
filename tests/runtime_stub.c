@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier: BSD-2-Clause */
+
 #include <bgfx/c99/bgfx.h>
 
 #include <stdarg.h>

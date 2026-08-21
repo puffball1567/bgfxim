@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-2-Clause
 """Update generated declarations in bgfx.nim from bgfx's C99 header.
 
 Usage: tools/update_bindings.py <path-to-bgfx>/include/bgfx/c99/bgfx.h bgfx.nim

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: BSD-2-Clause
+
 import bgfx
 
 proc traceCallback(this: ptr bgfx_callback_interface_t; filePath: cstring;
