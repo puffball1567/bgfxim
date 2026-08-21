@@ -2,7 +2,7 @@
 
 All notable changes to bgfxim are documented in this file.
 
-## [0.2.0] - 2026-08-21
+## [0.2.0] - 2026-08-22
 
 ### Added
 
