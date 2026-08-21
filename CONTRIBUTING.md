@@ -3,6 +3,45 @@
 bgfxim is a thin binding to a pinned bgfx C99 API. Changes should preserve the
 upstream ABI and keep generated files reproducible.
 
+## Project Scope
+
+bgfxim exists to provide a faithful, low-level Nim representation of bgfx's
+generated C99 API. The upstream header, ABI, ownership model, threading rules,
+and versioned behavior remain authoritative. Convenience additions are kept to
+small, lossless Nim adaptations such as the `BGFX` namespace, typed handles,
+and direct constant helpers.
+
+The following work belongs in this repository:
+
+- tracking a new upstream bgfx C99 API revision;
+- correcting generated declarations, constants, layouts, or calling
+  conventions;
+- improving generators and reproducibility checks;
+- adding ABI, FFI, renderer, platform, and regression coverage;
+- improving portability, documentation, licensing, and focused integration
+  demos;
+- fixing behavior needed to expose the pinned upstream API accurately.
+
+The following work should normally be implemented in a separate package that
+depends on bgfxim:
+
+- high-level rendering or scene APIs;
+- automatic resource-lifetime or ownership systems;
+- renderer selection, window-framework integration, or native dependency
+  builds for applications;
+- shader, material, asset, frame-graph, ECS, or game-engine abstractions;
+- convenience APIs that hide, reinterpret, or replace upstream bgfx behavior.
+
+Applications and libraries are encouraged to wrap bgfxim at the abstraction
+level they need. Keeping those policies outside this package lets different
+Nim APIs evolve without compromising the binding's fidelity or forcing one
+rendering model on all users.
+
+In practice, most ongoing work is expected to be upstream-version tracking,
+test and platform coverage, generator maintenance, bug fixes, and
+documentation. Proposals for higher-level APIs are still useful, but will
+usually be directed to a separate companion package.
+
 ## Branch and Release Workflow
 
 - Create feature, documentation, and fix branches from `devel`.
@@ -53,8 +92,12 @@ data should also run the real NOOP or SDL3 demos as appropriate.
 
 - Preserve bgfx's exact integer widths, calling conventions, object layouts,
   ownership rules, and API-thread requirements.
+- Prefer a direct, mechanically verifiable mapping over a more opinionated Nim
+  API when the two goals conflict.
 - Keep the low-level binding usable without SDL or another window library.
 - Do not silently select or build a renderer backend for consuming projects.
+- Keep examples focused on validating or explaining the binding rather than
+  growing them into an application framework.
 - Keep examples portable and use placeholders instead of machine-specific
   paths.
 - Record native dependency versions and licenses when they change.

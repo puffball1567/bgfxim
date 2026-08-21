@@ -15,6 +15,10 @@ Describe the application or binding workflow this enables.
 Explain whether this belongs in the low-level binding, generation tools,
 verification suite, or a separate higher-level package.
 
+bgfxim preserves a direct mapping to the upstream C99 API. High-level
+rendering, resource-management, window, shader, asset, and engine abstractions
+will normally belong in a separate package built on bgfxim.
+
 ## API Shape
 
 Show a small Nim example if possible.

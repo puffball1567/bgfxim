@@ -28,6 +28,20 @@ platform and renderer backends.
 - **Thin by design.** The binding preserves bgfx ownership and threading rules;
   higher-level rendering APIs can be built independently.
 
+## Project Direction
+
+bgfxim intentionally remains a faithful, low-level binding. Its long-term work
+is expected to center on upstream bgfx version tracking, generator correctness,
+ABI and runtime coverage, platform validation, documentation, and focused
+demos.
+
+High-level renderers, automatic resource management, window integration,
+shader or asset pipelines, frame graphs, and engine-style convenience APIs
+should be built as separate packages on top of bgfxim. This keeps the binding
+close to upstream bgfx and allows users to choose or design the abstraction
+that fits their application. See [CONTRIBUTING.md](CONTRIBUTING.md) for the
+detailed scope and contribution criteria.
+
 ## Status
 
 Version `0.1.0` targets bgfx API version 155 at revision
