@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bgfxim-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  linux:
+    name: Nim bindings and real NOOP runtime
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout bgfxim
+        uses: actions/checkout@v4
+
+      - name: Checkout bgfx
+        uses: actions/checkout@v4
+        with:
+          repository: bkaradzic/bgfx
+          ref: d8db55f8123a4a0871b1290fec2e5d0caae01bbf
+          path: _deps/bgfx
+
+      - name: Checkout bx
+        uses: actions/checkout@v4
+        with:
+          repository: bkaradzic/bx
+          ref: 9e3fadf6f11380031486be704d2ff46ca143664f
+          path: _deps/bx
+
+      - name: Checkout bimg
+        uses: actions/checkout@v4
+        with:
+          repository: bkaradzic/bimg
+          ref: 371d90098b1fd017cd00205979d5ef74b8c3ed62
+          path: _deps/bimg
+
+      - name: Install Nim
+        uses: jiro4989/setup-nim-action@1dba098c77a0e800c96a7d92a0888ac2af26f19f # v2
+        with:
+          nim-version: '2.2.10'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Toolchain versions
+        run: |
+          nim --version
+          nimble --version
+          python3 --version
+          g++ --version
+
+      - name: Check package metadata
+        run: nimble check
+
+      - name: Verify generated bindings
+        run: |
+          python3 tools/generate_defines.py \
+            _deps/bgfx/include/bgfx/defines.h bgfx/defines.nim
+          python3 tools/update_bindings.py \
+            _deps/bgfx/include/bgfx/c99/bgfx.h bgfx.nim
+          git diff --exit-code -- bgfx.nim bgfx/defines.nim
+
+      - name: Run API and ABI test
+        run: >-
+          nim c -r --path:.
+          --passC:-I_deps/bgfx/include
+          --passC:-I_deps/bx/include
+          tests/test_api.nim
+
+      - name: Run executed FFI test
+        run: >-
+          nim c -r --path:.
+          --passC:-I_deps/bgfx/include
+          --passC:-I_deps/bx/include
+          tests/test_runtime.nim
+
+      - name: Compile calls to every C99 function
+        run: |
+          python3 tools/generate_signature_test.py \
+            _deps/bgfx/include/bgfx/c99/bgfx.h \
+            "${{ runner.temp }}/bgfxim_all_signatures.nim"
+          nim c --noLinking:on --path:. \
+            --passC:-I_deps/bgfx/include \
+            --passC:-I_deps/bx/include \
+            "${{ runner.temp }}/bgfxim_all_signatures.nim"
+
+      - name: Build real bgfx and run headless demos
+        run: examples/run_noop_demos.sh _deps/bgfx _deps/bx _deps/bimg
