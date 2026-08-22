@@ -34,7 +34,7 @@ From the repository root, run:
 tools/build_api_docs.sh
 ```
 
-The command writes `build/api/bgfx.html`. To choose another directory, pass it
+The command writes `build/api/index.html`. To choose another directory, pass it
 as the only argument:
 
 ```sh
@@ -42,6 +42,11 @@ tools/build_api_docs.sh /tmp/bgfxim-api
 ```
 
 The build needs Nim 2.0 or newer but does not need compiled bgfx libraries.
+
+The published reference uses a responsive left sidebar, full API search,
+light and dark themes, direct anchors, and compact parameter tables. It is
+deployed from the `devel` branch because that is bgfxim's default branch and
+the source of the next upstream-tracking update.
 
 ## Documentation source
 
