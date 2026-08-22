@@ -4,6 +4,8 @@ All notable changes to bgfxim are documented in this file.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-08-23
+
 ### Added
 
 - Added Nim language-server documentation for all 208 public calls, including
@@ -12,7 +14,6 @@ All notable changes to bgfxim are documented in this file.
 - Added a reproducible HTML API-reference command and CI documentation build.
 - Added a responsive GitHub Pages theme with a persistent left sidebar, API
   search, light and dark modes, mobile navigation, and release metadata.
-
 - Expanded the SDL3/OpenGL demo into a real triangle submission covering
   vertex/index buffers, shader and program creation, pipeline state, submit,
   frames, and ordered resource destruction.
