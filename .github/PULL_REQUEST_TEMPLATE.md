@@ -15,6 +15,8 @@ changed by this pull request.
 
 ## Compatibility
 
+- [ ] The change preserves bgfxim as a faithful low-level binding; higher-level
+      policy belongs in a separate package.
 - [ ] The pinned bgfx API version and revision remain accurate.
 - [ ] ABI or ownership changes are documented.
 - [ ] Native dependency versions and licenses are updated when applicable.

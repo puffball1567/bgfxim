@@ -2,16 +2,48 @@
 
 import bgfx
 
-proc traceCallback(this: ptr bgfx_callback_interface_t; filePath: cstring;
-    line: uint16; format: cstring; argList: bgfx_va_list_t) {.cdecl.} =
+proc fatalCallback(this: ptr bgfx_callback_interface_t;
+    filePath: bgfx_const_char_ptr_t; line: uint16; code: bgfx_fatal_t;
+    message: bgfx_const_char_ptr_t) {.cdecl.} =
+  discard
+
+proc traceCallback(this: ptr bgfx_callback_interface_t;
+    filePath: bgfx_const_char_ptr_t; line: uint16;
+    format: bgfx_const_char_ptr_t; argList: bgfx_va_list_t) {.cdecl.} =
+  discard
+
+proc profilerBeginCallback(this: ptr bgfx_callback_interface_t;
+    name: bgfx_const_char_ptr_t; abgr: uint32;
+    filePath: bgfx_const_char_ptr_t; line: uint16) {.cdecl.} =
+  discard
+
+proc cacheWriteCallback(this: ptr bgfx_callback_interface_t; id: uint64;
+    data: bgfx_const_void_ptr_t; size: uint32) {.cdecl.} =
+  discard
+
+proc screenShotCallback(this: ptr bgfx_callback_interface_t;
+    filePath: bgfx_const_char_ptr_t; width, height, pitch: uint32;
+    format: bgfx_texture_format_t; data: bgfx_const_void_ptr_t;
+    size: uint32; yflip: bool) {.cdecl.} =
+  discard
+
+proc captureFrameCallback(this: ptr bgfx_callback_interface_t;
+    data: bgfx_const_void_ptr_t; size: uint32) {.cdecl.} =
   discard
 
 proc reallocCallback(this: ptr bgfx_allocator_interface_t; old: pointer;
-    size, align: csize_t; file: cstring; line: uint32): pointer {.cdecl.} =
+    size, align: csize_t; file: bgfx_const_char_ptr_t;
+    line: uint32): pointer {.cdecl.} =
   discard
 
 var callbackVtable: bgfx_callback_vtbl_t
+callbackVtable.fatal = fatalCallback
 callbackVtable.trace_vargs = traceCallback
+callbackVtable.profiler_begin = profilerBeginCallback
+callbackVtable.profiler_begin_literal = profilerBeginCallback
+callbackVtable.cache_write = cacheWriteCallback
+callbackVtable.screen_shot = screenShotCallback
+callbackVtable.capture_frame = captureFrameCallback
 
 var allocatorVtable: bgfx_allocator_vtbl_t
 allocatorVtable.realloc = reallocCallback
