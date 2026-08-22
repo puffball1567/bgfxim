@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import re
 import sys
+import tempfile
 import unittest
 from dataclasses import replace
 from pathlib import Path
@@ -15,6 +16,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 import generate_abi_test
 import generate_value_test
+import style_api_docs
 import update_bindings
 
 
@@ -22,13 +24,13 @@ class DocumentationGeneratorTests(unittest.TestCase):
     def test_current_surface_documents_every_imported_call(self) -> None:
         binding = (ROOT / "bgfx.nim").read_text(encoding="utf-8")
         documented_calls = re.findall(
-            r'(?:(?:^##[^\n]*\n)+)^proc\s+.*?\{\.importc:\s*"bgfx_',
+            r'^proc\s+.*?\{\.importc:\s*"bgfx_[^\n]*\n(?:  ##[^\n]*(?:\n|$))+',
             binding,
             re.MULTILINE,
         )
 
         self.assertEqual(208, len(documented_calls))
-        self.assertNotRegex(binding, r'(?m)^proc .*\n  ##')
+        self.assertNotRegex(binding, r'(?m)^## .*\nproc .*\{\.importc:')
 
     def test_only_the_adjacent_doxygen_block_is_selected(self) -> None:
         header = """
@@ -125,6 +127,68 @@ class DocumentationGeneratorTests(unittest.TestCase):
             update_bindings.proc_documentation(function),
             update_bindings.proc_documentation(function),
         )
+
+
+class DocumentationSiteTests(unittest.TestCase):
+    GENERATED_PAGE = """<!doctype html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bgfx</title>
+<!-- Google fonts -->
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+</head><body><h1 class="title">bgfx</h1></body></html>
+"""
+
+    def test_site_theme_is_applied_to_root_and_nested_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory)
+            (output / "bgfx").mkdir()
+            for name in ("bgfx.html", "theindex.html"):
+                (output / name).write_text(self.GENERATED_PAGE, encoding="utf-8")
+            (output / "bgfx" / "defines.html").write_text(
+                self.GENERATED_PAGE, encoding="utf-8"
+            )
+            for name in ("dochack.js", "nimdoc.out.css"):
+                (output / name).write_text("", encoding="utf-8")
+
+            style_api_docs.style_output(output)
+
+            root_page = (output / "index.html").read_text(encoding="utf-8")
+            nested_page = (output / "bgfx" / "defines.html").read_text(
+                encoding="utf-8"
+            )
+            self.assertIn('href="assets/api-docs.css"', root_page)
+            self.assertIn('src="assets/api-docs.js"', root_page)
+            self.assertIn('href="../assets/api-docs.css"', nested_page)
+            self.assertIn('src="../assets/api-docs.js"', nested_page)
+            self.assertIn('class="bgfxim-docs"', root_page)
+            self.assertNotIn("fonts.googleapis.com", root_page)
+            self.assertTrue((output / ".nojekyll").is_file())
+
+    def test_missing_nim_entrypoint_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            with self.assertRaisesRegex(ValueError, "missing Nim documentation"):
+                style_api_docs.style_output(Path(temporary_directory))
+
+    def test_broken_local_link_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory)
+            (output / "bgfx").mkdir()
+            broken_page = self.GENERATED_PAGE.replace(
+                "</body>", '<a href="missing.html">Missing</a></body>'
+            )
+            (output / "bgfx.html").write_text(broken_page, encoding="utf-8")
+            (output / "theindex.html").write_text(
+                self.GENERATED_PAGE, encoding="utf-8"
+            )
+            (output / "bgfx" / "defines.html").write_text(
+                self.GENERATED_PAGE, encoding="utf-8"
+            )
+            for name in ("dochack.js", "nimdoc.out.css"):
+                (output / name).write_text("", encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "broken local documentation"):
+                style_api_docs.style_output(output)
 
 
 class AbiGeneratorTests(unittest.TestCase):

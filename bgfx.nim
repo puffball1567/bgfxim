@@ -1030,2410 +1030,2410 @@ template BGFX_HANDLE_IS_VALID*(handle: untyped): bool =
   handle.idx != BGFX_INVALID_HANDLE
 
 
-## Init attachment.
-##
-## **Parameters:**
-## - `this` (in): Target object instance.
-## - `handle` (in): Render target texture handle.
-## - `access` (in): Access. See `bgfx_access_t`.
-## - `layer` (in): Cubemap side or depth layer/slice to use.
-## - `numLayers` (in): Number of texture layer/slice(s) in array to use.
-## - `mip` (in): Mip level.
-## - `resolve` (in): Resolve flags. See: `BGFX_RESOLVE_*`
 proc attachment_init*(_: type BGFX; this: ptr bgfx_attachment_t; handle: bgfx_texture_handle_t; access: bgfx_access_t; layer: uint16; numLayers: uint16; mip: uint16; resolve: uint8) {.importc: "bgfx_attachment_init", cdecl, header: "bgfx/c99/bgfx.h".}
-## Start VertexLayout.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `rendererType` (in): Renderer backend type. See: `bgfx_renderer_type_t`
-##
-## **Returns:**
-## Returns itself.
+  ## Init attachment.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Target object instance.
+  ## - `handle` (in): Render target texture handle.
+  ## - `access` (in): Access. See `bgfx_access_t`.
+  ## - `layer` (in): Cubemap side or depth layer/slice to use.
+  ## - `numLayers` (in): Number of texture layer/slice(s) in array to use.
+  ## - `mip` (in): Mip level.
+  ## - `resolve` (in): Resolve flags. See: `BGFX_RESOLVE_*`
 proc vertex_layout_begin*(_: type BGFX; this: ptr bgfx_vertex_layout_t; rendererType: bgfx_renderer_type_t): ptr bgfx_vertex_layout_t {.importc: "bgfx_vertex_layout_begin", cdecl, header: "bgfx/c99/bgfx.h".}
-## Add attribute to VertexLayout.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
-## - `num` (in): Number of elements 1, 2, 3 or 4.
-## - `type` (in): Element type.
-## - `normalized` (in): When using fixed point AttribType (f.e. Uint8)
-##   value will be normalized for vertex shader usage. When normalized
-##   is set to true, BGFX_ATTRIB_TYPE_UINT_8 value in range 0-255 will be
-##   in range 0.0-1.0 in vertex shader.
-## - `asInt` (in): Packaging rule for vertexPack, vertexUnpack, and
-##   vertexConvert for BGFX_ATTRIB_TYPE_UINT_8 and BGFX_ATTRIB_TYPE_INT_16.
-##   Unpacking code must be implemented inside vertex shader.
-##
-## **Returns:**
-## Returns itself.
-##
-## **Remarks:**
-## Must be called between begin/end.
+  ## Start VertexLayout.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `rendererType` (in): Renderer backend type. See: `bgfx_renderer_type_t`
+  ##
+  ## **Returns:**
+  ## Returns itself.
 proc vertex_layout_add*(_: type BGFX; this: ptr bgfx_vertex_layout_t; attrib: bgfx_attrib_t; num: uint8; `type`: bgfx_attrib_type_t; normalized: bool; asInt: bool): ptr bgfx_vertex_layout_t {.importc: "bgfx_vertex_layout_add", cdecl, header: "bgfx/c99/bgfx.h".}
-## Decode attribute.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
-## - `num` (out): Number of elements.
-## - `type` (out): Element type.
-## - `normalized` (out): Attribute is normalized.
-## - `asInt` (out): Attribute is packed as int.
+  ## Add attribute to VertexLayout.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
+  ## - `num` (in): Number of elements 1, 2, 3 or 4.
+  ## - `type` (in): Element type.
+  ## - `normalized` (in): When using fixed point AttribType (f.e. Uint8)
+  ##   value will be normalized for vertex shader usage. When normalized
+  ##   is set to true, BGFX_ATTRIB_TYPE_UINT_8 value in range 0-255 will be
+  ##   in range 0.0-1.0 in vertex shader.
+  ## - `asInt` (in): Packaging rule for vertexPack, vertexUnpack, and
+  ##   vertexConvert for BGFX_ATTRIB_TYPE_UINT_8 and BGFX_ATTRIB_TYPE_INT_16.
+  ##   Unpacking code must be implemented inside vertex shader.
+  ##
+  ## **Returns:**
+  ## Returns itself.
+  ##
+  ## **Remarks:**
+  ## Must be called between begin/end.
 proc vertex_layout_decode*(_: type BGFX; this: ptr bgfx_vertex_layout_t; attrib: bgfx_attrib_t; num: ptr uint8; `type`: ptr bgfx_attrib_type_t; normalized: ptr bool; asInt: ptr bool) {.importc: "bgfx_vertex_layout_decode", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns `true` if VertexLayout contains attribute.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
-##
-## **Returns:**
-## True if VertexLayout contains attribute.
+  ## Decode attribute.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
+  ## - `num` (out): Number of elements.
+  ## - `type` (out): Element type.
+  ## - `normalized` (out): Attribute is normalized.
+  ## - `asInt` (out): Attribute is packed as int.
 proc vertex_layout_has*(_: type BGFX; this: ptr bgfx_vertex_layout_t; attrib: bgfx_attrib_t): bool {.importc: "bgfx_vertex_layout_has", cdecl, header: "bgfx/c99/bgfx.h".}
-## Skip `num` bytes in vertex stream.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `num` (in): Number of bytes to skip.
-##
-## **Returns:**
-## Returns itself.
+  ## Returns `true` if VertexLayout contains attribute.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
+  ##
+  ## **Returns:**
+  ## True if VertexLayout contains attribute.
 proc vertex_layout_skip*(_: type BGFX; this: ptr bgfx_vertex_layout_t; num: uint8): ptr bgfx_vertex_layout_t {.importc: "bgfx_vertex_layout_skip", cdecl, header: "bgfx/c99/bgfx.h".}
-## End VertexLayout.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
+  ## Skip `num` bytes in vertex stream.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `num` (in): Number of bytes to skip.
+  ##
+  ## **Returns:**
+  ## Returns itself.
 proc vertex_layout_end*(_: type BGFX; this: ptr bgfx_vertex_layout_t) {.importc: "bgfx_vertex_layout_end", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns relative attribute offset from the vertex.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
-##
-## **Returns:**
-## Relative attribute offset from the vertex.
+  ## End VertexLayout.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
 proc vertex_layout_get_offset*(_: type BGFX; this: ptr bgfx_vertex_layout_t; attrib: bgfx_attrib_t): uint16 {.importc: "bgfx_vertex_layout_get_offset", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns vertex stride.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
+  ## Returns relative attribute offset from the vertex.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `attrib` (in): Attribute semantics. See: `bgfx_attrib_t`
+  ##
+  ## **Returns:**
+  ## Relative attribute offset from the vertex.
 proc vertex_layout_get_stride*(_: type BGFX; this: ptr bgfx_vertex_layout_t): uint16 {.importc: "bgfx_vertex_layout_get_stride", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns size of vertex buffer for number of vertices.
-##
-## **Parameters:**
-## - `this` (in): Vertex layout instance.
-## - `num` (in): Number of vertices.
-##
-## **Returns:**
-## Size of vertex buffer for number of vertices.
+  ## Returns vertex stride.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
 proc vertex_layout_get_size*(_: type BGFX; this: ptr bgfx_vertex_layout_t; num: uint32): uint32 {.importc: "bgfx_vertex_layout_get_size", cdecl, header: "bgfx/c99/bgfx.h".}
-## Pack vertex attribute into vertex stream format.
-##
-## **Parameters:**
-## - `input` (in): Value to be packed into vertex stream.
-## - `inputNormalized` (in): `true` if input value is already normalized.
-## - `attr` (in): Attribute to pack.
-## - `layout` (in): Vertex stream layout.
-## - `data` (in): Destination vertex stream where data will be packed.
-## - `index` (in): Vertex index that will be modified.
+  ## Returns size of vertex buffer for number of vertices.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Vertex layout instance.
+  ## - `num` (in): Number of vertices.
+  ##
+  ## **Returns:**
+  ## Size of vertex buffer for number of vertices.
 proc vertex_pack*(_: type BGFX; input: array[4, cfloat]; inputNormalized: bool; attr: bgfx_attrib_t; layout: ptr bgfx_vertex_layout_t; data: pointer; index: uint32) {.importc: "bgfx_vertex_pack", cdecl, header: "bgfx/c99/bgfx.h".}
-## Unpack vertex attribute from vertex stream format.
-##
-## **Parameters:**
-## - `output` (out): Result of unpacking.
-## - `attr` (in): Attribute to unpack.
-## - `layout` (in): Vertex stream layout.
-## - `data` (in): Source vertex stream from where data will be unpacked.
-## - `index` (in): Vertex index that will be unpacked.
+  ## Pack vertex attribute into vertex stream format.
+  ##
+  ## **Parameters:**
+  ## - `input` (in): Value to be packed into vertex stream.
+  ## - `inputNormalized` (in): `true` if input value is already normalized.
+  ## - `attr` (in): Attribute to pack.
+  ## - `layout` (in): Vertex stream layout.
+  ## - `data` (in): Destination vertex stream where data will be packed.
+  ## - `index` (in): Vertex index that will be modified.
 proc vertex_unpack*(_: type BGFX; output: var array[4, cfloat]; attr: bgfx_attrib_t; layout: ptr bgfx_vertex_layout_t; data: pointer; index: uint32) {.importc: "bgfx_vertex_unpack", cdecl, header: "bgfx/c99/bgfx.h".}
-## Converts vertex stream data from one vertex stream format to another.
-##
-## **Parameters:**
-## - `dstLayout` (in): Destination vertex stream layout.
-## - `dstData` (in): Destination vertex stream.
-## - `srcLayout` (in): Source vertex stream layout.
-## - `srcData` (in): Source vertex stream data.
-## - `num` (in): Number of vertices to convert from source to destination.
+  ## Unpack vertex attribute from vertex stream format.
+  ##
+  ## **Parameters:**
+  ## - `output` (out): Result of unpacking.
+  ## - `attr` (in): Attribute to unpack.
+  ## - `layout` (in): Vertex stream layout.
+  ## - `data` (in): Source vertex stream from where data will be unpacked.
+  ## - `index` (in): Vertex index that will be unpacked.
 proc vertex_convert*(_: type BGFX; dstLayout: ptr bgfx_vertex_layout_t; dstData: pointer; srcLayout: ptr bgfx_vertex_layout_t; srcData: pointer; num: uint32) {.importc: "bgfx_vertex_convert", cdecl, header: "bgfx/c99/bgfx.h".}
-## Convert index buffer for use with different primitive topologies.
-##
-## **Parameters:**
-## - `conversion` (in): Conversion type, see `bgfx_topology_convert_t`.
-## - `dst` (out): Destination index buffer. If this argument is NULL
-##   function will return number of indices after conversion.
-## - `dstSize` (in): Destination index buffer in bytes. It must be
-##   large enough to contain output indices. If destination size is
-##   insufficient index buffer will be truncated.
-## - `indices` (in): Source indices.
-## - `numIndices` (in): Number of input indices.
-## - `index32` (in): Set to `true` if input indices are 32-bit.
-##
-## **Returns:**
-## Number of output indices after conversion.
+  ## Converts vertex stream data from one vertex stream format to another.
+  ##
+  ## **Parameters:**
+  ## - `dstLayout` (in): Destination vertex stream layout.
+  ## - `dstData` (in): Destination vertex stream.
+  ## - `srcLayout` (in): Source vertex stream layout.
+  ## - `srcData` (in): Source vertex stream data.
+  ## - `num` (in): Number of vertices to convert from source to destination.
 proc topology_convert*(_: type BGFX; conversion: bgfx_topology_convert_t; dst: pointer; dstSize: uint32; indices: pointer; numIndices: uint32; index32: bool): uint32 {.importc: "bgfx_topology_convert", cdecl, header: "bgfx/c99/bgfx.h".}
-## Sort indices.
-##
-## **Parameters:**
-## - `sort` (in): Sort order, see `bgfx_topology_sort_t`.
-## - `dst` (out): Destination index buffer.
-## - `dstSize` (in): Destination index buffer in bytes. It must be
-##   large enough to contain output indices. If destination size is
-##   insufficient index buffer will be truncated.
-## - `dir` (in): Direction (vector must be normalized).
-## - `pos` (in): Position.
-## - `vertices` (in): Pointer to first vertex represented as
-##   float x, y, z. Must contain at least number of vertices
-##   referencende by index buffer.
-## - `stride` (in): Vertex stride.
-## - `indices` (in): Source indices.
-## - `numIndices` (in): Number of input indices.
-## - `index32` (in): Set to `true` if input indices are 32-bit.
+  ## Convert index buffer for use with different primitive topologies.
+  ##
+  ## **Parameters:**
+  ## - `conversion` (in): Conversion type, see `bgfx_topology_convert_t`.
+  ## - `dst` (out): Destination index buffer. If this argument is NULL
+  ##   function will return number of indices after conversion.
+  ## - `dstSize` (in): Destination index buffer in bytes. It must be
+  ##   large enough to contain output indices. If destination size is
+  ##   insufficient index buffer will be truncated.
+  ## - `indices` (in): Source indices.
+  ## - `numIndices` (in): Number of input indices.
+  ## - `index32` (in): Set to `true` if input indices are 32-bit.
+  ##
+  ## **Returns:**
+  ## Number of output indices after conversion.
 proc topology_sort_tri_list*(_: type BGFX; sort: bgfx_topology_sort_t; dst: pointer; dstSize: uint32; dir: array[3, cfloat]; pos: array[3, cfloat]; vertices: pointer; stride: uint32; indices: pointer; numIndices: uint32; index32: bool) {.importc: "bgfx_topology_sort_tri_list", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns supported backend API renderers.
-##
-## **Parameters:**
-## - `max` (in): Maximum number of elements in enum array.
-## - `enum` (in/out): Array where supported renderers will be written.
-##
-## **Returns:**
-## Number of supported renderers.
+  ## Sort indices.
+  ##
+  ## **Parameters:**
+  ## - `sort` (in): Sort order, see `bgfx_topology_sort_t`.
+  ## - `dst` (out): Destination index buffer.
+  ## - `dstSize` (in): Destination index buffer in bytes. It must be
+  ##   large enough to contain output indices. If destination size is
+  ##   insufficient index buffer will be truncated.
+  ## - `dir` (in): Direction (vector must be normalized).
+  ## - `pos` (in): Position.
+  ## - `vertices` (in): Pointer to first vertex represented as
+  ##   float x, y, z. Must contain at least number of vertices
+  ##   referencende by index buffer.
+  ## - `stride` (in): Vertex stride.
+  ## - `indices` (in): Source indices.
+  ## - `numIndices` (in): Number of input indices.
+  ## - `index32` (in): Set to `true` if input indices are 32-bit.
 proc get_supported_renderers*(_: type BGFX; max: uint8; `enum`: ptr bgfx_renderer_type_t): uint8 {.importc: "bgfx_get_supported_renderers", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns name of renderer.
-##
-## **Parameters:**
-## - `type` (in): Renderer backend type. See: `bgfx_renderer_type_t`
-##
-## **Returns:**
-## Name of renderer.
+  ## Returns supported backend API renderers.
+  ##
+  ## **Parameters:**
+  ## - `max` (in): Maximum number of elements in enum array.
+  ## - `enum` (in/out): Array where supported renderers will be written.
+  ##
+  ## **Returns:**
+  ## Number of supported renderers.
 proc get_renderer_name*(_: type BGFX; `type`: bgfx_renderer_type_t): cstring {.importc: "bgfx_get_renderer_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Fill bgfx_init_t struct with default values, before using it to initialize the library.
-##
-## **Parameters:**
-## - `init` (in): Pointer to structure to be initialized. See: `bgfx_init_t` for more info.
+  ## Returns name of renderer.
+  ##
+  ## **Parameters:**
+  ## - `type` (in): Renderer backend type. See: `bgfx_renderer_type_t`
+  ##
+  ## **Returns:**
+  ## Name of renderer.
 proc init_ctor*(_: type BGFX; init: ptr bgfx_init_t) {.importc: "bgfx_init_ctor", cdecl, header: "bgfx/c99/bgfx.h".}
-## Initialize the bgfx library.
-##
-## **Parameters:**
-## - `init` (in): Initialization parameters. See: `bgfx_init_t` for more info.
-##
-## **Returns:**
-## `true` if initialization was successful.
+  ## Fill bgfx_init_t struct with default values, before using it to initialize the library.
+  ##
+  ## **Parameters:**
+  ## - `init` (in): Pointer to structure to be initialized. See: `bgfx_init_t` for more info.
 proc init*(_: type BGFX; init: ptr bgfx_init_t): bool {.importc: "bgfx_init", cdecl, header: "bgfx/c99/bgfx.h".}
-## Shutdown bgfx library.
+  ## Initialize the bgfx library.
+  ##
+  ## **Parameters:**
+  ## - `init` (in): Initialization parameters. See: `bgfx_init_t` for more info.
+  ##
+  ## **Returns:**
+  ## `true` if initialization was successful.
 proc shutdown*(_: type BGFX) {.importc: "bgfx_shutdown", cdecl, header: "bgfx/c99/bgfx.h".}
-## Reset graphic settings and back-buffer size.
-##
-## **Parameters:**
-## - `width` (in): Back-buffer width.
-## - `height` (in): Back-buffer height.
-## - `flags` (in): See: `BGFX_RESET_*` for more info.
-##   \- `BGFX_RESET_NONE` - No reset flags.
-##   \- `BGFX_RESET_FULLSCREEN` - Not supported yet.
-##   \- `BGFX_RESET_MSAA_X[2/4/8/16]` - Enable 2, 4, 8 or 16 x MSAA.
-##   \- `BGFX_RESET_VSYNC` - Enable V-Sync.
-##   \- `BGFX_RESET_MAXANISOTROPY` - Turn on/off max anisotropy.
-##   \- `BGFX_RESET_CAPTURE` - Begin screen capture.
-##   \- `BGFX_RESET_FLUSH_AFTER_RENDER` - Flush rendering after submitting to GPU.
-##   \- `BGFX_RESET_FLIP_AFTER_RENDER` - This flag  specifies where flip
-##   occurs. Default behaviour is that flip occurs before rendering new
-##   frame. This flag only has effect when `BGFX_CONFIG_MULTITHREADED=0`.
-##   \- `BGFX_RESET_SRGB_BACKBUFFER` - Enable sRGB back-buffer.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-##
-## **Attention:**
-## This call doesn’t change the window size, it just resizes
-## the back-buffer. Your windowing code controls the window size.
+  ## Shutdown bgfx library.
 proc reset*(_: type BGFX; width: uint32; height: uint32; flags: uint32; format: bgfx_texture_format_t) {.importc: "bgfx_reset", cdecl, header: "bgfx/c99/bgfx.h".}
-## Advance to next frame. This is the main frame-advancement call on the
-## API thread (the thread from which `BGFX.init` was called).
-##
-## **Multithreaded renderer** (`BGFX_CONFIG_MULTITHREADED=1`, default):
-## This call waits for the render thread to finish processing the previous
-## frame, then swaps internal submit/render buffers, signals the render
-## thread to begin processing the new frame via `BGFX.render_frame`, and
-## returns immediately. The render thread and API thread then run in
-## parallel: the API thread builds the next frame while the render thread
-## executes GPU commands for the current frame.
-##
-## **Single-threaded renderer** (`BGFX_CONFIG_MULTITHREADED=0`, or when
-## `BGFX.render_frame` and `BGFX.init` are called from the same thread):
-## This call swaps internal buffers and performs frame rendering inline
-## (internally calls `BGFX.render_frame`), then returns.
-##
-## **Parameters:**
-## - `flags` (in): Frame flags. See: `BGFX_FRAME_*` for more info.
-##   \- `BGFX_FRAME_NONE` - No frame flag.
-##   \- `BGFX_FRAME_DEBUG_CAPTURE` - Capture frame with graphics debugger.
-##   \- `BGFX_FRAME_DISCARD` - Discard all draw calls.
-##   \- `BGFX_FRAME_FLUSH` - Execute all rendering commands
-##   without presenting the backbuffer.
-##
-## **Returns:**
-## Current frame number. This might be used in conjunction with
-## double/multi buffering data outside the library and passing it to
-## library via `BGFX.make_ref` calls.
-##
-## **Remarks:**
-## Must be called from the API thread (the thread that called
-## `BGFX.init`). In multithreaded mode, this call synchronizes with
-## `BGFX.render_frame` running on the render thread via semaphores:
-## `BGFX.frame` waits for the render thread to finish, then posts a
-## signal that `BGFX.render_frame` waits on to begin the next frame.
-## See also: `BGFX.render_frame`.
+  ## Reset graphic settings and back-buffer size.
+  ##
+  ## **Parameters:**
+  ## - `width` (in): Back-buffer width.
+  ## - `height` (in): Back-buffer height.
+  ## - `flags` (in): See: `BGFX_RESET_*` for more info.
+  ##   \- `BGFX_RESET_NONE` - No reset flags.
+  ##   \- `BGFX_RESET_FULLSCREEN` - Not supported yet.
+  ##   \- `BGFX_RESET_MSAA_X[2/4/8/16]` - Enable 2, 4, 8 or 16 x MSAA.
+  ##   \- `BGFX_RESET_VSYNC` - Enable V-Sync.
+  ##   \- `BGFX_RESET_MAXANISOTROPY` - Turn on/off max anisotropy.
+  ##   \- `BGFX_RESET_CAPTURE` - Begin screen capture.
+  ##   \- `BGFX_RESET_FLUSH_AFTER_RENDER` - Flush rendering after submitting to GPU.
+  ##   \- `BGFX_RESET_FLIP_AFTER_RENDER` - This flag  specifies where flip
+  ##   occurs. Default behaviour is that flip occurs before rendering new
+  ##   frame. This flag only has effect when `BGFX_CONFIG_MULTITHREADED=0`.
+  ##   \- `BGFX_RESET_SRGB_BACKBUFFER` - Enable sRGB back-buffer.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ##
+  ## **Attention:**
+  ## This call doesn’t change the window size, it just resizes
+  ## the back-buffer. Your windowing code controls the window size.
 proc frame*(_: type BGFX; flags: uint8): uint32 {.importc: "bgfx_frame", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns current renderer backend API type.
-##
-## **Remarks:**
-## Library must be initialized.
+  ## Advance to next frame. This is the main frame-advancement call on the
+  ## API thread (the thread from which `BGFX.init` was called).
+  ##
+  ## **Multithreaded renderer** (`BGFX_CONFIG_MULTITHREADED=1`, default):
+  ## This call waits for the render thread to finish processing the previous
+  ## frame, then swaps internal submit/render buffers, signals the render
+  ## thread to begin processing the new frame via `BGFX.render_frame`, and
+  ## returns immediately. The render thread and API thread then run in
+  ## parallel: the API thread builds the next frame while the render thread
+  ## executes GPU commands for the current frame.
+  ##
+  ## **Single-threaded renderer** (`BGFX_CONFIG_MULTITHREADED=0`, or when
+  ## `BGFX.render_frame` and `BGFX.init` are called from the same thread):
+  ## This call swaps internal buffers and performs frame rendering inline
+  ## (internally calls `BGFX.render_frame`), then returns.
+  ##
+  ## **Parameters:**
+  ## - `flags` (in): Frame flags. See: `BGFX_FRAME_*` for more info.
+  ##   \- `BGFX_FRAME_NONE` - No frame flag.
+  ##   \- `BGFX_FRAME_DEBUG_CAPTURE` - Capture frame with graphics debugger.
+  ##   \- `BGFX_FRAME_DISCARD` - Discard all draw calls.
+  ##   \- `BGFX_FRAME_FLUSH` - Execute all rendering commands
+  ##   without presenting the backbuffer.
+  ##
+  ## **Returns:**
+  ## Current frame number. This might be used in conjunction with
+  ## double/multi buffering data outside the library and passing it to
+  ## library via `BGFX.make_ref` calls.
+  ##
+  ## **Remarks:**
+  ## Must be called from the API thread (the thread that called
+  ## `BGFX.init`). In multithreaded mode, this call synchronizes with
+  ## `BGFX.render_frame` running on the render thread via semaphores:
+  ## `BGFX.frame` waits for the render thread to finish, then posts a
+  ## signal that `BGFX.render_frame` waits on to begin the next frame.
+  ## See also: `BGFX.render_frame`.
 proc get_renderer_type*(_: type BGFX): bgfx_renderer_type_t {.importc: "bgfx_get_renderer_type", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns renderer capabilities.
-##
-## **Remarks:**
-## Library must be initialized.
+  ## Returns current renderer backend API type.
+  ##
+  ## **Remarks:**
+  ## Library must be initialized.
 proc get_caps*(_: type BGFX): ptr bgfx_caps_t {.importc: "bgfx_get_caps", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns performance counters.
-##
-## **Attention:**
-## Pointer returned is valid until `BGFX.frame` is called.
+  ## Returns renderer capabilities.
+  ##
+  ## **Remarks:**
+  ## Library must be initialized.
 proc get_stats*(_: type BGFX): ptr bgfx_stats_t {.importc: "bgfx_get_stats", cdecl, header: "bgfx/c99/bgfx.h".}
-## Allocate buffer to pass to bgfx calls. Data will be freed inside bgfx.
-##
-## **Parameters:**
-## - `size` (in): Size to allocate.
-##
-## **Returns:**
-## Allocated memory.
+  ## Returns performance counters.
+  ##
+  ## **Attention:**
+  ## Pointer returned is valid until `BGFX.frame` is called.
 proc alloc*(_: type BGFX; size: uint32): ptr bgfx_memory_t {.importc: "bgfx_alloc", cdecl, header: "bgfx/c99/bgfx.h".}
-## Allocate buffer and copy data into it. Data will be freed inside bgfx.
-##
-## **Parameters:**
-## - `data` (in): Pointer to data to be copied.
-## - `size` (in): Size of data to be copied.
-##
-## **Returns:**
-## Allocated memory.
+  ## Allocate buffer to pass to bgfx calls. Data will be freed inside bgfx.
+  ##
+  ## **Parameters:**
+  ## - `size` (in): Size to allocate.
+  ##
+  ## **Returns:**
+  ## Allocated memory.
 proc copy*(_: type BGFX; data: pointer; size: uint32): ptr bgfx_memory_t {.importc: "bgfx_copy", cdecl, header: "bgfx/c99/bgfx.h".}
-## Make reference to data to pass to bgfx. Unlike `BGFX.alloc`, this call
-## doesn't allocate memory for data. It just copies the data pointer. You
-## can pass `bgfx_release_fn_t` function pointer to release this memory after it's
-## consumed, otherwise you must make sure data is available for at least 2
-## `BGFX.frame` calls. `bgfx_release_fn_t` function must be able to be called
-## from any thread.
-##
-## **Parameters:**
-## - `data` (in): Pointer to data.
-## - `size` (in): Size of data.
-##
-## **Returns:**
-## Referenced memory.
-##
-## **Attention:**
-## Data passed must be available for at least 2 `BGFX.frame` calls.
+  ## Allocate buffer and copy data into it. Data will be freed inside bgfx.
+  ##
+  ## **Parameters:**
+  ## - `data` (in): Pointer to data to be copied.
+  ## - `size` (in): Size of data to be copied.
+  ##
+  ## **Returns:**
+  ## Allocated memory.
 proc make_ref*(_: type BGFX; data: pointer; size: uint32): ptr bgfx_memory_t {.importc: "bgfx_make_ref", cdecl, header: "bgfx/c99/bgfx.h".}
-## Make reference to data to pass to bgfx. Unlike `BGFX.alloc`, this call
-## doesn't allocate memory for data. It just copies the data pointer. You
-## can pass `bgfx_release_fn_t` function pointer to release this memory after it's
-## consumed, otherwise you must make sure data is available for at least 2
-## `BGFX.frame` calls. `bgfx_release_fn_t` function must be able to be called
-## from any thread.
-##
-## **Parameters:**
-## - `data` (in): Pointer to data.
-## - `size` (in): Size of data.
-## - `releaseFn` (in): Callback function to release memory after use.
-## - `userData` (in): User data to be passed to callback function.
-##
-## **Returns:**
-## Referenced memory.
-##
-## **Attention:**
-## Data passed must be available for at least 2 `BGFX.frame` calls.
+  ## Make reference to data to pass to bgfx. Unlike `BGFX.alloc`, this call
+  ## doesn't allocate memory for data. It just copies the data pointer. You
+  ## can pass `bgfx_release_fn_t` function pointer to release this memory after it's
+  ## consumed, otherwise you must make sure data is available for at least 2
+  ## `BGFX.frame` calls. `bgfx_release_fn_t` function must be able to be called
+  ## from any thread.
+  ##
+  ## **Parameters:**
+  ## - `data` (in): Pointer to data.
+  ## - `size` (in): Size of data.
+  ##
+  ## **Returns:**
+  ## Referenced memory.
+  ##
+  ## **Attention:**
+  ## Data passed must be available for at least 2 `BGFX.frame` calls.
 proc make_ref_release*(_: type BGFX; data: pointer; size: uint32; releaseFn: bgfx_release_fn_t; userData: pointer): ptr bgfx_memory_t {.importc: "bgfx_make_ref_release", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set debug flags.
-##
-## **Parameters:**
-## - `debug` (in): Available flags:
-##   \- `BGFX_DEBUG_IFH` - Infinitely fast hardware. When this flag is set
-##   all rendering calls will be skipped. This is useful when profiling
-##   to quickly assess potential bottlenecks between CPU and GPU.
-##   \- `BGFX_DEBUG_PROFILER` - Enable profiler.
-##   \- `BGFX_DEBUG_STATS` - Display internal statistics.
-##   \- `BGFX_DEBUG_TEXT` - Display debug text.
-##   \- `BGFX_DEBUG_WIREFRAME` - Wireframe rendering. All rendering
-##   primitives will be rendered as lines.
+  ## Make reference to data to pass to bgfx. Unlike `BGFX.alloc`, this call
+  ## doesn't allocate memory for data. It just copies the data pointer. You
+  ## can pass `bgfx_release_fn_t` function pointer to release this memory after it's
+  ## consumed, otherwise you must make sure data is available for at least 2
+  ## `BGFX.frame` calls. `bgfx_release_fn_t` function must be able to be called
+  ## from any thread.
+  ##
+  ## **Parameters:**
+  ## - `data` (in): Pointer to data.
+  ## - `size` (in): Size of data.
+  ## - `releaseFn` (in): Callback function to release memory after use.
+  ## - `userData` (in): User data to be passed to callback function.
+  ##
+  ## **Returns:**
+  ## Referenced memory.
+  ##
+  ## **Attention:**
+  ## Data passed must be available for at least 2 `BGFX.frame` calls.
 proc set_debug*(_: type BGFX; debug: uint32) {.importc: "bgfx_set_debug", cdecl, header: "bgfx/c99/bgfx.h".}
-## Clear internal debug text buffer.
-##
-## **Parameters:**
-## - `attr` (in): Background color.
-## - `small` (in): Default 8x16 or 8x8 font.
+  ## Set debug flags.
+  ##
+  ## **Parameters:**
+  ## - `debug` (in): Available flags:
+  ##   \- `BGFX_DEBUG_IFH` - Infinitely fast hardware. When this flag is set
+  ##   all rendering calls will be skipped. This is useful when profiling
+  ##   to quickly assess potential bottlenecks between CPU and GPU.
+  ##   \- `BGFX_DEBUG_PROFILER` - Enable profiler.
+  ##   \- `BGFX_DEBUG_STATS` - Display internal statistics.
+  ##   \- `BGFX_DEBUG_TEXT` - Display debug text.
+  ##   \- `BGFX_DEBUG_WIREFRAME` - Wireframe rendering. All rendering
+  ##   primitives will be rendered as lines.
 proc dbg_text_clear*(_: type BGFX; attr: uint8; small: bool) {.importc: "bgfx_dbg_text_clear", cdecl, header: "bgfx/c99/bgfx.h".}
-## Print formatted data to internal debug text character-buffer (VGA-compatible text mode).
-##
-## **Parameters:**
-## - `x` (in): Position x from the left corner of the window.
-## - `y` (in): Position y from the top corner of the window.
-## - `attr` (in): Color palette. Where top 4-bits represent index of background, and bottom
-##   4-bits represent foreground color from standard VGA text palette (ANSI escape codes).
-## - `format` (in): `printf` style format.
+  ## Clear internal debug text buffer.
+  ##
+  ## **Parameters:**
+  ## - `attr` (in): Background color.
+  ## - `small` (in): Default 8x16 or 8x8 font.
 proc dbg_text_printf*(_: type BGFX; x: uint16; y: uint16; attr: uint8; format: cstring) {.importc: "bgfx_dbg_text_printf", cdecl, varargs, header: "bgfx/c99/bgfx.h".}
-## Print formatted data from variable argument list to internal debug text character-buffer (VGA-compatible text mode).
-##
-## **Parameters:**
-## - `x` (in): Position x from the left corner of the window.
-## - `y` (in): Position y from the top corner of the window.
-## - `attr` (in): Color palette. Where top 4-bits represent index of background, and bottom
-##   4-bits represent foreground color from standard VGA text palette (ANSI escape codes).
-## - `format` (in): `printf` style format.
-## - `argList` (in): Variable arguments list for format string.
+  ## Print formatted data to internal debug text character-buffer (VGA-compatible text mode).
+  ##
+  ## **Parameters:**
+  ## - `x` (in): Position x from the left corner of the window.
+  ## - `y` (in): Position y from the top corner of the window.
+  ## - `attr` (in): Color palette. Where top 4-bits represent index of background, and bottom
+  ##   4-bits represent foreground color from standard VGA text palette (ANSI escape codes).
+  ## - `format` (in): `printf` style format.
 proc dbg_text_vprintf*(_: type BGFX; x: uint16; y: uint16; attr: uint8; format: cstring; argList: bgfx_va_list_t) {.importc: "bgfx_dbg_text_vprintf", cdecl, header: "bgfx/c99/bgfx.h".}
-## Draw image into internal debug text buffer.
-##
-## **Parameters:**
-## - `x` (in): Position x from the left corner of the window.
-## - `y` (in): Position y from the top corner of the window.
-## - `width` (in): Image width.
-## - `height` (in): Image height.
-## - `data` (in): Raw image data (character/attribute raw encoding).
-## - `pitch` (in): Image pitch in bytes.
+  ## Print formatted data from variable argument list to internal debug text character-buffer (VGA-compatible text mode).
+  ##
+  ## **Parameters:**
+  ## - `x` (in): Position x from the left corner of the window.
+  ## - `y` (in): Position y from the top corner of the window.
+  ## - `attr` (in): Color palette. Where top 4-bits represent index of background, and bottom
+  ##   4-bits represent foreground color from standard VGA text palette (ANSI escape codes).
+  ## - `format` (in): `printf` style format.
+  ## - `argList` (in): Variable arguments list for format string.
 proc dbg_text_image*(_: type BGFX; x: uint16; y: uint16; width: uint16; height: uint16; data: pointer; pitch: uint16) {.importc: "bgfx_dbg_text_image", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create static index buffer.
-##
-## **Parameters:**
-## - `mem` (in): Index buffer data.
-## - `flags` (in): Buffer creation flags.
-##   \- `BGFX_BUFFER_NONE` - No flags.
-##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
-##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
-##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
-##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
-##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
-##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
-##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
-##   buffers.
-##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
-##   index buffers.
+  ## Draw image into internal debug text buffer.
+  ##
+  ## **Parameters:**
+  ## - `x` (in): Position x from the left corner of the window.
+  ## - `y` (in): Position y from the top corner of the window.
+  ## - `width` (in): Image width.
+  ## - `height` (in): Image height.
+  ## - `data` (in): Raw image data (character/attribute raw encoding).
+  ## - `pitch` (in): Image pitch in bytes.
 proc create_index_buffer*(_: type BGFX; mem: ptr bgfx_memory_t; flags: uint16): bgfx_index_buffer_handle_t {.importc: "bgfx_create_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set static index buffer debug name.
-##
-## **Parameters:**
-## - `handle` (in): Static index buffer handle.
-## - `name` (in): Static index buffer name.
-## - `len` (in): Static index buffer name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
+  ## Create static index buffer.
+  ##
+  ## **Parameters:**
+  ## - `mem` (in): Index buffer data.
+  ## - `flags` (in): Buffer creation flags.
+  ##   \- `BGFX_BUFFER_NONE` - No flags.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
+  ##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
+  ##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
+  ##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
+  ##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
+  ##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
+  ##   buffers.
+  ##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
+  ##   index buffers.
 proc set_index_buffer_name*(_: type BGFX; handle: bgfx_index_buffer_handle_t; name: cstring; len: int32) {.importc: "bgfx_set_index_buffer_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy static index buffer.
-##
-## **Parameters:**
-## - `handle` (in): Static index buffer handle.
+  ## Set static index buffer debug name.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Static index buffer handle.
+  ## - `name` (in): Static index buffer name.
+  ## - `len` (in): Static index buffer name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
 proc destroy_index_buffer*(_: type BGFX; handle: bgfx_index_buffer_handle_t) {.importc: "bgfx_destroy_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create vertex layout. Vertex layouts are used to describe the format of vertex data.
-##
-## **Parameters:**
-## - `layout` (in): Vertex layout.
+  ## Destroy static index buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Static index buffer handle.
 proc create_vertex_layout*(_: type BGFX; layout: ptr bgfx_vertex_layout_t): bgfx_vertex_layout_handle_t {.importc: "bgfx_create_vertex_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy vertex layout.
-##
-## **Parameters:**
-## - `layoutHandle` (in): Vertex layout handle.
+  ## Create vertex layout. Vertex layouts are used to describe the format of vertex data.
+  ##
+  ## **Parameters:**
+  ## - `layout` (in): Vertex layout.
 proc destroy_vertex_layout*(_: type BGFX; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_destroy_vertex_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create static vertex buffer.
-##
-## **Parameters:**
-## - `mem` (in): Vertex buffer data.
-## - `layout` (in): Vertex layout.
-## - `flags` (in): Buffer creation flags.
-##   \- `BGFX_BUFFER_NONE` - No flags.
-##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
-##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
-##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
-##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
-##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
-##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
-##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic buffers.
-##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on index buffers.
-##
-## **Returns:**
-## Static vertex buffer handle.
+  ## Destroy vertex layout.
+  ##
+  ## **Parameters:**
+  ## - `layoutHandle` (in): Vertex layout handle.
 proc create_vertex_buffer*(_: type BGFX; mem: ptr bgfx_memory_t; layout: ptr bgfx_vertex_layout_t; flags: uint16): bgfx_vertex_buffer_handle_t {.importc: "bgfx_create_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set static vertex buffer debug name.
-##
-## **Parameters:**
-## - `handle` (in): Static vertex buffer handle.
-## - `name` (in): Static vertex buffer name.
-## - `len` (in): Static vertex buffer name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
+  ## Create static vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `mem` (in): Vertex buffer data.
+  ## - `layout` (in): Vertex layout.
+  ## - `flags` (in): Buffer creation flags.
+  ##   \- `BGFX_BUFFER_NONE` - No flags.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
+  ##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
+  ##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
+  ##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
+  ##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
+  ##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic buffers.
+  ##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on index buffers.
+  ##
+  ## **Returns:**
+  ## Static vertex buffer handle.
 proc set_vertex_buffer_name*(_: type BGFX; handle: bgfx_vertex_buffer_handle_t; name: cstring; len: int32) {.importc: "bgfx_set_vertex_buffer_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy static vertex buffer.
-##
-## **Parameters:**
-## - `handle` (in): Static vertex buffer handle.
+  ## Set static vertex buffer debug name.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Static vertex buffer handle.
+  ## - `name` (in): Static vertex buffer name.
+  ## - `len` (in): Static vertex buffer name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
 proc destroy_vertex_buffer*(_: type BGFX; handle: bgfx_vertex_buffer_handle_t) {.importc: "bgfx_destroy_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create empty dynamic index buffer.
-##
-## **Parameters:**
-## - `num` (in): Number of indices.
-## - `flags` (in): Buffer creation flags.
-##   \- `BGFX_BUFFER_NONE` - No flags.
-##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
-##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
-##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
-##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
-##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
-##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
-##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
-##   buffers.
-##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
-##   index buffers.
-##
-## **Returns:**
-## Dynamic index buffer handle.
+  ## Destroy static vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Static vertex buffer handle.
 proc create_dynamic_index_buffer*(_: type BGFX; num: uint32; flags: uint16): bgfx_dynamic_index_buffer_handle_t {.importc: "bgfx_create_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create a dynamic index buffer and initialize it.
-##
-## **Parameters:**
-## - `mem` (in): Index buffer data.
-## - `flags` (in): Buffer creation flags.
-##   \- `BGFX_BUFFER_NONE` - No flags.
-##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
-##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
-##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
-##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
-##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
-##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
-##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
-##   buffers.
-##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
-##   index buffers.
-##
-## **Returns:**
-## Dynamic index buffer handle.
+  ## Create empty dynamic index buffer.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of indices.
+  ## - `flags` (in): Buffer creation flags.
+  ##   \- `BGFX_BUFFER_NONE` - No flags.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
+  ##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
+  ##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
+  ##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
+  ##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
+  ##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
+  ##   buffers.
+  ##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
+  ##   index buffers.
+  ##
+  ## **Returns:**
+  ## Dynamic index buffer handle.
 proc create_dynamic_index_buffer_mem*(_: type BGFX; mem: ptr bgfx_memory_t; flags: uint16): bgfx_dynamic_index_buffer_handle_t {.importc: "bgfx_create_dynamic_index_buffer_mem", cdecl, header: "bgfx/c99/bgfx.h".}
-## Update dynamic index buffer.
-##
-## **Parameters:**
-## - `handle` (in): Dynamic index buffer handle.
-## - `startIndex` (in): Start index.
-## - `mem` (in): Index buffer data.
+  ## Create a dynamic index buffer and initialize it.
+  ##
+  ## **Parameters:**
+  ## - `mem` (in): Index buffer data.
+  ## - `flags` (in): Buffer creation flags.
+  ##   \- `BGFX_BUFFER_NONE` - No flags.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
+  ##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
+  ##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
+  ##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
+  ##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
+  ##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
+  ##   buffers.
+  ##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
+  ##   index buffers.
+  ##
+  ## **Returns:**
+  ## Dynamic index buffer handle.
 proc update_dynamic_index_buffer*(_: type BGFX; handle: bgfx_dynamic_index_buffer_handle_t; startIndex: uint32; mem: ptr bgfx_memory_t) {.importc: "bgfx_update_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy dynamic index buffer.
-##
-## **Parameters:**
-## - `handle` (in): Dynamic index buffer handle.
+  ## Update dynamic index buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Dynamic index buffer handle.
+  ## - `startIndex` (in): Start index.
+  ## - `mem` (in): Index buffer data.
 proc destroy_dynamic_index_buffer*(_: type BGFX; handle: bgfx_dynamic_index_buffer_handle_t) {.importc: "bgfx_destroy_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create empty dynamic vertex buffer.
-##
-## **Parameters:**
-## - `num` (in): Number of vertices.
-## - `layout` (in): Vertex layout.
-## - `flags` (in): Buffer creation flags.
-##   \- `BGFX_BUFFER_NONE` - No flags.
-##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
-##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
-##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
-##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
-##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
-##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
-##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
-##   buffers.
-##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
-##   index buffers.
-##
-## **Returns:**
-## Dynamic vertex buffer handle.
+  ## Destroy dynamic index buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Dynamic index buffer handle.
 proc create_dynamic_vertex_buffer*(_: type BGFX; num: uint32; layout: ptr bgfx_vertex_layout_t; flags: uint16): bgfx_dynamic_vertex_buffer_handle_t {.importc: "bgfx_create_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create dynamic vertex buffer and initialize it.
-##
-## **Parameters:**
-## - `mem` (in): Vertex buffer data.
-## - `layout` (in): Vertex layout.
-## - `flags` (in): Buffer creation flags.
-##   \- `BGFX_BUFFER_NONE` - No flags.
-##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
-##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
-##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
-##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
-##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
-##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
-##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
-##   buffers.
-##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
-##   index buffers.
-##
-## **Returns:**
-## Dynamic vertex buffer handle.
+  ## Create empty dynamic vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of vertices.
+  ## - `layout` (in): Vertex layout.
+  ## - `flags` (in): Buffer creation flags.
+  ##   \- `BGFX_BUFFER_NONE` - No flags.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
+  ##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
+  ##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
+  ##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
+  ##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
+  ##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
+  ##   buffers.
+  ##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
+  ##   index buffers.
+  ##
+  ## **Returns:**
+  ## Dynamic vertex buffer handle.
 proc create_dynamic_vertex_buffer_mem*(_: type BGFX; mem: ptr bgfx_memory_t; layout: ptr bgfx_vertex_layout_t; flags: uint16): bgfx_dynamic_vertex_buffer_handle_t {.importc: "bgfx_create_dynamic_vertex_buffer_mem", cdecl, header: "bgfx/c99/bgfx.h".}
-## Update dynamic vertex buffer.
-##
-## **Parameters:**
-## - `handle` (in): Dynamic vertex buffer handle.
-## - `startVertex` (in): Start vertex.
-## - `mem` (in): Vertex buffer data.
+  ## Create dynamic vertex buffer and initialize it.
+  ##
+  ## **Parameters:**
+  ## - `mem` (in): Vertex buffer data.
+  ## - `layout` (in): Vertex layout.
+  ## - `flags` (in): Buffer creation flags.
+  ##   \- `BGFX_BUFFER_NONE` - No flags.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ` - Buffer will be read from by compute shader.
+  ##   \- `BGFX_BUFFER_COMPUTE_WRITE` - Buffer will be written into by compute shader. When buffer
+  ##   is created with `BGFX_BUFFER_COMPUTE_WRITE` flag it cannot be updated from CPU.
+  ##   \- `BGFX_BUFFER_COMPUTE_READ_WRITE` - Buffer will be used for read/write by compute shader.
+  ##   \- `BGFX_BUFFER_ALLOW_RESIZE` - Buffer will resize on buffer update if a different amount of
+  ##   data is passed. If this flag is not specified, and more data is passed on update, the buffer
+  ##   will be trimmed to fit the existing buffer size. This flag has effect only on dynamic
+  ##   buffers.
+  ##   \- `BGFX_BUFFER_INDEX32` - Buffer is using 32-bit indices. This flag has effect only on
+  ##   index buffers.
+  ##
+  ## **Returns:**
+  ## Dynamic vertex buffer handle.
 proc update_dynamic_vertex_buffer*(_: type BGFX; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; mem: ptr bgfx_memory_t) {.importc: "bgfx_update_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy dynamic vertex buffer.
-##
-## **Parameters:**
-## - `handle` (in): Dynamic vertex buffer handle.
+  ## Update dynamic vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Dynamic vertex buffer handle.
+  ## - `startVertex` (in): Start vertex.
+  ## - `mem` (in): Vertex buffer data.
 proc destroy_dynamic_vertex_buffer*(_: type BGFX; handle: bgfx_dynamic_vertex_buffer_handle_t) {.importc: "bgfx_destroy_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns number of requested or maximum available indices.
-##
-## **Parameters:**
-## - `num` (in): Number of required indices.
-## - `index32` (in): Set to `true` if input indices will be 32-bit.
-##
-## **Returns:**
-## Number of requested or maximum available indices.
+  ## Destroy dynamic vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Dynamic vertex buffer handle.
 proc get_avail_transient_index_buffer*(_: type BGFX; num: uint32; index32: bool): uint32 {.importc: "bgfx_get_avail_transient_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns number of requested or maximum available vertices.
-##
-## **Parameters:**
-## - `num` (in): Number of required vertices.
-## - `layout` (in): Vertex layout.
-##
-## **Returns:**
-## Number of requested or maximum available vertices.
+  ## Returns number of requested or maximum available indices.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of required indices.
+  ## - `index32` (in): Set to `true` if input indices will be 32-bit.
+  ##
+  ## **Returns:**
+  ## Number of requested or maximum available indices.
 proc get_avail_transient_vertex_buffer*(_: type BGFX; num: uint32; layout: ptr bgfx_vertex_layout_t): uint32 {.importc: "bgfx_get_avail_transient_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns number of requested or maximum available instance buffer slots.
-##
-## **Parameters:**
-## - `num` (in): Number of required instances.
-## - `stride` (in): Stride per instance.
-##
-## **Returns:**
-## Number of requested or maximum available instance buffer slots.
+  ## Returns number of requested or maximum available vertices.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of required vertices.
+  ## - `layout` (in): Vertex layout.
+  ##
+  ## **Returns:**
+  ## Number of requested or maximum available vertices.
 proc get_avail_instance_data_buffer*(_: type BGFX; num: uint32; stride: uint16): uint32 {.importc: "bgfx_get_avail_instance_data_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Allocate transient index buffer.
-##
-## **Parameters:**
-## - `tib` (out): TransientIndexBuffer structure will be filled, and will be valid
-##   for the duration of frame, and can be reused for multiple draw
-##   calls.
-## - `num` (in): Number of indices to allocate.
-## - `index32` (in): Set to `true` if input indices will be 32-bit.
+  ## Returns number of requested or maximum available instance buffer slots.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of required instances.
+  ## - `stride` (in): Stride per instance.
+  ##
+  ## **Returns:**
+  ## Number of requested or maximum available instance buffer slots.
 proc alloc_transient_index_buffer*(_: type BGFX; tib: ptr bgfx_transient_index_buffer_t; num: uint32; index32: bool) {.importc: "bgfx_alloc_transient_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Allocate transient vertex buffer.
-##
-## **Parameters:**
-## - `tvb` (out): TransientVertexBuffer structure will be filled, and will be valid
-##   for the duration of frame, and can be reused for multiple draw
-##   calls.
-## - `num` (in): Number of vertices to allocate.
-## - `layout` (in): Vertex layout.
+  ## Allocate transient index buffer.
+  ##
+  ## **Parameters:**
+  ## - `tib` (out): TransientIndexBuffer structure will be filled, and will be valid
+  ##   for the duration of frame, and can be reused for multiple draw
+  ##   calls.
+  ## - `num` (in): Number of indices to allocate.
+  ## - `index32` (in): Set to `true` if input indices will be 32-bit.
 proc alloc_transient_vertex_buffer*(_: type BGFX; tvb: ptr bgfx_transient_vertex_buffer_t; num: uint32; layout: ptr bgfx_vertex_layout_t) {.importc: "bgfx_alloc_transient_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Check for required space and allocate transient vertex and index
-## buffers. If both space requirements are satisfied function returns
-## true.
-##
-## **Parameters:**
-## - `tvb` (out): TransientVertexBuffer structure will be filled, and will be valid
-##   for the duration of frame, and can be reused for multiple draw
-##   calls.
-## - `layout` (in): Vertex layout.
-## - `numVertices` (in): Number of vertices to allocate.
-## - `tib` (out): TransientIndexBuffer structure will be filled, and will be valid
-##   for the duration of frame, and can be reused for multiple draw
-##   calls.
-## - `numIndices` (in): Number of indices to allocate.
-## - `index32` (in): Set to `true` if input indices will be 32-bit.
+  ## Allocate transient vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `tvb` (out): TransientVertexBuffer structure will be filled, and will be valid
+  ##   for the duration of frame, and can be reused for multiple draw
+  ##   calls.
+  ## - `num` (in): Number of vertices to allocate.
+  ## - `layout` (in): Vertex layout.
 proc alloc_transient_buffers*(_: type BGFX; tvb: ptr bgfx_transient_vertex_buffer_t; layout: ptr bgfx_vertex_layout_t; numVertices: uint32; tib: ptr bgfx_transient_index_buffer_t; numIndices: uint32; index32: bool): bool {.importc: "bgfx_alloc_transient_buffers", cdecl, header: "bgfx/c99/bgfx.h".}
-## Allocate instance data buffer.
-##
-## **Parameters:**
-## - `idb` (out): InstanceDataBuffer structure will be filled, and will be valid
-##   for duration of frame, and can be reused for multiple draw
-##   calls.
-## - `num` (in): Number of instances.
-## - `stride` (in): Instance stride. Must be multiple of 16.
+  ## Check for required space and allocate transient vertex and index
+  ## buffers. If both space requirements are satisfied function returns
+  ## true.
+  ##
+  ## **Parameters:**
+  ## - `tvb` (out): TransientVertexBuffer structure will be filled, and will be valid
+  ##   for the duration of frame, and can be reused for multiple draw
+  ##   calls.
+  ## - `layout` (in): Vertex layout.
+  ## - `numVertices` (in): Number of vertices to allocate.
+  ## - `tib` (out): TransientIndexBuffer structure will be filled, and will be valid
+  ##   for the duration of frame, and can be reused for multiple draw
+  ##   calls.
+  ## - `numIndices` (in): Number of indices to allocate.
+  ## - `index32` (in): Set to `true` if input indices will be 32-bit.
 proc alloc_instance_data_buffer*(_: type BGFX; idb: ptr bgfx_instance_data_buffer_t; num: uint32; stride: uint16) {.importc: "bgfx_alloc_instance_data_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create draw indirect buffer.
-##
-## **Parameters:**
-## - `num` (in): Number of indirect calls.
-##
-## **Returns:**
-## Indirect buffer handle.
+  ## Allocate instance data buffer.
+  ##
+  ## **Parameters:**
+  ## - `idb` (out): InstanceDataBuffer structure will be filled, and will be valid
+  ##   for duration of frame, and can be reused for multiple draw
+  ##   calls.
+  ## - `num` (in): Number of instances.
+  ## - `stride` (in): Instance stride. Must be multiple of 16.
 proc create_indirect_buffer*(_: type BGFX; num: uint32): bgfx_indirect_buffer_handle_t {.importc: "bgfx_create_indirect_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy draw indirect buffer.
-##
-## **Parameters:**
-## - `handle` (in): Indirect buffer handle.
+  ## Create draw indirect buffer.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of indirect calls.
+  ##
+  ## **Returns:**
+  ## Indirect buffer handle.
 proc destroy_indirect_buffer*(_: type BGFX; handle: bgfx_indirect_buffer_handle_t) {.importc: "bgfx_destroy_indirect_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create shader from memory buffer.
-##
-## **Parameters:**
-## - `mem` (in): Shader binary.
-##
-## **Returns:**
-## Shader handle.
-##
-## **Remarks:**
-## Shader binary is obtained by compiling shader offline with shaderc command line tool.
+  ## Destroy draw indirect buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Indirect buffer handle.
 proc create_shader*(_: type BGFX; mem: ptr bgfx_memory_t): bgfx_shader_handle_t {.importc: "bgfx_create_shader", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns the number of uniforms and uniform handles used inside a shader.
-##
-## **Parameters:**
-## - `handle` (in): Shader handle.
-## - `uniforms` (out): UniformHandle array where data will be stored.
-## - `max` (in): Maximum capacity of array.
-##
-## **Returns:**
-## Number of uniforms used by shader.
-##
-## **Remarks:**
-## Only non-predefined uniforms are returned.
+  ## Create shader from memory buffer.
+  ##
+  ## **Parameters:**
+  ## - `mem` (in): Shader binary.
+  ##
+  ## **Returns:**
+  ## Shader handle.
+  ##
+  ## **Remarks:**
+  ## Shader binary is obtained by compiling shader offline with shaderc command line tool.
 proc get_shader_uniforms*(_: type BGFX; handle: bgfx_shader_handle_t; uniforms: ptr bgfx_uniform_handle_t; max: uint16): uint16 {.importc: "bgfx_get_shader_uniforms", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set shader debug name.
-##
-## **Parameters:**
-## - `handle` (in): Shader handle.
-## - `name` (in): Shader name.
-## - `len` (in): Shader name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string).
+  ## Returns the number of uniforms and uniform handles used inside a shader.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Shader handle.
+  ## - `uniforms` (out): UniformHandle array where data will be stored.
+  ## - `max` (in): Maximum capacity of array.
+  ##
+  ## **Returns:**
+  ## Number of uniforms used by shader.
+  ##
+  ## **Remarks:**
+  ## Only non-predefined uniforms are returned.
 proc set_shader_name*(_: type BGFX; handle: bgfx_shader_handle_t; name: cstring; len: int32) {.importc: "bgfx_set_shader_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy shader.
-##
-## **Parameters:**
-## - `handle` (in): Shader handle.
-##
-## **Remarks:**
-## Once a shader program is created with handle,
-## it is safe to destroy that shader.
+  ## Set shader debug name.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Shader handle.
+  ## - `name` (in): Shader name.
+  ## - `len` (in): Shader name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string).
 proc destroy_shader*(_: type BGFX; handle: bgfx_shader_handle_t) {.importc: "bgfx_destroy_shader", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create program with vertex and fragment shaders.
-##
-## **Parameters:**
-## - `vsh` (in): Vertex shader.
-## - `fsh` (in): Fragment shader.
-## - `destroyShaders` (in): If true, shaders will be destroyed when program is destroyed.
-##
-## **Returns:**
-## Program handle if vertex shader output and fragment shader
-## input are matching, otherwise returns invalid program handle.
+  ## Destroy shader.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Shader handle.
+  ##
+  ## **Remarks:**
+  ## Once a shader program is created with handle,
+  ## it is safe to destroy that shader.
 proc create_program*(_: type BGFX; vsh: bgfx_shader_handle_t; fsh: bgfx_shader_handle_t; destroyShaders: bool): bgfx_program_handle_t {.importc: "bgfx_create_program", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create program with compute shader.
-##
-## **Parameters:**
-## - `csh` (in): Compute shader.
-## - `destroyShaders` (in): If true, shaders will be destroyed when program is destroyed.
-##
-## **Returns:**
-## Program handle.
+  ## Create program with vertex and fragment shaders.
+  ##
+  ## **Parameters:**
+  ## - `vsh` (in): Vertex shader.
+  ## - `fsh` (in): Fragment shader.
+  ## - `destroyShaders` (in): If true, shaders will be destroyed when program is destroyed.
+  ##
+  ## **Returns:**
+  ## Program handle if vertex shader output and fragment shader
+  ## input are matching, otherwise returns invalid program handle.
 proc create_compute_program*(_: type BGFX; csh: bgfx_shader_handle_t; destroyShaders: bool): bgfx_program_handle_t {.importc: "bgfx_create_compute_program", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy program.
-##
-## **Parameters:**
-## - `handle` (in): Program handle.
+  ## Create program with compute shader.
+  ##
+  ## **Parameters:**
+  ## - `csh` (in): Compute shader.
+  ## - `destroyShaders` (in): If true, shaders will be destroyed when program is destroyed.
+  ##
+  ## **Returns:**
+  ## Program handle.
 proc destroy_program*(_: type BGFX; handle: bgfx_program_handle_t) {.importc: "bgfx_destroy_program", cdecl, header: "bgfx/c99/bgfx.h".}
-## Validate texture parameters.
-##
-## **Parameters:**
-## - `depth` (in): Depth dimension of volume texture.
-## - `cubeMap` (in): Indicates that texture contains cubemap.
-## - `numLayers` (in): Number of layers in texture array.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `flags` (in): Texture flags. See `BGFX_TEXTURE_*`.
-##
-## **Returns:**
-## True if a texture with the same parameters can be created.
+  ## Destroy program.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Program handle.
 proc is_texture_valid*(_: type BGFX; depth: uint16; cubeMap: bool; numLayers: uint16; format: bgfx_texture_format_t; flags: uint64): bool {.importc: "bgfx_is_texture_valid", cdecl, header: "bgfx/c99/bgfx.h".}
-## Validate video codec parameters. Use to check whether the requested
-## combination of codec / bit depth / chroma / dimensions / DPB layout can
-## be hardware decoded on the current device. Coarse capability discovery
-## is `bgfx_caps_t.supported & BGFX_CAPS_VIDEO_DECODE` and `bgfx_caps_t.codecs[]`.
-##
-## **Parameters:**
-## - `codec` (in): Video codec. See: `bgfx_video_codec_t`.
-## - `chroma` (in): Chroma subsampling. 0 = 4:2:0, 2 = 4:2:2, 4 = 4:4:4.
-## - `bitDepth` (in): Bit depth per component. 8, 10 or 12.
-## - `codedWidth` (in): Coded picture width (macroblock / CTU / superblock aligned).
-## - `codedHeight` (in): Coded picture height.
-## - `maxDpbSlots` (in): Maximum decoded picture buffer slot count.
-## - `maxActiveReferences` (in): Maximum number of reference frames active at once.
-##
-## **Returns:**
-## True if a video decoder with the same parameters can be created.
+  ## Validate texture parameters.
+  ##
+  ## **Parameters:**
+  ## - `depth` (in): Depth dimension of volume texture.
+  ## - `cubeMap` (in): Indicates that texture contains cubemap.
+  ## - `numLayers` (in): Number of layers in texture array.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `flags` (in): Texture flags. See `BGFX_TEXTURE_*`.
+  ##
+  ## **Returns:**
+  ## True if a texture with the same parameters can be created.
 proc is_video_codec_valid*(_: type BGFX; codec: bgfx_video_codec_t; chroma: uint8; bitDepth: uint8; codedWidth: uint16; codedHeight: uint16; maxDpbSlots: uint8; maxActiveReferences: uint8): bool {.importc: "bgfx_is_video_codec_valid", cdecl, header: "bgfx/c99/bgfx.h".}
-## Validate frame buffer parameters.
-##
-## **Parameters:**
-## - `num` (in): Number of attachments.
-## - `attachment` (in): Attachment texture info. See: `bgfx_attachment_t`.
-##
-## **Returns:**
-## True if a frame buffer with the same parameters can be created.
+  ## Validate video codec parameters. Use to check whether the requested
+  ## combination of codec / bit depth / chroma / dimensions / DPB layout can
+  ## be hardware decoded on the current device. Coarse capability discovery
+  ## is `bgfx_caps_t.supported & BGFX_CAPS_VIDEO_DECODE` and `bgfx_caps_t.codecs[]`.
+  ##
+  ## **Parameters:**
+  ## - `codec` (in): Video codec. See: `bgfx_video_codec_t`.
+  ## - `chroma` (in): Chroma subsampling. 0 = 4:2:0, 2 = 4:2:2, 4 = 4:4:4.
+  ## - `bitDepth` (in): Bit depth per component. 8, 10 or 12.
+  ## - `codedWidth` (in): Coded picture width (macroblock / CTU / superblock aligned).
+  ## - `codedHeight` (in): Coded picture height.
+  ## - `maxDpbSlots` (in): Maximum decoded picture buffer slot count.
+  ## - `maxActiveReferences` (in): Maximum number of reference frames active at once.
+  ##
+  ## **Returns:**
+  ## True if a video decoder with the same parameters can be created.
 proc is_frame_buffer_valid*(_: type BGFX; num: uint8; attachment: ptr bgfx_attachment_t): bool {.importc: "bgfx_is_frame_buffer_valid", cdecl, header: "bgfx/c99/bgfx.h".}
-## Calculate amount of memory required for texture.
-##
-## **Parameters:**
-## - `info` (out): Resulting texture info structure. See: `bgfx_texture_info_t`.
-## - `width` (in): Width.
-## - `height` (in): Height.
-## - `depth` (in): Depth dimension of volume texture.
-## - `cubeMap` (in): Indicates that texture contains cubemap.
-## - `hasMips` (in): Indicates that texture contains full mip-map chain.
-## - `numLayers` (in): Number of layers in texture array.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## Validate frame buffer parameters.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of attachments.
+  ## - `attachment` (in): Attachment texture info. See: `bgfx_attachment_t`.
+  ##
+  ## **Returns:**
+  ## True if a frame buffer with the same parameters can be created.
 proc calc_texture_size*(_: type BGFX; info: ptr bgfx_texture_info_t; width: uint16; height: uint16; depth: uint16; cubeMap: bool; hasMips: bool; numLayers: uint16; format: bgfx_texture_format_t) {.importc: "bgfx_calc_texture_size", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create texture from memory buffer.
-##
-## **Parameters:**
-## - `mem` (in): DDS, KTX or PVR texture binary data.
-## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-## - `skip` (in): Skip top level mips when parsing texture.
-## - `info` (out): When non-`NULL` is specified it returns parsed texture information.
-##
-## **Returns:**
-## Texture handle.
+  ## Calculate amount of memory required for texture.
+  ##
+  ## **Parameters:**
+  ## - `info` (out): Resulting texture info structure. See: `bgfx_texture_info_t`.
+  ## - `width` (in): Width.
+  ## - `height` (in): Height.
+  ## - `depth` (in): Depth dimension of volume texture.
+  ## - `cubeMap` (in): Indicates that texture contains cubemap.
+  ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ## - `numLayers` (in): Number of layers in texture array.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
 proc create_texture*(_: type BGFX; mem: ptr bgfx_memory_t; flags: uint64; skip: uint8; info: ptr bgfx_texture_info_t): bgfx_texture_handle_t {.importc: "bgfx_create_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create 2D texture.
-##
-## **Parameters:**
-## - `width` (in): Width.
-## - `height` (in): Height.
-## - `hasMips` (in): Indicates that texture contains full mip-map chain.
-## - `numLayers` (in): Number of layers in texture array. Must be 1 if caps
-##   `BGFX_CAPS_TEXTURE_2D_ARRAY` flag is not set.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-## - `mem` (in): Texture data. If `mem` is non-NULL, created texture will be immutable. If
-##   `mem` is NULL content of the texture is uninitialized. When `numLayers` is more than
-##   1, expected memory layout is texture and all mips together for each array element.
-## - `external` (in): Native API pointer to texture.
-##
-## **Returns:**
-## Texture handle.
+  ## Create texture from memory buffer.
+  ##
+  ## **Parameters:**
+  ## - `mem` (in): DDS, KTX or PVR texture binary data.
+  ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ## - `skip` (in): Skip top level mips when parsing texture.
+  ## - `info` (out): When non-`NULL` is specified it returns parsed texture information.
+  ##
+  ## **Returns:**
+  ## Texture handle.
 proc create_texture_2d*(_: type BGFX; width: uint16; height: uint16; hasMips: bool; numLayers: uint16; format: bgfx_texture_format_t; flags: uint64; mem: ptr bgfx_memory_t; external: uint64): bgfx_texture_handle_t {.importc: "bgfx_create_texture_2d", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create texture with size based on back-buffer ratio. Texture will maintain ratio
-## if back buffer resolution changes.
-##
-## **Parameters:**
-## - `ratio` (in): Texture size in respect to back-buffer size. See: `bgfx_backbuffer_ratio_t`.
-## - `hasMips` (in): Indicates that texture contains full mip-map chain.
-## - `numLayers` (in): Number of layers in texture array. Must be 1 if caps
-##   `BGFX_CAPS_TEXTURE_2D_ARRAY` flag is not set.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-##
-## **Returns:**
-## Texture handle.
+  ## Create 2D texture.
+  ##
+  ## **Parameters:**
+  ## - `width` (in): Width.
+  ## - `height` (in): Height.
+  ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ## - `numLayers` (in): Number of layers in texture array. Must be 1 if caps
+  ##   `BGFX_CAPS_TEXTURE_2D_ARRAY` flag is not set.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ## - `mem` (in): Texture data. If `mem` is non-NULL, created texture will be immutable. If
+  ##   `mem` is NULL content of the texture is uninitialized. When `numLayers` is more than
+  ##   1, expected memory layout is texture and all mips together for each array element.
+  ## - `external` (in): Native API pointer to texture.
+  ##
+  ## **Returns:**
+  ## Texture handle.
 proc create_texture_2d_scaled*(_: type BGFX; ratio: bgfx_backbuffer_ratio_t; hasMips: bool; numLayers: uint16; format: bgfx_texture_format_t; flags: uint64): bgfx_texture_handle_t {.importc: "bgfx_create_texture_2d_scaled", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create 3D texture.
-##
-## **Parameters:**
-## - `width` (in): Width.
-## - `height` (in): Height.
-## - `depth` (in): Depth.
-## - `hasMips` (in): Indicates that texture contains full mip-map chain.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-## - `mem` (in): Texture data. If `mem` is non-NULL, created texture will be immutable. If
-##   `mem` is NULL content of the texture is uninitialized. When `numLayers` is more than
-##   1, expected memory layout is texture and all mips together for each array element.
-## - `external` (in): Native API pointer to texture.
-##
-## **Returns:**
-## Texture handle.
+  ## Create texture with size based on back-buffer ratio. Texture will maintain ratio
+  ## if back buffer resolution changes.
+  ##
+  ## **Parameters:**
+  ## - `ratio` (in): Texture size in respect to back-buffer size. See: `bgfx_backbuffer_ratio_t`.
+  ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ## - `numLayers` (in): Number of layers in texture array. Must be 1 if caps
+  ##   `BGFX_CAPS_TEXTURE_2D_ARRAY` flag is not set.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ##
+  ## **Returns:**
+  ## Texture handle.
 proc create_texture_3d*(_: type BGFX; width: uint16; height: uint16; depth: uint16; hasMips: bool; format: bgfx_texture_format_t; flags: uint64; mem: ptr bgfx_memory_t; external: uint64): bgfx_texture_handle_t {.importc: "bgfx_create_texture_3d", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create Cube texture.
-##
-## **Parameters:**
-## - `size` (in): Cube side size.
-## - `hasMips` (in): Indicates that texture contains full mip-map chain.
-## - `numLayers` (in): Number of layers in texture array. Must be 1 if caps
-##   `BGFX_CAPS_TEXTURE_2D_ARRAY` flag is not set.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-## - `mem` (in): Texture data. If `mem` is non-NULL, created texture will be immutable. If
-##   `mem` is NULL content of the texture is uninitialized. When `numLayers` is more than
-## - `external` (in): Native API pointer to texture.
-##
-## **Returns:**
-## Texture handle.
+  ## Create 3D texture.
+  ##
+  ## **Parameters:**
+  ## - `width` (in): Width.
+  ## - `height` (in): Height.
+  ## - `depth` (in): Depth.
+  ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ## - `mem` (in): Texture data. If `mem` is non-NULL, created texture will be immutable. If
+  ##   `mem` is NULL content of the texture is uninitialized. When `numLayers` is more than
+  ##   1, expected memory layout is texture and all mips together for each array element.
+  ## - `external` (in): Native API pointer to texture.
+  ##
+  ## **Returns:**
+  ## Texture handle.
 proc create_texture_cube*(_: type BGFX; size: uint16; hasMips: bool; numLayers: uint16; format: bgfx_texture_format_t; flags: uint64; mem: ptr bgfx_memory_t; external: uint64): bgfx_texture_handle_t {.importc: "bgfx_create_texture_cube", cdecl, header: "bgfx/c99/bgfx.h".}
-## Update 2D texture.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `layer` (in): Layer in texture array.
-## - `mip` (in): Mip level.
-## - `x` (in): X offset in texture.
-## - `y` (in): Y offset in texture.
-## - `width` (in): Width of texture block.
-## - `height` (in): Height of texture block.
-## - `mem` (in): Texture update data.
-## - `pitch` (in): Pitch of input image (bytes). When pitch is set to
-##   UINT16_MAX, it will be calculated internally based on width.
-##
-## **Attention:**
-## It's valid to update only mutable texture. See `BGFX.create_texture_2d` for more info.
+  ## Create Cube texture.
+  ##
+  ## **Parameters:**
+  ## - `size` (in): Cube side size.
+  ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ## - `numLayers` (in): Number of layers in texture array. Must be 1 if caps
+  ##   `BGFX_CAPS_TEXTURE_2D_ARRAY` flag is not set.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ## - `mem` (in): Texture data. If `mem` is non-NULL, created texture will be immutable. If
+  ##   `mem` is NULL content of the texture is uninitialized. When `numLayers` is more than
+  ## - `external` (in): Native API pointer to texture.
+  ##
+  ## **Returns:**
+  ## Texture handle.
 proc update_texture_2d*(_: type BGFX; handle: bgfx_texture_handle_t; layer: uint16; mip: uint8; x: uint16; y: uint16; width: uint16; height: uint16; mem: ptr bgfx_memory_t; pitch: uint16) {.importc: "bgfx_update_texture_2d", cdecl, header: "bgfx/c99/bgfx.h".}
-## Update 3D texture.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `mip` (in): Mip level.
-## - `x` (in): X offset in texture.
-## - `y` (in): Y offset in texture.
-## - `z` (in): Z offset in texture.
-## - `width` (in): Width of texture block.
-## - `height` (in): Height of texture block.
-## - `depth` (in): Depth of texture block.
-## - `mem` (in): Texture update data.
-##
-## **Attention:**
-## It's valid to update only mutable texture. See `BGFX.create_texture_3d` for more info.
+  ## Update 2D texture.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `layer` (in): Layer in texture array.
+  ## - `mip` (in): Mip level.
+  ## - `x` (in): X offset in texture.
+  ## - `y` (in): Y offset in texture.
+  ## - `width` (in): Width of texture block.
+  ## - `height` (in): Height of texture block.
+  ## - `mem` (in): Texture update data.
+  ## - `pitch` (in): Pitch of input image (bytes). When pitch is set to
+  ##   UINT16_MAX, it will be calculated internally based on width.
+  ##
+  ## **Attention:**
+  ## It's valid to update only mutable texture. See `BGFX.create_texture_2d` for more info.
 proc update_texture_3d*(_: type BGFX; handle: bgfx_texture_handle_t; mip: uint8; x: uint16; y: uint16; z: uint16; width: uint16; height: uint16; depth: uint16; mem: ptr bgfx_memory_t) {.importc: "bgfx_update_texture_3d", cdecl, header: "bgfx/c99/bgfx.h".}
-## Update Cube texture.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `layer` (in): Layer in texture array.
-## - `side` (in): Cubemap side `BGFX_CUBE_MAP_<POSITIVE or NEGATIVE>_<X, Y or Z>`,
-##   where 0 is +X, 1 is -X, 2 is +Y, 3 is -Y, 4 is +Z, and 5 is -Z.
-##   \+----------+
-##   \|-z       2|
-##   \| ^  +y    |
-##   \| |        |    Unfolded cube:
-##   \| +---->+x |
-##   \+----------+----------+----------+----------+
-##   \|+y       1|+y       4|+y       0|+y       5|
-##   \| ^  -x    | ^  +z    | ^  +x    | ^  -z    |
-##   \| |        | |        | |        | |        |
-##   \| +---->+z | +---->+x | +---->-z | +---->-x |
-##   \+----------+----------+----------+----------+
-##   \|+z       3|
-##   \| ^  -y    |
-##   \| |        |
-##   \| +---->+x |
-##   \+----------+
-## - `mip` (in): Mip level.
-## - `x` (in): X offset in texture.
-## - `y` (in): Y offset in texture.
-## - `width` (in): Width of texture block.
-## - `height` (in): Height of texture block.
-## - `mem` (in): Texture update data.
-## - `pitch` (in): Pitch of input image (bytes). When pitch is set to
-##   UINT16_MAX, it will be calculated internally based on width.
-##
-## **Attention:**
-## It's valid to update only mutable texture. See `BGFX.create_texture_cube` for more info.
+  ## Update 3D texture.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `mip` (in): Mip level.
+  ## - `x` (in): X offset in texture.
+  ## - `y` (in): Y offset in texture.
+  ## - `z` (in): Z offset in texture.
+  ## - `width` (in): Width of texture block.
+  ## - `height` (in): Height of texture block.
+  ## - `depth` (in): Depth of texture block.
+  ## - `mem` (in): Texture update data.
+  ##
+  ## **Attention:**
+  ## It's valid to update only mutable texture. See `BGFX.create_texture_3d` for more info.
 proc update_texture_cube*(_: type BGFX; handle: bgfx_texture_handle_t; layer: uint16; side: uint8; mip: uint8; x: uint16; y: uint16; width: uint16; height: uint16; mem: ptr bgfx_memory_t; pitch: uint16) {.importc: "bgfx_update_texture_cube", cdecl, header: "bgfx/c99/bgfx.h".}
-## Clear a texture subresource range to zero.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `mip` (in): First mip level.
-## - `numMips` (in): Number of mip levels.
-## - `layer` (in): First array layer (or 3D depth slice base).
-## - `numLayers` (in): Number of layers.
+  ## Update Cube texture.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `layer` (in): Layer in texture array.
+  ## - `side` (in): Cubemap side `BGFX_CUBE_MAP_<POSITIVE or NEGATIVE>_<X, Y or Z>`,
+  ##   where 0 is +X, 1 is -X, 2 is +Y, 3 is -Y, 4 is +Z, and 5 is -Z.
+  ##   \+----------+
+  ##   \|-z       2|
+  ##   \| ^  +y    |
+  ##   \| |        |    Unfolded cube:
+  ##   \| +---->+x |
+  ##   \+----------+----------+----------+----------+
+  ##   \|+y       1|+y       4|+y       0|+y       5|
+  ##   \| ^  -x    | ^  +z    | ^  +x    | ^  -z    |
+  ##   \| |        | |        | |        | |        |
+  ##   \| +---->+z | +---->+x | +---->-z | +---->-x |
+  ##   \+----------+----------+----------+----------+
+  ##   \|+z       3|
+  ##   \| ^  -y    |
+  ##   \| |        |
+  ##   \| +---->+x |
+  ##   \+----------+
+  ## - `mip` (in): Mip level.
+  ## - `x` (in): X offset in texture.
+  ## - `y` (in): Y offset in texture.
+  ## - `width` (in): Width of texture block.
+  ## - `height` (in): Height of texture block.
+  ## - `mem` (in): Texture update data.
+  ## - `pitch` (in): Pitch of input image (bytes). When pitch is set to
+  ##   UINT16_MAX, it will be calculated internally based on width.
+  ##
+  ## **Attention:**
+  ## It's valid to update only mutable texture. See `BGFX.create_texture_cube` for more info.
 proc clear_texture*(_: type BGFX; handle: bgfx_texture_handle_t; mip: uint8; numMips: uint8; layer: uint16; numLayers: uint16) {.importc: "bgfx_clear_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Read back texture content.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `data` (in): Destination buffer.
-## - `layer` (in): Texture layer.
-## - `mip` (in): Mip level.
-##
-## **Returns:**
-## Frame number when the result will be available. See: `BGFX.frame`.
-##
-## **Attention:**
-## Texture must be created with `BGFX_TEXTURE_READ_BACK` flag.
-## It's a texture for CPU readback, and can't be a GPU resource
-## at the same time. See `examples/30-picking`.
-##
-## Availability depends on: `BGFX_CAPS_TEXTURE_READ_BACK`.
+  ## Clear a texture subresource range to zero.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `mip` (in): First mip level.
+  ## - `numMips` (in): Number of mip levels.
+  ## - `layer` (in): First array layer (or 3D depth slice base).
+  ## - `numLayers` (in): Number of layers.
 proc read_texture*(_: type BGFX; handle: bgfx_texture_handle_t; data: pointer; layer: uint16; mip: uint8): uint32 {.importc: "bgfx_read_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set texture debug name.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `name` (in): Texture name.
-## - `len` (in): Texture name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
+  ## Read back texture content.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `data` (in): Destination buffer.
+  ## - `layer` (in): Texture layer.
+  ## - `mip` (in): Mip level.
+  ##
+  ## **Returns:**
+  ## Frame number when the result will be available. See: `BGFX.frame`.
+  ##
+  ## **Attention:**
+  ## Texture must be created with `BGFX_TEXTURE_READ_BACK` flag.
+  ## It's a texture for CPU readback, and can't be a GPU resource
+  ## at the same time. See `examples/30-picking`.
+  ##
+  ## Availability depends on: `BGFX_CAPS_TEXTURE_READ_BACK`.
 proc set_texture_name*(_: type BGFX; handle: bgfx_texture_handle_t; name: cstring; len: int32) {.importc: "bgfx_set_texture_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Returns texture direct access pointer.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-##
-## **Returns:**
-## Pointer to texture memory. If returned pointer is `NULL` direct access
-## is not available for this texture. If pointer is `UINTPTR_MAX` sentinel value
-## it means texture is pending creation. Pointer returned can be cached and it
-## will be valid until texture is destroyed.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_TEXTURE_DIRECT_ACCESS`. This feature
-## is available on GPUs that have unified memory architecture (UMA) support.
+  ## Set texture debug name.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `name` (in): Texture name.
+  ## - `len` (in): Texture name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
 proc get_direct_access_ptr*(_: type BGFX; handle: bgfx_texture_handle_t): pointer {.importc: "bgfx_get_direct_access_ptr", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy texture.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
+  ## Returns texture direct access pointer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ##
+  ## **Returns:**
+  ## Pointer to texture memory. If returned pointer is `NULL` direct access
+  ## is not available for this texture. If pointer is `UINTPTR_MAX` sentinel value
+  ## it means texture is pending creation. Pointer returned can be cached and it
+  ## will be valid until texture is destroyed.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_TEXTURE_DIRECT_ACCESS`. This feature
+  ## is available on GPUs that have unified memory architecture (UMA) support.
 proc destroy_texture*(_: type BGFX; handle: bgfx_texture_handle_t) {.importc: "bgfx_destroy_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create frame buffer (simple).
-##
-## **Parameters:**
-## - `width` (in): Texture width.
-## - `height` (in): Texture height.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `textureFlags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-##
-## **Returns:**
-## Frame buffer handle.
+  ## Destroy texture.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
 proc create_frame_buffer*(_: type BGFX; width: uint16; height: uint16; format: bgfx_texture_format_t; textureFlags: uint64): bgfx_frame_buffer_handle_t {.importc: "bgfx_create_frame_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create frame buffer with size based on back-buffer ratio. Frame buffer will maintain ratio
-## if back buffer resolution changes.
-##
-## **Parameters:**
-## - `ratio` (in): Frame buffer size in respect to back-buffer size. See:
-##   `bgfx_backbuffer_ratio_t`.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `textureFlags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-##
-## **Returns:**
-## Frame buffer handle.
+  ## Create frame buffer (simple).
+  ##
+  ## **Parameters:**
+  ## - `width` (in): Texture width.
+  ## - `height` (in): Texture height.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `textureFlags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ##
+  ## **Returns:**
+  ## Frame buffer handle.
 proc create_frame_buffer_scaled*(_: type BGFX; ratio: bgfx_backbuffer_ratio_t; format: bgfx_texture_format_t; textureFlags: uint64): bgfx_frame_buffer_handle_t {.importc: "bgfx_create_frame_buffer_scaled", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create MRT frame buffer from texture handles (simple).
-##
-## **Parameters:**
-## - `num` (in): Number of texture handles.
-## - `handles` (in): Texture attachments.
-## - `destroyTexture` (in): If true, textures will be destroyed when
-##   frame buffer is destroyed.
-##
-## **Returns:**
-## Frame buffer handle.
+  ## Create frame buffer with size based on back-buffer ratio. Frame buffer will maintain ratio
+  ## if back buffer resolution changes.
+  ##
+  ## **Parameters:**
+  ## - `ratio` (in): Frame buffer size in respect to back-buffer size. See:
+  ##   `bgfx_backbuffer_ratio_t`.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `textureFlags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ##
+  ## **Returns:**
+  ## Frame buffer handle.
 proc create_frame_buffer_from_handles*(_: type BGFX; num: uint8; handles: ptr bgfx_texture_handle_t; destroyTexture: bool): bgfx_frame_buffer_handle_t {.importc: "bgfx_create_frame_buffer_from_handles", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create MRT frame buffer from texture handles with specific layer and
-## mip level.
-##
-## **Parameters:**
-## - `num` (in): Number of attachments.
-## - `attachment` (in): Attachment texture info. See: `bgfx_attachment_t`.
-## - `destroyTexture` (in): If true, textures will be destroyed when
-##   frame buffer is destroyed.
-##
-## **Returns:**
-## Frame buffer handle.
+  ## Create MRT frame buffer from texture handles (simple).
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of texture handles.
+  ## - `handles` (in): Texture attachments.
+  ## - `destroyTexture` (in): If true, textures will be destroyed when
+  ##   frame buffer is destroyed.
+  ##
+  ## **Returns:**
+  ## Frame buffer handle.
 proc create_frame_buffer_from_attachment*(_: type BGFX; num: uint8; attachment: ptr bgfx_attachment_t; destroyTexture: bool): bgfx_frame_buffer_handle_t {.importc: "bgfx_create_frame_buffer_from_attachment", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create frame buffer for multiple window rendering.
-##
-## **Parameters:**
-## - `nwh` (in): OS' target native window handle.
-## - `width` (in): Window back buffer width.
-## - `height` (in): Window back buffer height.
-## - `format` (in): Window back buffer color format.
-## - `depthFormat` (in): Window back buffer depth format.
-##
-## **Returns:**
-## Frame buffer handle.
-##
-## **Remarks:**
-## Frame buffer cannot be used for sampling.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_SWAP_CHAIN`.
+  ## Create MRT frame buffer from texture handles with specific layer and
+  ## mip level.
+  ##
+  ## **Parameters:**
+  ## - `num` (in): Number of attachments.
+  ## - `attachment` (in): Attachment texture info. See: `bgfx_attachment_t`.
+  ## - `destroyTexture` (in): If true, textures will be destroyed when
+  ##   frame buffer is destroyed.
+  ##
+  ## **Returns:**
+  ## Frame buffer handle.
 proc create_frame_buffer_from_nwh*(_: type BGFX; nwh: pointer; width: uint16; height: uint16; format: bgfx_texture_format_t; depthFormat: bgfx_texture_format_t): bgfx_frame_buffer_handle_t {.importc: "bgfx_create_frame_buffer_from_nwh", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set frame buffer debug name.
-##
-## **Parameters:**
-## - `handle` (in): Frame buffer handle.
-## - `name` (in): Frame buffer name.
-## - `len` (in): Frame buffer name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
+  ## Create frame buffer for multiple window rendering.
+  ##
+  ## **Parameters:**
+  ## - `nwh` (in): OS' target native window handle.
+  ## - `width` (in): Window back buffer width.
+  ## - `height` (in): Window back buffer height.
+  ## - `format` (in): Window back buffer color format.
+  ## - `depthFormat` (in): Window back buffer depth format.
+  ##
+  ## **Returns:**
+  ## Frame buffer handle.
+  ##
+  ## **Remarks:**
+  ## Frame buffer cannot be used for sampling.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_SWAP_CHAIN`.
 proc set_frame_buffer_name*(_: type BGFX; handle: bgfx_frame_buffer_handle_t; name: cstring; len: int32) {.importc: "bgfx_set_frame_buffer_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Obtain texture handle of frame buffer attachment.
-##
-## **Parameters:**
-## - `handle` (in): Frame buffer handle.
-## - `attachment` (in):
+  ## Set frame buffer debug name.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Frame buffer handle.
+  ## - `name` (in): Frame buffer name.
+  ## - `len` (in): Frame buffer name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
 proc get_texture*(_: type BGFX; handle: bgfx_frame_buffer_handle_t; attachment: uint8): bgfx_texture_handle_t {.importc: "bgfx_get_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy frame buffer.
-##
-## **Parameters:**
-## - `handle` (in): Frame buffer handle.
+  ## Obtain texture handle of frame buffer attachment.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Frame buffer handle.
+  ## - `attachment` (in):
 proc destroy_frame_buffer*(_: type BGFX; handle: bgfx_frame_buffer_handle_t) {.importc: "bgfx_destroy_frame_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create shader uniform parameter.
-##
-## **Parameters:**
-## - `name` (in): Uniform name in shader.
-## - `type` (in): Type of uniform (See: `bgfx_uniform_type_t`).
-## - `num` (in): Number of elements in array.
-##
-## **Returns:**
-## Handle to uniform object.
-##
-## **Remarks:**
-## 1\. Uniform names are unique. It's valid to call `BGFX.create_uniform`
-## multiple times with the same uniform name. The library will always
-## return the same handle, but the handle reference count will be
-## incremented. This means that the same number of `BGFX.destroy_uniform`
-## must be called to properly destroy the uniform.
-##
-## 2\. Predefined uniforms (declared in `bgfx_shader.sh`):
-## \- `u_viewRect vec4(x, y, width, height)` - view rectangle for current
-## view, in pixels.
-## \- `u_viewTexel vec4(1.0/width, 1.0/height, undef, undef)` - inverse
-## width and height
-## \- `u_view mat4` - view matrix
-## \- `u_invView mat4` - inverted view matrix
-## \- `u_proj mat4` - projection matrix
-## \- `u_invProj mat4` - inverted projection matrix
-## \- `u_viewProj mat4` - concatenated view projection matrix
-## \- `u_invViewProj mat4` - concatenated inverted view projection matrix
-## \- `u_model mat4[BGFX_CONFIG_MAX_BONES]` - array of model matrices.
-## \- `u_modelView mat4` - concatenated model view matrix, only first
-## model matrix from array is used.
-## \- `u_invModelView mat4` - inverted concatenated model view matrix.
-## \- `u_modelViewProj mat4` - concatenated model view projection matrix.
-## \- `u_alphaRef float` - alpha reference value for alpha test.
+  ## Destroy frame buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Frame buffer handle.
 proc create_uniform*(_: type BGFX; name: cstring; `type`: bgfx_uniform_type_t; num: uint16): bgfx_uniform_handle_t {.importc: "bgfx_create_uniform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create shader uniform parameter.
-##
-## **Parameters:**
-## - `name` (in): Uniform name in shader.
-## - `freq` (in): Uniform change frequency (See: `bgfx_uniform_freq_t`).
-## - `type` (in): Type of uniform (See: `bgfx_uniform_type_t`).
-## - `num` (in): Number of elements in array.
-##
-## **Returns:**
-## Handle to uniform object.
-##
-## **Remarks:**
-## 1\. Uniform names are unique. It's valid to call `BGFX.create_uniform`
-## multiple times with the same uniform name. The library will always
-## return the same handle, but the handle reference count will be
-## incremented. This means that the same number of `BGFX.destroy_uniform`
-## must be called to properly destroy the uniform.
-##
-## 2\. Predefined uniforms (declared in `bgfx_shader.sh`):
-## \- `u_viewRect vec4(x, y, width, height)` - view rectangle for current
-## view, in pixels.
-## \- `u_viewTexel vec4(1.0/width, 1.0/height, undef, undef)` - inverse
-## width and height
-## \- `u_view mat4` - view matrix
-## \- `u_invView mat4` - inverted view matrix
-## \- `u_proj mat4` - projection matrix
-## \- `u_invProj mat4` - inverted projection matrix
-## \- `u_viewProj mat4` - concatenated view projection matrix
-## \- `u_invViewProj mat4` - concatenated inverted view projection matrix
-## \- `u_model mat4[BGFX_CONFIG_MAX_BONES]` - array of model matrices.
-## \- `u_modelView mat4` - concatenated model view matrix, only first
-## model matrix from array is used.
-## \- `u_invModelView mat4` - inverted concatenated model view matrix.
-## \- `u_modelViewProj mat4` - concatenated model view projection matrix.
-## \- `u_alphaRef float` - alpha reference value for alpha test.
+  ## Create shader uniform parameter.
+  ##
+  ## **Parameters:**
+  ## - `name` (in): Uniform name in shader.
+  ## - `type` (in): Type of uniform (See: `bgfx_uniform_type_t`).
+  ## - `num` (in): Number of elements in array.
+  ##
+  ## **Returns:**
+  ## Handle to uniform object.
+  ##
+  ## **Remarks:**
+  ## 1\. Uniform names are unique. It's valid to call `BGFX.create_uniform`
+  ## multiple times with the same uniform name. The library will always
+  ## return the same handle, but the handle reference count will be
+  ## incremented. This means that the same number of `BGFX.destroy_uniform`
+  ## must be called to properly destroy the uniform.
+  ##
+  ## 2\. Predefined uniforms (declared in `bgfx_shader.sh`):
+  ## \- `u_viewRect vec4(x, y, width, height)` - view rectangle for current
+  ## view, in pixels.
+  ## \- `u_viewTexel vec4(1.0/width, 1.0/height, undef, undef)` - inverse
+  ## width and height
+  ## \- `u_view mat4` - view matrix
+  ## \- `u_invView mat4` - inverted view matrix
+  ## \- `u_proj mat4` - projection matrix
+  ## \- `u_invProj mat4` - inverted projection matrix
+  ## \- `u_viewProj mat4` - concatenated view projection matrix
+  ## \- `u_invViewProj mat4` - concatenated inverted view projection matrix
+  ## \- `u_model mat4[BGFX_CONFIG_MAX_BONES]` - array of model matrices.
+  ## \- `u_modelView mat4` - concatenated model view matrix, only first
+  ## model matrix from array is used.
+  ## \- `u_invModelView mat4` - inverted concatenated model view matrix.
+  ## \- `u_modelViewProj mat4` - concatenated model view projection matrix.
+  ## \- `u_alphaRef float` - alpha reference value for alpha test.
 proc create_uniform_with_freq*(_: type BGFX; name: cstring; freq: bgfx_uniform_freq_t; `type`: bgfx_uniform_type_t; num: uint16): bgfx_uniform_handle_t {.importc: "bgfx_create_uniform_with_freq", cdecl, header: "bgfx/c99/bgfx.h".}
-## Retrieve uniform info.
-##
-## **Parameters:**
-## - `handle` (in): Handle to uniform object.
-## - `info` (out): Uniform info.
+  ## Create shader uniform parameter.
+  ##
+  ## **Parameters:**
+  ## - `name` (in): Uniform name in shader.
+  ## - `freq` (in): Uniform change frequency (See: `bgfx_uniform_freq_t`).
+  ## - `type` (in): Type of uniform (See: `bgfx_uniform_type_t`).
+  ## - `num` (in): Number of elements in array.
+  ##
+  ## **Returns:**
+  ## Handle to uniform object.
+  ##
+  ## **Remarks:**
+  ## 1\. Uniform names are unique. It's valid to call `BGFX.create_uniform`
+  ## multiple times with the same uniform name. The library will always
+  ## return the same handle, but the handle reference count will be
+  ## incremented. This means that the same number of `BGFX.destroy_uniform`
+  ## must be called to properly destroy the uniform.
+  ##
+  ## 2\. Predefined uniforms (declared in `bgfx_shader.sh`):
+  ## \- `u_viewRect vec4(x, y, width, height)` - view rectangle for current
+  ## view, in pixels.
+  ## \- `u_viewTexel vec4(1.0/width, 1.0/height, undef, undef)` - inverse
+  ## width and height
+  ## \- `u_view mat4` - view matrix
+  ## \- `u_invView mat4` - inverted view matrix
+  ## \- `u_proj mat4` - projection matrix
+  ## \- `u_invProj mat4` - inverted projection matrix
+  ## \- `u_viewProj mat4` - concatenated view projection matrix
+  ## \- `u_invViewProj mat4` - concatenated inverted view projection matrix
+  ## \- `u_model mat4[BGFX_CONFIG_MAX_BONES]` - array of model matrices.
+  ## \- `u_modelView mat4` - concatenated model view matrix, only first
+  ## model matrix from array is used.
+  ## \- `u_invModelView mat4` - inverted concatenated model view matrix.
+  ## \- `u_modelViewProj mat4` - concatenated model view projection matrix.
+  ## \- `u_alphaRef float` - alpha reference value for alpha test.
 proc get_uniform_info*(_: type BGFX; handle: bgfx_uniform_handle_t; info: ptr bgfx_uniform_info_t) {.importc: "bgfx_get_uniform_info", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy shader uniform parameter.
-##
-## **Parameters:**
-## - `handle` (in): Handle to uniform object.
+  ## Retrieve uniform info.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Handle to uniform object.
+  ## - `info` (out): Uniform info.
 proc destroy_uniform*(_: type BGFX; handle: bgfx_uniform_handle_t) {.importc: "bgfx_destroy_uniform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Create occlusion query. Occlusion queries allow the GPU to determine
-## if any pixels passed the depth test.
+  ## Destroy shader uniform parameter.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Handle to uniform object.
 proc create_occlusion_query*(_: type BGFX): bgfx_occlusion_query_handle_t {.importc: "bgfx_create_occlusion_query", cdecl, header: "bgfx/c99/bgfx.h".}
-## Retrieve occlusion query result from previous frame.
-##
-## **Parameters:**
-## - `handle` (in): Handle to occlusion query object.
-## - `result` (out): Number of pixels that passed test. This argument
-##   can be `NULL` if result of occlusion query is not needed.
-##
-## **Returns:**
-## Occlusion query result.
+  ## Create occlusion query. Occlusion queries allow the GPU to determine
+  ## if any pixels passed the depth test.
 proc get_result*(_: type BGFX; handle: bgfx_occlusion_query_handle_t; result: ptr int32): bgfx_occlusion_query_result_t {.importc: "bgfx_get_result", cdecl, header: "bgfx/c99/bgfx.h".}
-## Destroy occlusion query.
-##
-## **Parameters:**
-## - `handle` (in): Handle to occlusion query object.
+  ## Retrieve occlusion query result from previous frame.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Handle to occlusion query object.
+  ## - `result` (out): Number of pixels that passed test. This argument
+  ##   can be `NULL` if result of occlusion query is not needed.
+  ##
+  ## **Returns:**
+  ## Occlusion query result.
 proc destroy_occlusion_query*(_: type BGFX; handle: bgfx_occlusion_query_handle_t) {.importc: "bgfx_destroy_occlusion_query", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set palette color value.
-##
-## **Parameters:**
-## - `index` (in): Index into palette.
-## - `rgba` (in): RGBA floating point values.
+  ## Destroy occlusion query.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Handle to occlusion query object.
 proc set_palette_color*(_: type BGFX; index: uint8; rgba: array[4, cfloat]) {.importc: "bgfx_set_palette_color", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set palette color value.
-##
-## **Parameters:**
-## - `index` (in): Index into palette.
-## - `r` (in): Red value (RGBA floating point values)
-## - `g` (in): Green value (RGBA floating point values)
-## - `b` (in): Blue value (RGBA floating point values)
-## - `a` (in): Alpha value (RGBA floating point values)
+  ## Set palette color value.
+  ##
+  ## **Parameters:**
+  ## - `index` (in): Index into palette.
+  ## - `rgba` (in): RGBA floating point values.
 proc set_palette_color_rgba32f*(_: type BGFX; index: uint8; r: cfloat; g: cfloat; b: cfloat; a: cfloat) {.importc: "bgfx_set_palette_color_rgba32f", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set palette color value.
-##
-## **Parameters:**
-## - `index` (in): Index into palette.
-## - `rgba` (in): Packed 32-bit RGBA value.
+  ## Set palette color value.
+  ##
+  ## **Parameters:**
+  ## - `index` (in): Index into palette.
+  ## - `r` (in): Red value (RGBA floating point values)
+  ## - `g` (in): Green value (RGBA floating point values)
+  ## - `b` (in): Blue value (RGBA floating point values)
+  ## - `a` (in): Alpha value (RGBA floating point values)
 proc set_palette_color_rgba8*(_: type BGFX; index: uint8; rgba: uint32) {.importc: "bgfx_set_palette_color_rgba8", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view name.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `name` (in): View name.
-## - `len` (in): View name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
-##
-## **Remarks:**
-## This is debug only feature.
-##
-## In graphics debugger view name will appear as:
-##
-## "nnnc <view name>"
-## \^  ^ ^
-## \|  +--- compute (C)
-## \+------ view id
+  ## Set palette color value.
+  ##
+  ## **Parameters:**
+  ## - `index` (in): Index into palette.
+  ## - `rgba` (in): Packed 32-bit RGBA value.
 proc set_view_name*(_: type BGFX; id: bgfx_view_id_t; name: cstring; len: int32) {.importc: "bgfx_set_view_name", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view rectangle. Draw primitive outside view will be clipped.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `x` (in): Position x from the left corner of the window. Can be
-##   negative to place view origin outside of the window.
-## - `y` (in): Position y from the top corner of the window. Can be
-##   negative to place view origin outside of the window.
-## - `width` (in): Width of view port region.
-## - `height` (in): Height of view port region.
+  ## Set view name.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `name` (in): View name.
+  ## - `len` (in): View name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
+  ##
+  ## **Remarks:**
+  ## This is debug only feature.
+  ##
+  ## In graphics debugger view name will appear as:
+  ##
+  ## "nnnc <view name>"
+  ## \^  ^ ^
+  ## \|  +--- compute (C)
+  ## \+------ view id
 proc set_view_rect*(_: type BGFX; id: bgfx_view_id_t; x: int16; y: int16; width: uint16; height: uint16) {.importc: "bgfx_set_view_rect", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view rectangle. Draw primitive outside view will be clipped.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `x` (in): Position x from the left corner of the window. Can be
-##   negative to place view origin outside of the window.
-## - `y` (in): Position y from the top corner of the window. Can be
-##   negative to place view origin outside of the window.
-## - `ratio` (in): Width and height will be set in respect to back-buffer size.
-##   See: `bgfx_backbuffer_ratio_t`.
+  ## Set view rectangle. Draw primitive outside view will be clipped.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `x` (in): Position x from the left corner of the window. Can be
+  ##   negative to place view origin outside of the window.
+  ## - `y` (in): Position y from the top corner of the window. Can be
+  ##   negative to place view origin outside of the window.
+  ## - `width` (in): Width of view port region.
+  ## - `height` (in): Height of view port region.
 proc set_view_rect_ratio*(_: type BGFX; id: bgfx_view_id_t; x: int16; y: int16; ratio: bgfx_backbuffer_ratio_t) {.importc: "bgfx_set_view_rect_ratio", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view scissor. Draw primitive outside view will be clipped. When
-## x, y, width and height are set to 0, scissor will be disabled.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `x` (in): Position x from the left corner of the window.
-## - `y` (in): Position y from the top corner of the window.
-## - `width` (in): Width of view scissor region.
-## - `height` (in): Height of view scissor region.
+  ## Set view rectangle. Draw primitive outside view will be clipped.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `x` (in): Position x from the left corner of the window. Can be
+  ##   negative to place view origin outside of the window.
+  ## - `y` (in): Position y from the top corner of the window. Can be
+  ##   negative to place view origin outside of the window.
+  ## - `ratio` (in): Width and height will be set in respect to back-buffer size.
+  ##   See: `bgfx_backbuffer_ratio_t`.
 proc set_view_scissor*(_: type BGFX; id: bgfx_view_id_t; x: uint16; y: uint16; width: uint16; height: uint16) {.importc: "bgfx_set_view_scissor", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view clear flags.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `flags` (in): Clear flags. Use `BGFX_CLEAR_NONE` to remove any clear
-##   operation. See: `BGFX_CLEAR_*`.
-## - `rgba` (in): Color clear value.
-## - `depth` (in): Depth clear value.
-## - `stencil` (in): Stencil clear value.
+  ## Set view scissor. Draw primitive outside view will be clipped. When
+  ## x, y, width and height are set to 0, scissor will be disabled.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `x` (in): Position x from the left corner of the window.
+  ## - `y` (in): Position y from the top corner of the window.
+  ## - `width` (in): Width of view scissor region.
+  ## - `height` (in): Height of view scissor region.
 proc set_view_clear*(_: type BGFX; id: bgfx_view_id_t; flags: uint16; rgba: uint32; depth: cfloat; stencil: uint8) {.importc: "bgfx_set_view_clear", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view clear flags with different clear color for each
-## frame buffer texture. `BGFX.set_palette_color` must be used to set up a
-## clear color palette.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `flags` (in): Clear flags. Use `BGFX_CLEAR_NONE` to remove any clear
-##   operation. See: `BGFX_CLEAR_*`.
-## - `depth` (in): Depth clear value.
-## - `stencil` (in): Stencil clear value.
-## - `c0` (in): Palette index for frame buffer attachment 0.
-## - `c1` (in): Palette index for frame buffer attachment 1.
-## - `c2` (in): Palette index for frame buffer attachment 2.
-## - `c3` (in): Palette index for frame buffer attachment 3.
-## - `c4` (in): Palette index for frame buffer attachment 4.
-## - `c5` (in): Palette index for frame buffer attachment 5.
-## - `c6` (in): Palette index for frame buffer attachment 6.
-## - `c7` (in): Palette index for frame buffer attachment 7.
+  ## Set view clear flags.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `flags` (in): Clear flags. Use `BGFX_CLEAR_NONE` to remove any clear
+  ##   operation. See: `BGFX_CLEAR_*`.
+  ## - `rgba` (in): Color clear value.
+  ## - `depth` (in): Depth clear value.
+  ## - `stencil` (in): Stencil clear value.
 proc set_view_clear_mrt*(_: type BGFX; id: bgfx_view_id_t; flags: uint16; depth: cfloat; stencil: uint8; c0: uint8; c1: uint8; c2: uint8; c3: uint8; c4: uint8; c5: uint8; c6: uint8; c7: uint8) {.importc: "bgfx_set_view_clear_mrt", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view sorting mode.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `mode` (in): View sort mode. See `bgfx_view_mode_t`.
-##
-## **Remarks:**
-## View mode must be set prior calling `BGFX.submit` for the view.
+  ## Set view clear flags with different clear color for each
+  ## frame buffer texture. `BGFX.set_palette_color` must be used to set up a
+  ## clear color palette.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `flags` (in): Clear flags. Use `BGFX_CLEAR_NONE` to remove any clear
+  ##   operation. See: `BGFX_CLEAR_*`.
+  ## - `depth` (in): Depth clear value.
+  ## - `stencil` (in): Stencil clear value.
+  ## - `c0` (in): Palette index for frame buffer attachment 0.
+  ## - `c1` (in): Palette index for frame buffer attachment 1.
+  ## - `c2` (in): Palette index for frame buffer attachment 2.
+  ## - `c3` (in): Palette index for frame buffer attachment 3.
+  ## - `c4` (in): Palette index for frame buffer attachment 4.
+  ## - `c5` (in): Palette index for frame buffer attachment 5.
+  ## - `c6` (in): Palette index for frame buffer attachment 6.
+  ## - `c7` (in): Palette index for frame buffer attachment 7.
 proc set_view_mode*(_: type BGFX; id: bgfx_view_id_t; mode: bgfx_view_mode_t) {.importc: "bgfx_set_view_mode", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view frame buffer.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `handle` (in): Frame buffer handle. Passing `BGFX_INVALID_HANDLE` as
-##   frame buffer handle will draw primitives from this view into
-##   default back buffer.
-##
-## **Remarks:**
-## Not persistent after `BGFX.reset` call.
+  ## Set view sorting mode.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `mode` (in): View sort mode. See `bgfx_view_mode_t`.
+  ##
+  ## **Remarks:**
+  ## View mode must be set prior calling `BGFX.submit` for the view.
 proc set_view_frame_buffer*(_: type BGFX; id: bgfx_view_id_t; handle: bgfx_frame_buffer_handle_t) {.importc: "bgfx_set_view_frame_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view's view matrix and projection matrix,
-## all draw primitives in this view will use these two matrices.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `view` (in): View matrix.
-## - `proj` (in): Projection matrix.
+  ## Set view frame buffer.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `handle` (in): Frame buffer handle. Passing `BGFX_INVALID_HANDLE` as
+  ##   frame buffer handle will draw primitives from this view into
+  ##   default back buffer.
+  ##
+  ## **Remarks:**
+  ## Not persistent after `BGFX.reset` call.
 proc set_view_transform*(_: type BGFX; id: bgfx_view_id_t; view: pointer; proj: pointer) {.importc: "bgfx_set_view_transform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Post submit view reordering.
-##
-## **Parameters:**
-## - `id` (in): First view id.
-## - `num` (in): Number of views to remap.
-## - `order` (in): View remap id table. Passing `NULL` will reset view ids
-##   to default state.
+  ## Set view's view matrix and projection matrix,
+  ## all draw primitives in this view will use these two matrices.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `view` (in): View matrix.
+  ## - `proj` (in): Projection matrix.
 proc set_view_order*(_: type BGFX; id: bgfx_view_id_t; num: uint16; order: ptr bgfx_view_id_t) {.importc: "bgfx_set_view_order", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set view shading rate.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `shadingRate` (in): Shading rate.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_VARIABLE_RATE_SHADING`.
+  ## Post submit view reordering.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): First view id.
+  ## - `num` (in): Number of views to remap.
+  ## - `order` (in): View remap id table. Passing `NULL` will reset view ids
+  ##   to default state.
 proc set_view_shading_rate*(_: type BGFX; id: bgfx_view_id_t; shadingRate: bgfx_shading_rate_t) {.importc: "bgfx_set_view_shading_rate", cdecl, header: "bgfx/c99/bgfx.h".}
-## Reset all view settings to default.
-##
-## **Parameters:**
-## - `id` (in): id View id.
+  ## Set view shading rate.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `shadingRate` (in): Shading rate.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_VARIABLE_RATE_SHADING`.
 proc reset_view*(_: type BGFX; id: bgfx_view_id_t) {.importc: "bgfx_reset_view", cdecl, header: "bgfx/c99/bgfx.h".}
-## Begin submitting draw calls from thread. Obtains an encoder that can be
-## used to submit draw calls, compute dispatches, and state changes.
-##
-## In multithreaded mode (`BGFX_CONFIG_MULTITHREADED=1`), multiple threads
-## can each obtain their own encoder and submit draw calls in parallel.
-## Each encoder writes into its own uniform buffer, so there is no
-## contention between threads. The maximum number of simultaneous encoders
-## is configured via `Limits.maxEncoders` in `bgfx_init_t` (default: 8).
-##
-## When called from the API thread (the thread that called `BGFX.init`)
-## with `forceNewEncoder` set to `false`, the default internal encoder
-## (encoder 0) is returned. This is the same encoder used by the legacy
-## non-encoder API (`BGFX.set_state`, `BGFX.submit`, etc.). When called
-## from a worker thread (or with `forceNewEncoder` set to `true`), a new
-## encoder is allocated from the encoder pool.
-##
-## **Parameters:**
-## - `forceNewEncoder` (in): Force allocation of a new encoder from the pool,
-##   even when called from the API thread.
-##
-## **Returns:**
-## Encoder.
-##
-## **Remarks:**
-## The returned `Encoder` pointer is valid until `BGFX.end` is called
-## with it. All encoders must be ended before `BGFX.frame` is called.
-## If `BGFX.frame` is called while encoders are still active, it will
-## wait for them to finish. Returns `NULL` if no encoder slots are
-## available (all `maxEncoders` slots are in use).
-## See also: `BGFX.end`, `BGFX.frame`.
+  ## Reset all view settings to default.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): id View id.
 proc encoder_begin*(_: type BGFX; forceNewEncoder: bool): ptr bgfx_encoder_t {.importc: "bgfx_encoder_begin", cdecl, header: "bgfx/c99/bgfx.h".}
-## End submitting draw calls from thread. Returns the encoder obtained from
-## `BGFX.begin` back to the encoder pool.
-##
-## After this call the `Encoder` pointer is no longer valid and must not
-## be used. The encoder's recorded draw calls and state changes are finalized
-## and will be included in the next frame when `BGFX.frame` is called.
-##
-## **Parameters:**
-## - `encoder` (in): Encoder.
-##
-## **Remarks:**
-## Must be called from the same thread that called `BGFX.begin` for
-## this encoder. All encoders must be ended before `BGFX.frame` is
-## called. The default encoder (encoder 0, used by the legacy API) is
-## managed internally and does not need to be passed to `BGFX.end`;
-## passing it is harmless but has no effect.
-## See also: `BGFX.begin`, `BGFX.frame`.
+  ## Begin submitting draw calls from thread. Obtains an encoder that can be
+  ## used to submit draw calls, compute dispatches, and state changes.
+  ##
+  ## In multithreaded mode (`BGFX_CONFIG_MULTITHREADED=1`), multiple threads
+  ## can each obtain their own encoder and submit draw calls in parallel.
+  ## Each encoder writes into its own uniform buffer, so there is no
+  ## contention between threads. The maximum number of simultaneous encoders
+  ## is configured via `Limits.maxEncoders` in `bgfx_init_t` (default: 8).
+  ##
+  ## When called from the API thread (the thread that called `BGFX.init`)
+  ## with `forceNewEncoder` set to `false`, the default internal encoder
+  ## (encoder 0) is returned. This is the same encoder used by the legacy
+  ## non-encoder API (`BGFX.set_state`, `BGFX.submit`, etc.). When called
+  ## from a worker thread (or with `forceNewEncoder` set to `true`), a new
+  ## encoder is allocated from the encoder pool.
+  ##
+  ## **Parameters:**
+  ## - `forceNewEncoder` (in): Force allocation of a new encoder from the pool,
+  ##   even when called from the API thread.
+  ##
+  ## **Returns:**
+  ## Encoder.
+  ##
+  ## **Remarks:**
+  ## The returned `Encoder` pointer is valid until `BGFX.end` is called
+  ## with it. All encoders must be ended before `BGFX.frame` is called.
+  ## If `BGFX.frame` is called while encoders are still active, it will
+  ## wait for them to finish. Returns `NULL` if no encoder slots are
+  ## available (all `maxEncoders` slots are in use).
+  ## See also: `BGFX.end`, `BGFX.frame`.
 proc encoder_end*(_: type BGFX; encoder: ptr bgfx_encoder_t) {.importc: "bgfx_encoder_end", cdecl, header: "bgfx/c99/bgfx.h".}
-## Sets a debug marker. This allows you to group graphics calls together for easy browsing in
-## graphics debugging tools.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `name` (in): Marker name.
-## - `len` (in): Marker name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
+  ## End submitting draw calls from thread. Returns the encoder obtained from
+  ## `BGFX.begin` back to the encoder pool.
+  ##
+  ## After this call the `Encoder` pointer is no longer valid and must not
+  ## be used. The encoder's recorded draw calls and state changes are finalized
+  ## and will be included in the next frame when `BGFX.frame` is called.
+  ##
+  ## **Parameters:**
+  ## - `encoder` (in): Encoder.
+  ##
+  ## **Remarks:**
+  ## Must be called from the same thread that called `BGFX.begin` for
+  ## this encoder. All encoders must be ended before `BGFX.frame` is
+  ## called. The default encoder (encoder 0, used by the legacy API) is
+  ## managed internally and does not need to be passed to `BGFX.end`;
+  ## passing it is harmless but has no effect.
+  ## See also: `BGFX.begin`, `BGFX.frame`.
 proc encoder_set_marker*(_: type BGFX; this: ptr bgfx_encoder_t; name: cstring; len: int32) {.importc: "bgfx_encoder_set_marker", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set render states for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `state` (in): State flags. Default state for primitive type is
-##   triangles. See: `BGFX_STATE_DEFAULT`.
-##   \- `BGFX_STATE_DEPTH_TEST_*` - Depth test function.
-##   \- `BGFX_STATE_BLEND_*` - See remark 1 about BGFX_STATE_BLEND_FUNC.
-##   \- `BGFX_STATE_BLEND_EQUATION_*` - See remark 2.
-##   \- `BGFX_STATE_CULL_*` - Backface culling mode.
-##   \- `BGFX_STATE_WRITE_*` - Enable R, G, B, A or Z write.
-##   \- `BGFX_STATE_MSAA` - Enable hardware multisample antialiasing.
-##   \- `BGFX_STATE_PT_[TRISTRIP/LINES/POINTS]` - Primitive type.
-## - `rgba` (in): Sets blend factor used by `BGFX_STATE_BLEND_FACTOR` and
-##   `BGFX_STATE_BLEND_INV_FACTOR` blend modes.
-##
-## **Remarks:**
-## 1\. To set up more complex states use:
-## `BGFX_STATE_ALPHA_REF(_ref)`,
-## `BGFX_STATE_POINT_SIZE(_size)`,
-## `BGFX_STATE_BLEND_FUNC(_src, _dst)`,
-## `BGFX_STATE_BLEND_FUNC_SEPARATE(_srcRGB, _dstRGB, _srcA, _dstA)`,
-## `BGFX_STATE_BLEND_EQUATION(_equation)`,
-## `BGFX_STATE_BLEND_EQUATION_SEPARATE(_equationRGB, _equationA)`
-## 2\. `BGFX_STATE_BLEND_EQUATION_ADD` is set when no other blend
-## equation is specified.
+  ## Sets a debug marker. This allows you to group graphics calls together for easy browsing in
+  ## graphics debugging tools.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `name` (in): Marker name.
+  ## - `len` (in): Marker name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
 proc encoder_set_state*(_: type BGFX; this: ptr bgfx_encoder_t; state: uint64; rgba: uint32) {.importc: "bgfx_encoder_set_state", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set condition for rendering.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `handle` (in): Occlusion query handle.
-## - `visible` (in): Render if occlusion query is visible.
+  ## Set render states for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `state` (in): State flags. Default state for primitive type is
+  ##   triangles. See: `BGFX_STATE_DEFAULT`.
+  ##   \- `BGFX_STATE_DEPTH_TEST_*` - Depth test function.
+  ##   \- `BGFX_STATE_BLEND_*` - See remark 1 about BGFX_STATE_BLEND_FUNC.
+  ##   \- `BGFX_STATE_BLEND_EQUATION_*` - See remark 2.
+  ##   \- `BGFX_STATE_CULL_*` - Backface culling mode.
+  ##   \- `BGFX_STATE_WRITE_*` - Enable R, G, B, A or Z write.
+  ##   \- `BGFX_STATE_MSAA` - Enable hardware multisample antialiasing.
+  ##   \- `BGFX_STATE_PT_[TRISTRIP/LINES/POINTS]` - Primitive type.
+  ## - `rgba` (in): Sets blend factor used by `BGFX_STATE_BLEND_FACTOR` and
+  ##   `BGFX_STATE_BLEND_INV_FACTOR` blend modes.
+  ##
+  ## **Remarks:**
+  ## 1\. To set up more complex states use:
+  ## `BGFX_STATE_ALPHA_REF(_ref)`,
+  ## `BGFX_STATE_POINT_SIZE(_size)`,
+  ## `BGFX_STATE_BLEND_FUNC(_src, _dst)`,
+  ## `BGFX_STATE_BLEND_FUNC_SEPARATE(_srcRGB, _dstRGB, _srcA, _dstA)`,
+  ## `BGFX_STATE_BLEND_EQUATION(_equation)`,
+  ## `BGFX_STATE_BLEND_EQUATION_SEPARATE(_equationRGB, _equationA)`
+  ## 2\. `BGFX_STATE_BLEND_EQUATION_ADD` is set when no other blend
+  ## equation is specified.
 proc encoder_set_condition*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_occlusion_query_handle_t; visible: bool) {.importc: "bgfx_encoder_set_condition", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set stencil test state.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `fstencil` (in): Front stencil state.
-## - `bstencil` (in): Back stencil state. If back is set to `BGFX_STENCIL_NONE`
-##   fstencil is applied to both front and back facing primitives.
+  ## Set condition for rendering.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Occlusion query handle.
+  ## - `visible` (in): Render if occlusion query is visible.
 proc encoder_set_stencil*(_: type BGFX; this: ptr bgfx_encoder_t; fstencil: uint32; bstencil: uint32) {.importc: "bgfx_encoder_set_stencil", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set scissor for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `x` (in): Position x from the left corner of the window.
-## - `y` (in): Position y from the top corner of the window.
-## - `width` (in): Width of view scissor region.
-## - `height` (in): Height of view scissor region.
-##
-## **Returns:**
-## Scissor cache index.
-##
-## **Remarks:**
-## To scissor for all primitives in view see `BGFX.set_view_scissor`.
+  ## Set stencil test state.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `fstencil` (in): Front stencil state.
+  ## - `bstencil` (in): Back stencil state. If back is set to `BGFX_STENCIL_NONE`
+  ##   fstencil is applied to both front and back facing primitives.
 proc encoder_set_scissor*(_: type BGFX; this: ptr bgfx_encoder_t; x: uint16; y: uint16; width: uint16; height: uint16): uint16 {.importc: "bgfx_encoder_set_scissor", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set scissor from cache for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `cache` (in): Index in scissor cache.
-##
-## **Remarks:**
-## To scissor for all primitives in view see `BGFX.set_view_scissor`.
+  ## Set scissor for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `x` (in): Position x from the left corner of the window.
+  ## - `y` (in): Position y from the top corner of the window.
+  ## - `width` (in): Width of view scissor region.
+  ## - `height` (in): Height of view scissor region.
+  ##
+  ## **Returns:**
+  ## Scissor cache index.
+  ##
+  ## **Remarks:**
+  ## To scissor for all primitives in view see `BGFX.set_view_scissor`.
 proc encoder_set_scissor_cached*(_: type BGFX; this: ptr bgfx_encoder_t; cache: uint16) {.importc: "bgfx_encoder_set_scissor_cached", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set model matrix for draw primitive. If it is not called,
-## the model will be rendered with an identity model matrix.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `mtx` (in): Pointer to first matrix in array.
-## - `num` (in): Number of matrices in array.
-##
-## **Returns:**
-## Index into matrix cache in case the same model matrix has
-## to be used for other draw primitive call.
+  ## Set scissor from cache for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `cache` (in): Index in scissor cache.
+  ##
+  ## **Remarks:**
+  ## To scissor for all primitives in view see `BGFX.set_view_scissor`.
 proc encoder_set_transform*(_: type BGFX; this: ptr bgfx_encoder_t; mtx: pointer; num: uint16): uint32 {.importc: "bgfx_encoder_set_transform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set model matrix from matrix cache for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `cache` (in): Index in matrix cache.
-## - `num` (in): Number of matrices from cache.
+  ## Set model matrix for draw primitive. If it is not called,
+  ## the model will be rendered with an identity model matrix.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `mtx` (in): Pointer to first matrix in array.
+  ## - `num` (in): Number of matrices in array.
+  ##
+  ## **Returns:**
+  ## Index into matrix cache in case the same model matrix has
+  ## to be used for other draw primitive call.
 proc encoder_set_transform_cached*(_: type BGFX; this: ptr bgfx_encoder_t; cache: uint32; num: uint16) {.importc: "bgfx_encoder_set_transform_cached", cdecl, header: "bgfx/c99/bgfx.h".}
-## Reserve matrices in internal matrix cache.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `transform` (out): Pointer to `bgfx_transform_t` structure.
-## - `num` (in): Number of matrices.
-##
-## **Returns:**
-## Index in matrix cache.
-##
-## **Attention:**
-## Pointer returned can be modified until `BGFX.frame` is called.
+  ## Set model matrix from matrix cache for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `cache` (in): Index in matrix cache.
+  ## - `num` (in): Number of matrices from cache.
 proc encoder_alloc_transform*(_: type BGFX; this: ptr bgfx_encoder_t; transform: ptr bgfx_transform_t; num: uint16): uint32 {.importc: "bgfx_encoder_alloc_transform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set shader uniform parameter for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `handle` (in): Uniform.
-## - `value` (in): Pointer to uniform data.
-## - `num` (in): Number of elements. Passing `UINT16_MAX` will
-##   use the num passed on uniform creation.
+  ## Reserve matrices in internal matrix cache.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `transform` (out): Pointer to `bgfx_transform_t` structure.
+  ## - `num` (in): Number of matrices.
+  ##
+  ## **Returns:**
+  ## Index in matrix cache.
+  ##
+  ## **Attention:**
+  ## Pointer returned can be modified until `BGFX.frame` is called.
 proc encoder_set_uniform*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.importc: "bgfx_encoder_set_uniform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set shader uniform parameter for view.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `handle` (in): Uniform.
-## - `value` (in): Pointer to uniform data.
-## - `num` (in): Number of elements. Passing `UINT16_MAX` will
-##   use the num passed on uniform creation.
-##
-## **Attention:**
-## Uniform must be created with `BGFX_UNIFORM_FREQ_VIEW` argument.
+  ## Set shader uniform parameter for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Uniform.
+  ## - `value` (in): Pointer to uniform data.
+  ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
+  ##   use the num passed on uniform creation.
 proc set_view_uniform*(_: type BGFX; id: bgfx_view_id_t; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.importc: "bgfx_set_view_uniform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set shader uniform parameter for frame.
-##
-## **Parameters:**
-## - `handle` (in): Uniform.
-## - `value` (in): Pointer to uniform data.
-## - `num` (in): Number of elements. Passing `UINT16_MAX` will
-##   use the num passed on uniform creation.
-##
-## **Attention:**
-## Uniform must be created with `BGFX_UNIFORM_FREQ_VIEW` argument.
+  ## Set shader uniform parameter for view.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `handle` (in): Uniform.
+  ## - `value` (in): Pointer to uniform data.
+  ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
+  ##   use the num passed on uniform creation.
+  ##
+  ## **Attention:**
+  ## Uniform must be created with `BGFX_UNIFORM_FREQ_VIEW` argument.
 proc set_frame_uniform*(_: type BGFX; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.importc: "bgfx_set_frame_uniform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set index buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `handle` (in): Index buffer.
-## - `firstIndex` (in): First index to render.
-## - `numIndices` (in): Number of indices to render.
+  ## Set shader uniform parameter for frame.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Uniform.
+  ## - `value` (in): Pointer to uniform data.
+  ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
+  ##   use the num passed on uniform creation.
+  ##
+  ## **Attention:**
+  ## Uniform must be created with `BGFX_UNIFORM_FREQ_VIEW` argument.
 proc encoder_set_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.importc: "bgfx_encoder_set_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set index buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `handle` (in): Dynamic index buffer.
-## - `firstIndex` (in): First index to render.
-## - `numIndices` (in): Number of indices to render.
+  ## Set index buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Index buffer.
+  ## - `firstIndex` (in): First index to render.
+  ## - `numIndices` (in): Number of indices to render.
 proc encoder_set_dynamic_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_dynamic_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.importc: "bgfx_encoder_set_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set index buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `tib` (in): Transient index buffer.
-## - `firstIndex` (in): First index to render.
-## - `numIndices` (in): Number of indices to render.
+  ## Set index buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Dynamic index buffer.
+  ## - `firstIndex` (in): First index to render.
+  ## - `numIndices` (in): Number of indices to render.
 proc encoder_set_transient_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; tib: ptr bgfx_transient_index_buffer_t; firstIndex: uint32; numIndices: uint32) {.importc: "bgfx_encoder_set_transient_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
+  ## Set index buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `tib` (in): Transient index buffer.
+  ## - `firstIndex` (in): First index to render.
+  ## - `numIndices` (in): Number of indices to render.
 proc encoder_set_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stream: uint8; handle: bgfx_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32) {.importc: "bgfx_encoder_set_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
-## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
-##   handle is used, vertex layout used for creation
-##   of vertex buffer will be used.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
 proc encoder_set_vertex_buffer_with_layout*(_: type BGFX; this: ptr bgfx_encoder_t; stream: uint8; handle: bgfx_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_encoder_set_vertex_buffer_with_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Dynamic vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
+  ## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
+  ##   handle is used, vertex layout used for creation
+  ##   of vertex buffer will be used.
 proc encoder_set_dynamic_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stream: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32) {.importc: "bgfx_encoder_set_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Dynamic vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
-## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
-##   handle is used, vertex layout used for creation
-##   of vertex buffer will be used.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Dynamic vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
 proc encoder_set_dynamic_vertex_buffer_with_layout*(_: type BGFX; this: ptr bgfx_encoder_t; stream: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_encoder_set_dynamic_vertex_buffer_with_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stream` (in): Vertex stream.
-## - `tvb` (in): Transient vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Dynamic vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
+  ## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
+  ##   handle is used, vertex layout used for creation
+  ##   of vertex buffer will be used.
 proc encoder_set_transient_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stream: uint8; tvb: ptr bgfx_transient_vertex_buffer_t; startVertex: uint32; numVertices: uint32) {.importc: "bgfx_encoder_set_transient_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stream` (in): Vertex stream.
-## - `tvb` (in): Transient vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
-## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
-##   handle is used, vertex layout used for creation
-##   of vertex buffer will be used.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stream` (in): Vertex stream.
+  ## - `tvb` (in): Transient vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
 proc encoder_set_transient_vertex_buffer_with_layout*(_: type BGFX; this: ptr bgfx_encoder_t; stream: uint8; tvb: ptr bgfx_transient_vertex_buffer_t; startVertex: uint32; numVertices: uint32; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_encoder_set_transient_vertex_buffer_with_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set number of vertices for auto generated vertices use in conjunction
-## with gl_VertexID.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `numVertices` (in): Number of vertices.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stream` (in): Vertex stream.
+  ## - `tvb` (in): Transient vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
+  ## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
+  ##   handle is used, vertex layout used for creation
+  ##   of vertex buffer will be used.
 proc encoder_set_vertex_count*(_: type BGFX; this: ptr bgfx_encoder_t; numVertices: uint32) {.importc: "bgfx_encoder_set_vertex_count", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set instance data buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `idb` (in): Transient instance data buffer.
-## - `start` (in): First instance data.
-## - `num` (in): Number of data instances.
+  ## Set number of vertices for auto generated vertices use in conjunction
+  ## with gl_VertexID.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `numVertices` (in): Number of vertices.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
 proc encoder_set_instance_data_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; idb: ptr bgfx_instance_data_buffer_t; start: uint32; num: uint32) {.importc: "bgfx_encoder_set_instance_data_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set instance data buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `handle` (in): Vertex buffer.
-## - `startVertex` (in): First instance data.
-## - `num` (in): Number of data instances.
+  ## Set instance data buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `idb` (in): Transient instance data buffer.
+  ## - `start` (in): First instance data.
+  ## - `num` (in): Number of data instances.
 proc encoder_set_instance_data_from_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_vertex_buffer_handle_t; startVertex: uint32; num: uint32) {.importc: "bgfx_encoder_set_instance_data_from_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set instance data buffer for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `handle` (in): Dynamic vertex buffer.
-## - `startVertex` (in): First instance data.
-## - `num` (in): Number of data instances.
+  ## Set instance data buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Vertex buffer.
+  ## - `startVertex` (in): First instance data.
+  ## - `num` (in): Number of data instances.
 proc encoder_set_instance_data_from_dynamic_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; num: uint32) {.importc: "bgfx_encoder_set_instance_data_from_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set number of instances for auto generated instances use in conjunction
-## with gl_InstanceID.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `numInstances` (in): Number of instances.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
+  ## Set instance data buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Dynamic vertex buffer.
+  ## - `startVertex` (in): First instance data.
+  ## - `num` (in): Number of data instances.
 proc encoder_set_instance_count*(_: type BGFX; this: ptr bgfx_encoder_t; numInstances: uint32) {.importc: "bgfx_encoder_set_instance_count", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set texture stage for draw primitive.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Texture unit.
-## - `sampler` (in): Program sampler.
-## - `handle` (in): Texture handle.
-## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
-##   texture sampling settings from the texture.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
+  ## Set number of instances for auto generated instances use in conjunction
+  ## with gl_InstanceID.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `numInstances` (in): Number of instances.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
 proc encoder_set_texture*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; flags: uint32) {.importc: "bgfx_encoder_set_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set texture stage for draw primitive, selecting a sub-range of the
-## texture's array layers and mip levels.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Texture unit.
-## - `sampler` (in): Program sampler.
-## - `handle` (in): Texture handle.
-## - `firstLayer` (in): First array layer.
-## - `numLayers` (in): Number of array layers.
-## - `firstMip` (in): First (most detailed) mip level.
-## - `numMips` (in): Number of mip levels.
-## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
-##   texture sampling settings from the texture.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
+  ## Set texture stage for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Texture unit.
+  ## - `sampler` (in): Program sampler.
+  ## - `handle` (in): Texture handle.
+  ## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
+  ##   texture sampling settings from the texture.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
 proc encoder_set_texture_view*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32) {.importc: "bgfx_encoder_set_texture_view", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit an empty primitive for rendering. Uniforms and draw state
-## will be applied but no geometry will be submitted. Useful in cases
-## when no other draw/compute primitive is submitted to view, but it's
-## desired to execute clear view.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-##
-## **Remarks:**
-## These empty draw calls will sort before ordinary draw calls.
+  ## Set texture stage for draw primitive, selecting a sub-range of the
+  ## texture's array layers and mip levels.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Texture unit.
+  ## - `sampler` (in): Program sampler.
+  ## - `handle` (in): Texture handle.
+  ## - `firstLayer` (in): First array layer.
+  ## - `numLayers` (in): Number of array layers.
+  ## - `firstMip` (in): First (most detailed) mip level.
+  ## - `numMips` (in): Number of mip levels.
+  ## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
+  ##   texture sampling settings from the texture.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
 proc encoder_touch*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t) {.importc: "bgfx_encoder_touch", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive for rendering.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Submit an empty primitive for rendering. Uniforms and draw state
+  ## will be applied but no geometry will be submitted. Useful in cases
+  ## when no other draw/compute primitive is submitted to view, but it's
+  ## desired to execute clear view.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ##
+  ## **Remarks:**
+  ## These empty draw calls will sort before ordinary draw calls.
 proc encoder_submit*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; depth: uint32; flags: uint8) {.importc: "bgfx_encoder_submit", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive with occlusion query for rendering.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `occlusionQuery` (in): Occlusion query.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Submit primitive for rendering.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc encoder_submit_occlusion_query*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; occlusionQuery: bgfx_occlusion_query_handle_t; depth: uint32; flags: uint8) {.importc: "bgfx_encoder_submit_occlusion_query", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive for rendering with index and instance data info from
-## indirect buffer.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `indirectHandle` (in): Indirect buffer.
-## - `start` (in): First element in indirect buffer.
-## - `num` (in): Number of draws.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT`.
+  ## Submit primitive with occlusion query for rendering.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `occlusionQuery` (in): Occlusion query.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc encoder_submit_indirect*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; num: uint32; depth: uint32; flags: uint8) {.importc: "bgfx_encoder_submit_indirect", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive for rendering with index and instance data info and
-## draw count from indirect buffers.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `indirectHandle` (in): Indirect buffer.
-## - `start` (in): First element in indirect buffer.
-## - `numHandle` (in): Buffer for number of draws. Must be
-##   created with `BGFX_BUFFER_INDEX32` and `BGFX_BUFFER_DRAW_INDIRECT`.
-## - `numIndex` (in): Element in number buffer.
-## - `numMax` (in): Max number of draws.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT_COUNT`.
+  ## Submit primitive for rendering with index and instance data info from
+  ## indirect buffer.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `indirectHandle` (in): Indirect buffer.
+  ## - `start` (in): First element in indirect buffer.
+  ## - `num` (in): Number of draws.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT`.
 proc encoder_submit_indirect_count*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; numHandle: bgfx_index_buffer_handle_t; numIndex: uint32; numMax: uint32; depth: uint32; flags: uint8) {.importc: "bgfx_encoder_submit_indirect_count", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute index buffer.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Index buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Submit primitive for rendering with index and instance data info and
+  ## draw count from indirect buffers.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `indirectHandle` (in): Indirect buffer.
+  ## - `start` (in): First element in indirect buffer.
+  ## - `numHandle` (in): Buffer for number of draws. Must be
+  ##   created with `BGFX_BUFFER_INDEX32` and `BGFX_BUFFER_DRAW_INDIRECT`.
+  ## - `numIndex` (in): Element in number buffer.
+  ## - `numMax` (in): Max number of draws.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT_COUNT`.
 proc encoder_set_compute_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute vertex buffer.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Vertex buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute index buffer.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Index buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc encoder_set_compute_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute dynamic index buffer.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Dynamic index buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Vertex buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc encoder_set_compute_dynamic_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute dynamic vertex buffer.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Dynamic vertex buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute dynamic index buffer.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Dynamic index buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc encoder_set_compute_dynamic_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute indirect buffer.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Indirect buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute dynamic vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Dynamic vertex buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc encoder_set_compute_indirect_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_indirect_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_indirect_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute image from texture.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Texture handle.
-## - `mip` (in): Mip level.
-## - `access` (in): Image access. See `bgfx_access_t`.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## Set compute indirect buffer.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Indirect buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc encoder_set_image*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_texture_handle_t; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.importc: "bgfx_encoder_set_image", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute image stage for draw primitive, selecting a sub-range of the
-## texture's array layers and mip levels.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `stage` (in): Compute stage.
-## - `handle` (in): Texture handle.
-## - `firstLayer` (in): First array layer.
-## - `numLayers` (in): Number of array layers.
-## - `mip` (in): Mip level.
-## - `access` (in): Image access. See `bgfx_access_t`.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## Set compute image from texture.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Texture handle.
+  ## - `mip` (in): Mip level.
+  ## - `access` (in): Image access. See `bgfx_access_t`.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
 proc encoder_set_image_view*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.importc: "bgfx_encoder_set_image_view", cdecl, header: "bgfx/c99/bgfx.h".}
-## Dispatch compute.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `program` (in): Compute program.
-## - `numX` (in): Number of groups X.
-## - `numY` (in): Number of groups Y.
-## - `numZ` (in): Number of groups Z.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Set compute image stage for draw primitive, selecting a sub-range of the
+  ## texture's array layers and mip levels.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Texture handle.
+  ## - `firstLayer` (in): First array layer.
+  ## - `numLayers` (in): Number of array layers.
+  ## - `mip` (in): Mip level.
+  ## - `access` (in): Image access. See `bgfx_access_t`.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
 proc encoder_dispatch*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; numX: uint32; numY: uint32; numZ: uint32; flags: uint8) {.importc: "bgfx_encoder_dispatch", cdecl, header: "bgfx/c99/bgfx.h".}
-## Dispatch compute indirect.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `program` (in): Compute program.
-## - `indirectHandle` (in): Indirect buffer.
-## - `start` (in): First element in indirect buffer.
-## - `num` (in): Number of dispatches.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Dispatch compute.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `program` (in): Compute program.
+  ## - `numX` (in): Number of groups X.
+  ## - `numY` (in): Number of groups Y.
+  ## - `numZ` (in): Number of groups Z.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc encoder_dispatch_indirect*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; num: uint32; flags: uint8) {.importc: "bgfx_encoder_dispatch_indirect", cdecl, header: "bgfx/c99/bgfx.h".}
-## Discard previously set state for draw or compute call.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Dispatch compute indirect.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `program` (in): Compute program.
+  ## - `indirectHandle` (in): Indirect buffer.
+  ## - `start` (in): First element in indirect buffer.
+  ## - `num` (in): Number of dispatches.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc encoder_discard*(_: type BGFX; this: ptr bgfx_encoder_t; flags: uint8) {.importc: "bgfx_encoder_discard", cdecl, header: "bgfx/c99/bgfx.h".}
-## Blit 2D texture region between two 2D textures.
-##
-## **Parameters:**
-## - `this` (in): Encoder instance.
-## - `id` (in): View id.
-## - `dst` (in): Destination texture handle.
-## - `dstMip` (in): Destination texture mip level.
-## - `dstX` (in): Destination texture X position.
-## - `dstY` (in): Destination texture Y position.
-## - `dstZ` (in): If texture is 2D this argument should be 0. If destination texture is cube
-##   this argument represents destination texture cube face. For 3D texture this argument
-##   represents destination texture Z position.
-## - `src` (in): Source texture handle.
-## - `srcMip` (in): Source texture mip level.
-## - `srcX` (in): Source texture X position.
-## - `srcY` (in): Source texture Y position.
-## - `srcZ` (in): If texture is 2D this argument should be 0. If source texture is cube
-##   this argument represents source texture cube face. For 3D texture this argument
-##   represents source texture Z position.
-## - `width` (in): Width of region.
-## - `height` (in): Height of region.
-## - `depth` (in): If texture is 3D this argument represents depth of region, otherwise it's
-##   unused.
-##
-## **Attention:**
-## Destination texture must be created with `BGFX_TEXTURE_BLIT_DST` flag.
-##
-## Availability depends on: `BGFX_CAPS_TEXTURE_BLIT`.
+  ## Discard previously set state for draw or compute call.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc encoder_blit*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t; dst: bgfx_texture_handle_t; dstMip: uint8; dstX: uint16; dstY: uint16; dstZ: uint16; src: bgfx_texture_handle_t; srcMip: uint8; srcX: uint16; srcY: uint16; srcZ: uint16; width: uint16; height: uint16; depth: uint16) {.importc: "bgfx_encoder_blit", cdecl, header: "bgfx/c99/bgfx.h".}
-## Request screen shot of window back buffer.
-##
-## **Parameters:**
-## - `handle` (in): Frame buffer handle. If handle is `BGFX_INVALID_HANDLE` request will be
-##   made for main window back buffer.
-## - `filePath` (in): Will be passed to `bgfx_callback_interface_t.screen_shot` callback.
-##
-## **Remarks:**
-## `bgfx_callback_interface_t.screen_shot` must be implemented.
-##
-## **Attention:**
-## Frame buffer handle must be created with OS' target native window handle.
+  ## Blit 2D texture region between two 2D textures.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `id` (in): View id.
+  ## - `dst` (in): Destination texture handle.
+  ## - `dstMip` (in): Destination texture mip level.
+  ## - `dstX` (in): Destination texture X position.
+  ## - `dstY` (in): Destination texture Y position.
+  ## - `dstZ` (in): If texture is 2D this argument should be 0. If destination texture is cube
+  ##   this argument represents destination texture cube face. For 3D texture this argument
+  ##   represents destination texture Z position.
+  ## - `src` (in): Source texture handle.
+  ## - `srcMip` (in): Source texture mip level.
+  ## - `srcX` (in): Source texture X position.
+  ## - `srcY` (in): Source texture Y position.
+  ## - `srcZ` (in): If texture is 2D this argument should be 0. If source texture is cube
+  ##   this argument represents source texture cube face. For 3D texture this argument
+  ##   represents source texture Z position.
+  ## - `width` (in): Width of region.
+  ## - `height` (in): Height of region.
+  ## - `depth` (in): If texture is 3D this argument represents depth of region, otherwise it's
+  ##   unused.
+  ##
+  ## **Attention:**
+  ## Destination texture must be created with `BGFX_TEXTURE_BLIT_DST` flag.
+  ##
+  ## Availability depends on: `BGFX_CAPS_TEXTURE_BLIT`.
 proc request_screen_shot*(_: type BGFX; handle: bgfx_frame_buffer_handle_t; filePath: cstring) {.importc: "bgfx_request_screen_shot", cdecl, header: "bgfx/c99/bgfx.h".}
-## Render frame. Executes the actual GPU rendering work for one frame.
-##
-## In the default **multithreaded** configuration, `BGFX.render_frame` runs
-## on the **render thread** while `BGFX.frame` runs on the **API thread**.
-## Their interaction is as follows:
-##
-## 1\. The render thread calls `BGFX.render_frame`, which blocks waiting
-## for the API thread to signal that a new frame is ready.
-## 2\. On the API thread, `BGFX.frame` finishes building the frame,
-## swaps internal submit/render buffers, and signals the render thread.
-## 3\. `BGFX.render_frame` wakes up, executes pre-render commands,
-## submits GPU draw calls, executes post-render commands, flips the
-## back buffer, then signals back to the API thread that rendering
-## is complete.
-## 4\. The API thread's next `BGFX.frame` call waits for this completion
-## signal before swapping buffers again.
-##
-## This double-buffered semaphore handshake allows the API thread and
-## render thread to run in parallel, overlapping CPU frame building with
-## GPU rendering.
-##
-## **Parameters:**
-## - `msecs` (in): Timeout in milliseconds.
-##
-## **Returns:**
-## Current renderer context state. See: `bgfx_render_frame_t`.
-##
-## **Attention:**
-## `BGFX.render_frame` is a blocking call. It waits for
-## `BGFX.frame` to be called from the API thread to process the frame.
-## If a timeout value is passed, the call will return
-## `BGFX_RENDER_FRAME_TIMEOUT` even if `BGFX.frame` has not been called.
-## A value of -1 (default) means wait indefinitely (up to
-## `BGFX_CONFIG_API_SEMAPHORE_TIMEOUT`).
-##
-## **Warning:**
-## This call should only be used on platforms that don't allow
-## creating a separate rendering thread. If it is called before
-## `BGFX.init`, the internal render thread won't be created by the
-## `BGFX.init` call, and the user is responsible for calling
-## `BGFX.render_frame` on the render thread each frame. If both
-## `BGFX.render_frame` and `BGFX.init` are called from the same
-## thread, bgfx operates in single-threaded mode and `BGFX.frame`
-## will internally invoke `BGFX.render_frame` automatically.
-## See also: `BGFX.frame`.
+  ## Request screen shot of window back buffer.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Frame buffer handle. If handle is `BGFX_INVALID_HANDLE` request will be
+  ##   made for main window back buffer.
+  ## - `filePath` (in): Will be passed to `bgfx_callback_interface_t.screen_shot` callback.
+  ##
+  ## **Remarks:**
+  ## `bgfx_callback_interface_t.screen_shot` must be implemented.
+  ##
+  ## **Attention:**
+  ## Frame buffer handle must be created with OS' target native window handle.
 proc render_frame*(_: type BGFX; msecs: int32): bgfx_render_frame_t {.importc: "bgfx_render_frame", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set platform data.
-##
-## **Parameters:**
-## - `data` (in): Platform data.
-##
-## **Warning:**
-## Must be called before `BGFX.init`.
+  ## Render frame. Executes the actual GPU rendering work for one frame.
+  ##
+  ## In the default **multithreaded** configuration, `BGFX.render_frame` runs
+  ## on the **render thread** while `BGFX.frame` runs on the **API thread**.
+  ## Their interaction is as follows:
+  ##
+  ## 1\. The render thread calls `BGFX.render_frame`, which blocks waiting
+  ## for the API thread to signal that a new frame is ready.
+  ## 2\. On the API thread, `BGFX.frame` finishes building the frame,
+  ## swaps internal submit/render buffers, and signals the render thread.
+  ## 3\. `BGFX.render_frame` wakes up, executes pre-render commands,
+  ## submits GPU draw calls, executes post-render commands, flips the
+  ## back buffer, then signals back to the API thread that rendering
+  ## is complete.
+  ## 4\. The API thread's next `BGFX.frame` call waits for this completion
+  ## signal before swapping buffers again.
+  ##
+  ## This double-buffered semaphore handshake allows the API thread and
+  ## render thread to run in parallel, overlapping CPU frame building with
+  ## GPU rendering.
+  ##
+  ## **Parameters:**
+  ## - `msecs` (in): Timeout in milliseconds.
+  ##
+  ## **Returns:**
+  ## Current renderer context state. See: `bgfx_render_frame_t`.
+  ##
+  ## **Attention:**
+  ## `BGFX.render_frame` is a blocking call. It waits for
+  ## `BGFX.frame` to be called from the API thread to process the frame.
+  ## If a timeout value is passed, the call will return
+  ## `BGFX_RENDER_FRAME_TIMEOUT` even if `BGFX.frame` has not been called.
+  ## A value of -1 (default) means wait indefinitely (up to
+  ## `BGFX_CONFIG_API_SEMAPHORE_TIMEOUT`).
+  ##
+  ## **Warning:**
+  ## This call should only be used on platforms that don't allow
+  ## creating a separate rendering thread. If it is called before
+  ## `BGFX.init`, the internal render thread won't be created by the
+  ## `BGFX.init` call, and the user is responsible for calling
+  ## `BGFX.render_frame` on the render thread each frame. If both
+  ## `BGFX.render_frame` and `BGFX.init` are called from the same
+  ## thread, bgfx operates in single-threaded mode and `BGFX.frame`
+  ## will internally invoke `BGFX.render_frame` automatically.
+  ## See also: `BGFX.frame`.
 proc set_platform_data*(_: type BGFX; data: ptr bgfx_platform_data_t) {.importc: "bgfx_set_platform_data", cdecl, header: "bgfx/c99/bgfx.h".}
-## Get internal data for interop.
-##
-## **Attention:**
-## It's expected you understand some bgfx internals before you
-## use this call.
-##
-## **Warning:**
-## Must be called only on render thread.
+  ## Set platform data.
+  ##
+  ## **Parameters:**
+  ## - `data` (in): Platform data.
+  ##
+  ## **Warning:**
+  ## Must be called before `BGFX.init`.
 proc get_internal_data*(_: type BGFX): ptr bgfx_internal_data_t {.importc: "bgfx_get_internal_data", cdecl, header: "bgfx/c99/bgfx.h".}
-## Override internal texture with externally created texture. Previously
-## created internal texture will released.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `ptr` (in): Native API pointer to texture.
-## - `layerIndex` (in): Layer index for texture arrays (only implemented for D3D11).
-##
-## **Returns:**
-## Native API pointer to texture. If result is 0, texture is not created
-## yet from the main thread.
-##
-## **Attention:**
-## It's expected you understand some bgfx internals before you
-## use this call.
-##
-## **Warning:**
-## Must be called only on render thread.
+  ## Get internal data for interop.
+  ##
+  ## **Attention:**
+  ## It's expected you understand some bgfx internals before you
+  ## use this call.
+  ##
+  ## **Warning:**
+  ## Must be called only on render thread.
 proc override_internal_texture_ptr*(_: type BGFX; handle: bgfx_texture_handle_t; `ptr`: uint; layerIndex: uint16): uint {.importc: "bgfx_override_internal_texture_ptr", cdecl, header: "bgfx/c99/bgfx.h".}
-## Override internal texture by creating new texture. Previously created
-## internal texture will released.
-##
-## **Parameters:**
-## - `handle` (in): Texture handle.
-## - `width` (in): Width.
-## - `height` (in): Height.
-## - `numMips` (in): Number of mip-maps.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
-## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
-##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
-##
-## **Returns:**
-## Native API pointer to texture. If result is 0, texture is not created yet from the
-## main thread.
-##
-## Native API pointer to texture. If result is 0, texture is not created
-## yet from the main thread.
-##
-## **Attention:**
-## It's expected you understand some bgfx internals before you
-## use this call.
-##
-## **Warning:**
-## Must be called only on render thread.
+  ## Override internal texture with externally created texture. Previously
+  ## created internal texture will released.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `ptr` (in): Native API pointer to texture.
+  ## - `layerIndex` (in): Layer index for texture arrays (only implemented for D3D11).
+  ##
+  ## **Returns:**
+  ## Native API pointer to texture. If result is 0, texture is not created
+  ## yet from the main thread.
+  ##
+  ## **Attention:**
+  ## It's expected you understand some bgfx internals before you
+  ## use this call.
+  ##
+  ## **Warning:**
+  ## Must be called only on render thread.
 proc override_internal_texture*(_: type BGFX; handle: bgfx_texture_handle_t; width: uint16; height: uint16; numMips: uint8; format: bgfx_texture_format_t; flags: uint64): uint {.importc: "bgfx_override_internal_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Sets a debug marker. This allows you to group graphics calls together for easy browsing in
-## graphics debugging tools.
-##
-## **Parameters:**
-## - `name` (in): Marker name.
-## - `len` (in): Marker name length (if length is INT32_MAX, it's expected
-##   that name is zero terminated string.
+  ## Override internal texture by creating new texture. Previously created
+  ## internal texture will released.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Texture handle.
+  ## - `width` (in): Width.
+  ## - `height` (in): Height.
+  ## - `numMips` (in): Number of mip-maps.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
+  ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
+  ##
+  ## **Returns:**
+  ## Native API pointer to texture. If result is 0, texture is not created yet from the
+  ## main thread.
+  ##
+  ## Native API pointer to texture. If result is 0, texture is not created
+  ## yet from the main thread.
+  ##
+  ## **Attention:**
+  ## It's expected you understand some bgfx internals before you
+  ## use this call.
+  ##
+  ## **Warning:**
+  ## Must be called only on render thread.
 proc set_marker*(_: type BGFX; name: cstring; len: int32) {.importc: "bgfx_set_marker", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set render states for draw primitive.
-##
-## **Parameters:**
-## - `state` (in): State flags. Default state for primitive type is
-##   triangles. See: `BGFX_STATE_DEFAULT`.
-##   \- `BGFX_STATE_DEPTH_TEST_*` - Depth test function.
-##   \- `BGFX_STATE_BLEND_*` - See remark 1 about BGFX_STATE_BLEND_FUNC.
-##   \- `BGFX_STATE_BLEND_EQUATION_*` - See remark 2.
-##   \- `BGFX_STATE_CULL_*` - Backface culling mode.
-##   \- `BGFX_STATE_WRITE_*` - Enable R, G, B, A or Z write.
-##   \- `BGFX_STATE_MSAA` - Enable hardware multisample antialiasing.
-##   \- `BGFX_STATE_PT_[TRISTRIP/LINES/POINTS]` - Primitive type.
-## - `rgba` (in): Sets blend factor used by `BGFX_STATE_BLEND_FACTOR` and
-##   `BGFX_STATE_BLEND_INV_FACTOR` blend modes.
-##
-## **Remarks:**
-## 1\. To set up more complex states use:
-## `BGFX_STATE_ALPHA_REF(_ref)`,
-## `BGFX_STATE_POINT_SIZE(_size)`,
-## `BGFX_STATE_BLEND_FUNC(_src, _dst)`,
-## `BGFX_STATE_BLEND_FUNC_SEPARATE(_srcRGB, _dstRGB, _srcA, _dstA)`,
-## `BGFX_STATE_BLEND_EQUATION(_equation)`,
-## `BGFX_STATE_BLEND_EQUATION_SEPARATE(_equationRGB, _equationA)`
-## 2\. `BGFX_STATE_BLEND_EQUATION_ADD` is set when no other blend
-## equation is specified.
+  ## Sets a debug marker. This allows you to group graphics calls together for easy browsing in
+  ## graphics debugging tools.
+  ##
+  ## **Parameters:**
+  ## - `name` (in): Marker name.
+  ## - `len` (in): Marker name length (if length is INT32_MAX, it's expected
+  ##   that name is zero terminated string.
 proc set_state*(_: type BGFX; state: uint64; rgba: uint32) {.importc: "bgfx_set_state", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set condition for rendering.
-##
-## **Parameters:**
-## - `handle` (in): Occlusion query handle.
-## - `visible` (in): Render if occlusion query is visible.
+  ## Set render states for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `state` (in): State flags. Default state for primitive type is
+  ##   triangles. See: `BGFX_STATE_DEFAULT`.
+  ##   \- `BGFX_STATE_DEPTH_TEST_*` - Depth test function.
+  ##   \- `BGFX_STATE_BLEND_*` - See remark 1 about BGFX_STATE_BLEND_FUNC.
+  ##   \- `BGFX_STATE_BLEND_EQUATION_*` - See remark 2.
+  ##   \- `BGFX_STATE_CULL_*` - Backface culling mode.
+  ##   \- `BGFX_STATE_WRITE_*` - Enable R, G, B, A or Z write.
+  ##   \- `BGFX_STATE_MSAA` - Enable hardware multisample antialiasing.
+  ##   \- `BGFX_STATE_PT_[TRISTRIP/LINES/POINTS]` - Primitive type.
+  ## - `rgba` (in): Sets blend factor used by `BGFX_STATE_BLEND_FACTOR` and
+  ##   `BGFX_STATE_BLEND_INV_FACTOR` blend modes.
+  ##
+  ## **Remarks:**
+  ## 1\. To set up more complex states use:
+  ## `BGFX_STATE_ALPHA_REF(_ref)`,
+  ## `BGFX_STATE_POINT_SIZE(_size)`,
+  ## `BGFX_STATE_BLEND_FUNC(_src, _dst)`,
+  ## `BGFX_STATE_BLEND_FUNC_SEPARATE(_srcRGB, _dstRGB, _srcA, _dstA)`,
+  ## `BGFX_STATE_BLEND_EQUATION(_equation)`,
+  ## `BGFX_STATE_BLEND_EQUATION_SEPARATE(_equationRGB, _equationA)`
+  ## 2\. `BGFX_STATE_BLEND_EQUATION_ADD` is set when no other blend
+  ## equation is specified.
 proc set_condition*(_: type BGFX; handle: bgfx_occlusion_query_handle_t; visible: bool) {.importc: "bgfx_set_condition", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set stencil test state.
-##
-## **Parameters:**
-## - `fstencil` (in): Front stencil state.
-## - `bstencil` (in): Back stencil state. If back is set to `BGFX_STENCIL_NONE`
-##   fstencil is applied to both front and back facing primitives.
+  ## Set condition for rendering.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Occlusion query handle.
+  ## - `visible` (in): Render if occlusion query is visible.
 proc set_stencil*(_: type BGFX; fstencil: uint32; bstencil: uint32) {.importc: "bgfx_set_stencil", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set scissor for draw primitive.
-##
-## **Parameters:**
-## - `x` (in): Position x from the left corner of the window.
-## - `y` (in): Position y from the top corner of the window.
-## - `width` (in): Width of view scissor region.
-## - `height` (in): Height of view scissor region.
-##
-## **Returns:**
-## Scissor cache index.
-##
-## **Remarks:**
-## To scissor for all primitives in view see `BGFX.set_view_scissor`.
+  ## Set stencil test state.
+  ##
+  ## **Parameters:**
+  ## - `fstencil` (in): Front stencil state.
+  ## - `bstencil` (in): Back stencil state. If back is set to `BGFX_STENCIL_NONE`
+  ##   fstencil is applied to both front and back facing primitives.
 proc set_scissor*(_: type BGFX; x: uint16; y: uint16; width: uint16; height: uint16): uint16 {.importc: "bgfx_set_scissor", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set scissor from cache for draw primitive.
-##
-## **Parameters:**
-## - `cache` (in): Index in scissor cache.
-##
-## **Remarks:**
-## To scissor for all primitives in view see `BGFX.set_view_scissor`.
+  ## Set scissor for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `x` (in): Position x from the left corner of the window.
+  ## - `y` (in): Position y from the top corner of the window.
+  ## - `width` (in): Width of view scissor region.
+  ## - `height` (in): Height of view scissor region.
+  ##
+  ## **Returns:**
+  ## Scissor cache index.
+  ##
+  ## **Remarks:**
+  ## To scissor for all primitives in view see `BGFX.set_view_scissor`.
 proc set_scissor_cached*(_: type BGFX; cache: uint16) {.importc: "bgfx_set_scissor_cached", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set model matrix for draw primitive. If it is not called,
-## the model will be rendered with an identity model matrix.
-##
-## **Parameters:**
-## - `mtx` (in): Pointer to first matrix in array.
-## - `num` (in): Number of matrices in array.
-##
-## **Returns:**
-## Index into matrix cache in case the same model matrix has
-## to be used for other draw primitive call.
+  ## Set scissor from cache for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `cache` (in): Index in scissor cache.
+  ##
+  ## **Remarks:**
+  ## To scissor for all primitives in view see `BGFX.set_view_scissor`.
 proc set_transform*(_: type BGFX; mtx: pointer; num: uint16): uint32 {.importc: "bgfx_set_transform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set model matrix from matrix cache for draw primitive.
-##
-## **Parameters:**
-## - `cache` (in): Index in matrix cache.
-## - `num` (in): Number of matrices from cache.
+  ## Set model matrix for draw primitive. If it is not called,
+  ## the model will be rendered with an identity model matrix.
+  ##
+  ## **Parameters:**
+  ## - `mtx` (in): Pointer to first matrix in array.
+  ## - `num` (in): Number of matrices in array.
+  ##
+  ## **Returns:**
+  ## Index into matrix cache in case the same model matrix has
+  ## to be used for other draw primitive call.
 proc set_transform_cached*(_: type BGFX; cache: uint32; num: uint16) {.importc: "bgfx_set_transform_cached", cdecl, header: "bgfx/c99/bgfx.h".}
-## Reserve matrices in internal matrix cache.
-##
-## **Parameters:**
-## - `transform` (out): Pointer to `bgfx_transform_t` structure.
-## - `num` (in): Number of matrices.
-##
-## **Returns:**
-## Index in matrix cache.
-##
-## **Attention:**
-## Pointer returned can be modified until `BGFX.frame` is called.
+  ## Set model matrix from matrix cache for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `cache` (in): Index in matrix cache.
+  ## - `num` (in): Number of matrices from cache.
 proc alloc_transform*(_: type BGFX; transform: ptr bgfx_transform_t; num: uint16): uint32 {.importc: "bgfx_alloc_transform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set shader uniform parameter for draw primitive.
-##
-## **Parameters:**
-## - `handle` (in): Uniform.
-## - `value` (in): Pointer to uniform data.
-## - `num` (in): Number of elements. Passing `UINT16_MAX` will
-##   use the num passed on uniform creation.
+  ## Reserve matrices in internal matrix cache.
+  ##
+  ## **Parameters:**
+  ## - `transform` (out): Pointer to `bgfx_transform_t` structure.
+  ## - `num` (in): Number of matrices.
+  ##
+  ## **Returns:**
+  ## Index in matrix cache.
+  ##
+  ## **Attention:**
+  ## Pointer returned can be modified until `BGFX.frame` is called.
 proc set_uniform*(_: type BGFX; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.importc: "bgfx_set_uniform", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set index buffer for draw primitive.
-##
-## **Parameters:**
-## - `handle` (in): Index buffer.
-## - `firstIndex` (in): First index to render.
-## - `numIndices` (in): Number of indices to render.
+  ## Set shader uniform parameter for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Uniform.
+  ## - `value` (in): Pointer to uniform data.
+  ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
+  ##   use the num passed on uniform creation.
 proc set_index_buffer*(_: type BGFX; handle: bgfx_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.importc: "bgfx_set_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set index buffer for draw primitive.
-##
-## **Parameters:**
-## - `handle` (in): Dynamic index buffer.
-## - `firstIndex` (in): First index to render.
-## - `numIndices` (in): Number of indices to render.
+  ## Set index buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Index buffer.
+  ## - `firstIndex` (in): First index to render.
+  ## - `numIndices` (in): Number of indices to render.
 proc set_dynamic_index_buffer*(_: type BGFX; handle: bgfx_dynamic_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.importc: "bgfx_set_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set index buffer for draw primitive.
-##
-## **Parameters:**
-## - `tib` (in): Transient index buffer.
-## - `firstIndex` (in): First index to render.
-## - `numIndices` (in): Number of indices to render.
+  ## Set index buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Dynamic index buffer.
+  ## - `firstIndex` (in): First index to render.
+  ## - `numIndices` (in): Number of indices to render.
 proc set_transient_index_buffer*(_: type BGFX; tib: ptr bgfx_transient_index_buffer_t; firstIndex: uint32; numIndices: uint32) {.importc: "bgfx_set_transient_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
+  ## Set index buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `tib` (in): Transient index buffer.
+  ## - `firstIndex` (in): First index to render.
+  ## - `numIndices` (in): Number of indices to render.
 proc set_vertex_buffer*(_: type BGFX; stream: uint8; handle: bgfx_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32) {.importc: "bgfx_set_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
-## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
-##   handle is used, vertex layout used for creation
-##   of vertex buffer will be used.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
 proc set_vertex_buffer_with_layout*(_: type BGFX; stream: uint8; handle: bgfx_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_set_vertex_buffer_with_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Dynamic vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
+  ## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
+  ##   handle is used, vertex layout used for creation
+  ##   of vertex buffer will be used.
 proc set_dynamic_vertex_buffer*(_: type BGFX; stream: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32) {.importc: "bgfx_set_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `stream` (in): Vertex stream.
-## - `handle` (in): Dynamic vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
-## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
-##   handle is used, vertex layout used for creation
-##   of vertex buffer will be used.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Dynamic vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
 proc set_dynamic_vertex_buffer_with_layout*(_: type BGFX; stream: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; numVertices: uint32; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_set_dynamic_vertex_buffer_with_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `stream` (in): Vertex stream.
-## - `tvb` (in): Transient vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stream` (in): Vertex stream.
+  ## - `handle` (in): Dynamic vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
+  ## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
+  ##   handle is used, vertex layout used for creation
+  ##   of vertex buffer will be used.
 proc set_transient_vertex_buffer*(_: type BGFX; stream: uint8; tvb: ptr bgfx_transient_vertex_buffer_t; startVertex: uint32; numVertices: uint32) {.importc: "bgfx_set_transient_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set vertex buffer for draw primitive.
-##
-## **Parameters:**
-## - `stream` (in): Vertex stream.
-## - `tvb` (in): Transient vertex buffer.
-## - `startVertex` (in): First vertex to render.
-## - `numVertices` (in): Number of vertices to render.
-## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
-##   handle is used, vertex layout used for creation
-##   of vertex buffer will be used.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stream` (in): Vertex stream.
+  ## - `tvb` (in): Transient vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
 proc set_transient_vertex_buffer_with_layout*(_: type BGFX; stream: uint8; tvb: ptr bgfx_transient_vertex_buffer_t; startVertex: uint32; numVertices: uint32; layoutHandle: bgfx_vertex_layout_handle_t) {.importc: "bgfx_set_transient_vertex_buffer_with_layout", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set number of vertices for auto generated vertices use in conjunction
-## with gl_VertexID.
-##
-## **Parameters:**
-## - `numVertices` (in): Number of vertices.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
+  ## Set vertex buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stream` (in): Vertex stream.
+  ## - `tvb` (in): Transient vertex buffer.
+  ## - `startVertex` (in): First vertex to render.
+  ## - `numVertices` (in): Number of vertices to render.
+  ## - `layoutHandle` (in): Vertex layout for aliasing vertex buffer. If invalid
+  ##   handle is used, vertex layout used for creation
+  ##   of vertex buffer will be used.
 proc set_vertex_count*(_: type BGFX; numVertices: uint32) {.importc: "bgfx_set_vertex_count", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set instance data buffer for draw primitive.
-##
-## **Parameters:**
-## - `idb` (in): Transient instance data buffer.
-## - `start` (in): First instance data.
-## - `num` (in): Number of data instances.
+  ## Set number of vertices for auto generated vertices use in conjunction
+  ## with gl_VertexID.
+  ##
+  ## **Parameters:**
+  ## - `numVertices` (in): Number of vertices.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
 proc set_instance_data_buffer*(_: type BGFX; idb: ptr bgfx_instance_data_buffer_t; start: uint32; num: uint32) {.importc: "bgfx_set_instance_data_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set instance data buffer for draw primitive.
-##
-## **Parameters:**
-## - `handle` (in): Vertex buffer.
-## - `startVertex` (in): First instance data.
-## - `num` (in): Number of data instances.
+  ## Set instance data buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `idb` (in): Transient instance data buffer.
+  ## - `start` (in): First instance data.
+  ## - `num` (in): Number of data instances.
 proc set_instance_data_from_vertex_buffer*(_: type BGFX; handle: bgfx_vertex_buffer_handle_t; startVertex: uint32; num: uint32) {.importc: "bgfx_set_instance_data_from_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set instance data buffer for draw primitive.
-##
-## **Parameters:**
-## - `handle` (in): Dynamic vertex buffer.
-## - `startVertex` (in): First instance data.
-## - `num` (in): Number of data instances.
+  ## Set instance data buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Vertex buffer.
+  ## - `startVertex` (in): First instance data.
+  ## - `num` (in): Number of data instances.
 proc set_instance_data_from_dynamic_vertex_buffer*(_: type BGFX; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; num: uint32) {.importc: "bgfx_set_instance_data_from_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set number of instances for auto generated instances use in conjunction
-## with gl_InstanceID.
-##
-## **Parameters:**
-## - `numInstances` (in): Number of instances.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
+  ## Set instance data buffer for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Dynamic vertex buffer.
+  ## - `startVertex` (in): First instance data.
+  ## - `num` (in): Number of data instances.
 proc set_instance_count*(_: type BGFX; numInstances: uint32) {.importc: "bgfx_set_instance_count", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set texture stage for draw primitive.
-##
-## **Parameters:**
-## - `stage` (in): Texture unit.
-## - `sampler` (in): Program sampler.
-## - `handle` (in): Texture handle.
-## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
-##   texture sampling settings from the texture.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
+  ## Set number of instances for auto generated instances use in conjunction
+  ## with gl_InstanceID.
+  ##
+  ## **Parameters:**
+  ## - `numInstances` (in): Number of instances.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_VERTEX_ID`.
 proc set_texture*(_: type BGFX; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; flags: uint32) {.importc: "bgfx_set_texture", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set texture stage for draw primitive, selecting a sub-range of the
-## texture's array layers and mip levels.
-##
-## **Parameters:**
-## - `stage` (in): Texture unit.
-## - `sampler` (in): Program sampler.
-## - `handle` (in): Texture handle.
-## - `firstLayer` (in): First array layer.
-## - `numLayers` (in): Number of array layers.
-## - `firstMip` (in): First (most detailed) mip level.
-## - `numMips` (in): Number of mip levels.
-## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
-##   texture sampling settings from the texture.
-##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
-##   mode.
-##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
-##   sampling.
+  ## Set texture stage for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Texture unit.
+  ## - `sampler` (in): Program sampler.
+  ## - `handle` (in): Texture handle.
+  ## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
+  ##   texture sampling settings from the texture.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
 proc set_texture_view*(_: type BGFX; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32) {.importc: "bgfx_set_texture_view", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit an empty primitive for rendering. Uniforms and draw state
-## will be applied but no geometry will be submitted.
-##
-## **Parameters:**
-## - `id` (in): View id.
-##
-## **Remarks:**
-## These empty draw calls will sort before ordinary draw calls.
+  ## Set texture stage for draw primitive, selecting a sub-range of the
+  ## texture's array layers and mip levels.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Texture unit.
+  ## - `sampler` (in): Program sampler.
+  ## - `handle` (in): Texture handle.
+  ## - `firstLayer` (in): First array layer.
+  ## - `numLayers` (in): Number of array layers.
+  ## - `firstMip` (in): First (most detailed) mip level.
+  ## - `numMips` (in): Number of mip levels.
+  ## - `flags` (in): Texture sampling mode. Default value UINT32_MAX uses
+  ##   texture sampling settings from the texture.
+  ##   \- `BGFX_SAMPLER_[U/V/W]_[MIRROR/CLAMP]` - Mirror or clamp to edge wrap
+  ##   mode.
+  ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
+  ##   sampling.
 proc touch*(_: type BGFX; id: bgfx_view_id_t) {.importc: "bgfx_touch", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive for rendering.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
+  ## Submit an empty primitive for rendering. Uniforms and draw state
+  ## will be applied but no geometry will be submitted.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ##
+  ## **Remarks:**
+  ## These empty draw calls will sort before ordinary draw calls.
 proc submit*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_program_handle_t; depth: uint32; flags: uint8) {.importc: "bgfx_submit", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive with occlusion query for rendering.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `occlusionQuery` (in): Occlusion query.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
+  ## Submit primitive for rendering.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
 proc submit_occlusion_query*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_program_handle_t; occlusionQuery: bgfx_occlusion_query_handle_t; depth: uint32; flags: uint8) {.importc: "bgfx_submit_occlusion_query", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive for rendering with index and instance data info from
-## indirect buffer.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `indirectHandle` (in): Indirect buffer.
-## - `start` (in): First element in indirect buffer.
-## - `num` (in): Number of draws.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT`.
+  ## Submit primitive with occlusion query for rendering.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `occlusionQuery` (in): Occlusion query.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
 proc submit_indirect*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; num: uint32; depth: uint32; flags: uint8) {.importc: "bgfx_submit_indirect", cdecl, header: "bgfx/c99/bgfx.h".}
-## Submit primitive for rendering with index and instance data info and
-## draw count from indirect buffers.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `program` (in): Program.
-## - `indirectHandle` (in): Indirect buffer.
-## - `start` (in): First element in indirect buffer.
-## - `numHandle` (in): Buffer for number of draws. Must be
-##   created with `BGFX_BUFFER_INDEX32` and `BGFX_BUFFER_DRAW_INDIRECT`.
-## - `numIndex` (in): Element in number buffer.
-## - `numMax` (in): Max number of draws.
-## - `depth` (in): Depth for sorting.
-## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
-##
-## **Attention:**
-## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT_COUNT`.
+  ## Submit primitive for rendering with index and instance data info from
+  ## indirect buffer.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `indirectHandle` (in): Indirect buffer.
+  ## - `start` (in): First element in indirect buffer.
+  ## - `num` (in): Number of draws.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT`.
 proc submit_indirect_count*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; numHandle: bgfx_index_buffer_handle_t; numIndex: uint32; numMax: uint32; depth: uint32; flags: uint8) {.importc: "bgfx_submit_indirect_count", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute index buffer.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Index buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Submit primitive for rendering with index and instance data info and
+  ## draw count from indirect buffers.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `program` (in): Program.
+  ## - `indirectHandle` (in): Indirect buffer.
+  ## - `start` (in): First element in indirect buffer.
+  ## - `numHandle` (in): Buffer for number of draws. Must be
+  ##   created with `BGFX_BUFFER_INDEX32` and `BGFX_BUFFER_DRAW_INDIRECT`.
+  ## - `numIndex` (in): Element in number buffer.
+  ## - `numMax` (in): Max number of draws.
+  ## - `depth` (in): Depth for sorting.
+  ## - `flags` (in): Which states to discard for next draw. See `BGFX_DISCARD_*`.
+  ##
+  ## **Attention:**
+  ## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT_COUNT`.
 proc set_compute_index_buffer*(_: type BGFX; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute vertex buffer.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Vertex buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute index buffer.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Index buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc set_compute_vertex_buffer*(_: type BGFX; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute dynamic index buffer.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Dynamic index buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Vertex buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc set_compute_dynamic_index_buffer*(_: type BGFX; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute dynamic vertex buffer.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Dynamic vertex buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute dynamic index buffer.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Dynamic index buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc set_compute_dynamic_vertex_buffer*(_: type BGFX; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute indirect buffer.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Indirect buffer handle.
-## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## Set compute dynamic vertex buffer.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Dynamic vertex buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc set_compute_indirect_buffer*(_: type BGFX; stage: uint8; handle: bgfx_indirect_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_indirect_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute image from texture.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Texture handle.
-## - `mip` (in): Mip level.
-## - `access` (in): Image access. See `bgfx_access_t`.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## Set compute indirect buffer.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Indirect buffer handle.
+  ## - `access` (in): Buffer access. See `bgfx_access_t`.
 proc set_image*(_: type BGFX; stage: uint8; handle: bgfx_texture_handle_t; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.importc: "bgfx_set_image", cdecl, header: "bgfx/c99/bgfx.h".}
-## Set compute image stage for draw primitive, selecting a sub-range of the
-## texture's array layers and mip levels.
-##
-## **Parameters:**
-## - `stage` (in): Compute stage.
-## - `handle` (in): Texture handle.
-## - `firstLayer` (in): First array layer.
-## - `numLayers` (in): Number of array layers.
-## - `mip` (in): Mip level.
-## - `access` (in): Image access. See `bgfx_access_t`.
-## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
+  ## Set compute image from texture.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Texture handle.
+  ## - `mip` (in): Mip level.
+  ## - `access` (in): Image access. See `bgfx_access_t`.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
 proc set_image_view*(_: type BGFX; stage: uint8; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.importc: "bgfx_set_image_view", cdecl, header: "bgfx/c99/bgfx.h".}
-## Dispatch compute.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `program` (in): Compute program.
-## - `numX` (in): Number of groups X.
-## - `numY` (in): Number of groups Y.
-## - `numZ` (in): Number of groups Z.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Set compute image stage for draw primitive, selecting a sub-range of the
+  ## texture's array layers and mip levels.
+  ##
+  ## **Parameters:**
+  ## - `stage` (in): Compute stage.
+  ## - `handle` (in): Texture handle.
+  ## - `firstLayer` (in): First array layer.
+  ## - `numLayers` (in): Number of array layers.
+  ## - `mip` (in): Mip level.
+  ## - `access` (in): Image access. See `bgfx_access_t`.
+  ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
 proc dispatch*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_program_handle_t; numX: uint32; numY: uint32; numZ: uint32; flags: uint8) {.importc: "bgfx_dispatch", cdecl, header: "bgfx/c99/bgfx.h".}
-## Dispatch compute indirect.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `program` (in): Compute program.
-## - `indirectHandle` (in): Indirect buffer.
-## - `start` (in): First element in indirect buffer.
-## - `num` (in): Number of dispatches.
-## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
+  ## Dispatch compute.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `program` (in): Compute program.
+  ## - `numX` (in): Number of groups X.
+  ## - `numY` (in): Number of groups Y.
+  ## - `numZ` (in): Number of groups Z.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc dispatch_indirect*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; num: uint32; flags: uint8) {.importc: "bgfx_dispatch_indirect", cdecl, header: "bgfx/c99/bgfx.h".}
-## Discard previously set state for draw or compute call.
-##
-## **Parameters:**
-## - `flags` (in): Draw/compute states to discard.
+  ## Dispatch compute indirect.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `program` (in): Compute program.
+  ## - `indirectHandle` (in): Indirect buffer.
+  ## - `start` (in): First element in indirect buffer.
+  ## - `num` (in): Number of dispatches.
+  ## - `flags` (in): Discard or preserve states. See `BGFX_DISCARD_*`.
 proc `discard`*(_: type BGFX; flags: uint8) {.importc: "bgfx_discard", cdecl, header: "bgfx/c99/bgfx.h".}
-## Blit 2D texture region between two 2D textures.
-##
-## **Parameters:**
-## - `id` (in): View id.
-## - `dst` (in): Destination texture handle.
-## - `dstMip` (in): Destination texture mip level.
-## - `dstX` (in): Destination texture X position.
-## - `dstY` (in): Destination texture Y position.
-## - `dstZ` (in): If texture is 2D this argument should be 0. If destination texture is cube
-##   this argument represents destination texture cube face. For 3D texture this argument
-##   represents destination texture Z position.
-## - `src` (in): Source texture handle.
-## - `srcMip` (in): Source texture mip level.
-## - `srcX` (in): Source texture X position.
-## - `srcY` (in): Source texture Y position.
-## - `srcZ` (in): If texture is 2D this argument should be 0. If source texture is cube
-##   this argument represents source texture cube face. For 3D texture this argument
-##   represents source texture Z position.
-## - `width` (in): Width of region.
-## - `height` (in): Height of region.
-## - `depth` (in): If texture is 3D this argument represents depth of region, otherwise it's
-##   unused.
-##
-## **Attention:**
-## Destination texture must be created with `BGFX_TEXTURE_BLIT_DST` flag.
-##
-## Availability depends on: `BGFX_CAPS_TEXTURE_BLIT`.
+  ## Discard previously set state for draw or compute call.
+  ##
+  ## **Parameters:**
+  ## - `flags` (in): Draw/compute states to discard.
 proc blit*(_: type BGFX; id: bgfx_view_id_t; dst: bgfx_texture_handle_t; dstMip: uint8; dstX: uint16; dstY: uint16; dstZ: uint16; src: bgfx_texture_handle_t; srcMip: uint8; srcX: uint16; srcY: uint16; srcZ: uint16; width: uint16; height: uint16; depth: uint16) {.importc: "bgfx_blit", cdecl, header: "bgfx/c99/bgfx.h".}
-## Return the C99 interface vtable for a matching API version.
-##
-## **Parameters:**
-## - `version` (in): Requested `BGFX_API_VERSION` value.
-##
-## **Returns:**
-## Interface vtable, or `nil` when `version` does not match.
+  ## Blit 2D texture region between two 2D textures.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `dst` (in): Destination texture handle.
+  ## - `dstMip` (in): Destination texture mip level.
+  ## - `dstX` (in): Destination texture X position.
+  ## - `dstY` (in): Destination texture Y position.
+  ## - `dstZ` (in): If texture is 2D this argument should be 0. If destination texture is cube
+  ##   this argument represents destination texture cube face. For 3D texture this argument
+  ##   represents destination texture Z position.
+  ## - `src` (in): Source texture handle.
+  ## - `srcMip` (in): Source texture mip level.
+  ## - `srcX` (in): Source texture X position.
+  ## - `srcY` (in): Source texture Y position.
+  ## - `srcZ` (in): If texture is 2D this argument should be 0. If source texture is cube
+  ##   this argument represents source texture cube face. For 3D texture this argument
+  ##   represents source texture Z position.
+  ## - `width` (in): Width of region.
+  ## - `height` (in): Height of region.
+  ## - `depth` (in): If texture is 3D this argument represents depth of region, otherwise it's
+  ##   unused.
+  ##
+  ## **Attention:**
+  ## Destination texture must be created with `BGFX_TEXTURE_BLIT_DST` flag.
+  ##
+  ## Availability depends on: `BGFX_CAPS_TEXTURE_BLIT`.
 proc get_interface*(_: type BGFX; version: uint32): ptr bgfx_interface_vtbl_t {.importc: "bgfx_get_interface", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Return the C99 interface vtable for a matching API version.
+  ##
+  ## **Parameters:**
+  ## - `version` (in): Requested `BGFX_API_VERSION` value.
+  ##
+  ## **Returns:**
+  ## Interface vtable, or `nil` when `version` does not match.
 
 # Compatibility aliases for the original generated names
 template bgfx_attachment_init*(_: type BGFX; args: varargs[untyped]): untyped =

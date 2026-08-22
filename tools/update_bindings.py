@@ -442,11 +442,11 @@ def proc_documentation(function: Function) -> str:
 
     if not output:
         raise ValueError(f"{function.c_name} has empty documentation")
-    return "\n".join(output)
+    return "\n".join("  " + line for line in output)
 
 
 def documented_proc_declaration(function: Function) -> str:
-    return proc_documentation(function) + "\n" + proc_declaration(function)
+    return proc_declaration(function) + "\n" + proc_documentation(function)
 
 
 def vtable_field(function: Function) -> str:

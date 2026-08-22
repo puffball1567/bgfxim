@@ -151,6 +151,9 @@ Build the browsable HTML reference with:
 tools/build_api_docs.sh
 ```
 
+The same responsive documentation site is published through GitHub Pages at
+[puffball1567.github.io/bgfxim](https://puffball1567.github.io/bgfxim/).
+
 See [docs/API_REFERENCE.md](docs/API_REFERENCE.md) for editor usage,
 custom output locations, and documentation-source details.
 
