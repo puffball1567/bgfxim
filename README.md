@@ -46,7 +46,7 @@ detailed scope and contribution criteria.
 
 ## Status
 
-Version `0.2.0` targets bgfx API version 155 at revision
+Version `0.3.0` targets bgfx API version 155 at revision
 `d8db55f8123a4a0871b1290fec2e5d0caae01bbf`.
 
 The release has been exercised with:
@@ -84,7 +84,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#v0.2.0
+nimble install https://github.com/puffball1567/bgfxim@#v0.3.0
 ```
 
 The repository contains the source bindings, generators, documentation, tests,
@@ -249,7 +249,7 @@ files, API comments, tests, and third-party notice together.
 
 ## Current Boundaries
 
-Version 0.2.0 is a low-level developer release.
+Version 0.3.0 is a low-level developer release.
 
 - The OpenGL renderer smoke test runs on Linux x86_64 with Mesa software
   rendering; it verifies successful submission and cleanup, not pixel output
