@@ -6,6 +6,11 @@ All notable changes to bgfxim are documented in this file.
 
 ### Added
 
+- Added Nim language-server documentation for all 208 public calls, including
+  purpose, parameter directions, returns, remarks, ownership and threading
+  constraints, and warnings from the pinned bgfx C99 API.
+- Added a reproducible HTML API-reference command and CI documentation build.
+
 - Expanded the SDL3/OpenGL demo into a real triangle submission covering
   vertex/index buffers, shader and program creation, pipeline state, submit,
   frames, and ordered resource destruction.

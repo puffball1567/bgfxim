@@ -27,6 +27,8 @@ platform and renderer backends.
   paths, and submit a real OpenGL triangle through an SDL3 native window.
 - **Thin by design.** The binding preserves bgfx ownership and threading rules;
   higher-level rendering APIs can be built independently.
+- **Editor-ready reference.** All 208 public calls include Nim documentation
+  for their purpose, parameters, return value, and upstream constraints.
 
 ## Project Direction
 
@@ -136,6 +138,22 @@ case-insensitive. Original names such as `BGFX.bgfx_init` remain available as
 compatibility aliases. Use `invalidHandle(bgfx_texture_handle_t)` and
 `BGFX_HANDLE_IS_VALID(handle)` for typed handles.
 
+## API Reference
+
+Nim language-server hover and completion information is available directly
+from the `##` comments on every public call. The comments describe parameter
+directions, returns, ownership and threading requirements, remarks, and
+warnings where upstream specifies them.
+
+Build the browsable HTML reference with:
+
+```sh
+tools/build_api_docs.sh
+```
+
+See [docs/API_REFERENCE.md](docs/API_REFERENCE.md) for editor usage,
+custom output locations, and documentation-source details.
+
 ## Demos
 
 ### Visible SDL3/OpenGL triangle
@@ -193,7 +211,7 @@ The verification checks cover complementary failure modes:
 | `tests/test_values.nim` | Direct C/Nim comparison of 350 constants, 444 enum values, and all 17 state helpers |
 | `tests/test_runtime.nim` | Executed Nim/C FFI calls, values, pointers, varargs, aliases, and ordering |
 | `tests/test_errors.nim` | Executed null, rejected-init, version mismatch, boundary flags, allocation failure, callback, invalid-handle, and validation-error paths |
-| `tests/test_generators.py` | Missing and duplicate types, fields, constants, and enum values must be rejected; output must remain deterministic |
+| `tests/test_generators.py` | Missing and duplicate API elements and undocumented parameters must be rejected; documentation and test output must remain deterministic |
 | All-signatures compile test | C compilation of calls to all 208 functions |
 | NOOP demos | Real initialization, resource/encoder lifecycle, and safe validation failures on Linux and macOS |
 | SDL3/OpenGL triangle | Real native-window handoff, buffers, shaders, program, submit, frames, and ordered destruction |
@@ -224,7 +242,7 @@ tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 ```
 
 An upstream update must change the recorded revision, API version, generated
-files, tests, and third-party notice together.
+files, API comments, tests, and third-party notice together.
 
 ## Current Boundaries
 
