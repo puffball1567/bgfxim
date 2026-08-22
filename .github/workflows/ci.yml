@@ -47,6 +47,9 @@ jobs:
       - name: Test generator rejection paths
         run: python3 tests/test_generators.py
 
+      - name: Build API reference
+        run: tools/build_api_docs.sh "${RUNNER_TEMP}/bgfxim-api"
+
       - name: Verify reproducible sources and exhaustive tests
         run: |
           python3 tools/generate_defines.py \

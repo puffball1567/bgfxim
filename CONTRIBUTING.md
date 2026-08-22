@@ -72,6 +72,13 @@ Do not hand-edit generated declaration or constant blocks when the generator can
 represent the change. Generator changes and regenerated output belong in the
 same commit.
 
+Public function documentation follows the same rule. Update the official C99
+comments or the translation logic in `tools/update_bindings.py`, then refresh
+`bgfx.nim`; do not maintain a second handwritten copy beside an imported
+declaration. Every non-implicit parameter must remain documented. Nim-specific
+usage notes that are not part of the low-level API belong in
+`docs/API_REFERENCE.md` or a focused example.
+
 ## Verification
 
 Before opening a pull request:
@@ -85,6 +92,7 @@ python3 tools/update_bindings.py \
 python3 tools/generate_abi_test.py bgfx.nim tests/test_abi.nim
 python3 tools/generate_value_test.py \
   bgfx.nim bgfx/defines.nim tests/test_values.nim
+tools/build_api_docs.sh
 tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 ```
 

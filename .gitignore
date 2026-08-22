@@ -2,6 +2,7 @@ nimcache/
 .nimble/
 _deps/
 __pycache__/
+/build/
 
 *.a
 *.dll
