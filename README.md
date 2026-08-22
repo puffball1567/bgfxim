@@ -24,9 +24,11 @@ platform and renderer backends.
   transcription.
 - **Real execution coverage.** Tests cross the Nim/C boundary, initialize the
   real NOOP renderer, exercise resource, encoder, and non-fatal validation
-  paths, and open an SDL3 window through the OpenGL backend.
+  paths, and submit a real OpenGL triangle through an SDL3 native window.
 - **Thin by design.** The binding preserves bgfx ownership and threading rules;
   higher-level rendering APIs can be built independently.
+- **Editor-ready reference.** All 208 public calls include Nim documentation
+  for their purpose, parameters, return value, and upstream constraints.
 
 ## Project Direction
 
@@ -44,7 +46,7 @@ detailed scope and contribution criteria.
 
 ## Status
 
-Version `0.2.0` targets bgfx API version 155 at revision
+Version `0.3.0` targets bgfx API version 155 at revision
 `d8db55f8123a4a0871b1290fec2e5d0caae01bbf`.
 
 The release has been exercised with:
@@ -53,14 +55,16 @@ The release has been exercised with:
 - bx revision `9e3fadf6f11380031486be704d2ff46ca143664f`;
 - bimg revision `371d90098b1fd017cd00205979d5ef74b8c3ed62`;
 - the real bgfx NOOP and OpenGL 4.3 renderers;
-- SDL 3.3.0 with X11 native-window integration.
+- SDL 3.4.14 with X11 native-window integration.
 
 CI also runs the complete compile/ABI/value/FFI suite across Linux, macOS, and
 Windows with Nim 2.0 and 2.2. Its focused matrix covers x86, x86_64, and arm64;
 GCC and Clang; `refc`, `arc`, and `orc`; and debug and release builds. Real
 NOOP integration runs on Linux x86_64 plus macOS x86_64 and arm64. The Linux
 Clang error-path test additionally runs under AddressSanitizer and
-UndefinedBehaviorSanitizer.
+UndefinedBehaviorSanitizer. A separate Linux job builds SDL3, opens an X11
+window under Xvfb, selects Mesa software rendering, and submits a triangle
+through the real bgfx OpenGL backend.
 
 The API is complete for the pinned revision, but not every function has been
 executed on every renderer or platform. See [Current Boundaries](#current-boundaries).
@@ -80,7 +84,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#v0.2.0
+nimble install https://github.com/puffball1567/bgfxim@#v0.3.0
 ```
 
 The repository contains the source bindings, generators, documentation, tests,
@@ -134,21 +138,54 @@ case-insensitive. Original names such as `BGFX.bgfx_init` remain available as
 compatibility aliases. Use `invalidHandle(bgfx_texture_handle_t)` and
 `BGFX_HANDLE_IS_VALID(handle)` for typed handles.
 
+## API Reference
+
+Nim language-server hover and completion information is available directly
+from the `##` comments on every public call. The comments describe parameter
+directions, returns, ownership and threading requirements, remarks, and
+warnings where upstream specifies them.
+
+Build the browsable HTML reference with:
+
+```sh
+tools/build_api_docs.sh
+```
+
+The same responsive documentation site is published through GitHub Pages at
+[puffball1567.github.io/bgfxim](https://puffball1567.github.io/bgfxim/).
+
+See [docs/API_REFERENCE.md](docs/API_REFERENCE.md) for editor usage,
+custom output locations, and documentation-source details.
+
 ## Demos
 
-### Visible SDL3/OpenGL demo
+### Visible SDL3/OpenGL triangle
 
 On Linux with SDL3 installed, the visible demo opens a resizable window and
-animates its clear color through the real bgfx OpenGL renderer:
+submits a colored triangle through the real bgfx OpenGL renderer:
 
 ```sh
 examples/run_sdl_demo.sh <path-to-bgfx> <path-to-bx> <path-to-bimg>
 ```
 
 The helper performs a clean temporary native build, so the first launch takes
-longer than an ordinary incremental application build. Close the window or
-press Escape to stop it. SDL handles only window creation and events; platform
-data, resize handling, views, frames, and shutdown go through this binding.
+longer than an ordinary incremental application build. It loads the
+`vs_cubes.bin` and `fs_cubes.bin` OpenGL shader binaries shipped in the
+supplied bgfx tree. Close the window or press Escape to stop it. SDL handles
+only window creation and events; platform data, vertex/index buffers, shaders,
+the program, submission, frames, resize handling, and shutdown go through this
+binding.
+
+Pass a frame count to run the same demo non-interactively. CI uses three
+frames under Xvfb and Mesa software rendering:
+
+```sh
+examples/run_sdl_demo.sh \
+  <path-to-bgfx> <path-to-bx> <path-to-bimg> 3
+```
+
+See [examples/README.md](examples/README.md) for the exact pipeline and native
+dependency responsibilities.
 
 ### Headless integration demos
 
@@ -177,16 +214,17 @@ The verification checks cover complementary failure modes:
 | `tests/test_values.nim` | Direct C/Nim comparison of 350 constants, 444 enum values, and all 17 state helpers |
 | `tests/test_runtime.nim` | Executed Nim/C FFI calls, values, pointers, varargs, aliases, and ordering |
 | `tests/test_errors.nim` | Executed null, rejected-init, version mismatch, boundary flags, allocation failure, callback, invalid-handle, and validation-error paths |
-| `tests/test_generators.py` | Missing and duplicate types, fields, constants, and enum values must be rejected; output must remain deterministic |
+| `tests/test_generators.py` | Missing and duplicate API elements and undocumented parameters must be rejected; documentation and test output must remain deterministic |
 | All-signatures compile test | C compilation of calls to all 208 functions |
 | NOOP demos | Real initialization, resource/encoder lifecycle, and safe validation failures on Linux and macOS |
-| SDL3 demo | Real native-window handoff and OpenGL frame execution |
+| SDL3/OpenGL triangle | Real native-window handoff, buffers, shaders, program, submit, frames, and ordered destruction |
 
 `tests/run_validation.sh` runs the compile, ABI, value, normal/error FFI,
 generator rejection, and all-signatures checks against supplied bgfx and bx
 trees. CI first reproduces the checked-in declarations and exhaustive test
 sources, then runs that suite through the platform matrix and executes all
-three real NOOP demos against the pinned upstream revisions.
+three real NOOP demos against the pinned upstream revisions. The dedicated
+renderer job also executes the SDL3/OpenGL triangle for a fixed frame count.
 
 ## Updating the Binding
 
@@ -207,14 +245,15 @@ tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 ```
 
 An upstream update must change the recorded revision, API version, generated
-files, tests, and third-party notice together.
+files, API comments, tests, and third-party notice together.
 
 ## Current Boundaries
 
-Version 0.2.0 is a low-level developer release.
+Version 0.3.0 is a low-level developer release.
 
-- The visible OpenGL renderer demo has only been exercised on Linux x86_64;
-  macOS coverage currently uses the headless NOOP renderer.
+- The OpenGL renderer smoke test runs on Linux x86_64 with Mesa software
+  rendering; it verifies successful submission and cleanup, not pixel output
+  or physical GPU-driver behavior. macOS coverage currently uses NOOP.
 - Windows coverage executes the synthetic FFI suite but does not yet build and
   run a real bgfx renderer.
 - CI targets Nim's C backend. The C++20 check verifies type layout and values
@@ -222,9 +261,9 @@ Version 0.2.0 is a low-level developer release.
   currently claimed.
 - Direct3D, Metal, Vulkan, OpenGL ES, WebGPU, mobile, and WebAssembly runtime
   paths still need platform-specific validation.
-- Shader/program submission, compute, framebuffer, screenshot, video, and
-  custom allocator/callback behavior have compile coverage but incomplete real
-  runtime coverage.
+- Basic shader/program submission now has real OpenGL coverage. Compute,
+  framebuffer, screenshot, video, and custom allocator/callback behavior have
+  compile coverage but incomplete real runtime coverage.
 - Calls that bgfx documents as fatal, asserted, or undefined precondition
   violations are intentionally not sent to the real library; equivalent ABI
   failure paths are exercised with the C stub instead.

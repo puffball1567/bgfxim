@@ -2,6 +2,7 @@ nimcache/
 .nimble/
 _deps/
 __pycache__/
+/build/
 
 *.a
 *.dll
@@ -15,6 +16,6 @@ __pycache__/
 
 /examples/noop_basic
 /examples/noop_resources
-/examples/sdl_clear
+/examples/sdl_triangle
 /tests/test_api
 /tests/test_runtime

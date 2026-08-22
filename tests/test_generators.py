@@ -3,7 +3,9 @@
 
 from __future__ import annotations
 
+import re
 import sys
+import tempfile
 import unittest
 from dataclasses import replace
 from pathlib import Path
@@ -14,6 +16,179 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 import generate_abi_test
 import generate_value_test
+import style_api_docs
+import update_bindings
+
+
+class DocumentationGeneratorTests(unittest.TestCase):
+    def test_current_surface_documents_every_imported_call(self) -> None:
+        binding = (ROOT / "bgfx.nim").read_text(encoding="utf-8")
+        documented_calls = re.findall(
+            r'^proc\s+.*?\{\.importc:\s*"bgfx_[^\n]*\n(?:  ##[^\n]*(?:\n|$))+',
+            binding,
+            re.MULTILINE,
+        )
+
+        self.assertEqual(208, len(documented_calls))
+        self.assertNotRegex(binding, r'(?m)^## .*\nproc .*\{\.importc:')
+
+    def test_only_the_adjacent_doxygen_block_is_selected(self) -> None:
+        header = """
+        /** Unrelated type documentation. */
+        typedef int unrelated_type;
+        /** Call documentation. */
+        BGFX_C_API void bgfx_example(void);
+        """
+
+        matches = update_bindings.DOCUMENTED_DECLARATION.findall(header)
+
+        self.assertEqual([(" Call documentation. ", "bgfx_example")], matches)
+
+    def test_doxygen_sections_are_rendered_for_nim_lsp(self) -> None:
+        documentation = update_bindings.parse_documentation(
+            """
+            * Submit a frame with `bgfx::submit`.
+            *
+            * @param[in] _viewId View identifier.
+            * @param[in,out] _state Mutable state.
+            * @returns Submission identifier.
+            * @remarks Call after `bgfx::init`.
+            * @attention Keep `_state` alive.
+            * @warning Do not reuse invalid state.
+            """
+        )
+        function = update_bindings.Function(
+            "bgfx_example",
+            "uint32",
+            (
+                update_bindings.Parameter("viewId", "uint16"),
+                update_bindings.Parameter("state", "ptr uint32"),
+            ),
+            False,
+            documentation,
+        )
+
+        output = update_bindings.proc_documentation(function)
+
+        self.assertIn("## Submit a frame with `BGFX.submit`.", output)
+        self.assertIn("## - `viewId` (in): View identifier.", output)
+        self.assertIn("## - `state` (in/out): Mutable state.", output)
+        self.assertIn("## **Returns:**", output)
+        self.assertIn("## **Remarks:**", output)
+        self.assertIn("## **Attention:**", output)
+        self.assertIn("## **Warning:**", output)
+        self.assertIn("Keep `state` alive.", output)
+
+    def test_cpp_type_references_use_nim_names(self) -> None:
+        documentation = update_bindings.Documentation(
+            (
+                "Use `bgfx::RendererType`, `TextureFormat::Enum`, and "
+                "`bgfx::createTexture2D`.",
+            ),
+            (),
+            (),
+            (),
+            (),
+            (),
+        )
+        function = update_bindings.Function(
+            "bgfx_example", None, (), False, documentation
+        )
+
+        output = update_bindings.proc_documentation(function)
+
+        self.assertIn("`bgfx_renderer_type_t`", output)
+        self.assertIn("`bgfx_texture_format_t`", output)
+        self.assertIn("`BGFX.create_texture_2d`", output)
+
+    def test_undocumented_parameter_is_rejected(self) -> None:
+        function = update_bindings.Function(
+            "bgfx_example",
+            None,
+            (update_bindings.Parameter("value", "uint32"),),
+            False,
+            update_bindings.Documentation(
+                ("Example.",), (), (), (), (), ()
+            ),
+        )
+
+        with self.assertRaisesRegex(ValueError, "undocumented parameters: value"):
+            update_bindings.proc_documentation(function)
+
+    def test_documentation_output_is_deterministic(self) -> None:
+        documentation = update_bindings.Documentation(
+            ("Example.",), (), ("Done.",), (), (), ()
+        )
+        function = update_bindings.Function(
+            "bgfx_example", "bool", (), False, documentation
+        )
+
+        self.assertEqual(
+            update_bindings.proc_documentation(function),
+            update_bindings.proc_documentation(function),
+        )
+
+
+class DocumentationSiteTests(unittest.TestCase):
+    GENERATED_PAGE = """<!doctype html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bgfx</title>
+<!-- Google fonts -->
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+</head><body><h1 class="title">bgfx</h1></body></html>
+"""
+
+    def test_site_theme_is_applied_to_root_and_nested_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory)
+            (output / "bgfx").mkdir()
+            for name in ("bgfx.html", "theindex.html"):
+                (output / name).write_text(self.GENERATED_PAGE, encoding="utf-8")
+            (output / "bgfx" / "defines.html").write_text(
+                self.GENERATED_PAGE, encoding="utf-8"
+            )
+            for name in ("dochack.js", "nimdoc.out.css"):
+                (output / name).write_text("", encoding="utf-8")
+
+            style_api_docs.style_output(output)
+
+            root_page = (output / "index.html").read_text(encoding="utf-8")
+            nested_page = (output / "bgfx" / "defines.html").read_text(
+                encoding="utf-8"
+            )
+            self.assertIn('href="assets/api-docs.css"', root_page)
+            self.assertIn('src="assets/api-docs.js"', root_page)
+            self.assertIn('href="../assets/api-docs.css"', nested_page)
+            self.assertIn('src="../assets/api-docs.js"', nested_page)
+            self.assertIn('class="bgfxim-docs"', root_page)
+            self.assertNotIn("fonts.googleapis.com", root_page)
+            self.assertTrue((output / ".nojekyll").is_file())
+
+    def test_missing_nim_entrypoint_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            with self.assertRaisesRegex(ValueError, "missing Nim documentation"):
+                style_api_docs.style_output(Path(temporary_directory))
+
+    def test_broken_local_link_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory)
+            (output / "bgfx").mkdir()
+            broken_page = self.GENERATED_PAGE.replace(
+                "</body>", '<a href="missing.html">Missing</a></body>'
+            )
+            (output / "bgfx.html").write_text(broken_page, encoding="utf-8")
+            (output / "theindex.html").write_text(
+                self.GENERATED_PAGE, encoding="utf-8"
+            )
+            (output / "bgfx" / "defines.html").write_text(
+                self.GENERATED_PAGE, encoding="utf-8"
+            )
+            for name in ("dochack.js", "nimdoc.out.css"):
+                (output / name).write_text("", encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "broken local documentation"):
+                style_api_docs.style_output(output)
 
 
 class AbiGeneratorTests(unittest.TestCase):

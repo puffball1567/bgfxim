@@ -18,6 +18,8 @@ demo_frames=${4:-0}
 
 for required_file in \
   "$bgfx_dir/src/amalgamated.cpp" \
+  "$bgfx_dir/examples/runtime/shaders/glsl/vs_cubes.bin" \
+  "$bgfx_dir/examples/runtime/shaders/glsl/fs_cubes.bin" \
   "$bx_dir/src/amalgamated.cpp" \
   "$bimg_dir/src/image.cpp" \
   "$bimg_dir/3rdparty/astc-encoder/include/astcenc.h"
@@ -37,6 +39,7 @@ build_dir=$(mktemp -d "${TMPDIR:-/tmp}/bgfxim-sdl.XXXXXX")
 trap 'rm -rf -- "$build_dir"' EXIT HUP INT TERM
 
 cxx=${CXX:-c++}
+archiver=${AR:-ar}
 nim_compiler=${NIM:-nim}
 simd_flag=
 case $(uname -m) in
@@ -48,7 +51,7 @@ sdl_libs=$(pkg-config --libs sdl3)
 echo "bgfxim: BSD-2-Clause"
 echo "bgfx/bx/bimg: Copyright 2010-2026 Branimir Karadzic, BSD-2-Clause"
 echo "SDL 3: zlib License (see THIRD_PARTY_NOTICES.md)"
-echo "building a temporary OpenGL bgfx library..."
+echo "building a temporary OpenGL bgfx library and triangle demo..."
 
 "$cxx" -std=c++20 -O2 -fPIC -pthread $simd_flag \
   -DBX_CONFIG_DEBUG=0 \
@@ -78,14 +81,15 @@ do
     -c "$astc_source" -o "$build_dir/${astc_name%.cpp}.o"
 done
 
-ar rcs "$build_dir/libbimg.a" "$build_dir/bimg.o" \
+"$archiver" rcs "$build_dir/libbimg.a" "$build_dir/bimg.o" \
   "$build_dir"/astcenc_*.o
 
 "$nim_compiler" c -r --path:. \
-  --nimcache:"$build_dir/nim-sdl" -o:"$build_dir/sdl-clear" \
+  --nimcache:"$build_dir/nim-sdl" -o:"$build_dir/sdl-triangle" \
   --passC:"-I$bgfx_dir/include" --passC:"-I$bx_dir/include" \
   --passC:"$sdl_cflags" \
   --passL:"$build_dir/bgfx.o" --passL:"$build_dir/libbimg.a" \
   --passL:"$build_dir/bx.o" --passL:-lstdc++ --passL:-pthread \
   --passL:-ldl --passL:-lm --passL:"$sdl_libs" \
-  examples/sdl_clear.nim "$demo_frames"
+  examples/sdl_triangle.nim "$demo_frames" \
+  "$bgfx_dir/examples/runtime/shaders/glsl"

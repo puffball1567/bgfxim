@@ -47,7 +47,8 @@ usually be directed to a separate companion package.
 - Create feature, documentation, and fix branches from `devel`.
 - Open ordinary pull requests against `devel`; feature work does not target
   `main` directly.
-- Keep `devel` green with the generated-source, ABI, FFI, and real-NOOP checks.
+- Keep `devel` green with the source, ABI, FFI, real-NOOP, and OpenGL renderer
+  checks.
 - For a release, merge `devel` into `main` with a merge commit after release
   checks pass. Create version tags from `main` only.
 - Use `hotfix/*` only for urgent corrections based on `main`, then apply the
@@ -71,6 +72,13 @@ Do not hand-edit generated declaration or constant blocks when the generator can
 represent the change. Generator changes and regenerated output belong in the
 same commit.
 
+Public function documentation follows the same rule. Update the official C99
+comments or the translation logic in `tools/update_bindings.py`, then refresh
+`bgfx.nim`; do not maintain a second handwritten copy beside an imported
+declaration. Every non-implicit parameter must remain documented. Nim-specific
+usage notes that are not part of the low-level API belong in
+`docs/API_REFERENCE.md` or a focused example.
+
 ## Verification
 
 Before opening a pull request:
@@ -84,6 +92,7 @@ python3 tools/update_bindings.py \
 python3 tools/generate_abi_test.py bgfx.nim tests/test_abi.nim
 python3 tools/generate_value_test.py \
   bgfx.nim bgfx/defines.nim tests/test_values.nim
+tools/build_api_docs.sh
 tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 ```
 
@@ -93,6 +102,12 @@ headers. CI repeats it across the supported OS, Nim, architecture, compiler,
 memory-management, and optimization matrix. Changes affecting ownership,
 resources, encoders, validation, or platform data should also run the real
 NOOP or SDL3 demos as appropriate.
+
+Renderer tests in this repository are connection smoke tests. They should
+prove that Nim can pass native platform data, create representative resources,
+submit work, advance frames, and clean up through the real backend. Pixel
+accuracy, shader semantics, backend conformance, and GPU-driver correctness
+remain upstream responsibilities and should not be duplicated here.
 
 Do not test a documented assertion, fatal condition, or undefined precondition
 against the real bgfx library. Use the C stub for those ABI paths. Real-library

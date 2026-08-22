@@ -2,6 +2,26 @@
 
 All notable changes to bgfxim are documented in this file.
 
+## [Unreleased]
+
+## [0.3.0] - 2026-08-23
+
+### Added
+
+- Added Nim language-server documentation for all 208 public calls, including
+  purpose, parameter directions, returns, remarks, ownership and threading
+  constraints, and warnings from the pinned bgfx C99 API.
+- Added a reproducible HTML API-reference command and CI documentation build.
+- Added a responsive GitHub Pages theme with a persistent left sidebar, API
+  search, light and dark modes, mobile navigation, and release metadata.
+- Expanded the SDL3/OpenGL demo into a real triangle submission covering
+  vertex/index buffers, shader and program creation, pipeline state, submit,
+  frames, and ordered resource destruction.
+- Added a Linux CI smoke test that runs the OpenGL renderer through SDL3 and
+  X11 under Xvfb with Mesa software rendering.
+- Added focused example documentation for interactive and finite-frame demo
+  execution.
+
 ## [0.2.0] - 2026-08-22
 
 ### Added
