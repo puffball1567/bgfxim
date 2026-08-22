@@ -16,6 +16,7 @@ env:
   BGFX_REVISION: d8db55f8123a4a0871b1290fec2e5d0caae01bbf
   BX_REVISION: 9e3fadf6f11380031486be704d2ff46ca143664f
   BIMG_REVISION: 371d90098b1fd017cd00205979d5ef74b8c3ed62
+  SDL_REVISION: 147a8ee32dbf9ac02f3794964490687b6bbda1bc
 
 jobs:
   source:
@@ -266,3 +267,77 @@ jobs:
 
       - name: Build real bgfx and run headless demos
         run: examples/run_noop_demos.sh _deps/bgfx _deps/bx _deps/bimg
+
+  opengl-runtime:
+    name: OpenGL renderer smoke · Linux x64
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout bgfxim
+        uses: actions/checkout@v7
+
+      - name: Checkout bgfx
+        uses: actions/checkout@v7
+        with:
+          repository: bkaradzic/bgfx
+          ref: ${{ env.BGFX_REVISION }}
+          path: _deps/bgfx
+
+      - name: Checkout bx
+        uses: actions/checkout@v7
+        with:
+          repository: bkaradzic/bx
+          ref: ${{ env.BX_REVISION }}
+          path: _deps/bx
+
+      - name: Checkout bimg
+        uses: actions/checkout@v7
+        with:
+          repository: bkaradzic/bimg
+          ref: ${{ env.BIMG_REVISION }}
+          path: _deps/bimg
+
+      - name: Checkout SDL
+        uses: actions/checkout@v7
+        with:
+          repository: libsdl-org/SDL
+          ref: ${{ env.SDL_REVISION }}
+          path: _deps/sdl
+
+      - name: Install Nim
+        uses: jiro4989/setup-nim-action@1dba098c77a0e800c96a7d92a0888ac2af26f19f # v2
+        with:
+          nim-version: '2.2.10'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install OpenGL and X11 build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes \
+            cmake ninja-build pkg-config xauth xvfb \
+            libgl1-mesa-dev libgl1-mesa-dri \
+            libx11-dev libxext-dev libxcursor-dev libxfixes-dev \
+            libxi-dev libxrandr-dev libxss-dev libxtst-dev \
+            libxkbcommon-dev
+
+      - name: Build SDL 3
+        run: |
+          cmake -S _deps/sdl -B "${RUNNER_TEMP}/sdl-build" -G Ninja \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX="${RUNNER_TEMP}/sdl" \
+            -DSDL_SHARED=ON -DSDL_STATIC=OFF \
+            -DSDL_TEST_LIBRARY=OFF -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF \
+            -DSDL_WAYLAND=OFF
+          cmake --build "${RUNNER_TEMP}/sdl-build" --parallel 2
+          cmake --install "${RUNNER_TEMP}/sdl-build"
+
+      - name: Build and run real OpenGL triangle
+        run: |
+          export PKG_CONFIG_PATH="${RUNNER_TEMP}/sdl/lib/pkgconfig:${RUNNER_TEMP}/sdl/lib64/pkgconfig"
+          export LD_LIBRARY_PATH="${RUNNER_TEMP}/sdl/lib:${RUNNER_TEMP}/sdl/lib64"
+          pkg-config --modversion sdl3
+          xvfb-run --auto-servernum \
+            --server-args="-screen 0 1280x720x24 +extension GLX" \
+            env SDL_VIDEODRIVER=x11 LIBGL_ALWAYS_SOFTWARE=1 \
+            examples/run_sdl_demo.sh _deps/bgfx _deps/bx _deps/bimg 3

@@ -40,10 +40,11 @@ distributed with an application.
 ## SDL 3
 
 The optional visible OpenGL demo links against the user's installed SDL 3
-library. The tested SDL 3.3.0 headers contain this notice:
+library. CI pins SDL 3.4.14 at revision
+`147a8ee32dbf9ac02f3794964490687b6bbda1bc`. Its headers contain this notice:
 
 > Simple DirectMedia Layer
-> Copyright (C) 1997-2025 Sam Lantinga
+> Copyright (C) 1997-2026 Sam Lantinga
 
 SDL 3 uses the zlib License:
 
