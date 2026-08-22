@@ -2,6 +2,18 @@
 
 All notable changes to bgfxim are documented in this file.
 
+## [Unreleased]
+
+### Added
+
+- Expanded the SDL3/OpenGL demo into a real triangle submission covering
+  vertex/index buffers, shader and program creation, pipeline state, submit,
+  frames, and ordered resource destruction.
+- Added a Linux CI smoke test that runs the OpenGL renderer through SDL3 and
+  X11 under Xvfb with Mesa software rendering.
+- Added focused example documentation for interactive and finite-frame demo
+  execution.
+
 ## [0.2.0] - 2026-08-22
 
 ### Added

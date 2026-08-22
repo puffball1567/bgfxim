@@ -47,7 +47,8 @@ usually be directed to a separate companion package.
 - Create feature, documentation, and fix branches from `devel`.
 - Open ordinary pull requests against `devel`; feature work does not target
   `main` directly.
-- Keep `devel` green with the generated-source, ABI, FFI, and real-NOOP checks.
+- Keep `devel` green with the source, ABI, FFI, real-NOOP, and OpenGL renderer
+  checks.
 - For a release, merge `devel` into `main` with a merge commit after release
   checks pass. Create version tags from `main` only.
 - Use `hotfix/*` only for urgent corrections based on `main`, then apply the
@@ -93,6 +94,12 @@ headers. CI repeats it across the supported OS, Nim, architecture, compiler,
 memory-management, and optimization matrix. Changes affecting ownership,
 resources, encoders, validation, or platform data should also run the real
 NOOP or SDL3 demos as appropriate.
+
+Renderer tests in this repository are connection smoke tests. They should
+prove that Nim can pass native platform data, create representative resources,
+submit work, advance frames, and clean up through the real backend. Pixel
+accuracy, shader semantics, backend conformance, and GPU-driver correctness
+remain upstream responsibilities and should not be duplicated here.
 
 Do not test a documented assertion, fatal condition, or undefined precondition
 against the real bgfx library. Use the C stub for those ABI paths. Real-library
