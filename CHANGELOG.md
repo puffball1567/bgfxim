@@ -4,6 +4,8 @@ All notable changes to bgfxim are documented in this file.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-06
+
 ### Changed
 
 - Updated the complete low-level binding from bgfx API 155 to API 159,
