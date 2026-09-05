@@ -46,10 +46,10 @@ detailed scope and contribution criteria.
 
 ## Status
 
-The current development branch targets bgfx API version 159 at revision
+Version `0.4.0` targets bgfx API version 159 at revision
 `8c8b6b5692be5054e89d2a59640c50b9319c9425`.
 
-This target has been exercised with:
+The release has been exercised with:
 
 - Nim 2.2.10 on Linux x86_64;
 - bx revision `98ad3bec2a7ee1a5cbabdcabc25252572dcb1d88`;
@@ -84,7 +84,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#devel
+nimble install https://github.com/puffball1567/bgfxim@#v0.4.0
 ```
 
 The repository contains the source bindings, generators, documentation, tests,
@@ -250,7 +250,7 @@ files, API comments, tests, and third-party notice together.
 
 ## Current Boundaries
 
-The current development branch remains a low-level binding.
+Version 0.4.0 remains a low-level binding.
 
 - The OpenGL renderer smoke test runs on Linux x86_64 with Mesa software
   rendering; it verifies successful submission and cleanup, not pixel output
