@@ -4,6 +4,21 @@ All notable changes to bgfxim are documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the complete low-level binding from bgfx API 155 to API 159,
+  including the new swap-chain, texture-region, buffer-region, buffer-readback,
+  and region-blit APIs.
+- Updated the pinned bgfx, bx, and bimg revisions and migrated the examples to
+  bgfx's swap-chain initialization and reset model.
+- Followed upstream's breaking initialization changes: native window handles
+  now live in `bgfx_init_t.swapChain`, device reset flags live in
+  `bgfx_init_t.reset`, and `BGFX.reset` and `BGFX.setDebug` use their API 159
+  signatures.
+- Removed the C99 calls that upstream removed: `set_platform_data`,
+  `create_frame_buffer_from_nwh`, `override_internal_texture_ptr`, and
+  `override_internal_texture`.
+
 ## [0.3.0] - 2026-08-23
 
 ### Added
