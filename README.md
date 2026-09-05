@@ -13,12 +13,12 @@ platform and renderer backends.
 
 ## Why bgfxim
 
-- **Complete C99 surface.** All 208 functions, public structs, enums, callback
-  and interface vtables, 350 object-like constants, and 17 state helpers are
+- **Complete C99 surface.** All 216 functions, public structs, enums, callback
+  and interface vtables, 334 object-like constants, and 17 state helpers are
   available.
 - **Auditable ABI.** Imported objects use the C typedef names from bgfx's
-  generated header. The test suite compares all 40 complete public types for
-  size and alignment and all 418 fields for byte offset with the C compiler.
+  generated header. The test suite compares all 43 complete public types for
+  size and alignment and all 443 fields for byte offset with the C compiler.
 - **Mechanical updates.** Checked-in generators update declarations and
   constants from upstream generated headers instead of relying on manual
   transcription.
@@ -27,7 +27,7 @@ platform and renderer backends.
   paths, and submit a real OpenGL triangle through an SDL3 native window.
 - **Thin by design.** The binding preserves bgfx ownership and threading rules;
   higher-level rendering APIs can be built independently.
-- **Editor-ready reference.** All 208 public calls include Nim documentation
+- **Editor-ready reference.** All 216 public calls include Nim documentation
   for their purpose, parameters, return value, and upstream constraints.
 
 ## Project Direction
@@ -46,14 +46,14 @@ detailed scope and contribution criteria.
 
 ## Status
 
-Version `0.3.0` targets bgfx API version 155 at revision
-`d8db55f8123a4a0871b1290fec2e5d0caae01bbf`.
+The current development branch targets bgfx API version 159 at revision
+`8c8b6b5692be5054e89d2a59640c50b9319c9425`.
 
-The release has been exercised with:
+This target has been exercised with:
 
 - Nim 2.2.10 on Linux x86_64;
-- bx revision `9e3fadf6f11380031486be704d2ff46ca143664f`;
-- bimg revision `371d90098b1fd017cd00205979d5ef74b8c3ed62`;
+- bx revision `98ad3bec2a7ee1a5cbabdcabc25252572dcb1d88`;
+- bimg revision `ddbeeae05779f84f97694553eb41605a60f86f0a`;
 - the real bgfx NOOP and OpenGL 4.3 renderers;
 - SDL 3.4.14 with X11 native-window integration.
 
@@ -84,7 +84,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#v0.3.0
+nimble install https://github.com/puffball1567/bgfxim@#devel
 ```
 
 The repository contains the source bindings, generators, documentation, tests,
@@ -98,24 +98,25 @@ import bgfx
 
 var init: bgfx_init_t
 BGFX.initCtor(addr init)
-init.resolution.width = 1280
-init.resolution.height = 720
-init.resolution.reset = BGFX_RESET_VSYNC
+init.swapChain.width = 1280
+init.swapChain.height = 720
+init.reset = BGFX_RESET_VSYNC
 
 if not BGFX.init(addr init):
   raise newException(IOError, "bgfx initialization failed")
 
 try:
-  BGFX.setDebug(BGFX_DEBUG_TEXT)
+  BGFX.setDebug(BGFX_DEBUG_TEXT,
+    invalidHandle(bgfx_frame_buffer_handle_t), 1)
   BGFX.touch(0)
   discard BGFX.frame(BGFX_FRAME_NONE)
 finally:
   BGFX.shutdown()
 ```
 
-Platform applications must populate `init.platformData` with the native window
-and display handles before initialization. The SDL3 demo contains a compact
-X11/Wayland example.
+Platform applications must populate `init.swapChain` with the native window
+and display handles and set `init.platformData.type` before initialization. The
+SDL3 demo contains a compact X11/Wayland example.
 
 ### 4. Compile and link
 
@@ -210,12 +211,12 @@ The verification checks cover complementary failure modes:
 | Check | Coverage |
 | --- | --- |
 | `tests/test_api.nim` | Representative declarations, callback slots, helpers, aliases, and compile-time values |
-| `tests/test_abi.nim` | Size and alignment of all 40 complete types plus offsets of all 418 fields, including 207 interface-vtable slots |
-| `tests/test_values.nim` | Direct C/Nim comparison of 350 constants, 444 enum values, and all 17 state helpers |
+| `tests/test_abi.nim` | Size and alignment of all 43 complete types plus offsets of all 443 fields, including 215 interface-vtable slots |
+| `tests/test_values.nim` | Direct C/Nim comparison of 334 constants, 458 enum values, and all 17 state helpers |
 | `tests/test_runtime.nim` | Executed Nim/C FFI calls, values, pointers, varargs, aliases, and ordering |
 | `tests/test_errors.nim` | Executed null, rejected-init, version mismatch, boundary flags, allocation failure, callback, invalid-handle, and validation-error paths |
 | `tests/test_generators.py` | Missing and duplicate API elements and undocumented parameters must be rejected; documentation and test output must remain deterministic |
-| All-signatures compile test | C compilation of calls to all 208 functions |
+| All-signatures compile test | C compilation of calls to all 216 functions |
 | NOOP demos | Real initialization, resource/encoder lifecycle, and safe validation failures on Linux and macOS |
 | SDL3/OpenGL triangle | Real native-window handoff, buffers, shaders, program, submit, frames, and ordered destruction |
 
@@ -249,7 +250,7 @@ files, API comments, tests, and third-party notice together.
 
 ## Current Boundaries
 
-Version 0.3.0 is a low-level developer release.
+The current development branch remains a low-level binding.
 
 - The OpenGL renderer smoke test runs on Linux x86_64 with Mesa software
   rendering; it verifies successful submission and cleanup, not pixel output

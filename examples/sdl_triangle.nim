@@ -70,20 +70,20 @@ var fragmentShader = invalidHandle(bgfx_shader_handle_t)
 var program = invalidHandle(bgfx_program_handle_t)
 
 try:
-  var platformData: bgfx_platform_data_t
+  var swapChain: bgfx_swap_chain_t
   var nativeWindowType: cint
-  if getPlatformData(window, addr platformData.ndt, addr platformData.nwh,
+  if getPlatformData(window, addr swapChain.ndt, addr swapChain.nwh,
       addr nativeWindowType) == 0:
     raise newException(IOError, "native window lookup failed: " & $sdlError())
-  platformData.type = bgfx_native_window_handle_type_t(nativeWindowType)
 
   var init: bgfx_init_t
   BGFX.initCtor(addr init)
   init.type = BGFX_RENDERER_TYPE_OPENGL
-  init.platformData = platformData
-  init.resolution.width = 960
-  init.resolution.height = 540
-  init.resolution.reset = BGFX_RESET_VSYNC
+  init.platformData.type = bgfx_native_window_handle_type_t(nativeWindowType)
+  swapChain.width = 960
+  swapChain.height = 540
+  init.swapChain = swapChain
+  init.reset = BGFX_RESET_VSYNC
 
   if not BGFX.init(addr init):
     raise newException(IOError, "bgfx OpenGL initialization failed")
@@ -148,8 +148,9 @@ try:
   while pollWindow(window, addr width, addr height) != 0 and
       (maxFrames == 0 or frame < maxFrames):
     if width != previousWidth or height != previousHeight:
-      BGFX.reset(uint32(width), uint32(height), BGFX_RESET_VSYNC,
-        BGFX_TEXTURE_FORMAT_COUNT)
+      swapChain.width = uint32(width)
+      swapChain.height = uint32(height)
+      BGFX.reset(BGFX_RESET_VSYNC, addr swapChain)
       previousWidth = width
       previousHeight = height
 

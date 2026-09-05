@@ -18,8 +18,8 @@ OBJECT = re.compile(
     r'.*\bcompleteStruct\b.*\.\} = object$'
 )
 FIELD = re.compile(r"^    (?P<name>`?[A-Za-z0-9_]+`?)\*:")
-EXPECTED_OBJECTS = 40
-EXPECTED_FIELDS = 418
+EXPECTED_OBJECTS = 43
+EXPECTED_FIELDS = 443
 
 
 @dataclass(frozen=True)

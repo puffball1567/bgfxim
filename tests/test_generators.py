@@ -29,7 +29,7 @@ class DocumentationGeneratorTests(unittest.TestCase):
             re.MULTILINE,
         )
 
-        self.assertEqual(208, len(documented_calls))
+        self.assertEqual(216, len(documented_calls))
         self.assertNotRegex(binding, r'(?m)^## .*\nproc .*\{\.importc:')
 
     def test_only_the_adjacent_doxygen_block_is_selected(self) -> None:
@@ -198,21 +198,21 @@ class AbiGeneratorTests(unittest.TestCase):
         cls.objects = generate_abi_test.parse_objects(cls.binding)
 
     def test_current_surface_has_expected_shape(self) -> None:
-        self.assertEqual(40, len(self.objects))
-        self.assertEqual(418, sum(len(item.fields) for item in self.objects))
+        self.assertEqual(43, len(self.objects))
+        self.assertEqual(443, sum(len(item.fields) for item in self.objects))
 
     def test_missing_type_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected 40 imported objects"):
+        with self.assertRaisesRegex(ValueError, "expected 43 imported objects"):
             generate_abi_test.generate(self.objects[:-1])
 
     def test_duplicate_type_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected 40 imported objects"):
+        with self.assertRaisesRegex(ValueError, "expected 43 imported objects"):
             generate_abi_test.generate(self.objects + [self.objects[0]])
 
     def test_missing_field_is_rejected(self) -> None:
         damaged = list(self.objects)
         damaged[0] = replace(damaged[0], fields=damaged[0].fields[:-1])
-        with self.assertRaisesRegex(ValueError, "expected 418 fields"):
+        with self.assertRaisesRegex(ValueError, "expected 443 fields"):
             generate_abi_test.generate(damaged)
 
     def test_duplicate_field_is_rejected(self) -> None:
@@ -220,7 +220,7 @@ class AbiGeneratorTests(unittest.TestCase):
         damaged[0] = replace(
             damaged[0], fields=damaged[0].fields + (damaged[0].fields[0],)
         )
-        with self.assertRaisesRegex(ValueError, "expected 418 fields"):
+        with self.assertRaisesRegex(ValueError, "expected 443 fields"):
             generate_abi_test.generate(damaged)
 
     def test_nim_keyword_field_is_quoted(self) -> None:
@@ -241,25 +241,25 @@ class ValueGeneratorTests(unittest.TestCase):
         )
 
     def test_current_surface_has_expected_shape(self) -> None:
-        self.assertEqual(350, len(self.constants))
-        self.assertEqual(444, len(self.enum_values))
+        self.assertEqual(334, len(self.constants))
+        self.assertEqual(458, len(self.enum_values))
 
     def test_missing_constant_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected 350 constants"):
+        with self.assertRaisesRegex(ValueError, "expected 334 constants"):
             generate_value_test.generate(self.constants[:-1], self.enum_values)
 
     def test_duplicate_constant_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected 350 constants"):
+        with self.assertRaisesRegex(ValueError, "expected 334 constants"):
             generate_value_test.generate(
                 self.constants + [self.constants[0]], self.enum_values
             )
 
     def test_missing_enum_value_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected 444 enum values"):
+        with self.assertRaisesRegex(ValueError, "expected 458 enum values"):
             generate_value_test.generate(self.constants, self.enum_values[:-1])
 
     def test_duplicate_enum_value_is_rejected(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected 444 enum values"):
+        with self.assertRaisesRegex(ValueError, "expected 458 enum values"):
             generate_value_test.generate(
                 self.constants, self.enum_values + [self.enum_values[0]]
             )

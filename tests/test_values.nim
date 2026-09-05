@@ -295,1346 +295,1342 @@ const nimValue139 = uint64(BGFX_DEBUG_TEXT)
 {.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_DEBUG_TEXT) == ", nimValue139, ", \"value mismatch: BGFX_DEBUG_TEXT\");"].}
 const nimValue140 = uint64(BGFX_DEBUG_PROFILER)
 {.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_DEBUG_PROFILER) == ", nimValue140, ", \"value mismatch: BGFX_DEBUG_PROFILER\");"].}
-const nimValue141 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_8X1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_8X1) == ", nimValue141, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_8X1\");"].}
-const nimValue142 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_8X2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_8X2) == ", nimValue142, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_8X2\");"].}
-const nimValue143 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_8X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_8X4) == ", nimValue143, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_8X4\");"].}
-const nimValue144 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_16X1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_16X1) == ", nimValue144, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_16X1\");"].}
-const nimValue145 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_16X2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_16X2) == ", nimValue145, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_16X2\");"].}
-const nimValue146 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_16X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_16X4) == ", nimValue146, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_16X4\");"].}
-const nimValue147 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_32X1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_32X1) == ", nimValue147, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_32X1\");"].}
-const nimValue148 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_32X2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_32X2) == ", nimValue148, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_32X2\");"].}
-const nimValue149 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_32X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_32X4) == ", nimValue149, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_32X4\");"].}
-const nimValue150 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_SHIFT) == ", nimValue150, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_SHIFT\");"].}
-const nimValue151 = uint64(BGFX_BUFFER_COMPUTE_FORMAT_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_FORMAT_MASK) == ", nimValue151, ", \"value mismatch: BGFX_BUFFER_COMPUTE_FORMAT_MASK\");"].}
-const nimValue152 = uint64(BGFX_BUFFER_COMPUTE_TYPE_INT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_TYPE_INT) == ", nimValue152, ", \"value mismatch: BGFX_BUFFER_COMPUTE_TYPE_INT\");"].}
-const nimValue153 = uint64(BGFX_BUFFER_COMPUTE_TYPE_UINT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_TYPE_UINT) == ", nimValue153, ", \"value mismatch: BGFX_BUFFER_COMPUTE_TYPE_UINT\");"].}
-const nimValue154 = uint64(BGFX_BUFFER_COMPUTE_TYPE_FLOAT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_TYPE_FLOAT) == ", nimValue154, ", \"value mismatch: BGFX_BUFFER_COMPUTE_TYPE_FLOAT\");"].}
-const nimValue155 = uint64(BGFX_BUFFER_COMPUTE_TYPE_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_TYPE_SHIFT) == ", nimValue155, ", \"value mismatch: BGFX_BUFFER_COMPUTE_TYPE_SHIFT\");"].}
-const nimValue156 = uint64(BGFX_BUFFER_COMPUTE_TYPE_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_TYPE_MASK) == ", nimValue156, ", \"value mismatch: BGFX_BUFFER_COMPUTE_TYPE_MASK\");"].}
-const nimValue157 = uint64(BGFX_BUFFER_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_NONE) == ", nimValue157, ", \"value mismatch: BGFX_BUFFER_NONE\");"].}
-const nimValue158 = uint64(BGFX_BUFFER_COMPUTE_READ)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_READ) == ", nimValue158, ", \"value mismatch: BGFX_BUFFER_COMPUTE_READ\");"].}
-const nimValue159 = uint64(BGFX_BUFFER_COMPUTE_WRITE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_WRITE) == ", nimValue159, ", \"value mismatch: BGFX_BUFFER_COMPUTE_WRITE\");"].}
-const nimValue160 = uint64(BGFX_BUFFER_DRAW_INDIRECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_DRAW_INDIRECT) == ", nimValue160, ", \"value mismatch: BGFX_BUFFER_DRAW_INDIRECT\");"].}
-const nimValue161 = uint64(BGFX_BUFFER_ALLOW_RESIZE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_ALLOW_RESIZE) == ", nimValue161, ", \"value mismatch: BGFX_BUFFER_ALLOW_RESIZE\");"].}
-const nimValue162 = uint64(BGFX_BUFFER_INDEX32)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_INDEX32) == ", nimValue162, ", \"value mismatch: BGFX_BUFFER_INDEX32\");"].}
-const nimValue163 = uint64(BGFX_BUFFER_COMPUTE_READ_WRITE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_READ_WRITE) == ", nimValue163, ", \"value mismatch: BGFX_BUFFER_COMPUTE_READ_WRITE\");"].}
-const nimValue164 = uint64(BGFX_TEXTURE_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_NONE) == ", nimValue164, ", \"value mismatch: BGFX_TEXTURE_NONE\");"].}
-const nimValue165 = uint64(BGFX_TEXTURE_MSAA_SAMPLE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_MSAA_SAMPLE) == ", nimValue165, ", \"value mismatch: BGFX_TEXTURE_MSAA_SAMPLE\");"].}
-const nimValue166 = uint64(BGFX_TEXTURE_RT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT) == ", nimValue166, ", \"value mismatch: BGFX_TEXTURE_RT\");"].}
-const nimValue167 = uint64(BGFX_TEXTURE_COMPUTE_WRITE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_COMPUTE_WRITE) == ", nimValue167, ", \"value mismatch: BGFX_TEXTURE_COMPUTE_WRITE\");"].}
-const nimValue168 = uint64(BGFX_TEXTURE_SRGB)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_SRGB) == ", nimValue168, ", \"value mismatch: BGFX_TEXTURE_SRGB\");"].}
-const nimValue169 = uint64(BGFX_TEXTURE_BLIT_DST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_BLIT_DST) == ", nimValue169, ", \"value mismatch: BGFX_TEXTURE_BLIT_DST\");"].}
-const nimValue170 = uint64(BGFX_TEXTURE_READ_BACK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_READ_BACK) == ", nimValue170, ", \"value mismatch: BGFX_TEXTURE_READ_BACK\");"].}
-const nimValue171 = uint64(BGFX_TEXTURE_EXTERNAL_SHARED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_EXTERNAL_SHARED) == ", nimValue171, ", \"value mismatch: BGFX_TEXTURE_EXTERNAL_SHARED\");"].}
-const nimValue172 = uint64(BGFX_TEXTURE_RESERVED_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RESERVED_SHIFT) == ", nimValue172, ", \"value mismatch: BGFX_TEXTURE_RESERVED_SHIFT\");"].}
-const nimValue173 = uint64(BGFX_TEXTURE_RESERVED_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RESERVED_MASK) == ", nimValue173, ", \"value mismatch: BGFX_TEXTURE_RESERVED_MASK\");"].}
-const nimValue174 = uint64(BGFX_TEXTURE_RT_MSAA_X2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X2) == ", nimValue174, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X2\");"].}
-const nimValue175 = uint64(BGFX_TEXTURE_RT_MSAA_X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X4) == ", nimValue175, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X4\");"].}
-const nimValue176 = uint64(BGFX_TEXTURE_RT_MSAA_X8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X8) == ", nimValue176, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X8\");"].}
-const nimValue177 = uint64(BGFX_TEXTURE_RT_MSAA_X16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X16) == ", nimValue177, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X16\");"].}
-const nimValue178 = uint64(BGFX_TEXTURE_RT_MSAA_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_SHIFT) == ", nimValue178, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_SHIFT\");"].}
-const nimValue179 = uint64(BGFX_TEXTURE_RT_MSAA_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_MASK) == ", nimValue179, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_MASK\");"].}
-const nimValue180 = uint64(BGFX_TEXTURE_RT_WRITE_ONLY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_WRITE_ONLY) == ", nimValue180, ", \"value mismatch: BGFX_TEXTURE_RT_WRITE_ONLY\");"].}
-const nimValue181 = uint64(BGFX_TEXTURE_RT_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_SHIFT) == ", nimValue181, ", \"value mismatch: BGFX_TEXTURE_RT_SHIFT\");"].}
-const nimValue182 = uint64(BGFX_TEXTURE_RT_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MASK) == ", nimValue182, ", \"value mismatch: BGFX_TEXTURE_RT_MASK\");"].}
-const nimValue183 = uint64(BGFX_SAMPLER_U_MIRROR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_MIRROR) == ", nimValue183, ", \"value mismatch: BGFX_SAMPLER_U_MIRROR\");"].}
-const nimValue184 = uint64(BGFX_SAMPLER_U_CLAMP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_CLAMP) == ", nimValue184, ", \"value mismatch: BGFX_SAMPLER_U_CLAMP\");"].}
-const nimValue185 = uint64(BGFX_SAMPLER_U_BORDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_BORDER) == ", nimValue185, ", \"value mismatch: BGFX_SAMPLER_U_BORDER\");"].}
-const nimValue186 = uint64(BGFX_SAMPLER_U_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_SHIFT) == ", nimValue186, ", \"value mismatch: BGFX_SAMPLER_U_SHIFT\");"].}
-const nimValue187 = uint64(BGFX_SAMPLER_U_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_MASK) == ", nimValue187, ", \"value mismatch: BGFX_SAMPLER_U_MASK\");"].}
-const nimValue188 = uint64(BGFX_SAMPLER_V_MIRROR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_MIRROR) == ", nimValue188, ", \"value mismatch: BGFX_SAMPLER_V_MIRROR\");"].}
-const nimValue189 = uint64(BGFX_SAMPLER_V_CLAMP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_CLAMP) == ", nimValue189, ", \"value mismatch: BGFX_SAMPLER_V_CLAMP\");"].}
-const nimValue190 = uint64(BGFX_SAMPLER_V_BORDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_BORDER) == ", nimValue190, ", \"value mismatch: BGFX_SAMPLER_V_BORDER\");"].}
-const nimValue191 = uint64(BGFX_SAMPLER_V_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_SHIFT) == ", nimValue191, ", \"value mismatch: BGFX_SAMPLER_V_SHIFT\");"].}
-const nimValue192 = uint64(BGFX_SAMPLER_V_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_MASK) == ", nimValue192, ", \"value mismatch: BGFX_SAMPLER_V_MASK\");"].}
-const nimValue193 = uint64(BGFX_SAMPLER_W_MIRROR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_MIRROR) == ", nimValue193, ", \"value mismatch: BGFX_SAMPLER_W_MIRROR\");"].}
-const nimValue194 = uint64(BGFX_SAMPLER_W_CLAMP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_CLAMP) == ", nimValue194, ", \"value mismatch: BGFX_SAMPLER_W_CLAMP\");"].}
-const nimValue195 = uint64(BGFX_SAMPLER_W_BORDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_BORDER) == ", nimValue195, ", \"value mismatch: BGFX_SAMPLER_W_BORDER\");"].}
-const nimValue196 = uint64(BGFX_SAMPLER_W_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_SHIFT) == ", nimValue196, ", \"value mismatch: BGFX_SAMPLER_W_SHIFT\");"].}
-const nimValue197 = uint64(BGFX_SAMPLER_W_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_MASK) == ", nimValue197, ", \"value mismatch: BGFX_SAMPLER_W_MASK\");"].}
-const nimValue198 = uint64(BGFX_SAMPLER_MIN_POINT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_POINT) == ", nimValue198, ", \"value mismatch: BGFX_SAMPLER_MIN_POINT\");"].}
-const nimValue199 = uint64(BGFX_SAMPLER_MIN_ANISOTROPIC)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_ANISOTROPIC) == ", nimValue199, ", \"value mismatch: BGFX_SAMPLER_MIN_ANISOTROPIC\");"].}
-const nimValue200 = uint64(BGFX_SAMPLER_MIN_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_SHIFT) == ", nimValue200, ", \"value mismatch: BGFX_SAMPLER_MIN_SHIFT\");"].}
-const nimValue201 = uint64(BGFX_SAMPLER_MIN_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_MASK) == ", nimValue201, ", \"value mismatch: BGFX_SAMPLER_MIN_MASK\");"].}
-const nimValue202 = uint64(BGFX_SAMPLER_MAG_POINT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_POINT) == ", nimValue202, ", \"value mismatch: BGFX_SAMPLER_MAG_POINT\");"].}
-const nimValue203 = uint64(BGFX_SAMPLER_MAG_ANISOTROPIC)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_ANISOTROPIC) == ", nimValue203, ", \"value mismatch: BGFX_SAMPLER_MAG_ANISOTROPIC\");"].}
-const nimValue204 = uint64(BGFX_SAMPLER_MAG_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_SHIFT) == ", nimValue204, ", \"value mismatch: BGFX_SAMPLER_MAG_SHIFT\");"].}
-const nimValue205 = uint64(BGFX_SAMPLER_MAG_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_MASK) == ", nimValue205, ", \"value mismatch: BGFX_SAMPLER_MAG_MASK\");"].}
-const nimValue206 = uint64(BGFX_SAMPLER_MIP_POINT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIP_POINT) == ", nimValue206, ", \"value mismatch: BGFX_SAMPLER_MIP_POINT\");"].}
-const nimValue207 = uint64(BGFX_SAMPLER_MIP_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIP_SHIFT) == ", nimValue207, ", \"value mismatch: BGFX_SAMPLER_MIP_SHIFT\");"].}
-const nimValue208 = uint64(BGFX_SAMPLER_MIP_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIP_MASK) == ", nimValue208, ", \"value mismatch: BGFX_SAMPLER_MIP_MASK\");"].}
-const nimValue209 = uint64(BGFX_SAMPLER_COMPARE_LESS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_LESS) == ", nimValue209, ", \"value mismatch: BGFX_SAMPLER_COMPARE_LESS\");"].}
-const nimValue210 = uint64(BGFX_SAMPLER_COMPARE_LEQUAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_LEQUAL) == ", nimValue210, ", \"value mismatch: BGFX_SAMPLER_COMPARE_LEQUAL\");"].}
-const nimValue211 = uint64(BGFX_SAMPLER_COMPARE_EQUAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_EQUAL) == ", nimValue211, ", \"value mismatch: BGFX_SAMPLER_COMPARE_EQUAL\");"].}
-const nimValue212 = uint64(BGFX_SAMPLER_COMPARE_GEQUAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_GEQUAL) == ", nimValue212, ", \"value mismatch: BGFX_SAMPLER_COMPARE_GEQUAL\");"].}
-const nimValue213 = uint64(BGFX_SAMPLER_COMPARE_GREATER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_GREATER) == ", nimValue213, ", \"value mismatch: BGFX_SAMPLER_COMPARE_GREATER\");"].}
-const nimValue214 = uint64(BGFX_SAMPLER_COMPARE_NOTEQUAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_NOTEQUAL) == ", nimValue214, ", \"value mismatch: BGFX_SAMPLER_COMPARE_NOTEQUAL\");"].}
-const nimValue215 = uint64(BGFX_SAMPLER_COMPARE_NEVER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_NEVER) == ", nimValue215, ", \"value mismatch: BGFX_SAMPLER_COMPARE_NEVER\");"].}
-const nimValue216 = uint64(BGFX_SAMPLER_COMPARE_ALWAYS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_ALWAYS) == ", nimValue216, ", \"value mismatch: BGFX_SAMPLER_COMPARE_ALWAYS\");"].}
-const nimValue217 = uint64(BGFX_SAMPLER_COMPARE_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_SHIFT) == ", nimValue217, ", \"value mismatch: BGFX_SAMPLER_COMPARE_SHIFT\");"].}
-const nimValue218 = uint64(BGFX_SAMPLER_COMPARE_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_MASK) == ", nimValue218, ", \"value mismatch: BGFX_SAMPLER_COMPARE_MASK\");"].}
-const nimValue219 = uint64(BGFX_SAMPLER_BORDER_COLOR_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BORDER_COLOR_SHIFT) == ", nimValue219, ", \"value mismatch: BGFX_SAMPLER_BORDER_COLOR_SHIFT\");"].}
-const nimValue220 = uint64(BGFX_SAMPLER_BORDER_COLOR_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BORDER_COLOR_MASK) == ", nimValue220, ", \"value mismatch: BGFX_SAMPLER_BORDER_COLOR_MASK\");"].}
-const nimValue221 = uint64(BGFX_SAMPLER_RESERVED_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_RESERVED_SHIFT) == ", nimValue221, ", \"value mismatch: BGFX_SAMPLER_RESERVED_SHIFT\");"].}
-const nimValue222 = uint64(BGFX_SAMPLER_RESERVED_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_RESERVED_MASK) == ", nimValue222, ", \"value mismatch: BGFX_SAMPLER_RESERVED_MASK\");"].}
-const nimValue223 = uint64(BGFX_SAMPLER_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_NONE) == ", nimValue223, ", \"value mismatch: BGFX_SAMPLER_NONE\");"].}
-const nimValue224 = uint64(BGFX_SAMPLER_SAMPLE_STENCIL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_SAMPLE_STENCIL) == ", nimValue224, ", \"value mismatch: BGFX_SAMPLER_SAMPLE_STENCIL\");"].}
-const nimValue225 = uint64(BGFX_SAMPLER_POINT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_POINT) == ", nimValue225, ", \"value mismatch: BGFX_SAMPLER_POINT\");"].}
-const nimValue226 = uint64(BGFX_SAMPLER_UVW_MIRROR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_UVW_MIRROR) == ", nimValue226, ", \"value mismatch: BGFX_SAMPLER_UVW_MIRROR\");"].}
-const nimValue227 = uint64(BGFX_SAMPLER_UVW_CLAMP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_UVW_CLAMP) == ", nimValue227, ", \"value mismatch: BGFX_SAMPLER_UVW_CLAMP\");"].}
-const nimValue228 = uint64(BGFX_SAMPLER_UVW_BORDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_UVW_BORDER) == ", nimValue228, ", \"value mismatch: BGFX_SAMPLER_UVW_BORDER\");"].}
-const nimValue229 = uint64(BGFX_SAMPLER_BITS_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BITS_MASK) == ", nimValue229, ", \"value mismatch: BGFX_SAMPLER_BITS_MASK\");"].}
-const nimValue230 = uint64(BGFX_RESET_MSAA_X2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X2) == ", nimValue230, ", \"value mismatch: BGFX_RESET_MSAA_X2\");"].}
-const nimValue231 = uint64(BGFX_RESET_MSAA_X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X4) == ", nimValue231, ", \"value mismatch: BGFX_RESET_MSAA_X4\");"].}
-const nimValue232 = uint64(BGFX_RESET_MSAA_X8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X8) == ", nimValue232, ", \"value mismatch: BGFX_RESET_MSAA_X8\");"].}
-const nimValue233 = uint64(BGFX_RESET_MSAA_X16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X16) == ", nimValue233, ", \"value mismatch: BGFX_RESET_MSAA_X16\");"].}
-const nimValue234 = uint64(BGFX_RESET_MSAA_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_SHIFT) == ", nimValue234, ", \"value mismatch: BGFX_RESET_MSAA_SHIFT\");"].}
-const nimValue235 = uint64(BGFX_RESET_MSAA_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_MASK) == ", nimValue235, ", \"value mismatch: BGFX_RESET_MSAA_MASK\");"].}
-const nimValue236 = uint64(BGFX_RESET_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_NONE) == ", nimValue236, ", \"value mismatch: BGFX_RESET_NONE\");"].}
-const nimValue237 = uint64(BGFX_RESET_FULLSCREEN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FULLSCREEN) == ", nimValue237, ", \"value mismatch: BGFX_RESET_FULLSCREEN\");"].}
-const nimValue238 = uint64(BGFX_RESET_VSYNC)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_VSYNC) == ", nimValue238, ", \"value mismatch: BGFX_RESET_VSYNC\");"].}
-const nimValue239 = uint64(BGFX_RESET_MAXANISOTROPY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MAXANISOTROPY) == ", nimValue239, ", \"value mismatch: BGFX_RESET_MAXANISOTROPY\");"].}
-const nimValue240 = uint64(BGFX_RESET_CAPTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_CAPTURE) == ", nimValue240, ", \"value mismatch: BGFX_RESET_CAPTURE\");"].}
-const nimValue241 = uint64(BGFX_RESET_FLUSH_AFTER_RENDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FLUSH_AFTER_RENDER) == ", nimValue241, ", \"value mismatch: BGFX_RESET_FLUSH_AFTER_RENDER\");"].}
-const nimValue242 = uint64(BGFX_RESET_FLIP_AFTER_RENDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FLIP_AFTER_RENDER) == ", nimValue242, ", \"value mismatch: BGFX_RESET_FLIP_AFTER_RENDER\");"].}
-const nimValue243 = uint64(BGFX_RESET_SRGB_BACKBUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_SRGB_BACKBUFFER) == ", nimValue243, ", \"value mismatch: BGFX_RESET_SRGB_BACKBUFFER\");"].}
-const nimValue244 = uint64(BGFX_RESET_HDR10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_HDR10) == ", nimValue244, ", \"value mismatch: BGFX_RESET_HDR10\");"].}
-const nimValue245 = uint64(BGFX_RESET_HIDPI)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_HIDPI) == ", nimValue245, ", \"value mismatch: BGFX_RESET_HIDPI\");"].}
-const nimValue246 = uint64(BGFX_RESET_DEPTH_CLAMP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_DEPTH_CLAMP) == ", nimValue246, ", \"value mismatch: BGFX_RESET_DEPTH_CLAMP\");"].}
-const nimValue247 = uint64(BGFX_RESET_SUSPEND)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_SUSPEND) == ", nimValue247, ", \"value mismatch: BGFX_RESET_SUSPEND\");"].}
-const nimValue248 = uint64(BGFX_RESET_TRANSPARENT_BACKBUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_TRANSPARENT_BACKBUFFER) == ", nimValue248, ", \"value mismatch: BGFX_RESET_TRANSPARENT_BACKBUFFER\");"].}
-const nimValue249 = uint64(BGFX_RESET_FULLSCREEN_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FULLSCREEN_SHIFT) == ", nimValue249, ", \"value mismatch: BGFX_RESET_FULLSCREEN_SHIFT\");"].}
-const nimValue250 = uint64(BGFX_RESET_FULLSCREEN_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FULLSCREEN_MASK) == ", nimValue250, ", \"value mismatch: BGFX_RESET_FULLSCREEN_MASK\");"].}
-const nimValue251 = uint64(BGFX_RESET_RESERVED_SHIFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_RESERVED_SHIFT) == ", nimValue251, ", \"value mismatch: BGFX_RESET_RESERVED_SHIFT\");"].}
-const nimValue252 = uint64(BGFX_RESET_RESERVED_MASK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_RESERVED_MASK) == ", nimValue252, ", \"value mismatch: BGFX_RESET_RESERVED_MASK\");"].}
-const nimValue253 = uint64(BGFX_CAPS_ALPHA_TO_COVERAGE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_ALPHA_TO_COVERAGE) == ", nimValue253, ", \"value mismatch: BGFX_CAPS_ALPHA_TO_COVERAGE\");"].}
-const nimValue254 = uint64(BGFX_CAPS_BLEND_INDEPENDENT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_BLEND_INDEPENDENT) == ", nimValue254, ", \"value mismatch: BGFX_CAPS_BLEND_INDEPENDENT\");"].}
-const nimValue255 = uint64(BGFX_CAPS_COMPUTE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_COMPUTE) == ", nimValue255, ", \"value mismatch: BGFX_CAPS_COMPUTE\");"].}
-const nimValue256 = uint64(BGFX_CAPS_CONSERVATIVE_RASTER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_CONSERVATIVE_RASTER) == ", nimValue256, ", \"value mismatch: BGFX_CAPS_CONSERVATIVE_RASTER\");"].}
-const nimValue257 = uint64(BGFX_CAPS_DRAW_INDIRECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_DRAW_INDIRECT) == ", nimValue257, ", \"value mismatch: BGFX_CAPS_DRAW_INDIRECT\");"].}
-const nimValue258 = uint64(BGFX_CAPS_DRAW_INDIRECT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_DRAW_INDIRECT_COUNT) == ", nimValue258, ", \"value mismatch: BGFX_CAPS_DRAW_INDIRECT_COUNT\");"].}
-const nimValue259 = uint64(BGFX_CAPS_FRAGMENT_DEPTH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FRAGMENT_DEPTH) == ", nimValue259, ", \"value mismatch: BGFX_CAPS_FRAGMENT_DEPTH\");"].}
-const nimValue260 = uint64(BGFX_CAPS_FRAGMENT_ORDERING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FRAGMENT_ORDERING) == ", nimValue260, ", \"value mismatch: BGFX_CAPS_FRAGMENT_ORDERING\");"].}
-const nimValue261 = uint64(BGFX_CAPS_GRAPHICS_DEBUGGER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_GRAPHICS_DEBUGGER) == ", nimValue261, ", \"value mismatch: BGFX_CAPS_GRAPHICS_DEBUGGER\");"].}
-const nimValue262 = uint64(BGFX_CAPS_HDR10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_HDR10) == ", nimValue262, ", \"value mismatch: BGFX_CAPS_HDR10\");"].}
-const nimValue263 = uint64(BGFX_CAPS_HIDPI)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_HIDPI) == ", nimValue263, ", \"value mismatch: BGFX_CAPS_HIDPI\");"].}
-const nimValue264 = uint64(BGFX_CAPS_IMAGE_RW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_IMAGE_RW) == ", nimValue264, ", \"value mismatch: BGFX_CAPS_IMAGE_RW\");"].}
-const nimValue265 = uint64(BGFX_CAPS_INDEX32)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_INDEX32) == ", nimValue265, ", \"value mismatch: BGFX_CAPS_INDEX32\");"].}
-const nimValue266 = uint64(BGFX_CAPS_INSTANCING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_INSTANCING) == ", nimValue266, ", \"value mismatch: BGFX_CAPS_INSTANCING\");"].}
-const nimValue267 = uint64(BGFX_CAPS_OCCLUSION_QUERY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_OCCLUSION_QUERY) == ", nimValue267, ", \"value mismatch: BGFX_CAPS_OCCLUSION_QUERY\");"].}
-const nimValue268 = uint64(BGFX_CAPS_PRIMITIVE_ID)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_PRIMITIVE_ID) == ", nimValue268, ", \"value mismatch: BGFX_CAPS_PRIMITIVE_ID\");"].}
-const nimValue269 = uint64(BGFX_CAPS_RENDERER_MULTITHREADED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_RENDERER_MULTITHREADED) == ", nimValue269, ", \"value mismatch: BGFX_CAPS_RENDERER_MULTITHREADED\");"].}
-const nimValue270 = uint64(BGFX_CAPS_SWAP_CHAIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_SWAP_CHAIN) == ", nimValue270, ", \"value mismatch: BGFX_CAPS_SWAP_CHAIN\");"].}
-const nimValue271 = uint64(BGFX_CAPS_TEXTURE_BLIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_BLIT) == ", nimValue271, ", \"value mismatch: BGFX_CAPS_TEXTURE_BLIT\");"].}
-const nimValue272 = uint64(BGFX_CAPS_TEXTURE_COMPARE_LEQUAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_COMPARE_LEQUAL) == ", nimValue272, ", \"value mismatch: BGFX_CAPS_TEXTURE_COMPARE_LEQUAL\");"].}
-const nimValue273 = uint64(BGFX_CAPS_TEXTURE_COMPARE_RESERVED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_COMPARE_RESERVED) == ", nimValue273, ", \"value mismatch: BGFX_CAPS_TEXTURE_COMPARE_RESERVED\");"].}
-const nimValue274 = uint64(BGFX_CAPS_TEXTURE_CUBE_ARRAY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_CUBE_ARRAY) == ", nimValue274, ", \"value mismatch: BGFX_CAPS_TEXTURE_CUBE_ARRAY\");"].}
-const nimValue275 = uint64(BGFX_CAPS_TEXTURE_DIRECT_ACCESS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_DIRECT_ACCESS) == ", nimValue275, ", \"value mismatch: BGFX_CAPS_TEXTURE_DIRECT_ACCESS\");"].}
-const nimValue276 = uint64(BGFX_CAPS_TEXTURE_EXTERNAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_EXTERNAL) == ", nimValue276, ", \"value mismatch: BGFX_CAPS_TEXTURE_EXTERNAL\");"].}
-const nimValue277 = uint64(BGFX_CAPS_TEXTURE_EXTERNAL_SHARED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_EXTERNAL_SHARED) == ", nimValue277, ", \"value mismatch: BGFX_CAPS_TEXTURE_EXTERNAL_SHARED\");"].}
-const nimValue278 = uint64(BGFX_CAPS_TEXTURE_READ_BACK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_READ_BACK) == ", nimValue278, ", \"value mismatch: BGFX_CAPS_TEXTURE_READ_BACK\");"].}
-const nimValue279 = uint64(BGFX_CAPS_TEXTURE_2D_ARRAY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_2D_ARRAY) == ", nimValue279, ", \"value mismatch: BGFX_CAPS_TEXTURE_2D_ARRAY\");"].}
-const nimValue280 = uint64(BGFX_CAPS_TEXTURE_3D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_3D) == ", nimValue280, ", \"value mismatch: BGFX_CAPS_TEXTURE_3D\");"].}
-const nimValue281 = uint64(BGFX_CAPS_TRANSPARENT_BACKBUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TRANSPARENT_BACKBUFFER) == ", nimValue281, ", \"value mismatch: BGFX_CAPS_TRANSPARENT_BACKBUFFER\");"].}
-const nimValue282 = uint64(BGFX_CAPS_VARIABLE_RATE_SHADING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VARIABLE_RATE_SHADING) == ", nimValue282, ", \"value mismatch: BGFX_CAPS_VARIABLE_RATE_SHADING\");"].}
-const nimValue283 = uint64(BGFX_CAPS_VERTEX_ATTRIB_HALF)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VERTEX_ATTRIB_HALF) == ", nimValue283, ", \"value mismatch: BGFX_CAPS_VERTEX_ATTRIB_HALF\");"].}
-const nimValue284 = uint64(BGFX_CAPS_VERTEX_ATTRIB_UINT10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VERTEX_ATTRIB_UINT10) == ", nimValue284, ", \"value mismatch: BGFX_CAPS_VERTEX_ATTRIB_UINT10\");"].}
-const nimValue285 = uint64(BGFX_CAPS_VERTEX_ID)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VERTEX_ID) == ", nimValue285, ", \"value mismatch: BGFX_CAPS_VERTEX_ID\");"].}
-const nimValue286 = uint64(BGFX_CAPS_VIDEO_DECODE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_DECODE) == ", nimValue286, ", \"value mismatch: BGFX_CAPS_VIDEO_DECODE\");"].}
-const nimValue287 = uint64(BGFX_CAPS_VIEWPORT_LAYER_ARRAY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIEWPORT_LAYER_ARRAY) == ", nimValue287, ", \"value mismatch: BGFX_CAPS_VIEWPORT_LAYER_ARRAY\");"].}
-const nimValue288 = uint64(BGFX_CAPS_TEXTURE_COMPARE_ALL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_COMPARE_ALL) == ", nimValue288, ", \"value mismatch: BGFX_CAPS_TEXTURE_COMPARE_ALL\");"].}
-const nimValue289 = uint64(BGFX_CAPS_FORMAT_TEXTURE_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_NONE) == ", nimValue289, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_NONE\");"].}
-const nimValue290 = uint64(BGFX_CAPS_FORMAT_TEXTURE_2D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_2D) == ", nimValue290, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_2D\");"].}
-const nimValue291 = uint64(BGFX_CAPS_FORMAT_TEXTURE_2D_SRGB)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_2D_SRGB) == ", nimValue291, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_2D_SRGB\");"].}
-const nimValue292 = uint64(BGFX_CAPS_FORMAT_TEXTURE_2D_EMULATED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_2D_EMULATED) == ", nimValue292, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_2D_EMULATED\");"].}
-const nimValue293 = uint64(BGFX_CAPS_FORMAT_TEXTURE_3D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_3D) == ", nimValue293, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_3D\");"].}
-const nimValue294 = uint64(BGFX_CAPS_FORMAT_TEXTURE_3D_SRGB)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_3D_SRGB) == ", nimValue294, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_3D_SRGB\");"].}
-const nimValue295 = uint64(BGFX_CAPS_FORMAT_TEXTURE_3D_EMULATED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_3D_EMULATED) == ", nimValue295, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_3D_EMULATED\");"].}
-const nimValue296 = uint64(BGFX_CAPS_FORMAT_TEXTURE_CUBE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_CUBE) == ", nimValue296, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_CUBE\");"].}
-const nimValue297 = uint64(BGFX_CAPS_FORMAT_TEXTURE_CUBE_SRGB)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_CUBE_SRGB) == ", nimValue297, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_CUBE_SRGB\");"].}
-const nimValue298 = uint64(BGFX_CAPS_FORMAT_TEXTURE_CUBE_EMULATED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_CUBE_EMULATED) == ", nimValue298, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_CUBE_EMULATED\");"].}
-const nimValue299 = uint64(BGFX_CAPS_FORMAT_TEXTURE_VERTEX)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_VERTEX) == ", nimValue299, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_VERTEX\");"].}
-const nimValue300 = uint64(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_READ)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_READ) == ", nimValue300, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_IMAGE_READ\");"].}
-const nimValue301 = uint64(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_WRITE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_WRITE) == ", nimValue301, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_IMAGE_WRITE\");"].}
-const nimValue302 = uint64(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER) == ", nimValue302, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER\");"].}
-const nimValue303 = uint64(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER_MSAA)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER_MSAA) == ", nimValue303, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER_MSAA\");"].}
-const nimValue304 = uint64(BGFX_CAPS_FORMAT_TEXTURE_MSAA)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_MSAA) == ", nimValue304, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_MSAA\");"].}
-const nimValue305 = uint64(BGFX_CAPS_FORMAT_TEXTURE_MIP_AUTOGEN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_MIP_AUTOGEN) == ", nimValue305, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_MIP_AUTOGEN\");"].}
-const nimValue306 = uint64(BGFX_CAPS_FORMAT_TEXTURE_BACKBUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_BACKBUFFER) == ", nimValue306, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_BACKBUFFER\");"].}
-const nimValue307 = uint64(BGFX_CAPS_FORMAT_TEXTURE_VIDEO_DECODE_DST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_VIDEO_DECODE_DST) == ", nimValue307, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_VIDEO_DECODE_DST\");"].}
-const nimValue308 = uint64(BGFX_CAPS_VIDEO_CODEC_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_NONE) == ", nimValue308, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_NONE\");"].}
-const nimValue309 = uint64(BGFX_CAPS_VIDEO_CODEC_BIT_8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_BIT_8) == ", nimValue309, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_BIT_8\");"].}
-const nimValue310 = uint64(BGFX_CAPS_VIDEO_CODEC_BIT_10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_BIT_10) == ", nimValue310, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_BIT_10\");"].}
-const nimValue311 = uint64(BGFX_CAPS_VIDEO_CODEC_BIT_12)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_BIT_12) == ", nimValue311, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_BIT_12\");"].}
-const nimValue312 = uint64(BGFX_CAPS_VIDEO_CODEC_CHROMA_420)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_CHROMA_420) == ", nimValue312, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_CHROMA_420\");"].}
-const nimValue313 = uint64(BGFX_CAPS_VIDEO_CODEC_CHROMA_422)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_CHROMA_422) == ", nimValue313, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_CHROMA_422\");"].}
-const nimValue314 = uint64(BGFX_CAPS_VIDEO_CODEC_CHROMA_444)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_CHROMA_444) == ", nimValue314, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_CHROMA_444\");"].}
-const nimValue315 = uint64(BGFX_VIDEO_DECODER_INIT_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODER_INIT_NONE) == ", nimValue315, ", \"value mismatch: BGFX_VIDEO_DECODER_INIT_NONE\");"].}
-const nimValue316 = uint64(BGFX_VIDEO_DECODER_INIT_RETAIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODER_INIT_RETAIN) == ", nimValue316, ", \"value mismatch: BGFX_VIDEO_DECODER_INIT_RETAIN\");"].}
-const nimValue317 = uint64(BGFX_VIDEO_DECODE_FRAME_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_NONE) == ", nimValue317, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_NONE\");"].}
-const nimValue318 = uint64(BGFX_VIDEO_DECODE_FRAME_SET)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_SET) == ", nimValue318, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_SET\");"].}
-const nimValue319 = uint64(BGFX_VIDEO_DECODE_FRAME_NO_BLIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_NO_BLIT) == ", nimValue319, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_NO_BLIT\");"].}
-const nimValue320 = uint64(BGFX_VIDEO_DECODE_FRAME_FINAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_FINAL) == ", nimValue320, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_FINAL\");"].}
-const nimValue321 = uint64(BGFX_VIDEO_DECODE_FRAME_LOOP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_LOOP) == ", nimValue321, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_LOOP\");"].}
-const nimValue322 = uint64(BGFX_RESOLVE_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESOLVE_NONE) == ", nimValue322, ", \"value mismatch: BGFX_RESOLVE_NONE\");"].}
-const nimValue323 = uint64(BGFX_RESOLVE_AUTO_GEN_MIPS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESOLVE_AUTO_GEN_MIPS) == ", nimValue323, ", \"value mismatch: BGFX_RESOLVE_AUTO_GEN_MIPS\");"].}
-const nimValue324 = uint64(BGFX_PCI_ID_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_NONE) == ", nimValue324, ", \"value mismatch: BGFX_PCI_ID_NONE\");"].}
-const nimValue325 = uint64(BGFX_PCI_ID_SOFTWARE_RASTERIZER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_SOFTWARE_RASTERIZER) == ", nimValue325, ", \"value mismatch: BGFX_PCI_ID_SOFTWARE_RASTERIZER\");"].}
-const nimValue326 = uint64(BGFX_PCI_ID_AMD)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_AMD) == ", nimValue326, ", \"value mismatch: BGFX_PCI_ID_AMD\");"].}
-const nimValue327 = uint64(BGFX_PCI_ID_APPLE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_APPLE) == ", nimValue327, ", \"value mismatch: BGFX_PCI_ID_APPLE\");"].}
-const nimValue328 = uint64(BGFX_PCI_ID_INTEL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_INTEL) == ", nimValue328, ", \"value mismatch: BGFX_PCI_ID_INTEL\");"].}
-const nimValue329 = uint64(BGFX_PCI_ID_NVIDIA)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_NVIDIA) == ", nimValue329, ", \"value mismatch: BGFX_PCI_ID_NVIDIA\");"].}
-const nimValue330 = uint64(BGFX_PCI_ID_MICROSOFT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_MICROSOFT) == ", nimValue330, ", \"value mismatch: BGFX_PCI_ID_MICROSOFT\");"].}
-const nimValue331 = uint64(BGFX_PCI_ID_ARM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_ARM) == ", nimValue331, ", \"value mismatch: BGFX_PCI_ID_ARM\");"].}
-const nimValue332 = uint64(BGFX_CUBE_MAP_POSITIVE_X)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_POSITIVE_X) == ", nimValue332, ", \"value mismatch: BGFX_CUBE_MAP_POSITIVE_X\");"].}
-const nimValue333 = uint64(BGFX_CUBE_MAP_NEGATIVE_X)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_NEGATIVE_X) == ", nimValue333, ", \"value mismatch: BGFX_CUBE_MAP_NEGATIVE_X\");"].}
-const nimValue334 = uint64(BGFX_CUBE_MAP_POSITIVE_Y)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_POSITIVE_Y) == ", nimValue334, ", \"value mismatch: BGFX_CUBE_MAP_POSITIVE_Y\");"].}
-const nimValue335 = uint64(BGFX_CUBE_MAP_NEGATIVE_Y)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_NEGATIVE_Y) == ", nimValue335, ", \"value mismatch: BGFX_CUBE_MAP_NEGATIVE_Y\");"].}
-const nimValue336 = uint64(BGFX_CUBE_MAP_POSITIVE_Z)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_POSITIVE_Z) == ", nimValue336, ", \"value mismatch: BGFX_CUBE_MAP_POSITIVE_Z\");"].}
-const nimValue337 = uint64(BGFX_CUBE_MAP_NEGATIVE_Z)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_NEGATIVE_Z) == ", nimValue337, ", \"value mismatch: BGFX_CUBE_MAP_NEGATIVE_Z\");"].}
-const nimValue338 = uint64(BGFX_FRAME_NONE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_NONE) == ", nimValue338, ", \"value mismatch: BGFX_FRAME_NONE\");"].}
-const nimValue339 = uint64(BGFX_FRAME_DEBUG_CAPTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_DEBUG_CAPTURE) == ", nimValue339, ", \"value mismatch: BGFX_FRAME_DEBUG_CAPTURE\");"].}
-const nimValue340 = uint64(BGFX_FRAME_DISCARD)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_DISCARD) == ", nimValue340, ", \"value mismatch: BGFX_FRAME_DISCARD\");"].}
-const nimValue341 = uint64(BGFX_FRAME_FLUSH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_FLUSH) == ", nimValue341, ", \"value mismatch: BGFX_FRAME_FLUSH\");"].}
-const nimValue342 = uint64(BGFX_STATE_BLEND_ADD)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_ADD) == ", nimValue342, ", \"value mismatch: BGFX_STATE_BLEND_ADD\");"].}
-const nimValue343 = uint64(BGFX_STATE_BLEND_ALPHA)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_ALPHA) == ", nimValue343, ", \"value mismatch: BGFX_STATE_BLEND_ALPHA\");"].}
-const nimValue344 = uint64(BGFX_STATE_BLEND_DARKEN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_DARKEN) == ", nimValue344, ", \"value mismatch: BGFX_STATE_BLEND_DARKEN\");"].}
-const nimValue345 = uint64(BGFX_STATE_BLEND_LIGHTEN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_LIGHTEN) == ", nimValue345, ", \"value mismatch: BGFX_STATE_BLEND_LIGHTEN\");"].}
-const nimValue346 = uint64(BGFX_STATE_BLEND_MULTIPLY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_MULTIPLY) == ", nimValue346, ", \"value mismatch: BGFX_STATE_BLEND_MULTIPLY\");"].}
-const nimValue347 = uint64(BGFX_STATE_BLEND_NORMAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_NORMAL) == ", nimValue347, ", \"value mismatch: BGFX_STATE_BLEND_NORMAL\");"].}
-const nimValue348 = uint64(BGFX_STATE_BLEND_SCREEN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_SCREEN) == ", nimValue348, ", \"value mismatch: BGFX_STATE_BLEND_SCREEN\");"].}
-const nimValue349 = uint64(BGFX_STATE_BLEND_LINEAR_BURN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_LINEAR_BURN) == ", nimValue349, ", \"value mismatch: BGFX_STATE_BLEND_LINEAR_BURN\");"].}
-const nimValue350 = uint64(BGFX_FATAL_DEBUG_CHECK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_DEBUG_CHECK) == ", nimValue350, ", \"value mismatch: BGFX_FATAL_DEBUG_CHECK\");"].}
-const nimValue351 = uint64(BGFX_FATAL_INVALID_SHADER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_INVALID_SHADER) == ", nimValue351, ", \"value mismatch: BGFX_FATAL_INVALID_SHADER\");"].}
-const nimValue352 = uint64(BGFX_FATAL_UNABLE_TO_INITIALIZE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_UNABLE_TO_INITIALIZE) == ", nimValue352, ", \"value mismatch: BGFX_FATAL_UNABLE_TO_INITIALIZE\");"].}
-const nimValue353 = uint64(BGFX_FATAL_UNABLE_TO_CREATE_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_UNABLE_TO_CREATE_TEXTURE) == ", nimValue353, ", \"value mismatch: BGFX_FATAL_UNABLE_TO_CREATE_TEXTURE\");"].}
-const nimValue354 = uint64(BGFX_FATAL_DEVICE_LOST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_DEVICE_LOST) == ", nimValue354, ", \"value mismatch: BGFX_FATAL_DEVICE_LOST\");"].}
-const nimValue355 = uint64(BGFX_FATAL_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_COUNT) == ", nimValue355, ", \"value mismatch: BGFX_FATAL_COUNT\");"].}
-const nimValue356 = uint64(BGFX_RENDERER_TYPE_NOOP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_NOOP) == ", nimValue356, ", \"value mismatch: BGFX_RENDERER_TYPE_NOOP\");"].}
-const nimValue357 = uint64(BGFX_RENDERER_TYPE_AGC)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_AGC) == ", nimValue357, ", \"value mismatch: BGFX_RENDERER_TYPE_AGC\");"].}
-const nimValue358 = uint64(BGFX_RENDERER_TYPE_DIRECT3D11)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_DIRECT3D11) == ", nimValue358, ", \"value mismatch: BGFX_RENDERER_TYPE_DIRECT3D11\");"].}
-const nimValue359 = uint64(BGFX_RENDERER_TYPE_DIRECT3D12)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_DIRECT3D12) == ", nimValue359, ", \"value mismatch: BGFX_RENDERER_TYPE_DIRECT3D12\");"].}
-const nimValue360 = uint64(BGFX_RENDERER_TYPE_GNM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_GNM) == ", nimValue360, ", \"value mismatch: BGFX_RENDERER_TYPE_GNM\");"].}
-const nimValue361 = uint64(BGFX_RENDERER_TYPE_METAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_METAL) == ", nimValue361, ", \"value mismatch: BGFX_RENDERER_TYPE_METAL\");"].}
-const nimValue362 = uint64(BGFX_RENDERER_TYPE_NVN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_NVN) == ", nimValue362, ", \"value mismatch: BGFX_RENDERER_TYPE_NVN\");"].}
-const nimValue363 = uint64(BGFX_RENDERER_TYPE_OPENGLES)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_OPENGLES) == ", nimValue363, ", \"value mismatch: BGFX_RENDERER_TYPE_OPENGLES\");"].}
-const nimValue364 = uint64(BGFX_RENDERER_TYPE_OPENGL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_OPENGL) == ", nimValue364, ", \"value mismatch: BGFX_RENDERER_TYPE_OPENGL\");"].}
-const nimValue365 = uint64(BGFX_RENDERER_TYPE_VULKAN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_VULKAN) == ", nimValue365, ", \"value mismatch: BGFX_RENDERER_TYPE_VULKAN\");"].}
-const nimValue366 = uint64(BGFX_RENDERER_TYPE_WEBGPU)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_WEBGPU) == ", nimValue366, ", \"value mismatch: BGFX_RENDERER_TYPE_WEBGPU\");"].}
-const nimValue367 = uint64(BGFX_RENDERER_TYPE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_COUNT) == ", nimValue367, ", \"value mismatch: BGFX_RENDERER_TYPE_COUNT\");"].}
-const nimValue368 = uint64(BGFX_ACCESS_READ)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_READ) == ", nimValue368, ", \"value mismatch: BGFX_ACCESS_READ\");"].}
-const nimValue369 = uint64(BGFX_ACCESS_WRITE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_WRITE) == ", nimValue369, ", \"value mismatch: BGFX_ACCESS_WRITE\");"].}
-const nimValue370 = uint64(BGFX_ACCESS_READWRITE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_READWRITE) == ", nimValue370, ", \"value mismatch: BGFX_ACCESS_READWRITE\");"].}
-const nimValue371 = uint64(BGFX_ACCESS_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_COUNT) == ", nimValue371, ", \"value mismatch: BGFX_ACCESS_COUNT\");"].}
-const nimValue372 = uint64(BGFX_ATTRIB_POSITION)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_POSITION) == ", nimValue372, ", \"value mismatch: BGFX_ATTRIB_POSITION\");"].}
-const nimValue373 = uint64(BGFX_ATTRIB_NORMAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_NORMAL) == ", nimValue373, ", \"value mismatch: BGFX_ATTRIB_NORMAL\");"].}
-const nimValue374 = uint64(BGFX_ATTRIB_TANGENT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TANGENT) == ", nimValue374, ", \"value mismatch: BGFX_ATTRIB_TANGENT\");"].}
-const nimValue375 = uint64(BGFX_ATTRIB_BITANGENT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_BITANGENT) == ", nimValue375, ", \"value mismatch: BGFX_ATTRIB_BITANGENT\");"].}
-const nimValue376 = uint64(BGFX_ATTRIB_COLOR0)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR0) == ", nimValue376, ", \"value mismatch: BGFX_ATTRIB_COLOR0\");"].}
-const nimValue377 = uint64(BGFX_ATTRIB_COLOR1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR1) == ", nimValue377, ", \"value mismatch: BGFX_ATTRIB_COLOR1\");"].}
-const nimValue378 = uint64(BGFX_ATTRIB_COLOR2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR2) == ", nimValue378, ", \"value mismatch: BGFX_ATTRIB_COLOR2\");"].}
-const nimValue379 = uint64(BGFX_ATTRIB_COLOR3)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR3) == ", nimValue379, ", \"value mismatch: BGFX_ATTRIB_COLOR3\");"].}
-const nimValue380 = uint64(BGFX_ATTRIB_INDICES)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_INDICES) == ", nimValue380, ", \"value mismatch: BGFX_ATTRIB_INDICES\");"].}
-const nimValue381 = uint64(BGFX_ATTRIB_WEIGHT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_WEIGHT) == ", nimValue381, ", \"value mismatch: BGFX_ATTRIB_WEIGHT\");"].}
-const nimValue382 = uint64(BGFX_ATTRIB_TEXCOORD0)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD0) == ", nimValue382, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD0\");"].}
-const nimValue383 = uint64(BGFX_ATTRIB_TEXCOORD1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD1) == ", nimValue383, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD1\");"].}
-const nimValue384 = uint64(BGFX_ATTRIB_TEXCOORD2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD2) == ", nimValue384, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD2\");"].}
-const nimValue385 = uint64(BGFX_ATTRIB_TEXCOORD3)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD3) == ", nimValue385, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD3\");"].}
-const nimValue386 = uint64(BGFX_ATTRIB_TEXCOORD4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD4) == ", nimValue386, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD4\");"].}
-const nimValue387 = uint64(BGFX_ATTRIB_TEXCOORD5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD5) == ", nimValue387, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD5\");"].}
-const nimValue388 = uint64(BGFX_ATTRIB_TEXCOORD6)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD6) == ", nimValue388, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD6\");"].}
-const nimValue389 = uint64(BGFX_ATTRIB_TEXCOORD7)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD7) == ", nimValue389, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD7\");"].}
-const nimValue390 = uint64(BGFX_ATTRIB_TEXCOORD8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD8) == ", nimValue390, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD8\");"].}
-const nimValue391 = uint64(BGFX_ATTRIB_TEXCOORD9)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD9) == ", nimValue391, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD9\");"].}
-const nimValue392 = uint64(BGFX_ATTRIB_TEXCOORD10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD10) == ", nimValue392, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD10\");"].}
-const nimValue393 = uint64(BGFX_ATTRIB_TEXCOORD11)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD11) == ", nimValue393, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD11\");"].}
-const nimValue394 = uint64(BGFX_ATTRIB_TEXCOORD12)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD12) == ", nimValue394, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD12\");"].}
-const nimValue395 = uint64(BGFX_ATTRIB_TEXCOORD13)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD13) == ", nimValue395, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD13\");"].}
-const nimValue396 = uint64(BGFX_ATTRIB_TEXCOORD14)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD14) == ", nimValue396, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD14\");"].}
-const nimValue397 = uint64(BGFX_ATTRIB_TEXCOORD15)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD15) == ", nimValue397, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD15\");"].}
-const nimValue398 = uint64(BGFX_ATTRIB_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COUNT) == ", nimValue398, ", \"value mismatch: BGFX_ATTRIB_COUNT\");"].}
-const nimValue399 = uint64(BGFX_ATTRIB_TYPE_INT8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_INT8) == ", nimValue399, ", \"value mismatch: BGFX_ATTRIB_TYPE_INT8\");"].}
-const nimValue400 = uint64(BGFX_ATTRIB_TYPE_UINT8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT8) == ", nimValue400, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT8\");"].}
-const nimValue401 = uint64(BGFX_ATTRIB_TYPE_UINT10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT10) == ", nimValue401, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT10\");"].}
-const nimValue402 = uint64(BGFX_ATTRIB_TYPE_INT16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_INT16) == ", nimValue402, ", \"value mismatch: BGFX_ATTRIB_TYPE_INT16\");"].}
-const nimValue403 = uint64(BGFX_ATTRIB_TYPE_UINT16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT16) == ", nimValue403, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT16\");"].}
-const nimValue404 = uint64(BGFX_ATTRIB_TYPE_HALF)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_HALF) == ", nimValue404, ", \"value mismatch: BGFX_ATTRIB_TYPE_HALF\");"].}
-const nimValue405 = uint64(BGFX_ATTRIB_TYPE_FLOAT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_FLOAT) == ", nimValue405, ", \"value mismatch: BGFX_ATTRIB_TYPE_FLOAT\");"].}
-const nimValue406 = uint64(BGFX_ATTRIB_TYPE_INT32)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_INT32) == ", nimValue406, ", \"value mismatch: BGFX_ATTRIB_TYPE_INT32\");"].}
-const nimValue407 = uint64(BGFX_ATTRIB_TYPE_UINT32)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT32) == ", nimValue407, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT32\");"].}
-const nimValue408 = uint64(BGFX_ATTRIB_TYPE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_COUNT) == ", nimValue408, ", \"value mismatch: BGFX_ATTRIB_TYPE_COUNT\");"].}
-const nimValue409 = uint64(BGFX_TEXTURE_FORMAT_BC1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC1) == ", nimValue409, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC1\");"].}
-const nimValue410 = uint64(BGFX_TEXTURE_FORMAT_BC2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC2) == ", nimValue410, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC2\");"].}
-const nimValue411 = uint64(BGFX_TEXTURE_FORMAT_BC3)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC3) == ", nimValue411, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC3\");"].}
-const nimValue412 = uint64(BGFX_TEXTURE_FORMAT_BC4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC4) == ", nimValue412, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC4\");"].}
-const nimValue413 = uint64(BGFX_TEXTURE_FORMAT_BC4S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC4S) == ", nimValue413, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC4S\");"].}
-const nimValue414 = uint64(BGFX_TEXTURE_FORMAT_BC5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC5) == ", nimValue414, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC5\");"].}
-const nimValue415 = uint64(BGFX_TEXTURE_FORMAT_BC5S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC5S) == ", nimValue415, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC5S\");"].}
-const nimValue416 = uint64(BGFX_TEXTURE_FORMAT_BC6H)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC6H) == ", nimValue416, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC6H\");"].}
-const nimValue417 = uint64(BGFX_TEXTURE_FORMAT_BC6HU)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC6HU) == ", nimValue417, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC6HU\");"].}
-const nimValue418 = uint64(BGFX_TEXTURE_FORMAT_BC7)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC7) == ", nimValue418, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC7\");"].}
-const nimValue419 = uint64(BGFX_TEXTURE_FORMAT_ETC1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC1) == ", nimValue419, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC1\");"].}
-const nimValue420 = uint64(BGFX_TEXTURE_FORMAT_ETC2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC2) == ", nimValue420, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC2\");"].}
-const nimValue421 = uint64(BGFX_TEXTURE_FORMAT_ETC2A)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC2A) == ", nimValue421, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC2A\");"].}
-const nimValue422 = uint64(BGFX_TEXTURE_FORMAT_ETC2A1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC2A1) == ", nimValue422, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC2A1\");"].}
-const nimValue423 = uint64(BGFX_TEXTURE_FORMAT_EACR11)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACR11) == ", nimValue423, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACR11\");"].}
-const nimValue424 = uint64(BGFX_TEXTURE_FORMAT_EACR11S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACR11S) == ", nimValue424, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACR11S\");"].}
-const nimValue425 = uint64(BGFX_TEXTURE_FORMAT_EACRG11)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACRG11) == ", nimValue425, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACRG11\");"].}
-const nimValue426 = uint64(BGFX_TEXTURE_FORMAT_EACRG11S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACRG11S) == ", nimValue426, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACRG11S\");"].}
-const nimValue427 = uint64(BGFX_TEXTURE_FORMAT_PTC12)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC12) == ", nimValue427, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC12\");"].}
-const nimValue428 = uint64(BGFX_TEXTURE_FORMAT_PTC14)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC14) == ", nimValue428, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC14\");"].}
-const nimValue429 = uint64(BGFX_TEXTURE_FORMAT_PTC12A)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC12A) == ", nimValue429, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC12A\");"].}
-const nimValue430 = uint64(BGFX_TEXTURE_FORMAT_PTC14A)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC14A) == ", nimValue430, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC14A\");"].}
-const nimValue431 = uint64(BGFX_TEXTURE_FORMAT_PTC22)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC22) == ", nimValue431, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC22\");"].}
-const nimValue432 = uint64(BGFX_TEXTURE_FORMAT_PTC24)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC24) == ", nimValue432, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC24\");"].}
-const nimValue433 = uint64(BGFX_TEXTURE_FORMAT_ATC)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ATC) == ", nimValue433, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ATC\");"].}
-const nimValue434 = uint64(BGFX_TEXTURE_FORMAT_ATCE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ATCE) == ", nimValue434, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ATCE\");"].}
-const nimValue435 = uint64(BGFX_TEXTURE_FORMAT_ATCI)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ATCI) == ", nimValue435, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ATCI\");"].}
-const nimValue436 = uint64(BGFX_TEXTURE_FORMAT_ASTC4X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC4X4) == ", nimValue436, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC4X4\");"].}
-const nimValue437 = uint64(BGFX_TEXTURE_FORMAT_ASTC5X4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC5X4) == ", nimValue437, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC5X4\");"].}
-const nimValue438 = uint64(BGFX_TEXTURE_FORMAT_ASTC5X5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC5X5) == ", nimValue438, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC5X5\");"].}
-const nimValue439 = uint64(BGFX_TEXTURE_FORMAT_ASTC6X5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC6X5) == ", nimValue439, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC6X5\");"].}
-const nimValue440 = uint64(BGFX_TEXTURE_FORMAT_ASTC6X6)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC6X6) == ", nimValue440, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC6X6\");"].}
-const nimValue441 = uint64(BGFX_TEXTURE_FORMAT_ASTC8X5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC8X5) == ", nimValue441, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC8X5\");"].}
-const nimValue442 = uint64(BGFX_TEXTURE_FORMAT_ASTC8X6)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC8X6) == ", nimValue442, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC8X6\");"].}
-const nimValue443 = uint64(BGFX_TEXTURE_FORMAT_ASTC8X8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC8X8) == ", nimValue443, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC8X8\");"].}
-const nimValue444 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X5) == ", nimValue444, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X5\");"].}
-const nimValue445 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X6)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X6) == ", nimValue445, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X6\");"].}
-const nimValue446 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X8) == ", nimValue446, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X8\");"].}
-const nimValue447 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X10) == ", nimValue447, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X10\");"].}
-const nimValue448 = uint64(BGFX_TEXTURE_FORMAT_ASTC12X10)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC12X10) == ", nimValue448, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC12X10\");"].}
-const nimValue449 = uint64(BGFX_TEXTURE_FORMAT_ASTC12X12)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC12X12) == ", nimValue449, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC12X12\");"].}
-const nimValue450 = uint64(BGFX_TEXTURE_FORMAT_UNKNOWN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_UNKNOWN) == ", nimValue450, ", \"value mismatch: BGFX_TEXTURE_FORMAT_UNKNOWN\");"].}
-const nimValue451 = uint64(BGFX_TEXTURE_FORMAT_R1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R1) == ", nimValue451, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R1\");"].}
-const nimValue452 = uint64(BGFX_TEXTURE_FORMAT_A8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_A8) == ", nimValue452, ", \"value mismatch: BGFX_TEXTURE_FORMAT_A8\");"].}
-const nimValue453 = uint64(BGFX_TEXTURE_FORMAT_R8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8) == ", nimValue453, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8\");"].}
-const nimValue454 = uint64(BGFX_TEXTURE_FORMAT_R8I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8I) == ", nimValue454, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8I\");"].}
-const nimValue455 = uint64(BGFX_TEXTURE_FORMAT_R8U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8U) == ", nimValue455, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8U\");"].}
-const nimValue456 = uint64(BGFX_TEXTURE_FORMAT_R8S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8S) == ", nimValue456, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8S\");"].}
-const nimValue457 = uint64(BGFX_TEXTURE_FORMAT_R16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16) == ", nimValue457, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16\");"].}
-const nimValue458 = uint64(BGFX_TEXTURE_FORMAT_R16I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16I) == ", nimValue458, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16I\");"].}
-const nimValue459 = uint64(BGFX_TEXTURE_FORMAT_R16U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16U) == ", nimValue459, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16U\");"].}
-const nimValue460 = uint64(BGFX_TEXTURE_FORMAT_R16F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16F) == ", nimValue460, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16F\");"].}
-const nimValue461 = uint64(BGFX_TEXTURE_FORMAT_R16S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16S) == ", nimValue461, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16S\");"].}
-const nimValue462 = uint64(BGFX_TEXTURE_FORMAT_R32I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R32I) == ", nimValue462, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R32I\");"].}
-const nimValue463 = uint64(BGFX_TEXTURE_FORMAT_R32U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R32U) == ", nimValue463, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R32U\");"].}
-const nimValue464 = uint64(BGFX_TEXTURE_FORMAT_R32F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R32F) == ", nimValue464, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R32F\");"].}
-const nimValue465 = uint64(BGFX_TEXTURE_FORMAT_RG8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8) == ", nimValue465, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8\");"].}
-const nimValue466 = uint64(BGFX_TEXTURE_FORMAT_RG8I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8I) == ", nimValue466, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8I\");"].}
-const nimValue467 = uint64(BGFX_TEXTURE_FORMAT_RG8U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8U) == ", nimValue467, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8U\");"].}
-const nimValue468 = uint64(BGFX_TEXTURE_FORMAT_RG8S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8S) == ", nimValue468, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8S\");"].}
-const nimValue469 = uint64(BGFX_TEXTURE_FORMAT_RG16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16) == ", nimValue469, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16\");"].}
-const nimValue470 = uint64(BGFX_TEXTURE_FORMAT_RG16I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16I) == ", nimValue470, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16I\");"].}
-const nimValue471 = uint64(BGFX_TEXTURE_FORMAT_RG16U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16U) == ", nimValue471, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16U\");"].}
-const nimValue472 = uint64(BGFX_TEXTURE_FORMAT_RG16F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16F) == ", nimValue472, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16F\");"].}
-const nimValue473 = uint64(BGFX_TEXTURE_FORMAT_RG16S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16S) == ", nimValue473, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16S\");"].}
-const nimValue474 = uint64(BGFX_TEXTURE_FORMAT_RG32I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG32I) == ", nimValue474, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG32I\");"].}
-const nimValue475 = uint64(BGFX_TEXTURE_FORMAT_RG32U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG32U) == ", nimValue475, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG32U\");"].}
-const nimValue476 = uint64(BGFX_TEXTURE_FORMAT_RG32F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG32F) == ", nimValue476, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG32F\");"].}
-const nimValue477 = uint64(BGFX_TEXTURE_FORMAT_RGB8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8) == ", nimValue477, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8\");"].}
-const nimValue478 = uint64(BGFX_TEXTURE_FORMAT_RGB8I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8I) == ", nimValue478, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8I\");"].}
-const nimValue479 = uint64(BGFX_TEXTURE_FORMAT_RGB8U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8U) == ", nimValue479, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8U\");"].}
-const nimValue480 = uint64(BGFX_TEXTURE_FORMAT_RGB8S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8S) == ", nimValue480, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8S\");"].}
-const nimValue481 = uint64(BGFX_TEXTURE_FORMAT_RGB9E5F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB9E5F) == ", nimValue481, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB9E5F\");"].}
-const nimValue482 = uint64(BGFX_TEXTURE_FORMAT_BGRA8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BGRA8) == ", nimValue482, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BGRA8\");"].}
-const nimValue483 = uint64(BGFX_TEXTURE_FORMAT_RGBA8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8) == ", nimValue483, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8\");"].}
-const nimValue484 = uint64(BGFX_TEXTURE_FORMAT_RGBA8I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8I) == ", nimValue484, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8I\");"].}
-const nimValue485 = uint64(BGFX_TEXTURE_FORMAT_RGBA8U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8U) == ", nimValue485, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8U\");"].}
-const nimValue486 = uint64(BGFX_TEXTURE_FORMAT_RGBA8S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8S) == ", nimValue486, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8S\");"].}
-const nimValue487 = uint64(BGFX_TEXTURE_FORMAT_RGBA16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16) == ", nimValue487, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16\");"].}
-const nimValue488 = uint64(BGFX_TEXTURE_FORMAT_RGBA16I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16I) == ", nimValue488, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16I\");"].}
-const nimValue489 = uint64(BGFX_TEXTURE_FORMAT_RGBA16U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16U) == ", nimValue489, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16U\");"].}
-const nimValue490 = uint64(BGFX_TEXTURE_FORMAT_RGBA16F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16F) == ", nimValue490, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16F\");"].}
-const nimValue491 = uint64(BGFX_TEXTURE_FORMAT_RGBA16S)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16S) == ", nimValue491, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16S\");"].}
-const nimValue492 = uint64(BGFX_TEXTURE_FORMAT_RGBA32I)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA32I) == ", nimValue492, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA32I\");"].}
-const nimValue493 = uint64(BGFX_TEXTURE_FORMAT_RGBA32U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA32U) == ", nimValue493, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA32U\");"].}
-const nimValue494 = uint64(BGFX_TEXTURE_FORMAT_RGBA32F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA32F) == ", nimValue494, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA32F\");"].}
-const nimValue495 = uint64(BGFX_TEXTURE_FORMAT_B5G6R5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_B5G6R5) == ", nimValue495, ", \"value mismatch: BGFX_TEXTURE_FORMAT_B5G6R5\");"].}
-const nimValue496 = uint64(BGFX_TEXTURE_FORMAT_R5G6B5)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R5G6B5) == ", nimValue496, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R5G6B5\");"].}
-const nimValue497 = uint64(BGFX_TEXTURE_FORMAT_BGRA4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BGRA4) == ", nimValue497, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BGRA4\");"].}
-const nimValue498 = uint64(BGFX_TEXTURE_FORMAT_RGBA4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA4) == ", nimValue498, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA4\");"].}
-const nimValue499 = uint64(BGFX_TEXTURE_FORMAT_BGR5A1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BGR5A1) == ", nimValue499, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BGR5A1\");"].}
-const nimValue500 = uint64(BGFX_TEXTURE_FORMAT_RGB5A1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB5A1) == ", nimValue500, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB5A1\");"].}
-const nimValue501 = uint64(BGFX_TEXTURE_FORMAT_RGB10A2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB10A2) == ", nimValue501, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB10A2\");"].}
-const nimValue502 = uint64(BGFX_TEXTURE_FORMAT_RGB10A2U)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB10A2U) == ", nimValue502, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB10A2U\");"].}
-const nimValue503 = uint64(BGFX_TEXTURE_FORMAT_RG11B10F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG11B10F) == ", nimValue503, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG11B10F\");"].}
-const nimValue504 = uint64(BGFX_TEXTURE_FORMAT_UNKNOWNDEPTH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_UNKNOWNDEPTH) == ", nimValue504, ", \"value mismatch: BGFX_TEXTURE_FORMAT_UNKNOWNDEPTH\");"].}
-const nimValue505 = uint64(BGFX_TEXTURE_FORMAT_D16)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D16) == ", nimValue505, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D16\");"].}
-const nimValue506 = uint64(BGFX_TEXTURE_FORMAT_D24)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D24) == ", nimValue506, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D24\");"].}
-const nimValue507 = uint64(BGFX_TEXTURE_FORMAT_D24S8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D24S8) == ", nimValue507, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D24S8\");"].}
-const nimValue508 = uint64(BGFX_TEXTURE_FORMAT_D32)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D32) == ", nimValue508, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D32\");"].}
-const nimValue509 = uint64(BGFX_TEXTURE_FORMAT_D16F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D16F) == ", nimValue509, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D16F\");"].}
-const nimValue510 = uint64(BGFX_TEXTURE_FORMAT_D24F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D24F) == ", nimValue510, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D24F\");"].}
-const nimValue511 = uint64(BGFX_TEXTURE_FORMAT_D32F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D32F) == ", nimValue511, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D32F\");"].}
-const nimValue512 = uint64(BGFX_TEXTURE_FORMAT_D32FS8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D32FS8) == ", nimValue512, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D32FS8\");"].}
-const nimValue513 = uint64(BGFX_TEXTURE_FORMAT_D0S8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D0S8) == ", nimValue513, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D0S8\");"].}
-const nimValue514 = uint64(BGFX_TEXTURE_FORMAT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_COUNT) == ", nimValue514, ", \"value mismatch: BGFX_TEXTURE_FORMAT_COUNT\");"].}
-const nimValue515 = uint64(BGFX_UNIFORM_TYPE_SAMPLER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_SAMPLER) == ", nimValue515, ", \"value mismatch: BGFX_UNIFORM_TYPE_SAMPLER\");"].}
-const nimValue516 = uint64(BGFX_UNIFORM_TYPE_END)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_END) == ", nimValue516, ", \"value mismatch: BGFX_UNIFORM_TYPE_END\");"].}
-const nimValue517 = uint64(BGFX_UNIFORM_TYPE_VEC4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_VEC4) == ", nimValue517, ", \"value mismatch: BGFX_UNIFORM_TYPE_VEC4\");"].}
-const nimValue518 = uint64(BGFX_UNIFORM_TYPE_MAT3)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_MAT3) == ", nimValue518, ", \"value mismatch: BGFX_UNIFORM_TYPE_MAT3\");"].}
-const nimValue519 = uint64(BGFX_UNIFORM_TYPE_MAT4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_MAT4) == ", nimValue519, ", \"value mismatch: BGFX_UNIFORM_TYPE_MAT4\");"].}
-const nimValue520 = uint64(BGFX_UNIFORM_TYPE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_COUNT) == ", nimValue520, ", \"value mismatch: BGFX_UNIFORM_TYPE_COUNT\");"].}
-const nimValue521 = uint64(BGFX_UNIFORM_FREQ_DRAW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_DRAW) == ", nimValue521, ", \"value mismatch: BGFX_UNIFORM_FREQ_DRAW\");"].}
-const nimValue522 = uint64(BGFX_UNIFORM_FREQ_VIEW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_VIEW) == ", nimValue522, ", \"value mismatch: BGFX_UNIFORM_FREQ_VIEW\");"].}
-const nimValue523 = uint64(BGFX_UNIFORM_FREQ_FRAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_FRAME) == ", nimValue523, ", \"value mismatch: BGFX_UNIFORM_FREQ_FRAME\");"].}
-const nimValue524 = uint64(BGFX_UNIFORM_FREQ_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_COUNT) == ", nimValue524, ", \"value mismatch: BGFX_UNIFORM_FREQ_COUNT\");"].}
-const nimValue525 = uint64(BGFX_BACKBUFFER_RATIO_EQUAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_EQUAL) == ", nimValue525, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_EQUAL\");"].}
-const nimValue526 = uint64(BGFX_BACKBUFFER_RATIO_HALF)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_HALF) == ", nimValue526, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_HALF\");"].}
-const nimValue527 = uint64(BGFX_BACKBUFFER_RATIO_QUARTER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_QUARTER) == ", nimValue527, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_QUARTER\");"].}
-const nimValue528 = uint64(BGFX_BACKBUFFER_RATIO_EIGHTH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_EIGHTH) == ", nimValue528, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_EIGHTH\");"].}
-const nimValue529 = uint64(BGFX_BACKBUFFER_RATIO_SIXTEENTH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_SIXTEENTH) == ", nimValue529, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_SIXTEENTH\");"].}
-const nimValue530 = uint64(BGFX_BACKBUFFER_RATIO_DOUBLE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_DOUBLE) == ", nimValue530, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_DOUBLE\");"].}
-const nimValue531 = uint64(BGFX_BACKBUFFER_RATIO_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_COUNT) == ", nimValue531, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_COUNT\");"].}
-const nimValue532 = uint64(BGFX_OCCLUSION_QUERY_RESULT_INVISIBLE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_INVISIBLE) == ", nimValue532, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_INVISIBLE\");"].}
-const nimValue533 = uint64(BGFX_OCCLUSION_QUERY_RESULT_VISIBLE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_VISIBLE) == ", nimValue533, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_VISIBLE\");"].}
-const nimValue534 = uint64(BGFX_OCCLUSION_QUERY_RESULT_NORESULT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_NORESULT) == ", nimValue534, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_NORESULT\");"].}
-const nimValue535 = uint64(BGFX_OCCLUSION_QUERY_RESULT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_COUNT) == ", nimValue535, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_COUNT\");"].}
-const nimValue536 = uint64(BGFX_VIDEO_CODEC_H264)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_H264) == ", nimValue536, ", \"value mismatch: BGFX_VIDEO_CODEC_H264\");"].}
-const nimValue537 = uint64(BGFX_VIDEO_CODEC_H265)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_H265) == ", nimValue537, ", \"value mismatch: BGFX_VIDEO_CODEC_H265\");"].}
-const nimValue538 = uint64(BGFX_VIDEO_CODEC_AV1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_AV1) == ", nimValue538, ", \"value mismatch: BGFX_VIDEO_CODEC_AV1\");"].}
-const nimValue539 = uint64(BGFX_VIDEO_CODEC_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_COUNT) == ", nimValue539, ", \"value mismatch: BGFX_VIDEO_CODEC_COUNT\");"].}
-const nimValue540 = uint64(BGFX_TOPOLOGY_TRI_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_TRI_LIST) == ", nimValue540, ", \"value mismatch: BGFX_TOPOLOGY_TRI_LIST\");"].}
-const nimValue541 = uint64(BGFX_TOPOLOGY_TRI_STRIP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_TRI_STRIP) == ", nimValue541, ", \"value mismatch: BGFX_TOPOLOGY_TRI_STRIP\");"].}
-const nimValue542 = uint64(BGFX_TOPOLOGY_LINE_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_LINE_LIST) == ", nimValue542, ", \"value mismatch: BGFX_TOPOLOGY_LINE_LIST\");"].}
-const nimValue543 = uint64(BGFX_TOPOLOGY_LINE_STRIP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_LINE_STRIP) == ", nimValue543, ", \"value mismatch: BGFX_TOPOLOGY_LINE_STRIP\");"].}
-const nimValue544 = uint64(BGFX_TOPOLOGY_POINT_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_POINT_LIST) == ", nimValue544, ", \"value mismatch: BGFX_TOPOLOGY_POINT_LIST\");"].}
-const nimValue545 = uint64(BGFX_TOPOLOGY_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_COUNT) == ", nimValue545, ", \"value mismatch: BGFX_TOPOLOGY_COUNT\");"].}
-const nimValue546 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_LIST_FLIP_WINDING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_LIST_FLIP_WINDING) == ", nimValue546, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_LIST_FLIP_WINDING\");"].}
-const nimValue547 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_FLIP_WINDING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_FLIP_WINDING) == ", nimValue547, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_STRIP_FLIP_WINDING\");"].}
-const nimValue548 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_LIST_TO_LINE_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_LIST_TO_LINE_LIST) == ", nimValue548, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_LIST_TO_LINE_LIST\");"].}
-const nimValue549 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_TO_TRI_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_TO_TRI_LIST) == ", nimValue549, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_STRIP_TO_TRI_LIST\");"].}
-const nimValue550 = uint64(BGFX_TOPOLOGY_CONVERT_LINE_STRIP_TO_LINE_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_LINE_STRIP_TO_LINE_LIST) == ", nimValue550, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_LINE_STRIP_TO_LINE_LIST\");"].}
-const nimValue551 = uint64(BGFX_TOPOLOGY_CONVERT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_COUNT) == ", nimValue551, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_COUNT\");"].}
-const nimValue552 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MIN) == ", nimValue552, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MIN\");"].}
-const nimValue553 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_AVG)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_AVG) == ", nimValue553, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_AVG\");"].}
-const nimValue554 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MAX)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MAX) == ", nimValue554, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MAX\");"].}
-const nimValue555 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MIN) == ", nimValue555, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MIN\");"].}
-const nimValue556 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_AVG)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_AVG) == ", nimValue556, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_AVG\");"].}
-const nimValue557 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MAX)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MAX) == ", nimValue557, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MAX\");"].}
-const nimValue558 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MIN) == ", nimValue558, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MIN\");"].}
-const nimValue559 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_AVG)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_AVG) == ", nimValue559, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_AVG\");"].}
-const nimValue560 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MAX)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MAX) == ", nimValue560, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MAX\");"].}
-const nimValue561 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MIN) == ", nimValue561, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MIN\");"].}
-const nimValue562 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_AVG)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_AVG) == ", nimValue562, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_AVG\");"].}
-const nimValue563 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MAX)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MAX) == ", nimValue563, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MAX\");"].}
-const nimValue564 = uint64(BGFX_TOPOLOGY_SORT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_COUNT) == ", nimValue564, ", \"value mismatch: BGFX_TOPOLOGY_SORT_COUNT\");"].}
-const nimValue565 = uint64(BGFX_VIEW_MODE_DEFAULT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_DEFAULT) == ", nimValue565, ", \"value mismatch: BGFX_VIEW_MODE_DEFAULT\");"].}
-const nimValue566 = uint64(BGFX_VIEW_MODE_SEQUENTIAL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_SEQUENTIAL) == ", nimValue566, ", \"value mismatch: BGFX_VIEW_MODE_SEQUENTIAL\");"].}
-const nimValue567 = uint64(BGFX_VIEW_MODE_DEPTH_ASCENDING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_DEPTH_ASCENDING) == ", nimValue567, ", \"value mismatch: BGFX_VIEW_MODE_DEPTH_ASCENDING\");"].}
-const nimValue568 = uint64(BGFX_VIEW_MODE_DEPTH_DESCENDING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_DEPTH_DESCENDING) == ", nimValue568, ", \"value mismatch: BGFX_VIEW_MODE_DEPTH_DESCENDING\");"].}
-const nimValue569 = uint64(BGFX_VIEW_MODE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_COUNT) == ", nimValue569, ", \"value mismatch: BGFX_VIEW_MODE_COUNT\");"].}
-const nimValue570 = uint64(BGFX_SHADING_RATE_RATE_1X_1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_1X_1) == ", nimValue570, ", \"value mismatch: BGFX_SHADING_RATE_RATE_1X_1\");"].}
-const nimValue571 = uint64(BGFX_SHADING_RATE_RATE_1X_2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_1X_2) == ", nimValue571, ", \"value mismatch: BGFX_SHADING_RATE_RATE_1X_2\");"].}
-const nimValue572 = uint64(BGFX_SHADING_RATE_RATE_2X_1)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_2X_1) == ", nimValue572, ", \"value mismatch: BGFX_SHADING_RATE_RATE_2X_1\");"].}
-const nimValue573 = uint64(BGFX_SHADING_RATE_RATE_2X_2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_2X_2) == ", nimValue573, ", \"value mismatch: BGFX_SHADING_RATE_RATE_2X_2\");"].}
-const nimValue574 = uint64(BGFX_SHADING_RATE_RATE_2X_4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_2X_4) == ", nimValue574, ", \"value mismatch: BGFX_SHADING_RATE_RATE_2X_4\");"].}
-const nimValue575 = uint64(BGFX_SHADING_RATE_RATE_4X_2)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_4X_2) == ", nimValue575, ", \"value mismatch: BGFX_SHADING_RATE_RATE_4X_2\");"].}
-const nimValue576 = uint64(BGFX_SHADING_RATE_RATE_4X_4)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_4X_4) == ", nimValue576, ", \"value mismatch: BGFX_SHADING_RATE_RATE_4X_4\");"].}
-const nimValue577 = uint64(BGFX_SHADING_RATE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_COUNT) == ", nimValue577, ", \"value mismatch: BGFX_SHADING_RATE_COUNT\");"].}
-const nimValue578 = uint64(BGFX_NATIVE_WINDOW_HANDLE_TYPE_DEFAULT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_NATIVE_WINDOW_HANDLE_TYPE_DEFAULT) == ", nimValue578, ", \"value mismatch: BGFX_NATIVE_WINDOW_HANDLE_TYPE_DEFAULT\");"].}
-const nimValue579 = uint64(BGFX_NATIVE_WINDOW_HANDLE_TYPE_WAYLAND)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_NATIVE_WINDOW_HANDLE_TYPE_WAYLAND) == ", nimValue579, ", \"value mismatch: BGFX_NATIVE_WINDOW_HANDLE_TYPE_WAYLAND\");"].}
-const nimValue580 = uint64(BGFX_NATIVE_WINDOW_HANDLE_TYPE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_NATIVE_WINDOW_HANDLE_TYPE_COUNT) == ", nimValue580, ", \"value mismatch: BGFX_NATIVE_WINDOW_HANDLE_TYPE_COUNT\");"].}
-const nimValue581 = uint64(BGFX_RENDER_FRAME_NO_CONTEXT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_NO_CONTEXT) == ", nimValue581, ", \"value mismatch: BGFX_RENDER_FRAME_NO_CONTEXT\");"].}
-const nimValue582 = uint64(BGFX_RENDER_FRAME_RENDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_RENDER) == ", nimValue582, ", \"value mismatch: BGFX_RENDER_FRAME_RENDER\");"].}
-const nimValue583 = uint64(BGFX_RENDER_FRAME_TIMEOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_TIMEOUT) == ", nimValue583, ", \"value mismatch: BGFX_RENDER_FRAME_TIMEOUT\");"].}
-const nimValue584 = uint64(BGFX_RENDER_FRAME_EXITING)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_EXITING) == ", nimValue584, ", \"value mismatch: BGFX_RENDER_FRAME_EXITING\");"].}
-const nimValue585 = uint64(BGFX_RENDER_FRAME_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_COUNT) == ", nimValue585, ", \"value mismatch: BGFX_RENDER_FRAME_COUNT\");"].}
-const nimValue586 = uint64(BGFX_FUNCTION_ID_ATTACHMENT_INIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ATTACHMENT_INIT) == ", nimValue586, ", \"value mismatch: BGFX_FUNCTION_ID_ATTACHMENT_INIT\");"].}
-const nimValue587 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_BEGIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_BEGIN) == ", nimValue587, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_BEGIN\");"].}
-const nimValue588 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_ADD)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_ADD) == ", nimValue588, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_ADD\");"].}
-const nimValue589 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_DECODE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_DECODE) == ", nimValue589, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_DECODE\");"].}
-const nimValue590 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_HAS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_HAS) == ", nimValue590, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_HAS\");"].}
-const nimValue591 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_SKIP)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_SKIP) == ", nimValue591, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_SKIP\");"].}
-const nimValue592 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_END)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_END) == ", nimValue592, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_END\");"].}
-const nimValue593 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_OFFSET)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_OFFSET) == ", nimValue593, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_OFFSET\");"].}
-const nimValue594 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_STRIDE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_STRIDE) == ", nimValue594, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_STRIDE\");"].}
-const nimValue595 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_SIZE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_SIZE) == ", nimValue595, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_SIZE\");"].}
-const nimValue596 = uint64(BGFX_FUNCTION_ID_VERTEX_PACK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_PACK) == ", nimValue596, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_PACK\");"].}
-const nimValue597 = uint64(BGFX_FUNCTION_ID_VERTEX_UNPACK)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_UNPACK) == ", nimValue597, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_UNPACK\");"].}
-const nimValue598 = uint64(BGFX_FUNCTION_ID_VERTEX_CONVERT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_CONVERT) == ", nimValue598, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_CONVERT\");"].}
-const nimValue599 = uint64(BGFX_FUNCTION_ID_TOPOLOGY_CONVERT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TOPOLOGY_CONVERT) == ", nimValue599, ", \"value mismatch: BGFX_FUNCTION_ID_TOPOLOGY_CONVERT\");"].}
-const nimValue600 = uint64(BGFX_FUNCTION_ID_TOPOLOGY_SORT_TRI_LIST)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TOPOLOGY_SORT_TRI_LIST) == ", nimValue600, ", \"value mismatch: BGFX_FUNCTION_ID_TOPOLOGY_SORT_TRI_LIST\");"].}
-const nimValue601 = uint64(BGFX_FUNCTION_ID_GET_SUPPORTED_RENDERERS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_SUPPORTED_RENDERERS) == ", nimValue601, ", \"value mismatch: BGFX_FUNCTION_ID_GET_SUPPORTED_RENDERERS\");"].}
-const nimValue602 = uint64(BGFX_FUNCTION_ID_GET_RENDERER_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_RENDERER_NAME) == ", nimValue602, ", \"value mismatch: BGFX_FUNCTION_ID_GET_RENDERER_NAME\");"].}
-const nimValue603 = uint64(BGFX_FUNCTION_ID_INIT_CTOR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_INIT_CTOR) == ", nimValue603, ", \"value mismatch: BGFX_FUNCTION_ID_INIT_CTOR\");"].}
-const nimValue604 = uint64(BGFX_FUNCTION_ID_INIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_INIT) == ", nimValue604, ", \"value mismatch: BGFX_FUNCTION_ID_INIT\");"].}
-const nimValue605 = uint64(BGFX_FUNCTION_ID_SHUTDOWN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SHUTDOWN) == ", nimValue605, ", \"value mismatch: BGFX_FUNCTION_ID_SHUTDOWN\");"].}
-const nimValue606 = uint64(BGFX_FUNCTION_ID_RESET)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_RESET) == ", nimValue606, ", \"value mismatch: BGFX_FUNCTION_ID_RESET\");"].}
-const nimValue607 = uint64(BGFX_FUNCTION_ID_FRAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_FRAME) == ", nimValue607, ", \"value mismatch: BGFX_FUNCTION_ID_FRAME\");"].}
-const nimValue608 = uint64(BGFX_FUNCTION_ID_GET_RENDERER_TYPE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_RENDERER_TYPE) == ", nimValue608, ", \"value mismatch: BGFX_FUNCTION_ID_GET_RENDERER_TYPE\");"].}
-const nimValue609 = uint64(BGFX_FUNCTION_ID_GET_CAPS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_CAPS) == ", nimValue609, ", \"value mismatch: BGFX_FUNCTION_ID_GET_CAPS\");"].}
-const nimValue610 = uint64(BGFX_FUNCTION_ID_GET_STATS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_STATS) == ", nimValue610, ", \"value mismatch: BGFX_FUNCTION_ID_GET_STATS\");"].}
-const nimValue611 = uint64(BGFX_FUNCTION_ID_ALLOC)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC) == ", nimValue611, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC\");"].}
-const nimValue612 = uint64(BGFX_FUNCTION_ID_COPY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_COPY) == ", nimValue612, ", \"value mismatch: BGFX_FUNCTION_ID_COPY\");"].}
-const nimValue613 = uint64(BGFX_FUNCTION_ID_MAKE_REF)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_MAKE_REF) == ", nimValue613, ", \"value mismatch: BGFX_FUNCTION_ID_MAKE_REF\");"].}
-const nimValue614 = uint64(BGFX_FUNCTION_ID_MAKE_REF_RELEASE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_MAKE_REF_RELEASE) == ", nimValue614, ", \"value mismatch: BGFX_FUNCTION_ID_MAKE_REF_RELEASE\");"].}
-const nimValue615 = uint64(BGFX_FUNCTION_ID_SET_DEBUG)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DEBUG) == ", nimValue615, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DEBUG\");"].}
-const nimValue616 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_CLEAR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_CLEAR) == ", nimValue616, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_CLEAR\");"].}
-const nimValue617 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_PRINTF)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_PRINTF) == ", nimValue617, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_PRINTF\");"].}
-const nimValue618 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_VPRINTF)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_VPRINTF) == ", nimValue618, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_VPRINTF\");"].}
-const nimValue619 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_IMAGE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_IMAGE) == ", nimValue619, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_IMAGE\");"].}
-const nimValue620 = uint64(BGFX_FUNCTION_ID_CREATE_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_INDEX_BUFFER) == ", nimValue620, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_INDEX_BUFFER\");"].}
-const nimValue621 = uint64(BGFX_FUNCTION_ID_SET_INDEX_BUFFER_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INDEX_BUFFER_NAME) == ", nimValue621, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INDEX_BUFFER_NAME\");"].}
-const nimValue622 = uint64(BGFX_FUNCTION_ID_DESTROY_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_INDEX_BUFFER) == ", nimValue622, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_INDEX_BUFFER\");"].}
-const nimValue623 = uint64(BGFX_FUNCTION_ID_CREATE_VERTEX_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_VERTEX_LAYOUT) == ", nimValue623, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_VERTEX_LAYOUT\");"].}
-const nimValue624 = uint64(BGFX_FUNCTION_ID_DESTROY_VERTEX_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_VERTEX_LAYOUT) == ", nimValue624, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_VERTEX_LAYOUT\");"].}
-const nimValue625 = uint64(BGFX_FUNCTION_ID_CREATE_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_VERTEX_BUFFER) == ", nimValue625, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_VERTEX_BUFFER\");"].}
-const nimValue626 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_NAME) == ", nimValue626, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_NAME\");"].}
-const nimValue627 = uint64(BGFX_FUNCTION_ID_DESTROY_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_VERTEX_BUFFER) == ", nimValue627, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_VERTEX_BUFFER\");"].}
-const nimValue628 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER) == ", nimValue628, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue629 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER_MEM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER_MEM) == ", nimValue629, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER_MEM\");"].}
-const nimValue630 = uint64(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_INDEX_BUFFER) == ", nimValue630, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue631 = uint64(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_INDEX_BUFFER) == ", nimValue631, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue632 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER) == ", nimValue632, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue633 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER_MEM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER_MEM) == ", nimValue633, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER_MEM\");"].}
-const nimValue634 = uint64(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_VERTEX_BUFFER) == ", nimValue634, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue635 = uint64(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_VERTEX_BUFFER) == ", nimValue635, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue636 = uint64(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_INDEX_BUFFER) == ", nimValue636, ", \"value mismatch: BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_INDEX_BUFFER\");"].}
-const nimValue637 = uint64(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_VERTEX_BUFFER) == ", nimValue637, ", \"value mismatch: BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_VERTEX_BUFFER\");"].}
-const nimValue638 = uint64(BGFX_FUNCTION_ID_GET_AVAIL_INSTANCE_DATA_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_AVAIL_INSTANCE_DATA_BUFFER) == ", nimValue638, ", \"value mismatch: BGFX_FUNCTION_ID_GET_AVAIL_INSTANCE_DATA_BUFFER\");"].}
-const nimValue639 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_INDEX_BUFFER) == ", nimValue639, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSIENT_INDEX_BUFFER\");"].}
-const nimValue640 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_VERTEX_BUFFER) == ", nimValue640, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSIENT_VERTEX_BUFFER\");"].}
-const nimValue641 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_BUFFERS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_BUFFERS) == ", nimValue641, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSIENT_BUFFERS\");"].}
-const nimValue642 = uint64(BGFX_FUNCTION_ID_ALLOC_INSTANCE_DATA_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_INSTANCE_DATA_BUFFER) == ", nimValue642, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_INSTANCE_DATA_BUFFER\");"].}
-const nimValue643 = uint64(BGFX_FUNCTION_ID_CREATE_INDIRECT_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_INDIRECT_BUFFER) == ", nimValue643, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_INDIRECT_BUFFER\");"].}
-const nimValue644 = uint64(BGFX_FUNCTION_ID_DESTROY_INDIRECT_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_INDIRECT_BUFFER) == ", nimValue644, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_INDIRECT_BUFFER\");"].}
-const nimValue645 = uint64(BGFX_FUNCTION_ID_CREATE_SHADER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_SHADER) == ", nimValue645, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_SHADER\");"].}
-const nimValue646 = uint64(BGFX_FUNCTION_ID_GET_SHADER_UNIFORMS)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_SHADER_UNIFORMS) == ", nimValue646, ", \"value mismatch: BGFX_FUNCTION_ID_GET_SHADER_UNIFORMS\");"].}
-const nimValue647 = uint64(BGFX_FUNCTION_ID_SET_SHADER_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_SHADER_NAME) == ", nimValue647, ", \"value mismatch: BGFX_FUNCTION_ID_SET_SHADER_NAME\");"].}
-const nimValue648 = uint64(BGFX_FUNCTION_ID_DESTROY_SHADER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_SHADER) == ", nimValue648, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_SHADER\");"].}
-const nimValue649 = uint64(BGFX_FUNCTION_ID_CREATE_PROGRAM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_PROGRAM) == ", nimValue649, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_PROGRAM\");"].}
-const nimValue650 = uint64(BGFX_FUNCTION_ID_CREATE_COMPUTE_PROGRAM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_COMPUTE_PROGRAM) == ", nimValue650, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_COMPUTE_PROGRAM\");"].}
-const nimValue651 = uint64(BGFX_FUNCTION_ID_DESTROY_PROGRAM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_PROGRAM) == ", nimValue651, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_PROGRAM\");"].}
-const nimValue652 = uint64(BGFX_FUNCTION_ID_IS_TEXTURE_VALID)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_IS_TEXTURE_VALID) == ", nimValue652, ", \"value mismatch: BGFX_FUNCTION_ID_IS_TEXTURE_VALID\");"].}
-const nimValue653 = uint64(BGFX_FUNCTION_ID_IS_VIDEO_CODEC_VALID)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_IS_VIDEO_CODEC_VALID) == ", nimValue653, ", \"value mismatch: BGFX_FUNCTION_ID_IS_VIDEO_CODEC_VALID\");"].}
-const nimValue654 = uint64(BGFX_FUNCTION_ID_IS_FRAME_BUFFER_VALID)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_IS_FRAME_BUFFER_VALID) == ", nimValue654, ", \"value mismatch: BGFX_FUNCTION_ID_IS_FRAME_BUFFER_VALID\");"].}
-const nimValue655 = uint64(BGFX_FUNCTION_ID_CALC_TEXTURE_SIZE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CALC_TEXTURE_SIZE) == ", nimValue655, ", \"value mismatch: BGFX_FUNCTION_ID_CALC_TEXTURE_SIZE\");"].}
-const nimValue656 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE) == ", nimValue656, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE\");"].}
-const nimValue657 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D) == ", nimValue657, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_2D\");"].}
-const nimValue658 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D_SCALED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D_SCALED) == ", nimValue658, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_2D_SCALED\");"].}
-const nimValue659 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_3D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_3D) == ", nimValue659, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_3D\");"].}
-const nimValue660 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_CUBE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_CUBE) == ", nimValue660, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_CUBE\");"].}
-const nimValue661 = uint64(BGFX_FUNCTION_ID_UPDATE_TEXTURE_2D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_TEXTURE_2D) == ", nimValue661, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_TEXTURE_2D\");"].}
-const nimValue662 = uint64(BGFX_FUNCTION_ID_UPDATE_TEXTURE_3D)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_TEXTURE_3D) == ", nimValue662, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_TEXTURE_3D\");"].}
-const nimValue663 = uint64(BGFX_FUNCTION_ID_UPDATE_TEXTURE_CUBE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_TEXTURE_CUBE) == ", nimValue663, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_TEXTURE_CUBE\");"].}
-const nimValue664 = uint64(BGFX_FUNCTION_ID_CLEAR_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CLEAR_TEXTURE) == ", nimValue664, ", \"value mismatch: BGFX_FUNCTION_ID_CLEAR_TEXTURE\");"].}
-const nimValue665 = uint64(BGFX_FUNCTION_ID_READ_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_READ_TEXTURE) == ", nimValue665, ", \"value mismatch: BGFX_FUNCTION_ID_READ_TEXTURE\");"].}
-const nimValue666 = uint64(BGFX_FUNCTION_ID_SET_TEXTURE_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TEXTURE_NAME) == ", nimValue666, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TEXTURE_NAME\");"].}
-const nimValue667 = uint64(BGFX_FUNCTION_ID_GET_DIRECT_ACCESS_PTR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_DIRECT_ACCESS_PTR) == ", nimValue667, ", \"value mismatch: BGFX_FUNCTION_ID_GET_DIRECT_ACCESS_PTR\");"].}
-const nimValue668 = uint64(BGFX_FUNCTION_ID_DESTROY_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_TEXTURE) == ", nimValue668, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_TEXTURE\");"].}
-const nimValue669 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER) == ", nimValue669, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER\");"].}
-const nimValue670 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_SCALED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_SCALED) == ", nimValue670, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_SCALED\");"].}
-const nimValue671 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_HANDLES)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_HANDLES) == ", nimValue671, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_HANDLES\");"].}
-const nimValue672 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_ATTACHMENT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_ATTACHMENT) == ", nimValue672, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_ATTACHMENT\");"].}
-const nimValue673 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_NWH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_NWH) == ", nimValue673, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_NWH\");"].}
-const nimValue674 = uint64(BGFX_FUNCTION_ID_SET_FRAME_BUFFER_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_FRAME_BUFFER_NAME) == ", nimValue674, ", \"value mismatch: BGFX_FUNCTION_ID_SET_FRAME_BUFFER_NAME\");"].}
-const nimValue675 = uint64(BGFX_FUNCTION_ID_GET_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_TEXTURE) == ", nimValue675, ", \"value mismatch: BGFX_FUNCTION_ID_GET_TEXTURE\");"].}
-const nimValue676 = uint64(BGFX_FUNCTION_ID_DESTROY_FRAME_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_FRAME_BUFFER) == ", nimValue676, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_FRAME_BUFFER\");"].}
-const nimValue677 = uint64(BGFX_FUNCTION_ID_CREATE_UNIFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_UNIFORM) == ", nimValue677, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_UNIFORM\");"].}
-const nimValue678 = uint64(BGFX_FUNCTION_ID_CREATE_UNIFORM_WITH_FREQ)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_UNIFORM_WITH_FREQ) == ", nimValue678, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_UNIFORM_WITH_FREQ\");"].}
-const nimValue679 = uint64(BGFX_FUNCTION_ID_GET_UNIFORM_INFO)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_UNIFORM_INFO) == ", nimValue679, ", \"value mismatch: BGFX_FUNCTION_ID_GET_UNIFORM_INFO\");"].}
-const nimValue680 = uint64(BGFX_FUNCTION_ID_DESTROY_UNIFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_UNIFORM) == ", nimValue680, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_UNIFORM\");"].}
-const nimValue681 = uint64(BGFX_FUNCTION_ID_CREATE_OCCLUSION_QUERY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_OCCLUSION_QUERY) == ", nimValue681, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_OCCLUSION_QUERY\");"].}
-const nimValue682 = uint64(BGFX_FUNCTION_ID_GET_RESULT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_RESULT) == ", nimValue682, ", \"value mismatch: BGFX_FUNCTION_ID_GET_RESULT\");"].}
-const nimValue683 = uint64(BGFX_FUNCTION_ID_DESTROY_OCCLUSION_QUERY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_OCCLUSION_QUERY) == ", nimValue683, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_OCCLUSION_QUERY\");"].}
-const nimValue684 = uint64(BGFX_FUNCTION_ID_SET_PALETTE_COLOR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PALETTE_COLOR) == ", nimValue684, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PALETTE_COLOR\");"].}
-const nimValue685 = uint64(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA32F)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA32F) == ", nimValue685, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA32F\");"].}
-const nimValue686 = uint64(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA8)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA8) == ", nimValue686, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA8\");"].}
-const nimValue687 = uint64(BGFX_FUNCTION_ID_SET_VIEW_NAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_NAME) == ", nimValue687, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_NAME\");"].}
-const nimValue688 = uint64(BGFX_FUNCTION_ID_SET_VIEW_RECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_RECT) == ", nimValue688, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_RECT\");"].}
-const nimValue689 = uint64(BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO) == ", nimValue689, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO\");"].}
-const nimValue690 = uint64(BGFX_FUNCTION_ID_SET_VIEW_SCISSOR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_SCISSOR) == ", nimValue690, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_SCISSOR\");"].}
-const nimValue691 = uint64(BGFX_FUNCTION_ID_SET_VIEW_CLEAR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_CLEAR) == ", nimValue691, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_CLEAR\");"].}
-const nimValue692 = uint64(BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT) == ", nimValue692, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT\");"].}
-const nimValue693 = uint64(BGFX_FUNCTION_ID_SET_VIEW_MODE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_MODE) == ", nimValue693, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_MODE\");"].}
-const nimValue694 = uint64(BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER) == ", nimValue694, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER\");"].}
-const nimValue695 = uint64(BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM) == ", nimValue695, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM\");"].}
-const nimValue696 = uint64(BGFX_FUNCTION_ID_SET_VIEW_ORDER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_ORDER) == ", nimValue696, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_ORDER\");"].}
-const nimValue697 = uint64(BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE) == ", nimValue697, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE\");"].}
-const nimValue698 = uint64(BGFX_FUNCTION_ID_RESET_VIEW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_RESET_VIEW) == ", nimValue698, ", \"value mismatch: BGFX_FUNCTION_ID_RESET_VIEW\");"].}
-const nimValue699 = uint64(BGFX_FUNCTION_ID_ENCODER_BEGIN)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BEGIN) == ", nimValue699, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BEGIN\");"].}
-const nimValue700 = uint64(BGFX_FUNCTION_ID_ENCODER_END)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_END) == ", nimValue700, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_END\");"].}
-const nimValue701 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_MARKER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_MARKER) == ", nimValue701, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_MARKER\");"].}
-const nimValue702 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_STATE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_STATE) == ", nimValue702, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_STATE\");"].}
-const nimValue703 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_CONDITION)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_CONDITION) == ", nimValue703, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_CONDITION\");"].}
-const nimValue704 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_STENCIL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_STENCIL) == ", nimValue704, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_STENCIL\");"].}
-const nimValue705 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR) == ", nimValue705, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR\");"].}
-const nimValue706 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED) == ", nimValue706, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED\");"].}
-const nimValue707 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM) == ", nimValue707, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM\");"].}
-const nimValue708 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED) == ", nimValue708, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED\");"].}
-const nimValue709 = uint64(BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM) == ", nimValue709, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM\");"].}
-const nimValue710 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM) == ", nimValue710, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM\");"].}
-const nimValue711 = uint64(BGFX_FUNCTION_ID_SET_VIEW_UNIFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_UNIFORM) == ", nimValue711, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_UNIFORM\");"].}
-const nimValue712 = uint64(BGFX_FUNCTION_ID_SET_FRAME_UNIFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_FRAME_UNIFORM) == ", nimValue712, ", \"value mismatch: BGFX_FUNCTION_ID_SET_FRAME_UNIFORM\");"].}
-const nimValue713 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER) == ", nimValue713, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER\");"].}
-const nimValue714 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER) == ", nimValue714, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue715 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER) == ", nimValue715, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER\");"].}
-const nimValue716 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER) == ", nimValue716, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER\");"].}
-const nimValue717 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue717, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT\");"].}
-const nimValue718 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER) == ", nimValue718, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue719 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue719, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT\");"].}
-const nimValue720 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER) == ", nimValue720, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER\");"].}
-const nimValue721 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue721, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT\");"].}
-const nimValue722 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT) == ", nimValue722, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT\");"].}
-const nimValue723 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER) == ", nimValue723, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER\");"].}
-const nimValue724 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER) == ", nimValue724, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER\");"].}
-const nimValue725 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER) == ", nimValue725, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue726 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT) == ", nimValue726, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT\");"].}
-const nimValue727 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE) == ", nimValue727, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE\");"].}
-const nimValue728 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW) == ", nimValue728, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW\");"].}
-const nimValue729 = uint64(BGFX_FUNCTION_ID_ENCODER_TOUCH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_TOUCH) == ", nimValue729, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_TOUCH\");"].}
-const nimValue730 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT) == ", nimValue730, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT\");"].}
-const nimValue731 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY) == ", nimValue731, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY\");"].}
-const nimValue732 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT) == ", nimValue732, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT\");"].}
-const nimValue733 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT) == ", nimValue733, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT\");"].}
-const nimValue734 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER) == ", nimValue734, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER\");"].}
-const nimValue735 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER) == ", nimValue735, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER\");"].}
-const nimValue736 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER) == ", nimValue736, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue737 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER) == ", nimValue737, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue738 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER) == ", nimValue738, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER\");"].}
-const nimValue739 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE) == ", nimValue739, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_IMAGE\");"].}
-const nimValue740 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW) == ", nimValue740, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW\");"].}
-const nimValue741 = uint64(BGFX_FUNCTION_ID_ENCODER_DISPATCH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_DISPATCH) == ", nimValue741, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_DISPATCH\");"].}
-const nimValue742 = uint64(BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT) == ", nimValue742, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT\");"].}
-const nimValue743 = uint64(BGFX_FUNCTION_ID_ENCODER_DISCARD)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_DISCARD) == ", nimValue743, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_DISCARD\");"].}
-const nimValue744 = uint64(BGFX_FUNCTION_ID_ENCODER_BLIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BLIT) == ", nimValue744, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BLIT\");"].}
-const nimValue745 = uint64(BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT) == ", nimValue745, ", \"value mismatch: BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT\");"].}
-const nimValue746 = uint64(BGFX_FUNCTION_ID_RENDER_FRAME)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_RENDER_FRAME) == ", nimValue746, ", \"value mismatch: BGFX_FUNCTION_ID_RENDER_FRAME\");"].}
-const nimValue747 = uint64(BGFX_FUNCTION_ID_SET_PLATFORM_DATA)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PLATFORM_DATA) == ", nimValue747, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PLATFORM_DATA\");"].}
-const nimValue748 = uint64(BGFX_FUNCTION_ID_GET_INTERNAL_DATA)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_INTERNAL_DATA) == ", nimValue748, ", \"value mismatch: BGFX_FUNCTION_ID_GET_INTERNAL_DATA\");"].}
-const nimValue749 = uint64(BGFX_FUNCTION_ID_OVERRIDE_INTERNAL_TEXTURE_PTR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_OVERRIDE_INTERNAL_TEXTURE_PTR) == ", nimValue749, ", \"value mismatch: BGFX_FUNCTION_ID_OVERRIDE_INTERNAL_TEXTURE_PTR\");"].}
-const nimValue750 = uint64(BGFX_FUNCTION_ID_OVERRIDE_INTERNAL_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_OVERRIDE_INTERNAL_TEXTURE) == ", nimValue750, ", \"value mismatch: BGFX_FUNCTION_ID_OVERRIDE_INTERNAL_TEXTURE\");"].}
-const nimValue751 = uint64(BGFX_FUNCTION_ID_SET_MARKER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_MARKER) == ", nimValue751, ", \"value mismatch: BGFX_FUNCTION_ID_SET_MARKER\");"].}
-const nimValue752 = uint64(BGFX_FUNCTION_ID_SET_STATE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_STATE) == ", nimValue752, ", \"value mismatch: BGFX_FUNCTION_ID_SET_STATE\");"].}
-const nimValue753 = uint64(BGFX_FUNCTION_ID_SET_CONDITION)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_CONDITION) == ", nimValue753, ", \"value mismatch: BGFX_FUNCTION_ID_SET_CONDITION\");"].}
-const nimValue754 = uint64(BGFX_FUNCTION_ID_SET_STENCIL)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_STENCIL) == ", nimValue754, ", \"value mismatch: BGFX_FUNCTION_ID_SET_STENCIL\");"].}
-const nimValue755 = uint64(BGFX_FUNCTION_ID_SET_SCISSOR)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_SCISSOR) == ", nimValue755, ", \"value mismatch: BGFX_FUNCTION_ID_SET_SCISSOR\");"].}
-const nimValue756 = uint64(BGFX_FUNCTION_ID_SET_SCISSOR_CACHED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_SCISSOR_CACHED) == ", nimValue756, ", \"value mismatch: BGFX_FUNCTION_ID_SET_SCISSOR_CACHED\");"].}
-const nimValue757 = uint64(BGFX_FUNCTION_ID_SET_TRANSFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSFORM) == ", nimValue757, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSFORM\");"].}
-const nimValue758 = uint64(BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED) == ", nimValue758, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED\");"].}
-const nimValue759 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSFORM) == ", nimValue759, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSFORM\");"].}
-const nimValue760 = uint64(BGFX_FUNCTION_ID_SET_UNIFORM)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_UNIFORM) == ", nimValue760, ", \"value mismatch: BGFX_FUNCTION_ID_SET_UNIFORM\");"].}
-const nimValue761 = uint64(BGFX_FUNCTION_ID_SET_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INDEX_BUFFER) == ", nimValue761, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INDEX_BUFFER\");"].}
-const nimValue762 = uint64(BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER) == ", nimValue762, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue763 = uint64(BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER) == ", nimValue763, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER\");"].}
-const nimValue764 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER) == ", nimValue764, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_BUFFER\");"].}
-const nimValue765 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue765, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT\");"].}
-const nimValue766 = uint64(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER) == ", nimValue766, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue767 = uint64(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue767, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT\");"].}
-const nimValue768 = uint64(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER) == ", nimValue768, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER\");"].}
-const nimValue769 = uint64(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue769, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT\");"].}
-const nimValue770 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_COUNT) == ", nimValue770, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_COUNT\");"].}
-const nimValue771 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER) == ", nimValue771, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER\");"].}
-const nimValue772 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER) == ", nimValue772, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER\");"].}
-const nimValue773 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER) == ", nimValue773, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue774 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_COUNT) == ", nimValue774, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_COUNT\");"].}
-const nimValue775 = uint64(BGFX_FUNCTION_ID_SET_TEXTURE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TEXTURE) == ", nimValue775, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TEXTURE\");"].}
-const nimValue776 = uint64(BGFX_FUNCTION_ID_SET_TEXTURE_VIEW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TEXTURE_VIEW) == ", nimValue776, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TEXTURE_VIEW\");"].}
-const nimValue777 = uint64(BGFX_FUNCTION_ID_TOUCH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TOUCH) == ", nimValue777, ", \"value mismatch: BGFX_FUNCTION_ID_TOUCH\");"].}
-const nimValue778 = uint64(BGFX_FUNCTION_ID_SUBMIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT) == ", nimValue778, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT\");"].}
-const nimValue779 = uint64(BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY) == ", nimValue779, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY\");"].}
-const nimValue780 = uint64(BGFX_FUNCTION_ID_SUBMIT_INDIRECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT_INDIRECT) == ", nimValue780, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT_INDIRECT\");"].}
-const nimValue781 = uint64(BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT) == ", nimValue781, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT\");"].}
-const nimValue782 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER) == ", nimValue782, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER\");"].}
-const nimValue783 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER) == ", nimValue783, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER\");"].}
-const nimValue784 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER) == ", nimValue784, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER\");"].}
-const nimValue785 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER) == ", nimValue785, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER\");"].}
-const nimValue786 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER) == ", nimValue786, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER\");"].}
-const nimValue787 = uint64(BGFX_FUNCTION_ID_SET_IMAGE)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_IMAGE) == ", nimValue787, ", \"value mismatch: BGFX_FUNCTION_ID_SET_IMAGE\");"].}
-const nimValue788 = uint64(BGFX_FUNCTION_ID_SET_IMAGE_VIEW)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_IMAGE_VIEW) == ", nimValue788, ", \"value mismatch: BGFX_FUNCTION_ID_SET_IMAGE_VIEW\");"].}
-const nimValue789 = uint64(BGFX_FUNCTION_ID_DISPATCH)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DISPATCH) == ", nimValue789, ", \"value mismatch: BGFX_FUNCTION_ID_DISPATCH\");"].}
-const nimValue790 = uint64(BGFX_FUNCTION_ID_DISPATCH_INDIRECT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DISPATCH_INDIRECT) == ", nimValue790, ", \"value mismatch: BGFX_FUNCTION_ID_DISPATCH_INDIRECT\");"].}
-const nimValue791 = uint64(BGFX_FUNCTION_ID_DISCARD)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DISCARD) == ", nimValue791, ", \"value mismatch: BGFX_FUNCTION_ID_DISCARD\");"].}
-const nimValue792 = uint64(BGFX_FUNCTION_ID_BLIT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BLIT) == ", nimValue792, ", \"value mismatch: BGFX_FUNCTION_ID_BLIT\");"].}
-const nimValue793 = uint64(BGFX_FUNCTION_ID_COUNT)
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_COUNT) == ", nimValue793, ", \"value mismatch: BGFX_FUNCTION_ID_COUNT\");"].}
-const nimValue794 = uint64(BGFX_STATE_ALPHA_REF(0x5a))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_ALPHA_REF(0x5a)) == ", nimValue794, ", \"helper mismatch: BGFX_STATE_ALPHA_REF\");"].}
-const nimValue795 = uint64(BGFX_STATE_POINT_SIZE(7))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_POINT_SIZE(7)) == ", nimValue795, ", \"helper mismatch: BGFX_STATE_POINT_SIZE\");"].}
-const nimValue796 = uint64(BGFX_STENCIL_FUNC_REF(0x6b))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STENCIL_FUNC_REF(0x6b)) == ", nimValue796, ", \"helper mismatch: BGFX_STENCIL_FUNC_REF\");"].}
-const nimValue797 = uint64(BGFX_STENCIL_FUNC_RMASK(0x8c))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STENCIL_FUNC_RMASK(0x8c)) == ", nimValue797, ", \"helper mismatch: BGFX_STENCIL_FUNC_RMASK\");"].}
-const nimValue798 = uint64(BGFX_SAMPLER_BORDER_COLOR(9))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BORDER_COLOR(9)) == ", nimValue798, ", \"helper mismatch: BGFX_SAMPLER_BORDER_COLOR\");"].}
-const nimValue799 = uint64(BGFX_STATE_BLEND_FUNC_SEPARATE(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA, BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_SEPARATE(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA, BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO)) == ", nimValue799, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_SEPARATE\");"].}
-const nimValue800 = uint64(BGFX_STATE_BLEND_EQUATION_SEPARATE(BGFX_STATE_BLEND_EQUATION_ADD, BGFX_STATE_BLEND_EQUATION_REVSUB))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_EQUATION_SEPARATE(BGFX_STATE_BLEND_EQUATION_ADD, BGFX_STATE_BLEND_EQUATION_REVSUB)) == ", nimValue800, ", \"helper mismatch: BGFX_STATE_BLEND_EQUATION_SEPARATE\");"].}
-const nimValue801 = uint64(BGFX_STATE_BLEND_FUNC(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue801, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC\");"].}
-const nimValue802 = uint64(BGFX_STATE_BLEND_EQUATION(BGFX_STATE_BLEND_EQUATION_SUB))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_EQUATION(BGFX_STATE_BLEND_EQUATION_SUB)) == ", nimValue802, ", \"helper mismatch: BGFX_STATE_BLEND_EQUATION\");"].}
-const nimValue803 = uint64(BGFX_STATE_BLEND_FUNC_RT_x(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_x(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue803, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_x\");"].}
-const nimValue804 = uint64(BGFX_STATE_BLEND_FUNC_RT_xE(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_xE(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue804, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_xE\");"].}
-const nimValue805 = uint64(BGFX_STATE_BLEND_FUNC_RT_1(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_1(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue805, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_1\");"].}
-const nimValue806 = uint64(BGFX_STATE_BLEND_FUNC_RT_2(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_2(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue806, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_2\");"].}
-const nimValue807 = uint64(BGFX_STATE_BLEND_FUNC_RT_3(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_3(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue807, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_3\");"].}
-const nimValue808 = uint64(BGFX_STATE_BLEND_FUNC_RT_1E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_1E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue808, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_1E\");"].}
-const nimValue809 = uint64(BGFX_STATE_BLEND_FUNC_RT_2E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_2E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue809, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_2E\");"].}
-const nimValue810 = uint64(BGFX_STATE_BLEND_FUNC_RT_3E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
-{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_3E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue810, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_3E\");"].}
+const nimValue141 = uint64(BGFX_BUFFER_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_NONE) == ", nimValue141, ", \"value mismatch: BGFX_BUFFER_NONE\");"].}
+const nimValue142 = uint64(BGFX_BUFFER_COMPUTE_READ)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_READ) == ", nimValue142, ", \"value mismatch: BGFX_BUFFER_COMPUTE_READ\");"].}
+const nimValue143 = uint64(BGFX_BUFFER_COMPUTE_WRITE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_WRITE) == ", nimValue143, ", \"value mismatch: BGFX_BUFFER_COMPUTE_WRITE\");"].}
+const nimValue144 = uint64(BGFX_BUFFER_DRAW_INDIRECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_DRAW_INDIRECT) == ", nimValue144, ", \"value mismatch: BGFX_BUFFER_DRAW_INDIRECT\");"].}
+const nimValue145 = uint64(BGFX_BUFFER_ALLOW_RESIZE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_ALLOW_RESIZE) == ", nimValue145, ", \"value mismatch: BGFX_BUFFER_ALLOW_RESIZE\");"].}
+const nimValue146 = uint64(BGFX_BUFFER_INDEX32)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_INDEX32) == ", nimValue146, ", \"value mismatch: BGFX_BUFFER_INDEX32\");"].}
+const nimValue147 = uint64(BGFX_BUFFER_COMPUTE_READ_WRITE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_COMPUTE_READ_WRITE) == ", nimValue147, ", \"value mismatch: BGFX_BUFFER_COMPUTE_READ_WRITE\");"].}
+const nimValue148 = uint64(BGFX_TEXTURE_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_NONE) == ", nimValue148, ", \"value mismatch: BGFX_TEXTURE_NONE\");"].}
+const nimValue149 = uint64(BGFX_TEXTURE_MSAA_SAMPLE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_MSAA_SAMPLE) == ", nimValue149, ", \"value mismatch: BGFX_TEXTURE_MSAA_SAMPLE\");"].}
+const nimValue150 = uint64(BGFX_TEXTURE_RT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT) == ", nimValue150, ", \"value mismatch: BGFX_TEXTURE_RT\");"].}
+const nimValue151 = uint64(BGFX_TEXTURE_COMPUTE_WRITE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_COMPUTE_WRITE) == ", nimValue151, ", \"value mismatch: BGFX_TEXTURE_COMPUTE_WRITE\");"].}
+const nimValue152 = uint64(BGFX_TEXTURE_SRGB)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_SRGB) == ", nimValue152, ", \"value mismatch: BGFX_TEXTURE_SRGB\");"].}
+const nimValue153 = uint64(BGFX_TEXTURE_BLIT_DST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_BLIT_DST) == ", nimValue153, ", \"value mismatch: BGFX_TEXTURE_BLIT_DST\");"].}
+const nimValue154 = uint64(BGFX_TEXTURE_READ_BACK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_READ_BACK) == ", nimValue154, ", \"value mismatch: BGFX_TEXTURE_READ_BACK\");"].}
+const nimValue155 = uint64(BGFX_TEXTURE_EXTERNAL_SHARED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_EXTERNAL_SHARED) == ", nimValue155, ", \"value mismatch: BGFX_TEXTURE_EXTERNAL_SHARED\");"].}
+const nimValue156 = uint64(BGFX_TEXTURE_RESERVED_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RESERVED_SHIFT) == ", nimValue156, ", \"value mismatch: BGFX_TEXTURE_RESERVED_SHIFT\");"].}
+const nimValue157 = uint64(BGFX_TEXTURE_RESERVED_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RESERVED_MASK) == ", nimValue157, ", \"value mismatch: BGFX_TEXTURE_RESERVED_MASK\");"].}
+const nimValue158 = uint64(BGFX_TEXTURE_RT_MSAA_X2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X2) == ", nimValue158, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X2\");"].}
+const nimValue159 = uint64(BGFX_TEXTURE_RT_MSAA_X4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X4) == ", nimValue159, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X4\");"].}
+const nimValue160 = uint64(BGFX_TEXTURE_RT_MSAA_X8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X8) == ", nimValue160, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X8\");"].}
+const nimValue161 = uint64(BGFX_TEXTURE_RT_MSAA_X16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_X16) == ", nimValue161, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_X16\");"].}
+const nimValue162 = uint64(BGFX_TEXTURE_RT_MSAA_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_SHIFT) == ", nimValue162, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_SHIFT\");"].}
+const nimValue163 = uint64(BGFX_TEXTURE_RT_MSAA_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MSAA_MASK) == ", nimValue163, ", \"value mismatch: BGFX_TEXTURE_RT_MSAA_MASK\");"].}
+const nimValue164 = uint64(BGFX_TEXTURE_RT_WRITE_ONLY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_WRITE_ONLY) == ", nimValue164, ", \"value mismatch: BGFX_TEXTURE_RT_WRITE_ONLY\");"].}
+const nimValue165 = uint64(BGFX_TEXTURE_RT_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_SHIFT) == ", nimValue165, ", \"value mismatch: BGFX_TEXTURE_RT_SHIFT\");"].}
+const nimValue166 = uint64(BGFX_TEXTURE_RT_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_RT_MASK) == ", nimValue166, ", \"value mismatch: BGFX_TEXTURE_RT_MASK\");"].}
+const nimValue167 = uint64(BGFX_SAMPLER_U_MIRROR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_MIRROR) == ", nimValue167, ", \"value mismatch: BGFX_SAMPLER_U_MIRROR\");"].}
+const nimValue168 = uint64(BGFX_SAMPLER_U_CLAMP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_CLAMP) == ", nimValue168, ", \"value mismatch: BGFX_SAMPLER_U_CLAMP\");"].}
+const nimValue169 = uint64(BGFX_SAMPLER_U_BORDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_BORDER) == ", nimValue169, ", \"value mismatch: BGFX_SAMPLER_U_BORDER\");"].}
+const nimValue170 = uint64(BGFX_SAMPLER_U_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_SHIFT) == ", nimValue170, ", \"value mismatch: BGFX_SAMPLER_U_SHIFT\");"].}
+const nimValue171 = uint64(BGFX_SAMPLER_U_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_U_MASK) == ", nimValue171, ", \"value mismatch: BGFX_SAMPLER_U_MASK\");"].}
+const nimValue172 = uint64(BGFX_SAMPLER_V_MIRROR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_MIRROR) == ", nimValue172, ", \"value mismatch: BGFX_SAMPLER_V_MIRROR\");"].}
+const nimValue173 = uint64(BGFX_SAMPLER_V_CLAMP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_CLAMP) == ", nimValue173, ", \"value mismatch: BGFX_SAMPLER_V_CLAMP\");"].}
+const nimValue174 = uint64(BGFX_SAMPLER_V_BORDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_BORDER) == ", nimValue174, ", \"value mismatch: BGFX_SAMPLER_V_BORDER\");"].}
+const nimValue175 = uint64(BGFX_SAMPLER_V_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_SHIFT) == ", nimValue175, ", \"value mismatch: BGFX_SAMPLER_V_SHIFT\");"].}
+const nimValue176 = uint64(BGFX_SAMPLER_V_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_V_MASK) == ", nimValue176, ", \"value mismatch: BGFX_SAMPLER_V_MASK\");"].}
+const nimValue177 = uint64(BGFX_SAMPLER_W_MIRROR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_MIRROR) == ", nimValue177, ", \"value mismatch: BGFX_SAMPLER_W_MIRROR\");"].}
+const nimValue178 = uint64(BGFX_SAMPLER_W_CLAMP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_CLAMP) == ", nimValue178, ", \"value mismatch: BGFX_SAMPLER_W_CLAMP\");"].}
+const nimValue179 = uint64(BGFX_SAMPLER_W_BORDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_BORDER) == ", nimValue179, ", \"value mismatch: BGFX_SAMPLER_W_BORDER\");"].}
+const nimValue180 = uint64(BGFX_SAMPLER_W_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_SHIFT) == ", nimValue180, ", \"value mismatch: BGFX_SAMPLER_W_SHIFT\");"].}
+const nimValue181 = uint64(BGFX_SAMPLER_W_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_W_MASK) == ", nimValue181, ", \"value mismatch: BGFX_SAMPLER_W_MASK\");"].}
+const nimValue182 = uint64(BGFX_SAMPLER_MIN_POINT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_POINT) == ", nimValue182, ", \"value mismatch: BGFX_SAMPLER_MIN_POINT\");"].}
+const nimValue183 = uint64(BGFX_SAMPLER_MIN_ANISOTROPIC)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_ANISOTROPIC) == ", nimValue183, ", \"value mismatch: BGFX_SAMPLER_MIN_ANISOTROPIC\");"].}
+const nimValue184 = uint64(BGFX_SAMPLER_MIN_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_SHIFT) == ", nimValue184, ", \"value mismatch: BGFX_SAMPLER_MIN_SHIFT\");"].}
+const nimValue185 = uint64(BGFX_SAMPLER_MIN_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIN_MASK) == ", nimValue185, ", \"value mismatch: BGFX_SAMPLER_MIN_MASK\");"].}
+const nimValue186 = uint64(BGFX_SAMPLER_MAG_POINT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_POINT) == ", nimValue186, ", \"value mismatch: BGFX_SAMPLER_MAG_POINT\");"].}
+const nimValue187 = uint64(BGFX_SAMPLER_MAG_ANISOTROPIC)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_ANISOTROPIC) == ", nimValue187, ", \"value mismatch: BGFX_SAMPLER_MAG_ANISOTROPIC\");"].}
+const nimValue188 = uint64(BGFX_SAMPLER_MAG_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_SHIFT) == ", nimValue188, ", \"value mismatch: BGFX_SAMPLER_MAG_SHIFT\");"].}
+const nimValue189 = uint64(BGFX_SAMPLER_MAG_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MAG_MASK) == ", nimValue189, ", \"value mismatch: BGFX_SAMPLER_MAG_MASK\");"].}
+const nimValue190 = uint64(BGFX_SAMPLER_MIP_POINT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIP_POINT) == ", nimValue190, ", \"value mismatch: BGFX_SAMPLER_MIP_POINT\");"].}
+const nimValue191 = uint64(BGFX_SAMPLER_MIP_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIP_SHIFT) == ", nimValue191, ", \"value mismatch: BGFX_SAMPLER_MIP_SHIFT\");"].}
+const nimValue192 = uint64(BGFX_SAMPLER_MIP_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_MIP_MASK) == ", nimValue192, ", \"value mismatch: BGFX_SAMPLER_MIP_MASK\");"].}
+const nimValue193 = uint64(BGFX_SAMPLER_COMPARE_LESS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_LESS) == ", nimValue193, ", \"value mismatch: BGFX_SAMPLER_COMPARE_LESS\");"].}
+const nimValue194 = uint64(BGFX_SAMPLER_COMPARE_LEQUAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_LEQUAL) == ", nimValue194, ", \"value mismatch: BGFX_SAMPLER_COMPARE_LEQUAL\");"].}
+const nimValue195 = uint64(BGFX_SAMPLER_COMPARE_EQUAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_EQUAL) == ", nimValue195, ", \"value mismatch: BGFX_SAMPLER_COMPARE_EQUAL\");"].}
+const nimValue196 = uint64(BGFX_SAMPLER_COMPARE_GEQUAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_GEQUAL) == ", nimValue196, ", \"value mismatch: BGFX_SAMPLER_COMPARE_GEQUAL\");"].}
+const nimValue197 = uint64(BGFX_SAMPLER_COMPARE_GREATER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_GREATER) == ", nimValue197, ", \"value mismatch: BGFX_SAMPLER_COMPARE_GREATER\");"].}
+const nimValue198 = uint64(BGFX_SAMPLER_COMPARE_NOTEQUAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_NOTEQUAL) == ", nimValue198, ", \"value mismatch: BGFX_SAMPLER_COMPARE_NOTEQUAL\");"].}
+const nimValue199 = uint64(BGFX_SAMPLER_COMPARE_NEVER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_NEVER) == ", nimValue199, ", \"value mismatch: BGFX_SAMPLER_COMPARE_NEVER\");"].}
+const nimValue200 = uint64(BGFX_SAMPLER_COMPARE_ALWAYS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_ALWAYS) == ", nimValue200, ", \"value mismatch: BGFX_SAMPLER_COMPARE_ALWAYS\");"].}
+const nimValue201 = uint64(BGFX_SAMPLER_COMPARE_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_SHIFT) == ", nimValue201, ", \"value mismatch: BGFX_SAMPLER_COMPARE_SHIFT\");"].}
+const nimValue202 = uint64(BGFX_SAMPLER_COMPARE_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_COMPARE_MASK) == ", nimValue202, ", \"value mismatch: BGFX_SAMPLER_COMPARE_MASK\");"].}
+const nimValue203 = uint64(BGFX_SAMPLER_BORDER_COLOR_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BORDER_COLOR_SHIFT) == ", nimValue203, ", \"value mismatch: BGFX_SAMPLER_BORDER_COLOR_SHIFT\");"].}
+const nimValue204 = uint64(BGFX_SAMPLER_BORDER_COLOR_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BORDER_COLOR_MASK) == ", nimValue204, ", \"value mismatch: BGFX_SAMPLER_BORDER_COLOR_MASK\");"].}
+const nimValue205 = uint64(BGFX_SAMPLER_RESERVED_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_RESERVED_SHIFT) == ", nimValue205, ", \"value mismatch: BGFX_SAMPLER_RESERVED_SHIFT\");"].}
+const nimValue206 = uint64(BGFX_SAMPLER_RESERVED_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_RESERVED_MASK) == ", nimValue206, ", \"value mismatch: BGFX_SAMPLER_RESERVED_MASK\");"].}
+const nimValue207 = uint64(BGFX_SAMPLER_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_NONE) == ", nimValue207, ", \"value mismatch: BGFX_SAMPLER_NONE\");"].}
+const nimValue208 = uint64(BGFX_SAMPLER_SAMPLE_STENCIL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_SAMPLE_STENCIL) == ", nimValue208, ", \"value mismatch: BGFX_SAMPLER_SAMPLE_STENCIL\");"].}
+const nimValue209 = uint64(BGFX_SAMPLER_POINT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_POINT) == ", nimValue209, ", \"value mismatch: BGFX_SAMPLER_POINT\");"].}
+const nimValue210 = uint64(BGFX_SAMPLER_UVW_MIRROR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_UVW_MIRROR) == ", nimValue210, ", \"value mismatch: BGFX_SAMPLER_UVW_MIRROR\");"].}
+const nimValue211 = uint64(BGFX_SAMPLER_UVW_CLAMP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_UVW_CLAMP) == ", nimValue211, ", \"value mismatch: BGFX_SAMPLER_UVW_CLAMP\");"].}
+const nimValue212 = uint64(BGFX_SAMPLER_UVW_BORDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_UVW_BORDER) == ", nimValue212, ", \"value mismatch: BGFX_SAMPLER_UVW_BORDER\");"].}
+const nimValue213 = uint64(BGFX_SAMPLER_BITS_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BITS_MASK) == ", nimValue213, ", \"value mismatch: BGFX_SAMPLER_BITS_MASK\");"].}
+const nimValue214 = uint64(BGFX_RESET_MSAA_X2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X2) == ", nimValue214, ", \"value mismatch: BGFX_RESET_MSAA_X2\");"].}
+const nimValue215 = uint64(BGFX_RESET_MSAA_X4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X4) == ", nimValue215, ", \"value mismatch: BGFX_RESET_MSAA_X4\");"].}
+const nimValue216 = uint64(BGFX_RESET_MSAA_X8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X8) == ", nimValue216, ", \"value mismatch: BGFX_RESET_MSAA_X8\");"].}
+const nimValue217 = uint64(BGFX_RESET_MSAA_X16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_X16) == ", nimValue217, ", \"value mismatch: BGFX_RESET_MSAA_X16\");"].}
+const nimValue218 = uint64(BGFX_RESET_MSAA_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_SHIFT) == ", nimValue218, ", \"value mismatch: BGFX_RESET_MSAA_SHIFT\");"].}
+const nimValue219 = uint64(BGFX_RESET_MSAA_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MSAA_MASK) == ", nimValue219, ", \"value mismatch: BGFX_RESET_MSAA_MASK\");"].}
+const nimValue220 = uint64(BGFX_RESET_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_NONE) == ", nimValue220, ", \"value mismatch: BGFX_RESET_NONE\");"].}
+const nimValue221 = uint64(BGFX_RESET_FULLSCREEN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FULLSCREEN) == ", nimValue221, ", \"value mismatch: BGFX_RESET_FULLSCREEN\");"].}
+const nimValue222 = uint64(BGFX_RESET_VSYNC)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_VSYNC) == ", nimValue222, ", \"value mismatch: BGFX_RESET_VSYNC\");"].}
+const nimValue223 = uint64(BGFX_RESET_MAXANISOTROPY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_MAXANISOTROPY) == ", nimValue223, ", \"value mismatch: BGFX_RESET_MAXANISOTROPY\");"].}
+const nimValue224 = uint64(BGFX_RESET_CAPTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_CAPTURE) == ", nimValue224, ", \"value mismatch: BGFX_RESET_CAPTURE\");"].}
+const nimValue225 = uint64(BGFX_RESET_FLUSH_AFTER_RENDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FLUSH_AFTER_RENDER) == ", nimValue225, ", \"value mismatch: BGFX_RESET_FLUSH_AFTER_RENDER\");"].}
+const nimValue226 = uint64(BGFX_RESET_FLIP_AFTER_RENDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FLIP_AFTER_RENDER) == ", nimValue226, ", \"value mismatch: BGFX_RESET_FLIP_AFTER_RENDER\");"].}
+const nimValue227 = uint64(BGFX_RESET_SRGB_BACKBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_SRGB_BACKBUFFER) == ", nimValue227, ", \"value mismatch: BGFX_RESET_SRGB_BACKBUFFER\");"].}
+const nimValue228 = uint64(BGFX_RESET_HDR10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_HDR10) == ", nimValue228, ", \"value mismatch: BGFX_RESET_HDR10\");"].}
+const nimValue229 = uint64(BGFX_RESET_HIDPI)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_HIDPI) == ", nimValue229, ", \"value mismatch: BGFX_RESET_HIDPI\");"].}
+const nimValue230 = uint64(BGFX_RESET_DEPTH_CLAMP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_DEPTH_CLAMP) == ", nimValue230, ", \"value mismatch: BGFX_RESET_DEPTH_CLAMP\");"].}
+const nimValue231 = uint64(BGFX_RESET_SUSPEND)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_SUSPEND) == ", nimValue231, ", \"value mismatch: BGFX_RESET_SUSPEND\");"].}
+const nimValue232 = uint64(BGFX_RESET_TRANSPARENT_BACKBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_TRANSPARENT_BACKBUFFER) == ", nimValue232, ", \"value mismatch: BGFX_RESET_TRANSPARENT_BACKBUFFER\");"].}
+const nimValue233 = uint64(BGFX_RESET_FULLSCREEN_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FULLSCREEN_SHIFT) == ", nimValue233, ", \"value mismatch: BGFX_RESET_FULLSCREEN_SHIFT\");"].}
+const nimValue234 = uint64(BGFX_RESET_FULLSCREEN_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_FULLSCREEN_MASK) == ", nimValue234, ", \"value mismatch: BGFX_RESET_FULLSCREEN_MASK\");"].}
+const nimValue235 = uint64(BGFX_RESET_RESERVED_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_RESERVED_SHIFT) == ", nimValue235, ", \"value mismatch: BGFX_RESET_RESERVED_SHIFT\");"].}
+const nimValue236 = uint64(BGFX_RESET_RESERVED_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESET_RESERVED_MASK) == ", nimValue236, ", \"value mismatch: BGFX_RESET_RESERVED_MASK\");"].}
+const nimValue237 = uint64(BGFX_SWAP_CHAIN_MSAA_X2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_MSAA_X2) == ", nimValue237, ", \"value mismatch: BGFX_SWAP_CHAIN_MSAA_X2\");"].}
+const nimValue238 = uint64(BGFX_SWAP_CHAIN_MSAA_X4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_MSAA_X4) == ", nimValue238, ", \"value mismatch: BGFX_SWAP_CHAIN_MSAA_X4\");"].}
+const nimValue239 = uint64(BGFX_SWAP_CHAIN_MSAA_X8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_MSAA_X8) == ", nimValue239, ", \"value mismatch: BGFX_SWAP_CHAIN_MSAA_X8\");"].}
+const nimValue240 = uint64(BGFX_SWAP_CHAIN_MSAA_X16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_MSAA_X16) == ", nimValue240, ", \"value mismatch: BGFX_SWAP_CHAIN_MSAA_X16\");"].}
+const nimValue241 = uint64(BGFX_SWAP_CHAIN_MSAA_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_MSAA_SHIFT) == ", nimValue241, ", \"value mismatch: BGFX_SWAP_CHAIN_MSAA_SHIFT\");"].}
+const nimValue242 = uint64(BGFX_SWAP_CHAIN_MSAA_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_MSAA_MASK) == ", nimValue242, ", \"value mismatch: BGFX_SWAP_CHAIN_MSAA_MASK\");"].}
+const nimValue243 = uint64(BGFX_SWAP_CHAIN_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_NONE) == ", nimValue243, ", \"value mismatch: BGFX_SWAP_CHAIN_NONE\");"].}
+const nimValue244 = uint64(BGFX_SWAP_CHAIN_FULLSCREEN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_FULLSCREEN) == ", nimValue244, ", \"value mismatch: BGFX_SWAP_CHAIN_FULLSCREEN\");"].}
+const nimValue245 = uint64(BGFX_SWAP_CHAIN_SRGB_BACKBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_SRGB_BACKBUFFER) == ", nimValue245, ", \"value mismatch: BGFX_SWAP_CHAIN_SRGB_BACKBUFFER\");"].}
+const nimValue246 = uint64(BGFX_SWAP_CHAIN_HDR10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_HDR10) == ", nimValue246, ", \"value mismatch: BGFX_SWAP_CHAIN_HDR10\");"].}
+const nimValue247 = uint64(BGFX_SWAP_CHAIN_HIDPI)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_HIDPI) == ", nimValue247, ", \"value mismatch: BGFX_SWAP_CHAIN_HIDPI\");"].}
+const nimValue248 = uint64(BGFX_SWAP_CHAIN_TRANSPARENT_BACKBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_TRANSPARENT_BACKBUFFER) == ", nimValue248, ", \"value mismatch: BGFX_SWAP_CHAIN_TRANSPARENT_BACKBUFFER\");"].}
+const nimValue249 = uint64(BGFX_SWAP_CHAIN_FULLSCREEN_SHIFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_FULLSCREEN_SHIFT) == ", nimValue249, ", \"value mismatch: BGFX_SWAP_CHAIN_FULLSCREEN_SHIFT\");"].}
+const nimValue250 = uint64(BGFX_SWAP_CHAIN_FULLSCREEN_MASK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SWAP_CHAIN_FULLSCREEN_MASK) == ", nimValue250, ", \"value mismatch: BGFX_SWAP_CHAIN_FULLSCREEN_MASK\");"].}
+const nimValue251 = uint64(BGFX_CAPS_BLEND_INDEPENDENT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_BLEND_INDEPENDENT) == ", nimValue251, ", \"value mismatch: BGFX_CAPS_BLEND_INDEPENDENT\");"].}
+const nimValue252 = uint64(BGFX_CAPS_COMPUTE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_COMPUTE) == ", nimValue252, ", \"value mismatch: BGFX_CAPS_COMPUTE\");"].}
+const nimValue253 = uint64(BGFX_CAPS_CONSERVATIVE_RASTER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_CONSERVATIVE_RASTER) == ", nimValue253, ", \"value mismatch: BGFX_CAPS_CONSERVATIVE_RASTER\");"].}
+const nimValue254 = uint64(BGFX_CAPS_DRAW_INDIRECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_DRAW_INDIRECT) == ", nimValue254, ", \"value mismatch: BGFX_CAPS_DRAW_INDIRECT\");"].}
+const nimValue255 = uint64(BGFX_CAPS_DRAW_INDIRECT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_DRAW_INDIRECT_COUNT) == ", nimValue255, ", \"value mismatch: BGFX_CAPS_DRAW_INDIRECT_COUNT\");"].}
+const nimValue256 = uint64(BGFX_CAPS_FRAGMENT_ORDERING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FRAGMENT_ORDERING) == ", nimValue256, ", \"value mismatch: BGFX_CAPS_FRAGMENT_ORDERING\");"].}
+const nimValue257 = uint64(BGFX_CAPS_GRAPHICS_DEBUGGER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_GRAPHICS_DEBUGGER) == ", nimValue257, ", \"value mismatch: BGFX_CAPS_GRAPHICS_DEBUGGER\");"].}
+const nimValue258 = uint64(BGFX_CAPS_HDR10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_HDR10) == ", nimValue258, ", \"value mismatch: BGFX_CAPS_HDR10\");"].}
+const nimValue259 = uint64(BGFX_CAPS_IMAGE_RW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_IMAGE_RW) == ", nimValue259, ", \"value mismatch: BGFX_CAPS_IMAGE_RW\");"].}
+const nimValue260 = uint64(BGFX_CAPS_INDEX32)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_INDEX32) == ", nimValue260, ", \"value mismatch: BGFX_CAPS_INDEX32\");"].}
+const nimValue261 = uint64(BGFX_CAPS_PRIMITIVE_ID)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_PRIMITIVE_ID) == ", nimValue261, ", \"value mismatch: BGFX_CAPS_PRIMITIVE_ID\");"].}
+const nimValue262 = uint64(BGFX_CAPS_RENDERER_MULTITHREADED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_RENDERER_MULTITHREADED) == ", nimValue262, ", \"value mismatch: BGFX_CAPS_RENDERER_MULTITHREADED\");"].}
+const nimValue263 = uint64(BGFX_CAPS_SWAP_CHAIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_SWAP_CHAIN) == ", nimValue263, ", \"value mismatch: BGFX_CAPS_SWAP_CHAIN\");"].}
+const nimValue264 = uint64(BGFX_CAPS_TEXTURE_CUBE_ARRAY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_CUBE_ARRAY) == ", nimValue264, ", \"value mismatch: BGFX_CAPS_TEXTURE_CUBE_ARRAY\");"].}
+const nimValue265 = uint64(BGFX_CAPS_TEXTURE_DIRECT_ACCESS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_DIRECT_ACCESS) == ", nimValue265, ", \"value mismatch: BGFX_CAPS_TEXTURE_DIRECT_ACCESS\");"].}
+const nimValue266 = uint64(BGFX_CAPS_TEXTURE_EXTERNAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_EXTERNAL) == ", nimValue266, ", \"value mismatch: BGFX_CAPS_TEXTURE_EXTERNAL\");"].}
+const nimValue267 = uint64(BGFX_CAPS_TEXTURE_EXTERNAL_SHARED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TEXTURE_EXTERNAL_SHARED) == ", nimValue267, ", \"value mismatch: BGFX_CAPS_TEXTURE_EXTERNAL_SHARED\");"].}
+const nimValue268 = uint64(BGFX_CAPS_TRANSPARENT_BACKBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_TRANSPARENT_BACKBUFFER) == ", nimValue268, ", \"value mismatch: BGFX_CAPS_TRANSPARENT_BACKBUFFER\");"].}
+const nimValue269 = uint64(BGFX_CAPS_VARIABLE_RATE_SHADING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VARIABLE_RATE_SHADING) == ", nimValue269, ", \"value mismatch: BGFX_CAPS_VARIABLE_RATE_SHADING\");"].}
+const nimValue270 = uint64(BGFX_CAPS_VERTEX_ATTRIB_UINT10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VERTEX_ATTRIB_UINT10) == ", nimValue270, ", \"value mismatch: BGFX_CAPS_VERTEX_ATTRIB_UINT10\");"].}
+const nimValue271 = uint64(BGFX_CAPS_VIDEO_DECODE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_DECODE) == ", nimValue271, ", \"value mismatch: BGFX_CAPS_VIDEO_DECODE\");"].}
+const nimValue272 = uint64(BGFX_CAPS_VIEWPORT_LAYER_ARRAY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIEWPORT_LAYER_ARRAY) == ", nimValue272, ", \"value mismatch: BGFX_CAPS_VIEWPORT_LAYER_ARRAY\");"].}
+const nimValue273 = uint64(BGFX_CAPS_FORMAT_TEXTURE_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_NONE) == ", nimValue273, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_NONE\");"].}
+const nimValue274 = uint64(BGFX_CAPS_FORMAT_TEXTURE_2D)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_2D) == ", nimValue274, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_2D\");"].}
+const nimValue275 = uint64(BGFX_CAPS_FORMAT_TEXTURE_2D_SRGB)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_2D_SRGB) == ", nimValue275, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_2D_SRGB\");"].}
+const nimValue276 = uint64(BGFX_CAPS_FORMAT_TEXTURE_2D_EMULATED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_2D_EMULATED) == ", nimValue276, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_2D_EMULATED\");"].}
+const nimValue277 = uint64(BGFX_CAPS_FORMAT_TEXTURE_3D)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_3D) == ", nimValue277, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_3D\");"].}
+const nimValue278 = uint64(BGFX_CAPS_FORMAT_TEXTURE_3D_SRGB)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_3D_SRGB) == ", nimValue278, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_3D_SRGB\");"].}
+const nimValue279 = uint64(BGFX_CAPS_FORMAT_TEXTURE_3D_EMULATED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_3D_EMULATED) == ", nimValue279, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_3D_EMULATED\");"].}
+const nimValue280 = uint64(BGFX_CAPS_FORMAT_TEXTURE_CUBE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_CUBE) == ", nimValue280, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_CUBE\");"].}
+const nimValue281 = uint64(BGFX_CAPS_FORMAT_TEXTURE_CUBE_SRGB)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_CUBE_SRGB) == ", nimValue281, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_CUBE_SRGB\");"].}
+const nimValue282 = uint64(BGFX_CAPS_FORMAT_TEXTURE_CUBE_EMULATED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_CUBE_EMULATED) == ", nimValue282, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_CUBE_EMULATED\");"].}
+const nimValue283 = uint64(BGFX_CAPS_FORMAT_TEXTURE_VERTEX)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_VERTEX) == ", nimValue283, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_VERTEX\");"].}
+const nimValue284 = uint64(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_READ)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_READ) == ", nimValue284, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_IMAGE_READ\");"].}
+const nimValue285 = uint64(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_WRITE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_IMAGE_WRITE) == ", nimValue285, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_IMAGE_WRITE\");"].}
+const nimValue286 = uint64(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER) == ", nimValue286, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER\");"].}
+const nimValue287 = uint64(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER_MSAA)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER_MSAA) == ", nimValue287, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_FRAMEBUFFER_MSAA\");"].}
+const nimValue288 = uint64(BGFX_CAPS_FORMAT_TEXTURE_MSAA)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_MSAA) == ", nimValue288, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_MSAA\");"].}
+const nimValue289 = uint64(BGFX_CAPS_FORMAT_TEXTURE_MIP_AUTOGEN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_MIP_AUTOGEN) == ", nimValue289, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_MIP_AUTOGEN\");"].}
+const nimValue290 = uint64(BGFX_CAPS_FORMAT_TEXTURE_BACKBUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_BACKBUFFER) == ", nimValue290, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_BACKBUFFER\");"].}
+const nimValue291 = uint64(BGFX_CAPS_FORMAT_TEXTURE_VIDEO_DECODE_DST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_FORMAT_TEXTURE_VIDEO_DECODE_DST) == ", nimValue291, ", \"value mismatch: BGFX_CAPS_FORMAT_TEXTURE_VIDEO_DECODE_DST\");"].}
+const nimValue292 = uint64(BGFX_CAPS_VIDEO_CODEC_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_NONE) == ", nimValue292, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_NONE\");"].}
+const nimValue293 = uint64(BGFX_CAPS_VIDEO_CODEC_BIT_8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_BIT_8) == ", nimValue293, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_BIT_8\");"].}
+const nimValue294 = uint64(BGFX_CAPS_VIDEO_CODEC_BIT_10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_BIT_10) == ", nimValue294, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_BIT_10\");"].}
+const nimValue295 = uint64(BGFX_CAPS_VIDEO_CODEC_BIT_12)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_BIT_12) == ", nimValue295, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_BIT_12\");"].}
+const nimValue296 = uint64(BGFX_CAPS_VIDEO_CODEC_CHROMA_420)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_CHROMA_420) == ", nimValue296, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_CHROMA_420\");"].}
+const nimValue297 = uint64(BGFX_CAPS_VIDEO_CODEC_CHROMA_422)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_CHROMA_422) == ", nimValue297, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_CHROMA_422\");"].}
+const nimValue298 = uint64(BGFX_CAPS_VIDEO_CODEC_CHROMA_444)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CAPS_VIDEO_CODEC_CHROMA_444) == ", nimValue298, ", \"value mismatch: BGFX_CAPS_VIDEO_CODEC_CHROMA_444\");"].}
+const nimValue299 = uint64(BGFX_VIDEO_DECODER_INIT_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODER_INIT_NONE) == ", nimValue299, ", \"value mismatch: BGFX_VIDEO_DECODER_INIT_NONE\");"].}
+const nimValue300 = uint64(BGFX_VIDEO_DECODER_INIT_RETAIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODER_INIT_RETAIN) == ", nimValue300, ", \"value mismatch: BGFX_VIDEO_DECODER_INIT_RETAIN\");"].}
+const nimValue301 = uint64(BGFX_VIDEO_DECODE_FRAME_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_NONE) == ", nimValue301, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_NONE\");"].}
+const nimValue302 = uint64(BGFX_VIDEO_DECODE_FRAME_SET)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_SET) == ", nimValue302, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_SET\");"].}
+const nimValue303 = uint64(BGFX_VIDEO_DECODE_FRAME_NO_BLIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_NO_BLIT) == ", nimValue303, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_NO_BLIT\");"].}
+const nimValue304 = uint64(BGFX_VIDEO_DECODE_FRAME_FINAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_FINAL) == ", nimValue304, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_FINAL\");"].}
+const nimValue305 = uint64(BGFX_VIDEO_DECODE_FRAME_LOOP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_DECODE_FRAME_LOOP) == ", nimValue305, ", \"value mismatch: BGFX_VIDEO_DECODE_FRAME_LOOP\");"].}
+const nimValue306 = uint64(BGFX_RESOLVE_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESOLVE_NONE) == ", nimValue306, ", \"value mismatch: BGFX_RESOLVE_NONE\");"].}
+const nimValue307 = uint64(BGFX_RESOLVE_AUTO_GEN_MIPS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RESOLVE_AUTO_GEN_MIPS) == ", nimValue307, ", \"value mismatch: BGFX_RESOLVE_AUTO_GEN_MIPS\");"].}
+const nimValue308 = uint64(BGFX_PCI_ID_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_NONE) == ", nimValue308, ", \"value mismatch: BGFX_PCI_ID_NONE\");"].}
+const nimValue309 = uint64(BGFX_PCI_ID_SOFTWARE_RASTERIZER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_SOFTWARE_RASTERIZER) == ", nimValue309, ", \"value mismatch: BGFX_PCI_ID_SOFTWARE_RASTERIZER\");"].}
+const nimValue310 = uint64(BGFX_PCI_ID_AMD)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_AMD) == ", nimValue310, ", \"value mismatch: BGFX_PCI_ID_AMD\");"].}
+const nimValue311 = uint64(BGFX_PCI_ID_APPLE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_APPLE) == ", nimValue311, ", \"value mismatch: BGFX_PCI_ID_APPLE\");"].}
+const nimValue312 = uint64(BGFX_PCI_ID_INTEL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_INTEL) == ", nimValue312, ", \"value mismatch: BGFX_PCI_ID_INTEL\");"].}
+const nimValue313 = uint64(BGFX_PCI_ID_NVIDIA)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_NVIDIA) == ", nimValue313, ", \"value mismatch: BGFX_PCI_ID_NVIDIA\");"].}
+const nimValue314 = uint64(BGFX_PCI_ID_MICROSOFT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_MICROSOFT) == ", nimValue314, ", \"value mismatch: BGFX_PCI_ID_MICROSOFT\");"].}
+const nimValue315 = uint64(BGFX_PCI_ID_ARM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_PCI_ID_ARM) == ", nimValue315, ", \"value mismatch: BGFX_PCI_ID_ARM\");"].}
+const nimValue316 = uint64(BGFX_CUBE_MAP_POSITIVE_X)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_POSITIVE_X) == ", nimValue316, ", \"value mismatch: BGFX_CUBE_MAP_POSITIVE_X\");"].}
+const nimValue317 = uint64(BGFX_CUBE_MAP_NEGATIVE_X)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_NEGATIVE_X) == ", nimValue317, ", \"value mismatch: BGFX_CUBE_MAP_NEGATIVE_X\");"].}
+const nimValue318 = uint64(BGFX_CUBE_MAP_POSITIVE_Y)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_POSITIVE_Y) == ", nimValue318, ", \"value mismatch: BGFX_CUBE_MAP_POSITIVE_Y\");"].}
+const nimValue319 = uint64(BGFX_CUBE_MAP_NEGATIVE_Y)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_NEGATIVE_Y) == ", nimValue319, ", \"value mismatch: BGFX_CUBE_MAP_NEGATIVE_Y\");"].}
+const nimValue320 = uint64(BGFX_CUBE_MAP_POSITIVE_Z)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_POSITIVE_Z) == ", nimValue320, ", \"value mismatch: BGFX_CUBE_MAP_POSITIVE_Z\");"].}
+const nimValue321 = uint64(BGFX_CUBE_MAP_NEGATIVE_Z)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_CUBE_MAP_NEGATIVE_Z) == ", nimValue321, ", \"value mismatch: BGFX_CUBE_MAP_NEGATIVE_Z\");"].}
+const nimValue322 = uint64(BGFX_FRAME_NONE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_NONE) == ", nimValue322, ", \"value mismatch: BGFX_FRAME_NONE\");"].}
+const nimValue323 = uint64(BGFX_FRAME_DEBUG_CAPTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_DEBUG_CAPTURE) == ", nimValue323, ", \"value mismatch: BGFX_FRAME_DEBUG_CAPTURE\");"].}
+const nimValue324 = uint64(BGFX_FRAME_DISCARD)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_DISCARD) == ", nimValue324, ", \"value mismatch: BGFX_FRAME_DISCARD\");"].}
+const nimValue325 = uint64(BGFX_FRAME_FLUSH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FRAME_FLUSH) == ", nimValue325, ", \"value mismatch: BGFX_FRAME_FLUSH\");"].}
+const nimValue326 = uint64(BGFX_STATE_BLEND_ADD)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_ADD) == ", nimValue326, ", \"value mismatch: BGFX_STATE_BLEND_ADD\");"].}
+const nimValue327 = uint64(BGFX_STATE_BLEND_ALPHA)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_ALPHA) == ", nimValue327, ", \"value mismatch: BGFX_STATE_BLEND_ALPHA\");"].}
+const nimValue328 = uint64(BGFX_STATE_BLEND_DARKEN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_DARKEN) == ", nimValue328, ", \"value mismatch: BGFX_STATE_BLEND_DARKEN\");"].}
+const nimValue329 = uint64(BGFX_STATE_BLEND_LIGHTEN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_LIGHTEN) == ", nimValue329, ", \"value mismatch: BGFX_STATE_BLEND_LIGHTEN\");"].}
+const nimValue330 = uint64(BGFX_STATE_BLEND_MULTIPLY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_MULTIPLY) == ", nimValue330, ", \"value mismatch: BGFX_STATE_BLEND_MULTIPLY\");"].}
+const nimValue331 = uint64(BGFX_STATE_BLEND_NORMAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_NORMAL) == ", nimValue331, ", \"value mismatch: BGFX_STATE_BLEND_NORMAL\");"].}
+const nimValue332 = uint64(BGFX_STATE_BLEND_SCREEN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_SCREEN) == ", nimValue332, ", \"value mismatch: BGFX_STATE_BLEND_SCREEN\");"].}
+const nimValue333 = uint64(BGFX_STATE_BLEND_LINEAR_BURN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_LINEAR_BURN) == ", nimValue333, ", \"value mismatch: BGFX_STATE_BLEND_LINEAR_BURN\");"].}
+const nimValue334 = uint64(BGFX_BUFFER_HANDLE_TYPE_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_HANDLE_TYPE_DYNAMIC_INDEX_BUFFER) == ", nimValue334, ", \"value mismatch: BGFX_BUFFER_HANDLE_TYPE_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue335 = uint64(BGFX_BUFFER_HANDLE_TYPE_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_HANDLE_TYPE_DYNAMIC_VERTEX_BUFFER) == ", nimValue335, ", \"value mismatch: BGFX_BUFFER_HANDLE_TYPE_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue336 = uint64(BGFX_BUFFER_HANDLE_TYPE_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_HANDLE_TYPE_INDEX_BUFFER) == ", nimValue336, ", \"value mismatch: BGFX_BUFFER_HANDLE_TYPE_INDEX_BUFFER\");"].}
+const nimValue337 = uint64(BGFX_BUFFER_HANDLE_TYPE_INDIRECT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_HANDLE_TYPE_INDIRECT_BUFFER) == ", nimValue337, ", \"value mismatch: BGFX_BUFFER_HANDLE_TYPE_INDIRECT_BUFFER\");"].}
+const nimValue338 = uint64(BGFX_BUFFER_HANDLE_TYPE_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_HANDLE_TYPE_VERTEX_BUFFER) == ", nimValue338, ", \"value mismatch: BGFX_BUFFER_HANDLE_TYPE_VERTEX_BUFFER\");"].}
+const nimValue339 = uint64(BGFX_BUFFER_HANDLE_TYPE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BUFFER_HANDLE_TYPE_COUNT) == ", nimValue339, ", \"value mismatch: BGFX_BUFFER_HANDLE_TYPE_COUNT\");"].}
+const nimValue340 = uint64(BGFX_FATAL_DEBUG_CHECK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_DEBUG_CHECK) == ", nimValue340, ", \"value mismatch: BGFX_FATAL_DEBUG_CHECK\");"].}
+const nimValue341 = uint64(BGFX_FATAL_INVALID_SHADER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_INVALID_SHADER) == ", nimValue341, ", \"value mismatch: BGFX_FATAL_INVALID_SHADER\");"].}
+const nimValue342 = uint64(BGFX_FATAL_UNABLE_TO_INITIALIZE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_UNABLE_TO_INITIALIZE) == ", nimValue342, ", \"value mismatch: BGFX_FATAL_UNABLE_TO_INITIALIZE\");"].}
+const nimValue343 = uint64(BGFX_FATAL_UNABLE_TO_CREATE_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_UNABLE_TO_CREATE_TEXTURE) == ", nimValue343, ", \"value mismatch: BGFX_FATAL_UNABLE_TO_CREATE_TEXTURE\");"].}
+const nimValue344 = uint64(BGFX_FATAL_DEVICE_LOST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_DEVICE_LOST) == ", nimValue344, ", \"value mismatch: BGFX_FATAL_DEVICE_LOST\");"].}
+const nimValue345 = uint64(BGFX_FATAL_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FATAL_COUNT) == ", nimValue345, ", \"value mismatch: BGFX_FATAL_COUNT\");"].}
+const nimValue346 = uint64(BGFX_RENDERER_TYPE_NOOP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_NOOP) == ", nimValue346, ", \"value mismatch: BGFX_RENDERER_TYPE_NOOP\");"].}
+const nimValue347 = uint64(BGFX_RENDERER_TYPE_AGC)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_AGC) == ", nimValue347, ", \"value mismatch: BGFX_RENDERER_TYPE_AGC\");"].}
+const nimValue348 = uint64(BGFX_RENDERER_TYPE_DIRECT3D11)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_DIRECT3D11) == ", nimValue348, ", \"value mismatch: BGFX_RENDERER_TYPE_DIRECT3D11\");"].}
+const nimValue349 = uint64(BGFX_RENDERER_TYPE_DIRECT3D12)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_DIRECT3D12) == ", nimValue349, ", \"value mismatch: BGFX_RENDERER_TYPE_DIRECT3D12\");"].}
+const nimValue350 = uint64(BGFX_RENDERER_TYPE_GNM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_GNM) == ", nimValue350, ", \"value mismatch: BGFX_RENDERER_TYPE_GNM\");"].}
+const nimValue351 = uint64(BGFX_RENDERER_TYPE_METAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_METAL) == ", nimValue351, ", \"value mismatch: BGFX_RENDERER_TYPE_METAL\");"].}
+const nimValue352 = uint64(BGFX_RENDERER_TYPE_NVN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_NVN) == ", nimValue352, ", \"value mismatch: BGFX_RENDERER_TYPE_NVN\");"].}
+const nimValue353 = uint64(BGFX_RENDERER_TYPE_OPENGLES)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_OPENGLES) == ", nimValue353, ", \"value mismatch: BGFX_RENDERER_TYPE_OPENGLES\");"].}
+const nimValue354 = uint64(BGFX_RENDERER_TYPE_OPENGL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_OPENGL) == ", nimValue354, ", \"value mismatch: BGFX_RENDERER_TYPE_OPENGL\");"].}
+const nimValue355 = uint64(BGFX_RENDERER_TYPE_VULKAN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_VULKAN) == ", nimValue355, ", \"value mismatch: BGFX_RENDERER_TYPE_VULKAN\");"].}
+const nimValue356 = uint64(BGFX_RENDERER_TYPE_WEBGPU)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_WEBGPU) == ", nimValue356, ", \"value mismatch: BGFX_RENDERER_TYPE_WEBGPU\");"].}
+const nimValue357 = uint64(BGFX_RENDERER_TYPE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDERER_TYPE_COUNT) == ", nimValue357, ", \"value mismatch: BGFX_RENDERER_TYPE_COUNT\");"].}
+const nimValue358 = uint64(BGFX_ACCESS_READ)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_READ) == ", nimValue358, ", \"value mismatch: BGFX_ACCESS_READ\");"].}
+const nimValue359 = uint64(BGFX_ACCESS_WRITE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_WRITE) == ", nimValue359, ", \"value mismatch: BGFX_ACCESS_WRITE\");"].}
+const nimValue360 = uint64(BGFX_ACCESS_READWRITE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_READWRITE) == ", nimValue360, ", \"value mismatch: BGFX_ACCESS_READWRITE\");"].}
+const nimValue361 = uint64(BGFX_ACCESS_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ACCESS_COUNT) == ", nimValue361, ", \"value mismatch: BGFX_ACCESS_COUNT\");"].}
+const nimValue362 = uint64(BGFX_ATTRIB_POSITION)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_POSITION) == ", nimValue362, ", \"value mismatch: BGFX_ATTRIB_POSITION\");"].}
+const nimValue363 = uint64(BGFX_ATTRIB_NORMAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_NORMAL) == ", nimValue363, ", \"value mismatch: BGFX_ATTRIB_NORMAL\");"].}
+const nimValue364 = uint64(BGFX_ATTRIB_TANGENT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TANGENT) == ", nimValue364, ", \"value mismatch: BGFX_ATTRIB_TANGENT\");"].}
+const nimValue365 = uint64(BGFX_ATTRIB_BITANGENT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_BITANGENT) == ", nimValue365, ", \"value mismatch: BGFX_ATTRIB_BITANGENT\");"].}
+const nimValue366 = uint64(BGFX_ATTRIB_COLOR0)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR0) == ", nimValue366, ", \"value mismatch: BGFX_ATTRIB_COLOR0\");"].}
+const nimValue367 = uint64(BGFX_ATTRIB_COLOR1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR1) == ", nimValue367, ", \"value mismatch: BGFX_ATTRIB_COLOR1\");"].}
+const nimValue368 = uint64(BGFX_ATTRIB_COLOR2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR2) == ", nimValue368, ", \"value mismatch: BGFX_ATTRIB_COLOR2\");"].}
+const nimValue369 = uint64(BGFX_ATTRIB_COLOR3)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COLOR3) == ", nimValue369, ", \"value mismatch: BGFX_ATTRIB_COLOR3\");"].}
+const nimValue370 = uint64(BGFX_ATTRIB_INDICES)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_INDICES) == ", nimValue370, ", \"value mismatch: BGFX_ATTRIB_INDICES\");"].}
+const nimValue371 = uint64(BGFX_ATTRIB_WEIGHT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_WEIGHT) == ", nimValue371, ", \"value mismatch: BGFX_ATTRIB_WEIGHT\");"].}
+const nimValue372 = uint64(BGFX_ATTRIB_TEXCOORD0)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD0) == ", nimValue372, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD0\");"].}
+const nimValue373 = uint64(BGFX_ATTRIB_TEXCOORD1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD1) == ", nimValue373, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD1\");"].}
+const nimValue374 = uint64(BGFX_ATTRIB_TEXCOORD2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD2) == ", nimValue374, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD2\");"].}
+const nimValue375 = uint64(BGFX_ATTRIB_TEXCOORD3)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD3) == ", nimValue375, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD3\");"].}
+const nimValue376 = uint64(BGFX_ATTRIB_TEXCOORD4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD4) == ", nimValue376, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD4\");"].}
+const nimValue377 = uint64(BGFX_ATTRIB_TEXCOORD5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD5) == ", nimValue377, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD5\");"].}
+const nimValue378 = uint64(BGFX_ATTRIB_TEXCOORD6)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD6) == ", nimValue378, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD6\");"].}
+const nimValue379 = uint64(BGFX_ATTRIB_TEXCOORD7)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD7) == ", nimValue379, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD7\");"].}
+const nimValue380 = uint64(BGFX_ATTRIB_TEXCOORD8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD8) == ", nimValue380, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD8\");"].}
+const nimValue381 = uint64(BGFX_ATTRIB_TEXCOORD9)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD9) == ", nimValue381, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD9\");"].}
+const nimValue382 = uint64(BGFX_ATTRIB_TEXCOORD10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD10) == ", nimValue382, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD10\");"].}
+const nimValue383 = uint64(BGFX_ATTRIB_TEXCOORD11)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD11) == ", nimValue383, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD11\");"].}
+const nimValue384 = uint64(BGFX_ATTRIB_TEXCOORD12)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD12) == ", nimValue384, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD12\");"].}
+const nimValue385 = uint64(BGFX_ATTRIB_TEXCOORD13)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD13) == ", nimValue385, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD13\");"].}
+const nimValue386 = uint64(BGFX_ATTRIB_TEXCOORD14)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD14) == ", nimValue386, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD14\");"].}
+const nimValue387 = uint64(BGFX_ATTRIB_TEXCOORD15)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TEXCOORD15) == ", nimValue387, ", \"value mismatch: BGFX_ATTRIB_TEXCOORD15\");"].}
+const nimValue388 = uint64(BGFX_ATTRIB_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_COUNT) == ", nimValue388, ", \"value mismatch: BGFX_ATTRIB_COUNT\");"].}
+const nimValue389 = uint64(BGFX_ATTRIB_TYPE_INT8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_INT8) == ", nimValue389, ", \"value mismatch: BGFX_ATTRIB_TYPE_INT8\");"].}
+const nimValue390 = uint64(BGFX_ATTRIB_TYPE_UINT8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT8) == ", nimValue390, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT8\");"].}
+const nimValue391 = uint64(BGFX_ATTRIB_TYPE_UINT10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT10) == ", nimValue391, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT10\");"].}
+const nimValue392 = uint64(BGFX_ATTRIB_TYPE_INT16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_INT16) == ", nimValue392, ", \"value mismatch: BGFX_ATTRIB_TYPE_INT16\");"].}
+const nimValue393 = uint64(BGFX_ATTRIB_TYPE_UINT16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT16) == ", nimValue393, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT16\");"].}
+const nimValue394 = uint64(BGFX_ATTRIB_TYPE_HALF)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_HALF) == ", nimValue394, ", \"value mismatch: BGFX_ATTRIB_TYPE_HALF\");"].}
+const nimValue395 = uint64(BGFX_ATTRIB_TYPE_FLOAT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_FLOAT) == ", nimValue395, ", \"value mismatch: BGFX_ATTRIB_TYPE_FLOAT\");"].}
+const nimValue396 = uint64(BGFX_ATTRIB_TYPE_INT32)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_INT32) == ", nimValue396, ", \"value mismatch: BGFX_ATTRIB_TYPE_INT32\");"].}
+const nimValue397 = uint64(BGFX_ATTRIB_TYPE_UINT32)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_UINT32) == ", nimValue397, ", \"value mismatch: BGFX_ATTRIB_TYPE_UINT32\");"].}
+const nimValue398 = uint64(BGFX_ATTRIB_TYPE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_ATTRIB_TYPE_COUNT) == ", nimValue398, ", \"value mismatch: BGFX_ATTRIB_TYPE_COUNT\");"].}
+const nimValue399 = uint64(BGFX_TEXTURE_FORMAT_BC1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC1) == ", nimValue399, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC1\");"].}
+const nimValue400 = uint64(BGFX_TEXTURE_FORMAT_BC2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC2) == ", nimValue400, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC2\");"].}
+const nimValue401 = uint64(BGFX_TEXTURE_FORMAT_BC3)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC3) == ", nimValue401, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC3\");"].}
+const nimValue402 = uint64(BGFX_TEXTURE_FORMAT_BC4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC4) == ", nimValue402, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC4\");"].}
+const nimValue403 = uint64(BGFX_TEXTURE_FORMAT_BC4S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC4S) == ", nimValue403, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC4S\");"].}
+const nimValue404 = uint64(BGFX_TEXTURE_FORMAT_BC5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC5) == ", nimValue404, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC5\");"].}
+const nimValue405 = uint64(BGFX_TEXTURE_FORMAT_BC5S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC5S) == ", nimValue405, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC5S\");"].}
+const nimValue406 = uint64(BGFX_TEXTURE_FORMAT_BC6H)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC6H) == ", nimValue406, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC6H\");"].}
+const nimValue407 = uint64(BGFX_TEXTURE_FORMAT_BC6HU)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC6HU) == ", nimValue407, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC6HU\");"].}
+const nimValue408 = uint64(BGFX_TEXTURE_FORMAT_BC7)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BC7) == ", nimValue408, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BC7\");"].}
+const nimValue409 = uint64(BGFX_TEXTURE_FORMAT_ETC1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC1) == ", nimValue409, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC1\");"].}
+const nimValue410 = uint64(BGFX_TEXTURE_FORMAT_ETC2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC2) == ", nimValue410, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC2\");"].}
+const nimValue411 = uint64(BGFX_TEXTURE_FORMAT_ETC2A)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC2A) == ", nimValue411, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC2A\");"].}
+const nimValue412 = uint64(BGFX_TEXTURE_FORMAT_ETC2A1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ETC2A1) == ", nimValue412, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ETC2A1\");"].}
+const nimValue413 = uint64(BGFX_TEXTURE_FORMAT_EACR11)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACR11) == ", nimValue413, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACR11\");"].}
+const nimValue414 = uint64(BGFX_TEXTURE_FORMAT_EACR11S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACR11S) == ", nimValue414, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACR11S\");"].}
+const nimValue415 = uint64(BGFX_TEXTURE_FORMAT_EACRG11)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACRG11) == ", nimValue415, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACRG11\");"].}
+const nimValue416 = uint64(BGFX_TEXTURE_FORMAT_EACRG11S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_EACRG11S) == ", nimValue416, ", \"value mismatch: BGFX_TEXTURE_FORMAT_EACRG11S\");"].}
+const nimValue417 = uint64(BGFX_TEXTURE_FORMAT_PTC12)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC12) == ", nimValue417, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC12\");"].}
+const nimValue418 = uint64(BGFX_TEXTURE_FORMAT_PTC14)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC14) == ", nimValue418, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC14\");"].}
+const nimValue419 = uint64(BGFX_TEXTURE_FORMAT_PTC12A)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC12A) == ", nimValue419, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC12A\");"].}
+const nimValue420 = uint64(BGFX_TEXTURE_FORMAT_PTC14A)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC14A) == ", nimValue420, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC14A\");"].}
+const nimValue421 = uint64(BGFX_TEXTURE_FORMAT_PTC22)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC22) == ", nimValue421, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC22\");"].}
+const nimValue422 = uint64(BGFX_TEXTURE_FORMAT_PTC24)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_PTC24) == ", nimValue422, ", \"value mismatch: BGFX_TEXTURE_FORMAT_PTC24\");"].}
+const nimValue423 = uint64(BGFX_TEXTURE_FORMAT_ATC)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ATC) == ", nimValue423, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ATC\");"].}
+const nimValue424 = uint64(BGFX_TEXTURE_FORMAT_ATCE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ATCE) == ", nimValue424, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ATCE\");"].}
+const nimValue425 = uint64(BGFX_TEXTURE_FORMAT_ATCI)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ATCI) == ", nimValue425, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ATCI\");"].}
+const nimValue426 = uint64(BGFX_TEXTURE_FORMAT_ASTC4X4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC4X4) == ", nimValue426, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC4X4\");"].}
+const nimValue427 = uint64(BGFX_TEXTURE_FORMAT_ASTC5X4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC5X4) == ", nimValue427, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC5X4\");"].}
+const nimValue428 = uint64(BGFX_TEXTURE_FORMAT_ASTC5X5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC5X5) == ", nimValue428, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC5X5\");"].}
+const nimValue429 = uint64(BGFX_TEXTURE_FORMAT_ASTC6X5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC6X5) == ", nimValue429, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC6X5\");"].}
+const nimValue430 = uint64(BGFX_TEXTURE_FORMAT_ASTC6X6)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC6X6) == ", nimValue430, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC6X6\");"].}
+const nimValue431 = uint64(BGFX_TEXTURE_FORMAT_ASTC8X5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC8X5) == ", nimValue431, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC8X5\");"].}
+const nimValue432 = uint64(BGFX_TEXTURE_FORMAT_ASTC8X6)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC8X6) == ", nimValue432, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC8X6\");"].}
+const nimValue433 = uint64(BGFX_TEXTURE_FORMAT_ASTC8X8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC8X8) == ", nimValue433, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC8X8\");"].}
+const nimValue434 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X5) == ", nimValue434, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X5\");"].}
+const nimValue435 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X6)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X6) == ", nimValue435, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X6\");"].}
+const nimValue436 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X8) == ", nimValue436, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X8\");"].}
+const nimValue437 = uint64(BGFX_TEXTURE_FORMAT_ASTC10X10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC10X10) == ", nimValue437, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC10X10\");"].}
+const nimValue438 = uint64(BGFX_TEXTURE_FORMAT_ASTC12X10)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC12X10) == ", nimValue438, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC12X10\");"].}
+const nimValue439 = uint64(BGFX_TEXTURE_FORMAT_ASTC12X12)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_ASTC12X12) == ", nimValue439, ", \"value mismatch: BGFX_TEXTURE_FORMAT_ASTC12X12\");"].}
+const nimValue440 = uint64(BGFX_TEXTURE_FORMAT_UNKNOWN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_UNKNOWN) == ", nimValue440, ", \"value mismatch: BGFX_TEXTURE_FORMAT_UNKNOWN\");"].}
+const nimValue441 = uint64(BGFX_TEXTURE_FORMAT_R1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R1) == ", nimValue441, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R1\");"].}
+const nimValue442 = uint64(BGFX_TEXTURE_FORMAT_A8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_A8) == ", nimValue442, ", \"value mismatch: BGFX_TEXTURE_FORMAT_A8\");"].}
+const nimValue443 = uint64(BGFX_TEXTURE_FORMAT_R8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8) == ", nimValue443, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8\");"].}
+const nimValue444 = uint64(BGFX_TEXTURE_FORMAT_R8I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8I) == ", nimValue444, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8I\");"].}
+const nimValue445 = uint64(BGFX_TEXTURE_FORMAT_R8U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8U) == ", nimValue445, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8U\");"].}
+const nimValue446 = uint64(BGFX_TEXTURE_FORMAT_R8S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R8S) == ", nimValue446, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R8S\");"].}
+const nimValue447 = uint64(BGFX_TEXTURE_FORMAT_R16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16) == ", nimValue447, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16\");"].}
+const nimValue448 = uint64(BGFX_TEXTURE_FORMAT_R16I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16I) == ", nimValue448, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16I\");"].}
+const nimValue449 = uint64(BGFX_TEXTURE_FORMAT_R16U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16U) == ", nimValue449, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16U\");"].}
+const nimValue450 = uint64(BGFX_TEXTURE_FORMAT_R16F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16F) == ", nimValue450, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16F\");"].}
+const nimValue451 = uint64(BGFX_TEXTURE_FORMAT_R16S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R16S) == ", nimValue451, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R16S\");"].}
+const nimValue452 = uint64(BGFX_TEXTURE_FORMAT_R32I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R32I) == ", nimValue452, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R32I\");"].}
+const nimValue453 = uint64(BGFX_TEXTURE_FORMAT_R32U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R32U) == ", nimValue453, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R32U\");"].}
+const nimValue454 = uint64(BGFX_TEXTURE_FORMAT_R32F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R32F) == ", nimValue454, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R32F\");"].}
+const nimValue455 = uint64(BGFX_TEXTURE_FORMAT_RG8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8) == ", nimValue455, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8\");"].}
+const nimValue456 = uint64(BGFX_TEXTURE_FORMAT_RG8I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8I) == ", nimValue456, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8I\");"].}
+const nimValue457 = uint64(BGFX_TEXTURE_FORMAT_RG8U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8U) == ", nimValue457, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8U\");"].}
+const nimValue458 = uint64(BGFX_TEXTURE_FORMAT_RG8S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG8S) == ", nimValue458, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG8S\");"].}
+const nimValue459 = uint64(BGFX_TEXTURE_FORMAT_RG16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16) == ", nimValue459, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16\");"].}
+const nimValue460 = uint64(BGFX_TEXTURE_FORMAT_RG16I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16I) == ", nimValue460, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16I\");"].}
+const nimValue461 = uint64(BGFX_TEXTURE_FORMAT_RG16U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16U) == ", nimValue461, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16U\");"].}
+const nimValue462 = uint64(BGFX_TEXTURE_FORMAT_RG16F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16F) == ", nimValue462, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16F\");"].}
+const nimValue463 = uint64(BGFX_TEXTURE_FORMAT_RG16S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG16S) == ", nimValue463, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG16S\");"].}
+const nimValue464 = uint64(BGFX_TEXTURE_FORMAT_RG32I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG32I) == ", nimValue464, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG32I\");"].}
+const nimValue465 = uint64(BGFX_TEXTURE_FORMAT_RG32U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG32U) == ", nimValue465, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG32U\");"].}
+const nimValue466 = uint64(BGFX_TEXTURE_FORMAT_RG32F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG32F) == ", nimValue466, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG32F\");"].}
+const nimValue467 = uint64(BGFX_TEXTURE_FORMAT_RGB8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8) == ", nimValue467, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8\");"].}
+const nimValue468 = uint64(BGFX_TEXTURE_FORMAT_RGB8I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8I) == ", nimValue468, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8I\");"].}
+const nimValue469 = uint64(BGFX_TEXTURE_FORMAT_RGB8U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8U) == ", nimValue469, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8U\");"].}
+const nimValue470 = uint64(BGFX_TEXTURE_FORMAT_RGB8S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB8S) == ", nimValue470, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB8S\");"].}
+const nimValue471 = uint64(BGFX_TEXTURE_FORMAT_RGB9E5F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB9E5F) == ", nimValue471, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB9E5F\");"].}
+const nimValue472 = uint64(BGFX_TEXTURE_FORMAT_BGRA8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BGRA8) == ", nimValue472, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BGRA8\");"].}
+const nimValue473 = uint64(BGFX_TEXTURE_FORMAT_RGBA8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8) == ", nimValue473, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8\");"].}
+const nimValue474 = uint64(BGFX_TEXTURE_FORMAT_RGBA8I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8I) == ", nimValue474, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8I\");"].}
+const nimValue475 = uint64(BGFX_TEXTURE_FORMAT_RGBA8U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8U) == ", nimValue475, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8U\");"].}
+const nimValue476 = uint64(BGFX_TEXTURE_FORMAT_RGBA8S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA8S) == ", nimValue476, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA8S\");"].}
+const nimValue477 = uint64(BGFX_TEXTURE_FORMAT_RGBA16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16) == ", nimValue477, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16\");"].}
+const nimValue478 = uint64(BGFX_TEXTURE_FORMAT_RGBA16I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16I) == ", nimValue478, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16I\");"].}
+const nimValue479 = uint64(BGFX_TEXTURE_FORMAT_RGBA16U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16U) == ", nimValue479, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16U\");"].}
+const nimValue480 = uint64(BGFX_TEXTURE_FORMAT_RGBA16F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16F) == ", nimValue480, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16F\");"].}
+const nimValue481 = uint64(BGFX_TEXTURE_FORMAT_RGBA16S)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA16S) == ", nimValue481, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA16S\");"].}
+const nimValue482 = uint64(BGFX_TEXTURE_FORMAT_RGBA32I)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA32I) == ", nimValue482, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA32I\");"].}
+const nimValue483 = uint64(BGFX_TEXTURE_FORMAT_RGBA32U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA32U) == ", nimValue483, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA32U\");"].}
+const nimValue484 = uint64(BGFX_TEXTURE_FORMAT_RGBA32F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA32F) == ", nimValue484, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA32F\");"].}
+const nimValue485 = uint64(BGFX_TEXTURE_FORMAT_B5G6R5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_B5G6R5) == ", nimValue485, ", \"value mismatch: BGFX_TEXTURE_FORMAT_B5G6R5\");"].}
+const nimValue486 = uint64(BGFX_TEXTURE_FORMAT_R5G6B5)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_R5G6B5) == ", nimValue486, ", \"value mismatch: BGFX_TEXTURE_FORMAT_R5G6B5\");"].}
+const nimValue487 = uint64(BGFX_TEXTURE_FORMAT_BGRA4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BGRA4) == ", nimValue487, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BGRA4\");"].}
+const nimValue488 = uint64(BGFX_TEXTURE_FORMAT_RGBA4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGBA4) == ", nimValue488, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGBA4\");"].}
+const nimValue489 = uint64(BGFX_TEXTURE_FORMAT_BGR5A1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_BGR5A1) == ", nimValue489, ", \"value mismatch: BGFX_TEXTURE_FORMAT_BGR5A1\");"].}
+const nimValue490 = uint64(BGFX_TEXTURE_FORMAT_RGB5A1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB5A1) == ", nimValue490, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB5A1\");"].}
+const nimValue491 = uint64(BGFX_TEXTURE_FORMAT_RGB10A2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB10A2) == ", nimValue491, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB10A2\");"].}
+const nimValue492 = uint64(BGFX_TEXTURE_FORMAT_RGB10A2U)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RGB10A2U) == ", nimValue492, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RGB10A2U\");"].}
+const nimValue493 = uint64(BGFX_TEXTURE_FORMAT_RG11B10F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_RG11B10F) == ", nimValue493, ", \"value mismatch: BGFX_TEXTURE_FORMAT_RG11B10F\");"].}
+const nimValue494 = uint64(BGFX_TEXTURE_FORMAT_UNKNOWNDEPTH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_UNKNOWNDEPTH) == ", nimValue494, ", \"value mismatch: BGFX_TEXTURE_FORMAT_UNKNOWNDEPTH\");"].}
+const nimValue495 = uint64(BGFX_TEXTURE_FORMAT_D16)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D16) == ", nimValue495, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D16\");"].}
+const nimValue496 = uint64(BGFX_TEXTURE_FORMAT_D24)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D24) == ", nimValue496, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D24\");"].}
+const nimValue497 = uint64(BGFX_TEXTURE_FORMAT_D24S8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D24S8) == ", nimValue497, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D24S8\");"].}
+const nimValue498 = uint64(BGFX_TEXTURE_FORMAT_D32)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D32) == ", nimValue498, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D32\");"].}
+const nimValue499 = uint64(BGFX_TEXTURE_FORMAT_D16F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D16F) == ", nimValue499, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D16F\");"].}
+const nimValue500 = uint64(BGFX_TEXTURE_FORMAT_D24F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D24F) == ", nimValue500, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D24F\");"].}
+const nimValue501 = uint64(BGFX_TEXTURE_FORMAT_D32F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D32F) == ", nimValue501, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D32F\");"].}
+const nimValue502 = uint64(BGFX_TEXTURE_FORMAT_D32FS8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D32FS8) == ", nimValue502, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D32FS8\");"].}
+const nimValue503 = uint64(BGFX_TEXTURE_FORMAT_D0S8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_D0S8) == ", nimValue503, ", \"value mismatch: BGFX_TEXTURE_FORMAT_D0S8\");"].}
+const nimValue504 = uint64(BGFX_TEXTURE_FORMAT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TEXTURE_FORMAT_COUNT) == ", nimValue504, ", \"value mismatch: BGFX_TEXTURE_FORMAT_COUNT\");"].}
+const nimValue505 = uint64(BGFX_UNIFORM_TYPE_SAMPLER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_SAMPLER) == ", nimValue505, ", \"value mismatch: BGFX_UNIFORM_TYPE_SAMPLER\");"].}
+const nimValue506 = uint64(BGFX_UNIFORM_TYPE_END)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_END) == ", nimValue506, ", \"value mismatch: BGFX_UNIFORM_TYPE_END\");"].}
+const nimValue507 = uint64(BGFX_UNIFORM_TYPE_VEC4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_VEC4) == ", nimValue507, ", \"value mismatch: BGFX_UNIFORM_TYPE_VEC4\");"].}
+const nimValue508 = uint64(BGFX_UNIFORM_TYPE_MAT3)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_MAT3) == ", nimValue508, ", \"value mismatch: BGFX_UNIFORM_TYPE_MAT3\");"].}
+const nimValue509 = uint64(BGFX_UNIFORM_TYPE_MAT4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_MAT4) == ", nimValue509, ", \"value mismatch: BGFX_UNIFORM_TYPE_MAT4\");"].}
+const nimValue510 = uint64(BGFX_UNIFORM_TYPE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_TYPE_COUNT) == ", nimValue510, ", \"value mismatch: BGFX_UNIFORM_TYPE_COUNT\");"].}
+const nimValue511 = uint64(BGFX_UNIFORM_FREQ_DRAW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_DRAW) == ", nimValue511, ", \"value mismatch: BGFX_UNIFORM_FREQ_DRAW\");"].}
+const nimValue512 = uint64(BGFX_UNIFORM_FREQ_VIEW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_VIEW) == ", nimValue512, ", \"value mismatch: BGFX_UNIFORM_FREQ_VIEW\");"].}
+const nimValue513 = uint64(BGFX_UNIFORM_FREQ_FRAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_FRAME) == ", nimValue513, ", \"value mismatch: BGFX_UNIFORM_FREQ_FRAME\");"].}
+const nimValue514 = uint64(BGFX_UNIFORM_FREQ_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_UNIFORM_FREQ_COUNT) == ", nimValue514, ", \"value mismatch: BGFX_UNIFORM_FREQ_COUNT\");"].}
+const nimValue515 = uint64(BGFX_BACKBUFFER_RATIO_EQUAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_EQUAL) == ", nimValue515, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_EQUAL\");"].}
+const nimValue516 = uint64(BGFX_BACKBUFFER_RATIO_HALF)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_HALF) == ", nimValue516, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_HALF\");"].}
+const nimValue517 = uint64(BGFX_BACKBUFFER_RATIO_QUARTER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_QUARTER) == ", nimValue517, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_QUARTER\");"].}
+const nimValue518 = uint64(BGFX_BACKBUFFER_RATIO_EIGHTH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_EIGHTH) == ", nimValue518, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_EIGHTH\");"].}
+const nimValue519 = uint64(BGFX_BACKBUFFER_RATIO_SIXTEENTH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_SIXTEENTH) == ", nimValue519, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_SIXTEENTH\");"].}
+const nimValue520 = uint64(BGFX_BACKBUFFER_RATIO_DOUBLE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_DOUBLE) == ", nimValue520, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_DOUBLE\");"].}
+const nimValue521 = uint64(BGFX_BACKBUFFER_RATIO_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_BACKBUFFER_RATIO_COUNT) == ", nimValue521, ", \"value mismatch: BGFX_BACKBUFFER_RATIO_COUNT\");"].}
+const nimValue522 = uint64(BGFX_OCCLUSION_QUERY_RESULT_INVISIBLE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_INVISIBLE) == ", nimValue522, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_INVISIBLE\");"].}
+const nimValue523 = uint64(BGFX_OCCLUSION_QUERY_RESULT_VISIBLE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_VISIBLE) == ", nimValue523, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_VISIBLE\");"].}
+const nimValue524 = uint64(BGFX_OCCLUSION_QUERY_RESULT_NORESULT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_NORESULT) == ", nimValue524, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_NORESULT\");"].}
+const nimValue525 = uint64(BGFX_OCCLUSION_QUERY_RESULT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_OCCLUSION_QUERY_RESULT_COUNT) == ", nimValue525, ", \"value mismatch: BGFX_OCCLUSION_QUERY_RESULT_COUNT\");"].}
+const nimValue526 = uint64(BGFX_VIDEO_CODEC_H264)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_H264) == ", nimValue526, ", \"value mismatch: BGFX_VIDEO_CODEC_H264\");"].}
+const nimValue527 = uint64(BGFX_VIDEO_CODEC_H265)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_H265) == ", nimValue527, ", \"value mismatch: BGFX_VIDEO_CODEC_H265\");"].}
+const nimValue528 = uint64(BGFX_VIDEO_CODEC_AV1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_AV1) == ", nimValue528, ", \"value mismatch: BGFX_VIDEO_CODEC_AV1\");"].}
+const nimValue529 = uint64(BGFX_VIDEO_CODEC_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIDEO_CODEC_COUNT) == ", nimValue529, ", \"value mismatch: BGFX_VIDEO_CODEC_COUNT\");"].}
+const nimValue530 = uint64(BGFX_TOPOLOGY_TRI_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_TRI_LIST) == ", nimValue530, ", \"value mismatch: BGFX_TOPOLOGY_TRI_LIST\");"].}
+const nimValue531 = uint64(BGFX_TOPOLOGY_TRI_STRIP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_TRI_STRIP) == ", nimValue531, ", \"value mismatch: BGFX_TOPOLOGY_TRI_STRIP\");"].}
+const nimValue532 = uint64(BGFX_TOPOLOGY_LINE_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_LINE_LIST) == ", nimValue532, ", \"value mismatch: BGFX_TOPOLOGY_LINE_LIST\");"].}
+const nimValue533 = uint64(BGFX_TOPOLOGY_LINE_STRIP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_LINE_STRIP) == ", nimValue533, ", \"value mismatch: BGFX_TOPOLOGY_LINE_STRIP\");"].}
+const nimValue534 = uint64(BGFX_TOPOLOGY_POINT_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_POINT_LIST) == ", nimValue534, ", \"value mismatch: BGFX_TOPOLOGY_POINT_LIST\");"].}
+const nimValue535 = uint64(BGFX_TOPOLOGY_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_COUNT) == ", nimValue535, ", \"value mismatch: BGFX_TOPOLOGY_COUNT\");"].}
+const nimValue536 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_LIST_FLIP_WINDING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_LIST_FLIP_WINDING) == ", nimValue536, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_LIST_FLIP_WINDING\");"].}
+const nimValue537 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_FLIP_WINDING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_FLIP_WINDING) == ", nimValue537, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_STRIP_FLIP_WINDING\");"].}
+const nimValue538 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_LIST_TO_LINE_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_LIST_TO_LINE_LIST) == ", nimValue538, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_LIST_TO_LINE_LIST\");"].}
+const nimValue539 = uint64(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_TO_TRI_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_TRI_STRIP_TO_TRI_LIST) == ", nimValue539, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_TRI_STRIP_TO_TRI_LIST\");"].}
+const nimValue540 = uint64(BGFX_TOPOLOGY_CONVERT_LINE_STRIP_TO_LINE_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_LINE_STRIP_TO_LINE_LIST) == ", nimValue540, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_LINE_STRIP_TO_LINE_LIST\");"].}
+const nimValue541 = uint64(BGFX_TOPOLOGY_CONVERT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_CONVERT_COUNT) == ", nimValue541, ", \"value mismatch: BGFX_TOPOLOGY_CONVERT_COUNT\");"].}
+const nimValue542 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MIN) == ", nimValue542, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MIN\");"].}
+const nimValue543 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_AVG)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_AVG) == ", nimValue543, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_AVG\");"].}
+const nimValue544 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MAX)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MAX) == ", nimValue544, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_FRONT_TO_BACK_MAX\");"].}
+const nimValue545 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MIN) == ", nimValue545, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MIN\");"].}
+const nimValue546 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_AVG)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_AVG) == ", nimValue546, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_AVG\");"].}
+const nimValue547 = uint64(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MAX)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MAX) == ", nimValue547, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DIRECTION_BACK_TO_FRONT_MAX\");"].}
+const nimValue548 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MIN) == ", nimValue548, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MIN\");"].}
+const nimValue549 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_AVG)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_AVG) == ", nimValue549, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_AVG\");"].}
+const nimValue550 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MAX)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MAX) == ", nimValue550, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_FRONT_TO_BACK_MAX\");"].}
+const nimValue551 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MIN) == ", nimValue551, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MIN\");"].}
+const nimValue552 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_AVG)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_AVG) == ", nimValue552, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_AVG\");"].}
+const nimValue553 = uint64(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MAX)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MAX) == ", nimValue553, ", \"value mismatch: BGFX_TOPOLOGY_SORT_DISTANCE_BACK_TO_FRONT_MAX\");"].}
+const nimValue554 = uint64(BGFX_TOPOLOGY_SORT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_TOPOLOGY_SORT_COUNT) == ", nimValue554, ", \"value mismatch: BGFX_TOPOLOGY_SORT_COUNT\");"].}
+const nimValue555 = uint64(BGFX_VIEW_MODE_DEFAULT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_DEFAULT) == ", nimValue555, ", \"value mismatch: BGFX_VIEW_MODE_DEFAULT\");"].}
+const nimValue556 = uint64(BGFX_VIEW_MODE_SEQUENTIAL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_SEQUENTIAL) == ", nimValue556, ", \"value mismatch: BGFX_VIEW_MODE_SEQUENTIAL\");"].}
+const nimValue557 = uint64(BGFX_VIEW_MODE_DEPTH_ASCENDING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_DEPTH_ASCENDING) == ", nimValue557, ", \"value mismatch: BGFX_VIEW_MODE_DEPTH_ASCENDING\");"].}
+const nimValue558 = uint64(BGFX_VIEW_MODE_DEPTH_DESCENDING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_DEPTH_DESCENDING) == ", nimValue558, ", \"value mismatch: BGFX_VIEW_MODE_DEPTH_DESCENDING\");"].}
+const nimValue559 = uint64(BGFX_VIEW_MODE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_VIEW_MODE_COUNT) == ", nimValue559, ", \"value mismatch: BGFX_VIEW_MODE_COUNT\");"].}
+const nimValue560 = uint64(BGFX_SHADING_RATE_RATE_1X_1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_1X_1) == ", nimValue560, ", \"value mismatch: BGFX_SHADING_RATE_RATE_1X_1\");"].}
+const nimValue561 = uint64(BGFX_SHADING_RATE_RATE_1X_2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_1X_2) == ", nimValue561, ", \"value mismatch: BGFX_SHADING_RATE_RATE_1X_2\");"].}
+const nimValue562 = uint64(BGFX_SHADING_RATE_RATE_2X_1)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_2X_1) == ", nimValue562, ", \"value mismatch: BGFX_SHADING_RATE_RATE_2X_1\");"].}
+const nimValue563 = uint64(BGFX_SHADING_RATE_RATE_2X_2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_2X_2) == ", nimValue563, ", \"value mismatch: BGFX_SHADING_RATE_RATE_2X_2\");"].}
+const nimValue564 = uint64(BGFX_SHADING_RATE_RATE_2X_4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_2X_4) == ", nimValue564, ", \"value mismatch: BGFX_SHADING_RATE_RATE_2X_4\");"].}
+const nimValue565 = uint64(BGFX_SHADING_RATE_RATE_4X_2)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_4X_2) == ", nimValue565, ", \"value mismatch: BGFX_SHADING_RATE_RATE_4X_2\");"].}
+const nimValue566 = uint64(BGFX_SHADING_RATE_RATE_4X_4)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_RATE_4X_4) == ", nimValue566, ", \"value mismatch: BGFX_SHADING_RATE_RATE_4X_4\");"].}
+const nimValue567 = uint64(BGFX_SHADING_RATE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SHADING_RATE_COUNT) == ", nimValue567, ", \"value mismatch: BGFX_SHADING_RATE_COUNT\");"].}
+const nimValue568 = uint64(BGFX_NATIVE_WINDOW_HANDLE_TYPE_DEFAULT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_NATIVE_WINDOW_HANDLE_TYPE_DEFAULT) == ", nimValue568, ", \"value mismatch: BGFX_NATIVE_WINDOW_HANDLE_TYPE_DEFAULT\");"].}
+const nimValue569 = uint64(BGFX_NATIVE_WINDOW_HANDLE_TYPE_WAYLAND)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_NATIVE_WINDOW_HANDLE_TYPE_WAYLAND) == ", nimValue569, ", \"value mismatch: BGFX_NATIVE_WINDOW_HANDLE_TYPE_WAYLAND\");"].}
+const nimValue570 = uint64(BGFX_NATIVE_WINDOW_HANDLE_TYPE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_NATIVE_WINDOW_HANDLE_TYPE_COUNT) == ", nimValue570, ", \"value mismatch: BGFX_NATIVE_WINDOW_HANDLE_TYPE_COUNT\");"].}
+const nimValue571 = uint64(BGFX_RENDER_FRAME_NO_CONTEXT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_NO_CONTEXT) == ", nimValue571, ", \"value mismatch: BGFX_RENDER_FRAME_NO_CONTEXT\");"].}
+const nimValue572 = uint64(BGFX_RENDER_FRAME_RENDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_RENDER) == ", nimValue572, ", \"value mismatch: BGFX_RENDER_FRAME_RENDER\");"].}
+const nimValue573 = uint64(BGFX_RENDER_FRAME_TIMEOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_TIMEOUT) == ", nimValue573, ", \"value mismatch: BGFX_RENDER_FRAME_TIMEOUT\");"].}
+const nimValue574 = uint64(BGFX_RENDER_FRAME_EXITING)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_EXITING) == ", nimValue574, ", \"value mismatch: BGFX_RENDER_FRAME_EXITING\");"].}
+const nimValue575 = uint64(BGFX_RENDER_FRAME_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_RENDER_FRAME_COUNT) == ", nimValue575, ", \"value mismatch: BGFX_RENDER_FRAME_COUNT\");"].}
+const nimValue576 = uint64(BGFX_FUNCTION_ID_TEXTURE_REGION_INIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TEXTURE_REGION_INIT) == ", nimValue576, ", \"value mismatch: BGFX_FUNCTION_ID_TEXTURE_REGION_INIT\");"].}
+const nimValue577 = uint64(BGFX_FUNCTION_ID_BUFFER_REGION_INIT_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BUFFER_REGION_INIT_TEXTURE) == ", nimValue577, ", \"value mismatch: BGFX_FUNCTION_ID_BUFFER_REGION_INIT_TEXTURE\");"].}
+const nimValue578 = uint64(BGFX_FUNCTION_ID_BUFFER_REGION_INIT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BUFFER_REGION_INIT_BUFFER) == ", nimValue578, ", \"value mismatch: BGFX_FUNCTION_ID_BUFFER_REGION_INIT_BUFFER\");"].}
+const nimValue579 = uint64(BGFX_FUNCTION_ID_ATTACHMENT_INIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ATTACHMENT_INIT) == ", nimValue579, ", \"value mismatch: BGFX_FUNCTION_ID_ATTACHMENT_INIT\");"].}
+const nimValue580 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_BEGIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_BEGIN) == ", nimValue580, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_BEGIN\");"].}
+const nimValue581 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_ADD)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_ADD) == ", nimValue581, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_ADD\");"].}
+const nimValue582 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_DECODE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_DECODE) == ", nimValue582, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_DECODE\");"].}
+const nimValue583 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_HAS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_HAS) == ", nimValue583, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_HAS\");"].}
+const nimValue584 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_SKIP)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_SKIP) == ", nimValue584, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_SKIP\");"].}
+const nimValue585 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_END)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_END) == ", nimValue585, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_END\");"].}
+const nimValue586 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_OFFSET)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_OFFSET) == ", nimValue586, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_OFFSET\");"].}
+const nimValue587 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_STRIDE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_STRIDE) == ", nimValue587, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_STRIDE\");"].}
+const nimValue588 = uint64(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_SIZE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_SIZE) == ", nimValue588, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_LAYOUT_GET_SIZE\");"].}
+const nimValue589 = uint64(BGFX_FUNCTION_ID_VERTEX_PACK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_PACK) == ", nimValue589, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_PACK\");"].}
+const nimValue590 = uint64(BGFX_FUNCTION_ID_VERTEX_UNPACK)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_UNPACK) == ", nimValue590, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_UNPACK\");"].}
+const nimValue591 = uint64(BGFX_FUNCTION_ID_VERTEX_CONVERT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_VERTEX_CONVERT) == ", nimValue591, ", \"value mismatch: BGFX_FUNCTION_ID_VERTEX_CONVERT\");"].}
+const nimValue592 = uint64(BGFX_FUNCTION_ID_TOPOLOGY_CONVERT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TOPOLOGY_CONVERT) == ", nimValue592, ", \"value mismatch: BGFX_FUNCTION_ID_TOPOLOGY_CONVERT\");"].}
+const nimValue593 = uint64(BGFX_FUNCTION_ID_TOPOLOGY_SORT_TRI_LIST)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TOPOLOGY_SORT_TRI_LIST) == ", nimValue593, ", \"value mismatch: BGFX_FUNCTION_ID_TOPOLOGY_SORT_TRI_LIST\");"].}
+const nimValue594 = uint64(BGFX_FUNCTION_ID_GET_SUPPORTED_RENDERERS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_SUPPORTED_RENDERERS) == ", nimValue594, ", \"value mismatch: BGFX_FUNCTION_ID_GET_SUPPORTED_RENDERERS\");"].}
+const nimValue595 = uint64(BGFX_FUNCTION_ID_GET_RENDERER_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_RENDERER_NAME) == ", nimValue595, ", \"value mismatch: BGFX_FUNCTION_ID_GET_RENDERER_NAME\");"].}
+const nimValue596 = uint64(BGFX_FUNCTION_ID_INIT_CTOR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_INIT_CTOR) == ", nimValue596, ", \"value mismatch: BGFX_FUNCTION_ID_INIT_CTOR\");"].}
+const nimValue597 = uint64(BGFX_FUNCTION_ID_INIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_INIT) == ", nimValue597, ", \"value mismatch: BGFX_FUNCTION_ID_INIT\");"].}
+const nimValue598 = uint64(BGFX_FUNCTION_ID_SHUTDOWN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SHUTDOWN) == ", nimValue598, ", \"value mismatch: BGFX_FUNCTION_ID_SHUTDOWN\");"].}
+const nimValue599 = uint64(BGFX_FUNCTION_ID_RESET)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_RESET) == ", nimValue599, ", \"value mismatch: BGFX_FUNCTION_ID_RESET\");"].}
+const nimValue600 = uint64(BGFX_FUNCTION_ID_FRAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_FRAME) == ", nimValue600, ", \"value mismatch: BGFX_FUNCTION_ID_FRAME\");"].}
+const nimValue601 = uint64(BGFX_FUNCTION_ID_GET_RENDERER_TYPE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_RENDERER_TYPE) == ", nimValue601, ", \"value mismatch: BGFX_FUNCTION_ID_GET_RENDERER_TYPE\");"].}
+const nimValue602 = uint64(BGFX_FUNCTION_ID_GET_CAPS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_CAPS) == ", nimValue602, ", \"value mismatch: BGFX_FUNCTION_ID_GET_CAPS\");"].}
+const nimValue603 = uint64(BGFX_FUNCTION_ID_GET_STATS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_STATS) == ", nimValue603, ", \"value mismatch: BGFX_FUNCTION_ID_GET_STATS\");"].}
+const nimValue604 = uint64(BGFX_FUNCTION_ID_ALLOC)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC) == ", nimValue604, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC\");"].}
+const nimValue605 = uint64(BGFX_FUNCTION_ID_COPY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_COPY) == ", nimValue605, ", \"value mismatch: BGFX_FUNCTION_ID_COPY\");"].}
+const nimValue606 = uint64(BGFX_FUNCTION_ID_MAKE_REF)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_MAKE_REF) == ", nimValue606, ", \"value mismatch: BGFX_FUNCTION_ID_MAKE_REF\");"].}
+const nimValue607 = uint64(BGFX_FUNCTION_ID_MAKE_REF_RELEASE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_MAKE_REF_RELEASE) == ", nimValue607, ", \"value mismatch: BGFX_FUNCTION_ID_MAKE_REF_RELEASE\");"].}
+const nimValue608 = uint64(BGFX_FUNCTION_ID_SET_DEBUG)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DEBUG) == ", nimValue608, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DEBUG\");"].}
+const nimValue609 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_CLEAR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_CLEAR) == ", nimValue609, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_CLEAR\");"].}
+const nimValue610 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_PRINTF)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_PRINTF) == ", nimValue610, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_PRINTF\");"].}
+const nimValue611 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_VPRINTF)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_VPRINTF) == ", nimValue611, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_VPRINTF\");"].}
+const nimValue612 = uint64(BGFX_FUNCTION_ID_DBG_TEXT_IMAGE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DBG_TEXT_IMAGE) == ", nimValue612, ", \"value mismatch: BGFX_FUNCTION_ID_DBG_TEXT_IMAGE\");"].}
+const nimValue613 = uint64(BGFX_FUNCTION_ID_CREATE_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_INDEX_BUFFER) == ", nimValue613, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_INDEX_BUFFER\");"].}
+const nimValue614 = uint64(BGFX_FUNCTION_ID_READ_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_READ_BUFFER) == ", nimValue614, ", \"value mismatch: BGFX_FUNCTION_ID_READ_BUFFER\");"].}
+const nimValue615 = uint64(BGFX_FUNCTION_ID_SET_INDEX_BUFFER_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INDEX_BUFFER_NAME) == ", nimValue615, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INDEX_BUFFER_NAME\");"].}
+const nimValue616 = uint64(BGFX_FUNCTION_ID_DESTROY_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_INDEX_BUFFER) == ", nimValue616, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_INDEX_BUFFER\");"].}
+const nimValue617 = uint64(BGFX_FUNCTION_ID_CREATE_VERTEX_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_VERTEX_LAYOUT) == ", nimValue617, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_VERTEX_LAYOUT\");"].}
+const nimValue618 = uint64(BGFX_FUNCTION_ID_DESTROY_VERTEX_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_VERTEX_LAYOUT) == ", nimValue618, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_VERTEX_LAYOUT\");"].}
+const nimValue619 = uint64(BGFX_FUNCTION_ID_CREATE_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_VERTEX_BUFFER) == ", nimValue619, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_VERTEX_BUFFER\");"].}
+const nimValue620 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_NAME) == ", nimValue620, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_NAME\");"].}
+const nimValue621 = uint64(BGFX_FUNCTION_ID_DESTROY_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_VERTEX_BUFFER) == ", nimValue621, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_VERTEX_BUFFER\");"].}
+const nimValue622 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER) == ", nimValue622, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue623 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER_MEM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER_MEM) == ", nimValue623, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_INDEX_BUFFER_MEM\");"].}
+const nimValue624 = uint64(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_INDEX_BUFFER) == ", nimValue624, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue625 = uint64(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_INDEX_BUFFER) == ", nimValue625, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue626 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER) == ", nimValue626, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue627 = uint64(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER_MEM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER_MEM) == ", nimValue627, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_DYNAMIC_VERTEX_BUFFER_MEM\");"].}
+const nimValue628 = uint64(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_DYNAMIC_VERTEX_BUFFER) == ", nimValue628, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue629 = uint64(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_DYNAMIC_VERTEX_BUFFER) == ", nimValue629, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue630 = uint64(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_INDEX_BUFFER) == ", nimValue630, ", \"value mismatch: BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_INDEX_BUFFER\");"].}
+const nimValue631 = uint64(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_VERTEX_BUFFER) == ", nimValue631, ", \"value mismatch: BGFX_FUNCTION_ID_GET_AVAIL_TRANSIENT_VERTEX_BUFFER\");"].}
+const nimValue632 = uint64(BGFX_FUNCTION_ID_GET_AVAIL_INSTANCE_DATA_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_AVAIL_INSTANCE_DATA_BUFFER) == ", nimValue632, ", \"value mismatch: BGFX_FUNCTION_ID_GET_AVAIL_INSTANCE_DATA_BUFFER\");"].}
+const nimValue633 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_INDEX_BUFFER) == ", nimValue633, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSIENT_INDEX_BUFFER\");"].}
+const nimValue634 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_VERTEX_BUFFER) == ", nimValue634, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSIENT_VERTEX_BUFFER\");"].}
+const nimValue635 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_BUFFERS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSIENT_BUFFERS) == ", nimValue635, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSIENT_BUFFERS\");"].}
+const nimValue636 = uint64(BGFX_FUNCTION_ID_ALLOC_INSTANCE_DATA_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_INSTANCE_DATA_BUFFER) == ", nimValue636, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_INSTANCE_DATA_BUFFER\");"].}
+const nimValue637 = uint64(BGFX_FUNCTION_ID_CREATE_INDIRECT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_INDIRECT_BUFFER) == ", nimValue637, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_INDIRECT_BUFFER\");"].}
+const nimValue638 = uint64(BGFX_FUNCTION_ID_DESTROY_INDIRECT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_INDIRECT_BUFFER) == ", nimValue638, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_INDIRECT_BUFFER\");"].}
+const nimValue639 = uint64(BGFX_FUNCTION_ID_CREATE_SHADER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_SHADER) == ", nimValue639, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_SHADER\");"].}
+const nimValue640 = uint64(BGFX_FUNCTION_ID_GET_SHADER_UNIFORMS)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_SHADER_UNIFORMS) == ", nimValue640, ", \"value mismatch: BGFX_FUNCTION_ID_GET_SHADER_UNIFORMS\");"].}
+const nimValue641 = uint64(BGFX_FUNCTION_ID_SET_SHADER_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_SHADER_NAME) == ", nimValue641, ", \"value mismatch: BGFX_FUNCTION_ID_SET_SHADER_NAME\");"].}
+const nimValue642 = uint64(BGFX_FUNCTION_ID_DESTROY_SHADER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_SHADER) == ", nimValue642, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_SHADER\");"].}
+const nimValue643 = uint64(BGFX_FUNCTION_ID_CREATE_PROGRAM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_PROGRAM) == ", nimValue643, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_PROGRAM\");"].}
+const nimValue644 = uint64(BGFX_FUNCTION_ID_CREATE_COMPUTE_PROGRAM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_COMPUTE_PROGRAM) == ", nimValue644, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_COMPUTE_PROGRAM\");"].}
+const nimValue645 = uint64(BGFX_FUNCTION_ID_DESTROY_PROGRAM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_PROGRAM) == ", nimValue645, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_PROGRAM\");"].}
+const nimValue646 = uint64(BGFX_FUNCTION_ID_IS_TEXTURE_VALID)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_IS_TEXTURE_VALID) == ", nimValue646, ", \"value mismatch: BGFX_FUNCTION_ID_IS_TEXTURE_VALID\");"].}
+const nimValue647 = uint64(BGFX_FUNCTION_ID_IS_VIDEO_CODEC_VALID)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_IS_VIDEO_CODEC_VALID) == ", nimValue647, ", \"value mismatch: BGFX_FUNCTION_ID_IS_VIDEO_CODEC_VALID\");"].}
+const nimValue648 = uint64(BGFX_FUNCTION_ID_IS_FRAME_BUFFER_VALID)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_IS_FRAME_BUFFER_VALID) == ", nimValue648, ", \"value mismatch: BGFX_FUNCTION_ID_IS_FRAME_BUFFER_VALID\");"].}
+const nimValue649 = uint64(BGFX_FUNCTION_ID_CALC_TEXTURE_SIZE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CALC_TEXTURE_SIZE) == ", nimValue649, ", \"value mismatch: BGFX_FUNCTION_ID_CALC_TEXTURE_SIZE\");"].}
+const nimValue650 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE) == ", nimValue650, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE\");"].}
+const nimValue651 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D) == ", nimValue651, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_2D\");"].}
+const nimValue652 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D_SCALED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_2D_SCALED) == ", nimValue652, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_2D_SCALED\");"].}
+const nimValue653 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_3D)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_3D) == ", nimValue653, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_3D\");"].}
+const nimValue654 = uint64(BGFX_FUNCTION_ID_CREATE_TEXTURE_CUBE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_TEXTURE_CUBE) == ", nimValue654, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_TEXTURE_CUBE\");"].}
+const nimValue655 = uint64(BGFX_FUNCTION_ID_UPDATE_TEXTURE_2D)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_TEXTURE_2D) == ", nimValue655, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_TEXTURE_2D\");"].}
+const nimValue656 = uint64(BGFX_FUNCTION_ID_UPDATE_TEXTURE_3D)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_TEXTURE_3D) == ", nimValue656, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_TEXTURE_3D\");"].}
+const nimValue657 = uint64(BGFX_FUNCTION_ID_UPDATE_TEXTURE_CUBE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_TEXTURE_CUBE) == ", nimValue657, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_TEXTURE_CUBE\");"].}
+const nimValue658 = uint64(BGFX_FUNCTION_ID_CLEAR_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CLEAR_TEXTURE) == ", nimValue658, ", \"value mismatch: BGFX_FUNCTION_ID_CLEAR_TEXTURE\");"].}
+const nimValue659 = uint64(BGFX_FUNCTION_ID_READ_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_READ_TEXTURE) == ", nimValue659, ", \"value mismatch: BGFX_FUNCTION_ID_READ_TEXTURE\");"].}
+const nimValue660 = uint64(BGFX_FUNCTION_ID_SET_TEXTURE_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TEXTURE_NAME) == ", nimValue660, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TEXTURE_NAME\");"].}
+const nimValue661 = uint64(BGFX_FUNCTION_ID_GET_DIRECT_ACCESS_PTR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_DIRECT_ACCESS_PTR) == ", nimValue661, ", \"value mismatch: BGFX_FUNCTION_ID_GET_DIRECT_ACCESS_PTR\");"].}
+const nimValue662 = uint64(BGFX_FUNCTION_ID_DESTROY_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_TEXTURE) == ", nimValue662, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_TEXTURE\");"].}
+const nimValue663 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER) == ", nimValue663, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER\");"].}
+const nimValue664 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_SCALED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_SCALED) == ", nimValue664, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_SCALED\");"].}
+const nimValue665 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_HANDLES)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_HANDLES) == ", nimValue665, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_HANDLES\");"].}
+const nimValue666 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_ATTACHMENT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_ATTACHMENT) == ", nimValue666, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_ATTACHMENT\");"].}
+const nimValue667 = uint64(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_SWAP_CHAIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_SWAP_CHAIN) == ", nimValue667, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_FRAME_BUFFER_FROM_SWAP_CHAIN\");"].}
+const nimValue668 = uint64(BGFX_FUNCTION_ID_UPDATE_SWAP_CHAIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_UPDATE_SWAP_CHAIN) == ", nimValue668, ", \"value mismatch: BGFX_FUNCTION_ID_UPDATE_SWAP_CHAIN\");"].}
+const nimValue669 = uint64(BGFX_FUNCTION_ID_SET_FRAME_BUFFER_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_FRAME_BUFFER_NAME) == ", nimValue669, ", \"value mismatch: BGFX_FUNCTION_ID_SET_FRAME_BUFFER_NAME\");"].}
+const nimValue670 = uint64(BGFX_FUNCTION_ID_GET_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_TEXTURE) == ", nimValue670, ", \"value mismatch: BGFX_FUNCTION_ID_GET_TEXTURE\");"].}
+const nimValue671 = uint64(BGFX_FUNCTION_ID_DESTROY_FRAME_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_FRAME_BUFFER) == ", nimValue671, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_FRAME_BUFFER\");"].}
+const nimValue672 = uint64(BGFX_FUNCTION_ID_CREATE_UNIFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_UNIFORM) == ", nimValue672, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_UNIFORM\");"].}
+const nimValue673 = uint64(BGFX_FUNCTION_ID_CREATE_UNIFORM_WITH_FREQ)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_UNIFORM_WITH_FREQ) == ", nimValue673, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_UNIFORM_WITH_FREQ\");"].}
+const nimValue674 = uint64(BGFX_FUNCTION_ID_GET_UNIFORM_INFO)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_UNIFORM_INFO) == ", nimValue674, ", \"value mismatch: BGFX_FUNCTION_ID_GET_UNIFORM_INFO\");"].}
+const nimValue675 = uint64(BGFX_FUNCTION_ID_DESTROY_UNIFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_UNIFORM) == ", nimValue675, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_UNIFORM\");"].}
+const nimValue676 = uint64(BGFX_FUNCTION_ID_CREATE_OCCLUSION_QUERY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_CREATE_OCCLUSION_QUERY) == ", nimValue676, ", \"value mismatch: BGFX_FUNCTION_ID_CREATE_OCCLUSION_QUERY\");"].}
+const nimValue677 = uint64(BGFX_FUNCTION_ID_GET_RESULT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_RESULT) == ", nimValue677, ", \"value mismatch: BGFX_FUNCTION_ID_GET_RESULT\");"].}
+const nimValue678 = uint64(BGFX_FUNCTION_ID_DESTROY_OCCLUSION_QUERY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DESTROY_OCCLUSION_QUERY) == ", nimValue678, ", \"value mismatch: BGFX_FUNCTION_ID_DESTROY_OCCLUSION_QUERY\");"].}
+const nimValue679 = uint64(BGFX_FUNCTION_ID_SET_PALETTE_COLOR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PALETTE_COLOR) == ", nimValue679, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PALETTE_COLOR\");"].}
+const nimValue680 = uint64(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA32F)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA32F) == ", nimValue680, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA32F\");"].}
+const nimValue681 = uint64(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA8)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA8) == ", nimValue681, ", \"value mismatch: BGFX_FUNCTION_ID_SET_PALETTE_COLOR_RGBA8\");"].}
+const nimValue682 = uint64(BGFX_FUNCTION_ID_SET_VIEW_NAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_NAME) == ", nimValue682, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_NAME\");"].}
+const nimValue683 = uint64(BGFX_FUNCTION_ID_SET_VIEW_RECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_RECT) == ", nimValue683, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_RECT\");"].}
+const nimValue684 = uint64(BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO) == ", nimValue684, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO\");"].}
+const nimValue685 = uint64(BGFX_FUNCTION_ID_SET_VIEW_SCISSOR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_SCISSOR) == ", nimValue685, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_SCISSOR\");"].}
+const nimValue686 = uint64(BGFX_FUNCTION_ID_SET_VIEW_CLEAR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_CLEAR) == ", nimValue686, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_CLEAR\");"].}
+const nimValue687 = uint64(BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT) == ", nimValue687, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT\");"].}
+const nimValue688 = uint64(BGFX_FUNCTION_ID_SET_VIEW_MODE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_MODE) == ", nimValue688, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_MODE\");"].}
+const nimValue689 = uint64(BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER) == ", nimValue689, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER\");"].}
+const nimValue690 = uint64(BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM) == ", nimValue690, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM\");"].}
+const nimValue691 = uint64(BGFX_FUNCTION_ID_SET_VIEW_ORDER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_ORDER) == ", nimValue691, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_ORDER\");"].}
+const nimValue692 = uint64(BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE) == ", nimValue692, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE\");"].}
+const nimValue693 = uint64(BGFX_FUNCTION_ID_RESET_VIEW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_RESET_VIEW) == ", nimValue693, ", \"value mismatch: BGFX_FUNCTION_ID_RESET_VIEW\");"].}
+const nimValue694 = uint64(BGFX_FUNCTION_ID_ENCODER_BEGIN)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BEGIN) == ", nimValue694, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BEGIN\");"].}
+const nimValue695 = uint64(BGFX_FUNCTION_ID_ENCODER_END)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_END) == ", nimValue695, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_END\");"].}
+const nimValue696 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_MARKER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_MARKER) == ", nimValue696, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_MARKER\");"].}
+const nimValue697 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_STATE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_STATE) == ", nimValue697, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_STATE\");"].}
+const nimValue698 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_CONDITION)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_CONDITION) == ", nimValue698, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_CONDITION\");"].}
+const nimValue699 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_STENCIL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_STENCIL) == ", nimValue699, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_STENCIL\");"].}
+const nimValue700 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR) == ", nimValue700, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR\");"].}
+const nimValue701 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED) == ", nimValue701, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED\");"].}
+const nimValue702 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM) == ", nimValue702, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM\");"].}
+const nimValue703 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED) == ", nimValue703, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED\");"].}
+const nimValue704 = uint64(BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM) == ", nimValue704, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM\");"].}
+const nimValue705 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM) == ", nimValue705, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM\");"].}
+const nimValue706 = uint64(BGFX_FUNCTION_ID_SET_VIEW_UNIFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VIEW_UNIFORM) == ", nimValue706, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VIEW_UNIFORM\");"].}
+const nimValue707 = uint64(BGFX_FUNCTION_ID_SET_FRAME_UNIFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_FRAME_UNIFORM) == ", nimValue707, ", \"value mismatch: BGFX_FUNCTION_ID_SET_FRAME_UNIFORM\");"].}
+const nimValue708 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER) == ", nimValue708, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER\");"].}
+const nimValue709 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER) == ", nimValue709, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue710 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER) == ", nimValue710, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER\");"].}
+const nimValue711 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER) == ", nimValue711, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER\");"].}
+const nimValue712 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue712, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT\");"].}
+const nimValue713 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER) == ", nimValue713, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue714 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue714, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT\");"].}
+const nimValue715 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER) == ", nimValue715, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER\");"].}
+const nimValue716 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue716, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT\");"].}
+const nimValue717 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT) == ", nimValue717, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT\");"].}
+const nimValue718 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER) == ", nimValue718, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER\");"].}
+const nimValue719 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER) == ", nimValue719, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER\");"].}
+const nimValue720 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER) == ", nimValue720, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue721 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT) == ", nimValue721, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT\");"].}
+const nimValue722 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE) == ", nimValue722, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE\");"].}
+const nimValue723 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW) == ", nimValue723, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW\");"].}
+const nimValue724 = uint64(BGFX_FUNCTION_ID_ENCODER_TOUCH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_TOUCH) == ", nimValue724, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_TOUCH\");"].}
+const nimValue725 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT) == ", nimValue725, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT\");"].}
+const nimValue726 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY) == ", nimValue726, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY\");"].}
+const nimValue727 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT) == ", nimValue727, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT\");"].}
+const nimValue728 = uint64(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT) == ", nimValue728, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT\");"].}
+const nimValue729 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER) == ", nimValue729, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER\");"].}
+const nimValue730 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER) == ", nimValue730, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER\");"].}
+const nimValue731 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER) == ", nimValue731, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue732 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER) == ", nimValue732, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue733 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER) == ", nimValue733, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER\");"].}
+const nimValue734 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE) == ", nimValue734, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_IMAGE\");"].}
+const nimValue735 = uint64(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW) == ", nimValue735, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW\");"].}
+const nimValue736 = uint64(BGFX_FUNCTION_ID_ENCODER_DISPATCH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_DISPATCH) == ", nimValue736, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_DISPATCH\");"].}
+const nimValue737 = uint64(BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT) == ", nimValue737, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT\");"].}
+const nimValue738 = uint64(BGFX_FUNCTION_ID_ENCODER_DISCARD)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_DISCARD) == ", nimValue738, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_DISCARD\");"].}
+const nimValue739 = uint64(BGFX_FUNCTION_ID_ENCODER_BLIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BLIT) == ", nimValue739, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BLIT\");"].}
+const nimValue740 = uint64(BGFX_FUNCTION_ID_ENCODER_BLIT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BLIT_BUFFER) == ", nimValue740, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BLIT_BUFFER\");"].}
+const nimValue741 = uint64(BGFX_FUNCTION_ID_ENCODER_BLIT_TO_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BLIT_TO_BUFFER) == ", nimValue741, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BLIT_TO_BUFFER\");"].}
+const nimValue742 = uint64(BGFX_FUNCTION_ID_ENCODER_BLIT_FROM_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ENCODER_BLIT_FROM_BUFFER) == ", nimValue742, ", \"value mismatch: BGFX_FUNCTION_ID_ENCODER_BLIT_FROM_BUFFER\");"].}
+const nimValue743 = uint64(BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT) == ", nimValue743, ", \"value mismatch: BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT\");"].}
+const nimValue744 = uint64(BGFX_FUNCTION_ID_RENDER_FRAME)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_RENDER_FRAME) == ", nimValue744, ", \"value mismatch: BGFX_FUNCTION_ID_RENDER_FRAME\");"].}
+const nimValue745 = uint64(BGFX_FUNCTION_ID_GET_INTERNAL_DATA)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_GET_INTERNAL_DATA) == ", nimValue745, ", \"value mismatch: BGFX_FUNCTION_ID_GET_INTERNAL_DATA\");"].}
+const nimValue746 = uint64(BGFX_FUNCTION_ID_SET_MARKER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_MARKER) == ", nimValue746, ", \"value mismatch: BGFX_FUNCTION_ID_SET_MARKER\");"].}
+const nimValue747 = uint64(BGFX_FUNCTION_ID_SET_STATE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_STATE) == ", nimValue747, ", \"value mismatch: BGFX_FUNCTION_ID_SET_STATE\");"].}
+const nimValue748 = uint64(BGFX_FUNCTION_ID_SET_CONDITION)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_CONDITION) == ", nimValue748, ", \"value mismatch: BGFX_FUNCTION_ID_SET_CONDITION\");"].}
+const nimValue749 = uint64(BGFX_FUNCTION_ID_SET_STENCIL)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_STENCIL) == ", nimValue749, ", \"value mismatch: BGFX_FUNCTION_ID_SET_STENCIL\");"].}
+const nimValue750 = uint64(BGFX_FUNCTION_ID_SET_SCISSOR)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_SCISSOR) == ", nimValue750, ", \"value mismatch: BGFX_FUNCTION_ID_SET_SCISSOR\");"].}
+const nimValue751 = uint64(BGFX_FUNCTION_ID_SET_SCISSOR_CACHED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_SCISSOR_CACHED) == ", nimValue751, ", \"value mismatch: BGFX_FUNCTION_ID_SET_SCISSOR_CACHED\");"].}
+const nimValue752 = uint64(BGFX_FUNCTION_ID_SET_TRANSFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSFORM) == ", nimValue752, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSFORM\");"].}
+const nimValue753 = uint64(BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED) == ", nimValue753, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED\");"].}
+const nimValue754 = uint64(BGFX_FUNCTION_ID_ALLOC_TRANSFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_ALLOC_TRANSFORM) == ", nimValue754, ", \"value mismatch: BGFX_FUNCTION_ID_ALLOC_TRANSFORM\");"].}
+const nimValue755 = uint64(BGFX_FUNCTION_ID_SET_UNIFORM)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_UNIFORM) == ", nimValue755, ", \"value mismatch: BGFX_FUNCTION_ID_SET_UNIFORM\");"].}
+const nimValue756 = uint64(BGFX_FUNCTION_ID_SET_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INDEX_BUFFER) == ", nimValue756, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INDEX_BUFFER\");"].}
+const nimValue757 = uint64(BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER) == ", nimValue757, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue758 = uint64(BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER) == ", nimValue758, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER\");"].}
+const nimValue759 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER) == ", nimValue759, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_BUFFER\");"].}
+const nimValue760 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue760, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT\");"].}
+const nimValue761 = uint64(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER) == ", nimValue761, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue762 = uint64(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue762, ", \"value mismatch: BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT\");"].}
+const nimValue763 = uint64(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER) == ", nimValue763, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER\");"].}
+const nimValue764 = uint64(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT) == ", nimValue764, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT\");"].}
+const nimValue765 = uint64(BGFX_FUNCTION_ID_SET_VERTEX_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_VERTEX_COUNT) == ", nimValue765, ", \"value mismatch: BGFX_FUNCTION_ID_SET_VERTEX_COUNT\");"].}
+const nimValue766 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER) == ", nimValue766, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER\");"].}
+const nimValue767 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER) == ", nimValue767, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER\");"].}
+const nimValue768 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER) == ", nimValue768, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue769 = uint64(BGFX_FUNCTION_ID_SET_INSTANCE_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_INSTANCE_COUNT) == ", nimValue769, ", \"value mismatch: BGFX_FUNCTION_ID_SET_INSTANCE_COUNT\");"].}
+const nimValue770 = uint64(BGFX_FUNCTION_ID_SET_TEXTURE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TEXTURE) == ", nimValue770, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TEXTURE\");"].}
+const nimValue771 = uint64(BGFX_FUNCTION_ID_SET_TEXTURE_VIEW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_TEXTURE_VIEW) == ", nimValue771, ", \"value mismatch: BGFX_FUNCTION_ID_SET_TEXTURE_VIEW\");"].}
+const nimValue772 = uint64(BGFX_FUNCTION_ID_TOUCH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_TOUCH) == ", nimValue772, ", \"value mismatch: BGFX_FUNCTION_ID_TOUCH\");"].}
+const nimValue773 = uint64(BGFX_FUNCTION_ID_SUBMIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT) == ", nimValue773, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT\");"].}
+const nimValue774 = uint64(BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY) == ", nimValue774, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY\");"].}
+const nimValue775 = uint64(BGFX_FUNCTION_ID_SUBMIT_INDIRECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT_INDIRECT) == ", nimValue775, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT_INDIRECT\");"].}
+const nimValue776 = uint64(BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT) == ", nimValue776, ", \"value mismatch: BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT\");"].}
+const nimValue777 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER) == ", nimValue777, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER\");"].}
+const nimValue778 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER) == ", nimValue778, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER\");"].}
+const nimValue779 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER) == ", nimValue779, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER\");"].}
+const nimValue780 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER) == ", nimValue780, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER\");"].}
+const nimValue781 = uint64(BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER) == ", nimValue781, ", \"value mismatch: BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER\");"].}
+const nimValue782 = uint64(BGFX_FUNCTION_ID_SET_IMAGE)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_IMAGE) == ", nimValue782, ", \"value mismatch: BGFX_FUNCTION_ID_SET_IMAGE\");"].}
+const nimValue783 = uint64(BGFX_FUNCTION_ID_SET_IMAGE_VIEW)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_SET_IMAGE_VIEW) == ", nimValue783, ", \"value mismatch: BGFX_FUNCTION_ID_SET_IMAGE_VIEW\");"].}
+const nimValue784 = uint64(BGFX_FUNCTION_ID_DISPATCH)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DISPATCH) == ", nimValue784, ", \"value mismatch: BGFX_FUNCTION_ID_DISPATCH\");"].}
+const nimValue785 = uint64(BGFX_FUNCTION_ID_DISPATCH_INDIRECT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DISPATCH_INDIRECT) == ", nimValue785, ", \"value mismatch: BGFX_FUNCTION_ID_DISPATCH_INDIRECT\");"].}
+const nimValue786 = uint64(BGFX_FUNCTION_ID_DISCARD)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_DISCARD) == ", nimValue786, ", \"value mismatch: BGFX_FUNCTION_ID_DISCARD\");"].}
+const nimValue787 = uint64(BGFX_FUNCTION_ID_BLIT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BLIT) == ", nimValue787, ", \"value mismatch: BGFX_FUNCTION_ID_BLIT\");"].}
+const nimValue788 = uint64(BGFX_FUNCTION_ID_BLIT_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BLIT_BUFFER) == ", nimValue788, ", \"value mismatch: BGFX_FUNCTION_ID_BLIT_BUFFER\");"].}
+const nimValue789 = uint64(BGFX_FUNCTION_ID_BLIT_TO_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BLIT_TO_BUFFER) == ", nimValue789, ", \"value mismatch: BGFX_FUNCTION_ID_BLIT_TO_BUFFER\");"].}
+const nimValue790 = uint64(BGFX_FUNCTION_ID_BLIT_FROM_BUFFER)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_BLIT_FROM_BUFFER) == ", nimValue790, ", \"value mismatch: BGFX_FUNCTION_ID_BLIT_FROM_BUFFER\");"].}
+const nimValue791 = uint64(BGFX_FUNCTION_ID_COUNT)
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_FUNCTION_ID_COUNT) == ", nimValue791, ", \"value mismatch: BGFX_FUNCTION_ID_COUNT\");"].}
+const nimValue792 = uint64(BGFX_STATE_ALPHA_REF(0x5a))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_ALPHA_REF(0x5a)) == ", nimValue792, ", \"helper mismatch: BGFX_STATE_ALPHA_REF\");"].}
+const nimValue793 = uint64(BGFX_STATE_POINT_SIZE(7))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_POINT_SIZE(7)) == ", nimValue793, ", \"helper mismatch: BGFX_STATE_POINT_SIZE\");"].}
+const nimValue794 = uint64(BGFX_STENCIL_FUNC_REF(0x6b))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STENCIL_FUNC_REF(0x6b)) == ", nimValue794, ", \"helper mismatch: BGFX_STENCIL_FUNC_REF\");"].}
+const nimValue795 = uint64(BGFX_STENCIL_FUNC_RMASK(0x8c))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STENCIL_FUNC_RMASK(0x8c)) == ", nimValue795, ", \"helper mismatch: BGFX_STENCIL_FUNC_RMASK\");"].}
+const nimValue796 = uint64(BGFX_SAMPLER_BORDER_COLOR(9))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_SAMPLER_BORDER_COLOR(9)) == ", nimValue796, ", \"helper mismatch: BGFX_SAMPLER_BORDER_COLOR\");"].}
+const nimValue797 = uint64(BGFX_STATE_BLEND_FUNC_SEPARATE(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA, BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_SEPARATE(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA, BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO)) == ", nimValue797, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_SEPARATE\");"].}
+const nimValue798 = uint64(BGFX_STATE_BLEND_EQUATION_SEPARATE(BGFX_STATE_BLEND_EQUATION_ADD, BGFX_STATE_BLEND_EQUATION_REVSUB))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_EQUATION_SEPARATE(BGFX_STATE_BLEND_EQUATION_ADD, BGFX_STATE_BLEND_EQUATION_REVSUB)) == ", nimValue798, ", \"helper mismatch: BGFX_STATE_BLEND_EQUATION_SEPARATE\");"].}
+const nimValue799 = uint64(BGFX_STATE_BLEND_FUNC(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue799, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC\");"].}
+const nimValue800 = uint64(BGFX_STATE_BLEND_EQUATION(BGFX_STATE_BLEND_EQUATION_SUB))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_EQUATION(BGFX_STATE_BLEND_EQUATION_SUB)) == ", nimValue800, ", \"helper mismatch: BGFX_STATE_BLEND_EQUATION\");"].}
+const nimValue801 = uint64(BGFX_STATE_BLEND_FUNC_RT_x(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_x(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue801, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_x\");"].}
+const nimValue802 = uint64(BGFX_STATE_BLEND_FUNC_RT_xE(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_xE(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue802, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_xE\");"].}
+const nimValue803 = uint64(BGFX_STATE_BLEND_FUNC_RT_1(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_1(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue803, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_1\");"].}
+const nimValue804 = uint64(BGFX_STATE_BLEND_FUNC_RT_2(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_2(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue804, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_2\");"].}
+const nimValue805 = uint64(BGFX_STATE_BLEND_FUNC_RT_3(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_3(BGFX_STATE_BLEND_SRC_ALPHA, BGFX_STATE_BLEND_INV_SRC_ALPHA)) == ", nimValue805, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_3\");"].}
+const nimValue806 = uint64(BGFX_STATE_BLEND_FUNC_RT_1E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_1E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue806, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_1E\");"].}
+const nimValue807 = uint64(BGFX_STATE_BLEND_FUNC_RT_2E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_2E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue807, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_2E\");"].}
+const nimValue808 = uint64(BGFX_STATE_BLEND_FUNC_RT_3E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX))
+{.emit: ["BGFXIM_STATIC_ASSERT((uint64_t)(BGFX_STATE_BLEND_FUNC_RT_3E(BGFX_STATE_BLEND_ONE, BGFX_STATE_BLEND_ZERO, BGFX_STATE_BLEND_EQUATION_MAX)) == ", nimValue808, ", \"helper mismatch: BGFX_STATE_BLEND_FUNC_RT_3E\");"].}
 
-echo "value checks passed: 350 constants, " &
-  "444 enum values, 17 helpers"
+echo "value checks passed: 334 constants, " &
+  "458 enum values, 17 helpers"

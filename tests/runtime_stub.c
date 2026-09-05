@@ -10,6 +10,8 @@ static bool s_init_validated;
 static bool s_shutdown;
 static bool s_varargs_validated;
 static uint32_t s_debug_flags;
+static bgfx_frame_buffer_handle_t s_debug_handle;
+static uint8_t s_debug_scale;
 static uint8_t s_frame_flags;
 static uint8_t s_memory_data[64];
 static bgfx_memory_t s_memory;
@@ -17,13 +19,34 @@ static bgfx_release_fn_t s_release_fn;
 static void* s_release_ptr;
 static void* s_release_user_data;
 
+void bgfx_texture_region_init(bgfx_texture_region_t* region,
+    bgfx_texture_handle_t handle, uint16_t x, uint16_t y, uint16_t width,
+    uint16_t height)
+{
+    memset(region, 0, sizeof(*region));
+    region->handle = handle;
+    region->x = x;
+    region->y = y;
+    region->width = width;
+    region->height = height;
+}
+
+void bgfx_buffer_region_init_buffer(bgfx_buffer_region_t* region,
+    bgfx_buffer_handle_t handle, uint32_t offset, uint32_t size)
+{
+    memset(region, 0, sizeof(*region));
+    region->handle = handle;
+    region->offset = offset;
+    region->size = size;
+}
+
 void bgfx_init_ctor(bgfx_init_t* init)
 {
     memset(init, 0, sizeof(*init));
     init->type = BGFX_RENDERER_TYPE_NOOP;
     init->vendorId = UINT16_C(0x1234);
-    init->resolution.width = UINT32_C(640);
-    init->resolution.height = UINT32_C(480);
+    init->swapChain.width = UINT32_C(640);
+    init->swapChain.height = UINT32_C(480);
 }
 
 bool bgfx_init(const bgfx_init_t* init)
@@ -31,8 +54,8 @@ bool bgfx_init(const bgfx_init_t* init)
     s_init_validated = NULL != init
         && BGFX_RENDERER_TYPE_NOOP == init->type
         && UINT16_C(0x1234) == init->vendorId
-        && UINT32_C(640) == init->resolution.width
-        && UINT32_C(480) == init->resolution.height;
+        && UINT32_C(640) == init->swapChain.width
+        && UINT32_C(480) == init->swapChain.height;
     return s_init_validated;
 }
 
@@ -41,9 +64,12 @@ void bgfx_shutdown(void)
     s_shutdown = true;
 }
 
-void bgfx_set_debug(uint32_t debug)
+void bgfx_set_debug(uint32_t debug, bgfx_frame_buffer_handle_t handle,
+    uint8_t scale)
 {
     s_debug_flags = debug;
+    s_debug_handle = handle;
+    s_debug_scale = scale;
 }
 
 void bgfx_dbg_text_printf(uint16_t x, uint16_t y, uint8_t attr,
@@ -246,6 +272,16 @@ bool bgfxim_test_varargs_validated(void)
 uint32_t bgfxim_test_debug_flags(void)
 {
     return s_debug_flags;
+}
+
+uint16_t bgfxim_test_debug_handle(void)
+{
+    return s_debug_handle.idx;
+}
+
+uint8_t bgfxim_test_debug_scale(void)
+{
+    return s_debug_scale;
 }
 
 uint8_t bgfxim_test_frame_flags(void)
