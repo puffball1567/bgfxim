@@ -16,8 +16,8 @@ showLicenseNotice()
 var init: bgfx_init_t
 BGFX.initCtor(addr init)
 init.type = BGFX_RENDERER_TYPE_NOOP
-init.resolution.width = 64
-init.resolution.height = 64
+init.swapChain.width = 64
+init.swapChain.height = 64
 
 if not BGFX.init(addr init):
   raise newException(IOError, "bgfx NOOP initialization failed")

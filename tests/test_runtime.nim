@@ -8,19 +8,45 @@ proc testInitValidated(): bool {.importc: "bgfxim_test_init_validated", cdecl.}
 proc testShutdownCalled(): bool {.importc: "bgfxim_test_shutdown_called", cdecl.}
 proc testVarargsValidated(): bool {.importc: "bgfxim_test_varargs_validated", cdecl.}
 proc testDebugFlags(): uint32 {.importc: "bgfxim_test_debug_flags", cdecl.}
+proc testDebugHandle(): uint16 {.importc: "bgfxim_test_debug_handle", cdecl.}
+proc testDebugScale(): uint8 {.importc: "bgfxim_test_debug_scale", cdecl.}
 proc testFrameFlags(): uint8 {.importc: "bgfxim_test_frame_flags", cdecl.}
+
+let texture = bgfx_texture_handle_t(idx: 17'u16)
+var textureRegion: bgfx_texture_region_t
+BGFX.textureRegionInit(addr textureRegion, texture, 3'u16, 5'u16, 64'u16,
+  32'u16)
+doAssert textureRegion.handle.idx == texture.idx
+doAssert textureRegion.mip == 0'u8
+doAssert textureRegion.x == 3'u16 and textureRegion.y == 5'u16
+doAssert textureRegion.z == 0'u16
+doAssert textureRegion.width == 64'u16 and textureRegion.height == 32'u16
+doAssert textureRegion.depth == 0'u16
+
+let buffer = bgfx_buffer_handle_t(
+  idx: 23'u16,
+  `type`: uint16(BGFX_BUFFER_HANDLE_TYPE_VERTEX_BUFFER))
+var bufferRegion: bgfx_buffer_region_t
+BGFX.bufferRegionInitBuffer(addr bufferRegion, buffer, 128'u32, 4096'u32)
+doAssert bufferRegion.handle.idx == buffer.idx
+doAssert bufferRegion.handle.`type` == buffer.`type`
+doAssert bufferRegion.offset == 128'u32 and bufferRegion.size == 4096'u32
+doAssert bufferRegion.rowPitch == 0'u32 and bufferRegion.slicePitch == 0'u32
 
 var init: bgfx_init_t
 BGFX.initCtor(addr init)
 doAssert init.type == BGFX_RENDERER_TYPE_NOOP
 doAssert init.vendorId == 0x1234'u16
-doAssert init.resolution.width == 640'u32
-doAssert init.resolution.height == 480'u32
+doAssert init.swapChain.width == 640'u32
+doAssert init.swapChain.height == 480'u32
 doAssert BGFX.init(addr init)
 doAssert testInitValidated()
 
-BGFX.setDebug(BGFX_DEBUG_TEXT or BGFX_DEBUG_STATS)
+let debugTarget = bgfx_frame_buffer_handle_t(idx: 37'u16)
+BGFX.setDebug(BGFX_DEBUG_TEXT or BGFX_DEBUG_STATS, debugTarget, 2'u8)
 doAssert testDebugFlags() == (BGFX_DEBUG_TEXT or BGFX_DEBUG_STATS)
+doAssert testDebugHandle() == debugTarget.idx
+doAssert testDebugScale() == 2'u8
 
 BGFX.dbgTextPrintf(7'u16, 9'u16, 0x1f'u8, "%d", 42)
 doAssert testVarargsValidated()

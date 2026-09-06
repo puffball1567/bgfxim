@@ -60,7 +60,7 @@ echo "bgfxim: BSD-2-Clause"
 echo "bgfx/bx/bimg: Copyright 2010-2026 Branimir Karadzic, BSD-2-Clause"
 echo "building a temporary NOOP-only bgfx library..."
 
-"$cxx" -std=c++20 -O2 -fPIC -pthread \
+"$cxx" -std=c++20 -O2 -fPIC -pthread $simd_flag \
   -DBX_CONFIG_DEBUG=0 \
   "$@" \
   -I"$bx_dir/include" -I"$bx_dir/3rdparty" \
@@ -68,7 +68,7 @@ echo "building a temporary NOOP-only bgfx library..."
 
 # Defining one backend option selects the explicit configuration branch; all
 # unspecified GPU backends become disabled while bgfx's NOOP backend remains.
-"$cxx" -std=c++20 -O2 -fPIC -pthread \
+"$cxx" -std=c++20 -O2 -fPIC -pthread $simd_flag \
   -DBX_CONFIG_DEBUG=0 -DBGFX_CONFIG_RENDERER_VULKAN=0 \
   "$@" \
   -I"$bgfx_dir/include" -I"$bgfx_dir/src" -I"$bgfx_dir/3rdparty" \

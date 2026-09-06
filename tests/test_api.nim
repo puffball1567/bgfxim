@@ -49,7 +49,7 @@ var allocatorVtable: bgfx_allocator_vtbl_t
 allocatorVtable.realloc = reallocCallback
 
 static:
-  doAssert BGFX_API_VERSION == 155'u32
+  doAssert BGFX_API_VERSION == 159'u32
   doAssert BGFX_STATE_DEFAULT == 0x010000500000001f'u64
   doAssert BGFX_STATE_BLEND_ALPHA ==
     BGFX_STATE_BLEND_FUNC(BGFX_STATE_BLEND_SRC_ALPHA,
@@ -71,6 +71,7 @@ assertCSize(bgfx_callback_interface_t)
 assertCSize(bgfx_callback_vtbl_t)
 assertCSize(bgfx_dynamic_index_buffer_handle_t)
 assertCSize(bgfx_dynamic_vertex_buffer_handle_t)
+assertCSize(bgfx_buffer_handle_t)
 assertCSize(bgfx_frame_buffer_handle_t)
 assertCSize(bgfx_index_buffer_handle_t)
 assertCSize(bgfx_indirect_buffer_handle_t)
@@ -86,7 +87,7 @@ assertCSize(bgfx_caps_limits_t)
 assertCSize(bgfx_caps_t)
 assertCSize(bgfx_internal_data_t)
 assertCSize(bgfx_platform_data_t)
-assertCSize(bgfx_resolution_t)
+assertCSize(bgfx_swap_chain_t)
 assertCSize(bgfx_init_limits_t)
 assertCSize(bgfx_init_t)
 assertCSize(bgfx_memory_t)
@@ -94,6 +95,8 @@ assertCSize(bgfx_transient_index_buffer_t)
 assertCSize(bgfx_transient_vertex_buffer_t)
 assertCSize(bgfx_instance_data_buffer_t)
 assertCSize(bgfx_texture_info_t)
+assertCSize(bgfx_texture_region_t)
+assertCSize(bgfx_buffer_region_t)
 assertCSize(bgfx_video_decoder_init_t)
 assertCSize(bgfx_video_decoder_au_t)
 assertCSize(bgfx_video_decoder_frame_t)
@@ -109,7 +112,8 @@ proc exerciseApi() =
   var init: bgfx_init_t
   BGFX.initCtor(addr init)
   discard BGFX.init(addr init)
-  BGFX.setDebug(BGFX_DEBUG_TEXT)
+  BGFX.setDebug(BGFX_DEBUG_TEXT,
+    invalidHandle(bgfx_frame_buffer_handle_t), 1'u8)
   BGFX.dbgTextPrintf(0'u16, 0'u16, 0x0f'u8, "%d", 42)
 
   var layout: bgfx_vertex_layout_t

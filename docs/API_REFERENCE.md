@@ -5,7 +5,7 @@ editor using Nim's language server can show each call's purpose, parameters,
 parameter directions, return value, remarks, threading constraints, ownership
 requirements, and warnings directly in hover and completion information.
 
-The reference covers all 208 public C99 calls in the pinned bgfx revision.
+The reference covers all 216 public C99 calls in the pinned bgfx revision.
 Names in the prose are adapted to the Nim surface where an exact counterpart
 exists, for example `bgfx::createTexture2D` becomes `BGFX.create_texture_2d`
 and `RendererType::Enum` becomes `bgfx_renderer_type_t`.

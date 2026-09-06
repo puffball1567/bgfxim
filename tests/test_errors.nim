@@ -75,9 +75,10 @@ doAssert BGFX.getInterface(BGFX_API_VERSION + 1'u32) == nil
 doAssert BGFX.getInterface(high(uint32)) == nil
 
 # Zero and all-bits-set values verify that flags are forwarded without narrowing.
-BGFX.setDebug(0'u32)
+let invalidDebugTarget = invalidHandle(bgfx_frame_buffer_handle_t)
+BGFX.setDebug(0'u32, invalidDebugTarget, 0'u8)
 doAssert testDebugFlags() == 0'u32
-BGFX.setDebug(high(uint32))
+BGFX.setDebug(high(uint32), invalidDebugTarget, high(uint8))
 doAssert testDebugFlags() == high(uint32)
 discard BGFX.frame(high(uint8))
 doAssert testFrameFlags() == high(uint8)

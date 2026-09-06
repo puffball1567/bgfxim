@@ -36,14 +36,16 @@ TYPE_DOCUMENTATION_REFERENCES = {
     "Attrib": "bgfx_attrib_t",
     "AttribType": "bgfx_attrib_type_t",
     "BackbufferRatio": "bgfx_backbuffer_ratio_t",
+    "BufferRegion": "bgfx_buffer_region_t",
     "CallbackI": "bgfx_callback_interface_t",
     "Init": "bgfx_init_t",
     "ReleaseFn": "bgfx_release_fn_t",
     "RenderFrame": "bgfx_render_frame_t",
     "RendererType": "bgfx_renderer_type_t",
-    "Resolution": "bgfx_resolution_t",
+    "SwapChain": "bgfx_swap_chain_t",
     "TextureFormat": "bgfx_texture_format_t",
     "TextureInfo": "bgfx_texture_info_t",
+    "TextureRegion": "bgfx_texture_region_t",
     "TopologyConvert": "bgfx_topology_convert_t",
     "TopologySort": "bgfx_topology_sort_t",
     "Transform": "bgfx_transform_t",
@@ -254,9 +256,9 @@ def parse_documentation_by_name(header: str) -> dict[str, Documentation]:
         c_name: parse_documentation(comment)
         for comment, c_name in DOCUMENTED_DECLARATION.findall(header)
     }
-    if len(result) != 207:
+    if len(result) != 215:
         raise ValueError(
-            f"expected upstream documentation for 207 functions, found {len(result)}"
+            f"expected upstream documentation for 215 functions, found {len(result)}"
         )
     # bgfx_get_interface is declared with an empty /**/ marker in the C99 header.
     result["bgfx_get_interface"] = Documentation(
@@ -473,27 +475,27 @@ def wrapper(function: Function) -> str:
     )
 
 
+def function_id_enum(functions: list[Function]) -> str:
+    entries = [item for item in functions if item.c_name != "bgfx_get_interface"]
+    lines = [
+        '  bgfx_function_id* {.importc: "bgfx_function_id_t", '
+        'header: "bgfx/c99/bgfx.h", pure, size: sizeof(cint).} = enum'
+    ]
+    lines.extend(
+        f"    BGFX_FUNCTION_ID_{item.short_name.upper()} = {index}"
+        for index, item in enumerate(entries)
+    )
+    lines.append(f"    BGFX_FUNCTION_ID_COUNT = {len(entries)}")
+    lines.append("  bgfx_function_id_t* = bgfx_function_id")
+    return "\n".join(lines)
+
+
 def update(header_path: Path, binding_path: Path) -> None:
     functions = parse_functions(header_path.read_text(encoding="utf-8"))
-    if len(functions) != 208:
-        raise ValueError(f"expected 208 functions, found {len(functions)}")
+    if len(functions) != 216:
+        raise ValueError(f"expected 216 functions, found {len(functions)}")
 
     binding = binding_path.read_text(encoding="utf-8")
-    by_c_name = {function.c_name: function for function in functions}
-
-    declaration_line = re.compile(
-        r'(?:(?:^##[^\n]*\n)+)?^proc\s+(?:\w+|`\w+`)\*\(.*?'
-        r'\{\.importc:\s*"(bgfx_[a-z0-9_]+)".*$'
-        r'(?:\n  ##[^\n]*)*',
-        re.MULTILINE,
-    )
-
-    def replace_declaration(match: re.Match[str]) -> str:
-        return documented_proc_declaration(by_c_name[match.group(1)])
-
-    binding, replacements = declaration_line.subn(replace_declaration, binding)
-    if replacements != 208:
-        raise ValueError(f"expected to replace 208 declarations, replaced {replacements}")
 
     vtable_functions = [item for item in functions if item.c_name != "bgfx_get_interface"]
     vtable = (
@@ -512,7 +514,36 @@ def update(header_path: Path, binding_path: Path) -> None:
     if replacements != 1:
         raise ValueError("could not replace interface vtable")
 
+    binding, replacements = re.subn(
+        r'  bgfx_function_id\* .*?\n  bgfx_function_id_t\* = bgfx_function_id',
+        function_id_enum(functions),
+        binding,
+        count=1,
+        flags=re.DOTALL,
+    )
+    if replacements != 1:
+        raise ValueError("could not replace function id enum")
+
     marker = "# Compatibility aliases for the original generated names"
+    declaration_start = re.search(
+        r'^proc\s+.*?\{\.importc:\s*"bgfx_[a-z0-9_]+"',
+        binding,
+        re.MULTILINE,
+    )
+    marker_start = binding.find(marker)
+    if declaration_start is None or marker_start < declaration_start.start():
+        raise ValueError("could not locate generated declaration block")
+    declarations = "\n\n".join(
+        documented_proc_declaration(item) for item in functions
+    )
+    binding = (
+        binding[: declaration_start.start()].rstrip()
+        + "\n\n\n"
+        + declarations
+        + "\n\n"
+        + binding[marker_start:]
+    )
+
     for old_marker in (marker, "# Idiomatic namespace aliases"):
         binding = binding.split(old_marker, 1)[0].rstrip()
     binding += "\n\n" + marker + "\n"

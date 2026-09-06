@@ -14,8 +14,8 @@ from pathlib import Path
 
 CONSTANT = re.compile(r"^  (?P<name>BGFX_[A-Z0-9_]+)\*\s*=")
 ENUM = re.compile(r"^    (?P<name>BGFX_[A-Z0-9_]+)\s*=\s*")
-EXPECTED_CONSTANTS = 350
-EXPECTED_ENUM_VALUES = 444
+EXPECTED_CONSTANTS = 334
+EXPECTED_ENUM_VALUES = 458
 
 HELPERS = (
     ("BGFX_STATE_ALPHA_REF", "0x5a"),
