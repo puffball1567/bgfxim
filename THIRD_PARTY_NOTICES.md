@@ -3,9 +3,9 @@
 The generated declarations, constants, documentation comments, and examples
 in bgfxim interface with the following projects:
 
-- **bgfx**, source revision `8c8b6b5692be5054e89d2a59640c50b9319c9425`
-- **bx**, tested revision `98ad3bec2a7ee1a5cbabdcabc25252572dcb1d88`
-- **bimg**, tested revision `ddbeeae05779f84f97694553eb41605a60f86f0a`
+- **bgfx**, source revision `8f451e9102b1845b29dfe500116611ad283632ec`
+- **bx**, tested revision `36b2b6943f7c62276d96ff7a34d59db8057a5d24`
+- **bimg**, tested revision `671fe06dd7012a1ab85aa931019ed16112909756`
 
 These projects use the following license notice:
 

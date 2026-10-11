@@ -256,9 +256,9 @@ def parse_documentation_by_name(header: str) -> dict[str, Documentation]:
         c_name: parse_documentation(comment)
         for comment, c_name in DOCUMENTED_DECLARATION.findall(header)
     }
-    if len(result) != 215:
+    if len(result) != 225:
         raise ValueError(
-            f"expected upstream documentation for 215 functions, found {len(result)}"
+            f"expected upstream documentation for 225 functions, found {len(result)}"
         )
     # bgfx_get_interface is declared with an empty /**/ marker in the C99 header.
     result["bgfx_get_interface"] = Documentation(
@@ -345,6 +345,7 @@ def nim_documentation_text(text: str, function: Function) -> str:
     result = re.sub(r"bgfx::([A-Za-z0-9_:]+(?:\(\))?)", replace_bgfx_reference, text)
     result = result.replace("Caps::supported", "bgfx_caps_t.supported")
     result = result.replace("Caps::codecs", "bgfx_caps_t.codecs")
+    result = result.replace("Caps::Limits::", "bgfx_caps_limits_t.")
 
     def replace_enum_reference(match: re.Match[str]) -> str:
         type_name, value_name = match.groups()
@@ -373,6 +374,12 @@ def nim_documentation_text(text: str, function: Function) -> str:
     # upstream prose containing list-like prefixes from being parsed as markup.
     result = re.sub(r"^(\d+)\.", r"\1\\.", result)
     result = re.sub(r"^([-+|^])", r"\\\1", result)
+    # Numeric ranges such as [0,1] are prose, not reStructuredText links.
+    result = re.sub(
+        r"\[(-?\d+(?:\.\d+)?\s*,\s*-?\d+(?:\.\d+)?)\]",
+        r"\\[\1\\]",
+        result,
+    )
     return result
 
 
@@ -492,8 +499,8 @@ def function_id_enum(functions: list[Function]) -> str:
 
 def update(header_path: Path, binding_path: Path) -> None:
     functions = parse_functions(header_path.read_text(encoding="utf-8"))
-    if len(functions) != 216:
-        raise ValueError(f"expected 216 functions, found {len(functions)}")
+    if len(functions) != 226:
+        raise ValueError(f"expected 226 functions, found {len(functions)}")
 
     binding = binding_path.read_text(encoding="utf-8")
 

@@ -154,7 +154,7 @@ try:
       previousWidth = width
       previousHeight = height
 
-    BGFX.setViewRect(0, 0, 0, uint16(width), uint16(height))
+    BGFX.setViewRect(0, 0, 0, uint16(width), uint16(height), 0.0, 1.0)
     BGFX.setViewClear(0, BGFX_CLEAR_COLOR, clearColor(frame), 1.0, 0)
     BGFX.setVertexBuffer(0, vertexBuffer, 0, uint32(vertices.len))
     BGFX.setIndexBuffer(indexBuffer, 0, uint32(indices.len))

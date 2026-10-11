@@ -13,12 +13,12 @@ platform and renderer backends.
 
 ## Why bgfxim
 
-- **Complete C99 surface.** All 216 functions, public structs, enums, callback
-  and interface vtables, 334 object-like constants, and 17 state helpers are
+- **Complete C99 surface.** All 226 functions, public structs, enums, callback
+  and interface vtables, 346 object-like constants, and 18 state helpers are
   available.
 - **Auditable ABI.** Imported objects use the C typedef names from bgfx's
   generated header. The test suite compares all 43 complete public types for
-  size and alignment and all 443 fields for byte offset with the C compiler.
+  size and alignment and all 463 fields for byte offset with the C compiler.
 - **Mechanical updates.** Checked-in generators update declarations and
   constants from upstream generated headers instead of relying on manual
   transcription.
@@ -27,7 +27,7 @@ platform and renderer backends.
   paths, and submit a real OpenGL triangle through an SDL3 native window.
 - **Thin by design.** The binding preserves bgfx ownership and threading rules;
   higher-level rendering APIs can be built independently.
-- **Editor-ready reference.** All 216 public calls include Nim documentation
+- **Editor-ready reference.** All 226 public calls include Nim documentation
   for their purpose, parameters, return value, and upstream constraints.
 
 ## Project Direction
@@ -46,16 +46,19 @@ detailed scope and contribution criteria.
 
 ## Status
 
-Version `0.4.0` targets bgfx API version 159 at revision
-`8c8b6b5692be5054e89d2a59640c50b9319c9425`.
+The development version targets bgfx API version 166 at revision
+`8f451e9102b1845b29dfe500116611ad283632ec`.
 
-The release has been exercised with:
+The latest stable release, `0.4.0`, targets API 159. Use the development branch
+and the exact revisions below for API 166.
+
+The development binding has been exercised with:
 
 - Nim 2.2.10 on Linux x86_64;
-- bx revision `98ad3bec2a7ee1a5cbabdcabc25252572dcb1d88`;
-- bimg revision `ddbeeae05779f84f97694553eb41605a60f86f0a`;
+- bx revision `36b2b6943f7c62276d96ff7a34d59db8057a5d24`;
+- bimg revision `671fe06dd7012a1ab85aa931019ed16112909756`;
 - the real bgfx NOOP and OpenGL 4.3 renderers;
-- SDL 3.4.14 with X11 native-window integration.
+- SDL 3.3.0 with native-window integration; CI pins SDL 3.4.14 and uses X11.
 
 CI also runs the complete compile/ABI/value/FFI suite across Linux, macOS, and
 Windows with Nim 2.0 and 2.2. Its focused matrix covers x86, x86_64, and arm64;
@@ -84,7 +87,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#v0.4.0
+nimble install https://github.com/puffball1567/bgfxim@#devel
 ```
 
 The repository contains the source bindings, generators, documentation, tests,
@@ -211,12 +214,13 @@ The verification checks cover complementary failure modes:
 | Check | Coverage |
 | --- | --- |
 | `tests/test_api.nim` | Representative declarations, callback slots, helpers, aliases, and compile-time values |
-| `tests/test_abi.nim` | Size and alignment of all 43 complete types plus offsets of all 443 fields, including 215 interface-vtable slots |
-| `tests/test_values.nim` | Direct C/Nim comparison of 334 constants, 458 enum values, and all 17 state helpers |
+| `tests/test_abi.nim` | Size and alignment of all 43 complete types plus offsets of all 463 fields, including 225 interface-vtable slots |
+| `tests/test_values.nim` | Direct C/Nim comparison of 346 constants, 468 enum values, and all 18 state helpers |
 | `tests/test_runtime.nim` | Executed Nim/C FFI calls, values, pointers, varargs, aliases, and ordering |
+| `tests/test_api166.nim` | All 10 new calls, changed viewport/texture/compute arguments, attachment flags, reference pointer identity, and C-populated interface slots |
 | `tests/test_errors.nim` | Executed null, rejected-init, version mismatch, boundary flags, allocation failure, callback, invalid-handle, and validation-error paths |
 | `tests/test_generators.py` | Missing and duplicate API elements and undocumented parameters must be rejected; documentation and test output must remain deterministic |
-| All-signatures compile test | C compilation of calls to all 216 functions |
+| All-signatures compile test | C compilation of calls to all 226 functions |
 | NOOP demos | Real initialization, resource/encoder lifecycle, and safe validation failures on Linux and macOS |
 | SDL3/OpenGL triangle | Real native-window handoff, buffers, shaders, program, submit, frames, and ordered destruction |
 
@@ -248,9 +252,35 @@ tests/run_validation.sh <path-to-bgfx> <path-to-bx>
 An upstream update must change the recorded revision, API version, generated
 files, API comments, tests, and third-party notice together.
 
+### Migrating from API 159 to API 166
+
+Rebuild and link bgfx, bx, and bimg at the revisions in [Status](#status).
+API 159 headers or libraries cannot be mixed with this binding: initialization
+limits, capabilities, statistics, interface slots, and capability flag values
+have changed.
+
+| Previous usage | API 166 usage |
+| --- | --- |
+| `BGFX.setViewRect(id, x, y, width, height)` | Add `0.0, 1.0` for the minimum and maximum viewport depth |
+| `BGFX.setTextureView(...)` and encoder variant | Add `0'u8, high(uint8)` for the sampler LOD range in quarter-mip steps |
+| `BGFX.setCompute*Buffer(...)` and encoder variants | Add `0'u32, high(uint32)` to bind the entire buffer; byte offsets must be multiples of 256 |
+| `attachment.resolve`, `BGFX_RESOLVE_*` | Use `attachment.flags`, `BGFX_ATTACHMENT_*`; `attachmentInit` takes `flags` |
+| `BGFX_RESET_DEPTH_CLAMP` | Use per-draw `BGFX.setDepthControl(..., true)` or the encoder variant |
+
+`BGFX.setUniformRef` and `BGFX.encoderSetUniformRef` retain a pointer instead
+of immediately copying uniform data. Keep its storage alive and unchanged until
+the frame is rendered, which can require up to two `BGFX.frame` calls with
+multithreaded submission. Use the existing `setUniform` calls when immediate
+copying is needed.
+
+`BGFX_TEXTURE_MIP_COUNT(n)` specifies an explicit texture mip count and
+overrides `hasMips`. Depth bias/control, sample masks, mutable sRGB textures,
+read-only depth/stencil attachments, and low-latency flags are available through
+the direct API; check the corresponding renderer capabilities before use.
+
 ## Current Boundaries
 
-Version 0.4.0 remains a low-level binding.
+The binding remains a low-level API.
 
 - The OpenGL renderer smoke test runs on Linux x86_64 with Mesa software
   rendering; it verifies successful submission and cleanup, not pixel output

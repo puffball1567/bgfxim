@@ -39,6 +39,8 @@ doAssert init.type == BGFX_RENDERER_TYPE_NOOP
 doAssert init.vendorId == 0x1234'u16
 doAssert init.swapChain.width == 640'u32
 doAssert init.swapChain.height == 480'u32
+doAssert init.limits.minViews == 128'u32
+doAssert init.limits.minUniformCacheSize == 0x12345678'u32
 doAssert BGFX.init(addr init)
 doAssert testInitValidated()
 
@@ -71,7 +73,18 @@ let caps = BGFX.getCaps()
 doAssert caps != nil
 doAssert caps.vendorId == 0xbeef'u16
 doAssert caps.limits.maxDrawCalls == 321'u32
+doAssert caps.limits.minUniformCacheSize == 0x87654321'u32
 doAssert BGFX.bgfx_get_caps() == caps
+
+let stats = BGFX.getStats()
+doAssert stats != nil
+doAssert stats.latencySleep == 0x123456789'i64
+doAssert stats.latencyTotal == 0x23456789a'i64
+doAssert stats.latencySimulation == 0x3456789ab'i64
+doAssert stats.latencyRenderSubmit == 0x456789abc'i64
+doAssert stats.latencyPresent == 0x56789abcd'i64
+doAssert stats.latencyQueue == 0x6789abcde'i64
+doAssert stats.latencyGpu == 0x789abcdef'i64
 
 doAssert cast[uint](BGFX.getInterface(BGFX_API_VERSION)) == 0x1230'u
 doAssert BGFX.frame(BGFX_FRAME_FLUSH) == 0x12345678'u32
