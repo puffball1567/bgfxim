@@ -4,6 +4,26 @@ All notable changes to bgfxim are documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the pinned bgfx C99 binding from API 159 to API 166, with matching
+  bx and bimg revisions, all 226 public calls, 346 constants, 468 enum values,
+  and 18 flag/state helpers.
+- Updated initialization and capability limits, latency statistics, attachment
+  flags, and the 225-slot interface vtable to match the upstream ABI.
+- Followed upstream's breaking viewport depth, sampler LOD, and compute-buffer
+  byte-range arguments. Updated the NOOP and SDL3/OpenGL examples and documented
+  migration from API 159.
+
+### Added
+
+- Added depth bias/control, sample masks, referenced uniform updates, explicit
+  texture mip counts, mutable sRGB and read-only depth/stencil attachment flags,
+  shader F16 capability, and low-latency mode constants.
+- Added executed C-stub coverage for all new calls and changed argument lists,
+  attachment initialization, reference pointer identity, and populated interface
+  slots. Expanded exhaustive ABI/value and real NOOP coverage for API 166.
+
 ## [0.4.0] - 2026-09-06
 
 ### Changed

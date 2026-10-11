@@ -71,13 +71,26 @@ try:
   doAssert uniformInfo.type == BGFX_UNIFORM_TYPE_VEC4
   doAssert uniformInfo.num == 1
 
+  # Referenced uniform data must remain alive and unchanged until rendering
+  # completes. Keep this array in scope through two frame advances below.
+  var uniformValues = [0.25.cfloat, 0.5.cfloat, 0.75.cfloat, 1.0.cfloat]
+  BGFX.setUniformRef(uniform, addr uniformValues[0], 1)
+  BGFX.setSampleMask(high(uint32))
+  let depthControl = BGFX.setDepthControl(0, 0.0, 0.0, false)
+  BGFX.setDepthControlCached(depthControl)
+
   let encoder = BGFX.encoderBegin(true)
   doAssert encoder != nil
   BGFX.encoderSetMarker(encoder, "Nim encoder", 11)
+  BGFX.encoderSetUniformRef(encoder, uniform, addr uniformValues[0], 1)
+  BGFX.encoderSetSampleMask(encoder, high(uint32))
+  let encoderDepthControl = BGFX.encoderSetDepthControl(encoder, 0, 0.0, 0.0, false)
+  BGFX.encoderSetDepthControlCached(encoder, encoderDepthControl)
   discard BGFX.encoderSetScissor(encoder, 0, 0, 32, 32)
   BGFX.encoderTouch(encoder, 1)
   BGFX.encoderEnd(encoder)
 
+  discard BGFX.frame(BGFX_FRAME_NONE)
   discard BGFX.frame(BGFX_FRAME_NONE)
 
   BGFX.destroyUniform(uniform)

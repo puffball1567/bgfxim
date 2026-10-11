@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: BSD-2-Clause
-# Complete Nim bindings for the bgfx C99 API (API version 159).
+# Complete Nim bindings for the bgfx C99 API (API version 166).
 #
 # The binding code is BSD-2-Clause licensed. Declarations are derived from
 # bgfx's BSD-2-Clause C99 headers. See LICENSE and THIRD_PARTY_NOTICES.md.
-# Source: bgfx commit 8c8b6b5692be5054e89d2a59640c50b9319c9425.
+# Source: bgfx commit 8f451e9102b1845b29dfe500116611ad283632ec.
 # Requires bgfx/c99/bgfx.h on the C include path and the bgfx library at link time.
 #
 # Usage:  import bgfx
@@ -27,7 +27,7 @@ type
     texture_region_init*: proc(this: ptr bgfx_texture_region_t; handle: bgfx_texture_handle_t; x: uint16; y: uint16; width: uint16; height: uint16) {.cdecl.}
     buffer_region_init_texture*: proc(this: ptr bgfx_buffer_region_t; texture: ptr bgfx_texture_region_t) {.cdecl.}
     buffer_region_init_buffer*: proc(this: ptr bgfx_buffer_region_t; handle: bgfx_buffer_handle_t; offset: uint32; size: uint32) {.cdecl.}
-    attachment_init*: proc(this: ptr bgfx_attachment_t; handle: bgfx_texture_handle_t; access: bgfx_access_t; layer: uint16; numLayers: uint16; mip: uint16; resolve: uint8) {.cdecl.}
+    attachment_init*: proc(this: ptr bgfx_attachment_t; handle: bgfx_texture_handle_t; access: bgfx_access_t; layer: uint16; numLayers: uint16; mip: uint16; flags: uint8) {.cdecl.}
     vertex_layout_begin*: proc(this: ptr bgfx_vertex_layout_t; rendererType: bgfx_renderer_type_t): ptr bgfx_vertex_layout_t {.cdecl.}
     vertex_layout_add*: proc(this: ptr bgfx_vertex_layout_t; attrib: bgfx_attrib_t; num: uint8; `type`: bgfx_attrib_type_t; normalized: bool; asInt: bool): ptr bgfx_vertex_layout_t {.cdecl.}
     vertex_layout_decode*: proc(this: ptr bgfx_vertex_layout_t; attrib: bgfx_attrib_t; num: ptr uint8; `type`: ptr bgfx_attrib_type_t; normalized: ptr bool; asInt: ptr bool) {.cdecl.}
@@ -131,9 +131,11 @@ type
     set_palette_color_rgba32f*: proc(index: uint8; r: cfloat; g: cfloat; b: cfloat; a: cfloat) {.cdecl.}
     set_palette_color_rgba8*: proc(index: uint8; rgba: uint32) {.cdecl.}
     set_view_name*: proc(id: bgfx_view_id_t; name: cstring; len: int32) {.cdecl.}
-    set_view_rect*: proc(id: bgfx_view_id_t; x: int16; y: int16; width: uint16; height: uint16) {.cdecl.}
+    set_view_rect*: proc(id: bgfx_view_id_t; x: int16; y: int16; width: uint16; height: uint16; minDepth: cfloat; maxDepth: cfloat) {.cdecl.}
     set_view_rect_ratio*: proc(id: bgfx_view_id_t; x: int16; y: int16; ratio: bgfx_backbuffer_ratio_t) {.cdecl.}
     set_view_scissor*: proc(id: bgfx_view_id_t; x: uint16; y: uint16; width: uint16; height: uint16) {.cdecl.}
+    set_view_depth_bias*: proc(id: bgfx_view_id_t; constant: int32; slopeScale: cfloat; clamp: cfloat) {.cdecl.}
+    set_view_sample_mask*: proc(id: bgfx_view_id_t; mask: uint32) {.cdecl.}
     set_view_clear*: proc(id: bgfx_view_id_t; flags: uint16; rgba: uint32; depth: cfloat; stencil: uint8) {.cdecl.}
     set_view_clear_mrt*: proc(id: bgfx_view_id_t; flags: uint16; depth: cfloat; stencil: uint8; c0: uint8; c1: uint8; c2: uint8; c3: uint8; c4: uint8; c5: uint8; c6: uint8; c7: uint8) {.cdecl.}
     set_view_mode*: proc(id: bgfx_view_id_t; mode: bgfx_view_mode_t) {.cdecl.}
@@ -148,12 +150,16 @@ type
     encoder_set_state*: proc(this: ptr bgfx_encoder_t; state: uint64; rgba: uint32) {.cdecl.}
     encoder_set_condition*: proc(this: ptr bgfx_encoder_t; handle: bgfx_occlusion_query_handle_t; visible: bool) {.cdecl.}
     encoder_set_stencil*: proc(this: ptr bgfx_encoder_t; fstencil: uint32; bstencil: uint32) {.cdecl.}
+    encoder_set_sample_mask*: proc(this: ptr bgfx_encoder_t; mask: uint32) {.cdecl.}
     encoder_set_scissor*: proc(this: ptr bgfx_encoder_t; x: uint16; y: uint16; width: uint16; height: uint16): uint16 {.cdecl.}
     encoder_set_scissor_cached*: proc(this: ptr bgfx_encoder_t; cache: uint16) {.cdecl.}
+    encoder_set_depth_control*: proc(this: ptr bgfx_encoder_t; constant: int32; slopeScale: cfloat; clamp: cfloat; depthClamp: bool): uint16 {.cdecl.}
+    encoder_set_depth_control_cached*: proc(this: ptr bgfx_encoder_t; cache: uint16) {.cdecl.}
     encoder_set_transform*: proc(this: ptr bgfx_encoder_t; mtx: pointer; num: uint16): uint32 {.cdecl.}
     encoder_set_transform_cached*: proc(this: ptr bgfx_encoder_t; cache: uint32; num: uint16) {.cdecl.}
     encoder_alloc_transform*: proc(this: ptr bgfx_encoder_t; transform: ptr bgfx_transform_t; num: uint16): uint32 {.cdecl.}
     encoder_set_uniform*: proc(this: ptr bgfx_encoder_t; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.cdecl.}
+    encoder_set_uniform_ref*: proc(this: ptr bgfx_encoder_t; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.cdecl.}
     set_view_uniform*: proc(id: bgfx_view_id_t; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.cdecl.}
     set_frame_uniform*: proc(handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.cdecl.}
     encoder_set_index_buffer*: proc(this: ptr bgfx_encoder_t; handle: bgfx_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.cdecl.}
@@ -171,16 +177,16 @@ type
     encoder_set_instance_data_from_dynamic_vertex_buffer*: proc(this: ptr bgfx_encoder_t; handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; num: uint32) {.cdecl.}
     encoder_set_instance_count*: proc(this: ptr bgfx_encoder_t; numInstances: uint32) {.cdecl.}
     encoder_set_texture*: proc(this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; flags: uint32) {.cdecl.}
-    encoder_set_texture_view*: proc(this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32) {.cdecl.}
+    encoder_set_texture_view*: proc(this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32; lodMin: uint8; lodMax: uint8) {.cdecl.}
     encoder_touch*: proc(this: ptr bgfx_encoder_t; id: bgfx_view_id_t) {.cdecl.}
     encoder_submit*: proc(this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; depth: uint32; flags: uint8) {.cdecl.}
     encoder_submit_occlusion_query*: proc(this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; occlusionQuery: bgfx_occlusion_query_handle_t; depth: uint32; flags: uint8) {.cdecl.}
     encoder_submit_indirect*: proc(this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; num: uint32; depth: uint32; flags: uint8) {.cdecl.}
     encoder_submit_indirect_count*: proc(this: ptr bgfx_encoder_t; id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; numHandle: bgfx_index_buffer_handle_t; numIndex: uint32; numMax: uint32; depth: uint32; flags: uint8) {.cdecl.}
-    encoder_set_compute_index_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
-    encoder_set_compute_vertex_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
-    encoder_set_compute_dynamic_index_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
-    encoder_set_compute_dynamic_vertex_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
+    encoder_set_compute_index_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
+    encoder_set_compute_vertex_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
+    encoder_set_compute_dynamic_index_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
+    encoder_set_compute_dynamic_vertex_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
     encoder_set_compute_indirect_buffer*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_indirect_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
     encoder_set_image*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_texture_handle_t; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.cdecl.}
     encoder_set_image_view*: proc(this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.cdecl.}
@@ -198,12 +204,16 @@ type
     set_state*: proc(state: uint64; rgba: uint32) {.cdecl.}
     set_condition*: proc(handle: bgfx_occlusion_query_handle_t; visible: bool) {.cdecl.}
     set_stencil*: proc(fstencil: uint32; bstencil: uint32) {.cdecl.}
+    set_sample_mask*: proc(mask: uint32) {.cdecl.}
     set_scissor*: proc(x: uint16; y: uint16; width: uint16; height: uint16): uint16 {.cdecl.}
     set_scissor_cached*: proc(cache: uint16) {.cdecl.}
+    set_depth_control*: proc(constant: int32; slopeScale: cfloat; clamp: cfloat; depthClamp: bool): uint16 {.cdecl.}
+    set_depth_control_cached*: proc(cache: uint16) {.cdecl.}
     set_transform*: proc(mtx: pointer; num: uint16): uint32 {.cdecl.}
     set_transform_cached*: proc(cache: uint32; num: uint16) {.cdecl.}
     alloc_transform*: proc(transform: ptr bgfx_transform_t; num: uint16): uint32 {.cdecl.}
     set_uniform*: proc(handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.cdecl.}
+    set_uniform_ref*: proc(handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.cdecl.}
     set_index_buffer*: proc(handle: bgfx_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.cdecl.}
     set_dynamic_index_buffer*: proc(handle: bgfx_dynamic_index_buffer_handle_t; firstIndex: uint32; numIndices: uint32) {.cdecl.}
     set_transient_index_buffer*: proc(tib: ptr bgfx_transient_index_buffer_t; firstIndex: uint32; numIndices: uint32) {.cdecl.}
@@ -219,16 +229,16 @@ type
     set_instance_data_from_dynamic_vertex_buffer*: proc(handle: bgfx_dynamic_vertex_buffer_handle_t; startVertex: uint32; num: uint32) {.cdecl.}
     set_instance_count*: proc(numInstances: uint32) {.cdecl.}
     set_texture*: proc(stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; flags: uint32) {.cdecl.}
-    set_texture_view*: proc(stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32) {.cdecl.}
+    set_texture_view*: proc(stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32; lodMin: uint8; lodMax: uint8) {.cdecl.}
     touch*: proc(id: bgfx_view_id_t) {.cdecl.}
     submit*: proc(id: bgfx_view_id_t; program: bgfx_program_handle_t; depth: uint32; flags: uint8) {.cdecl.}
     submit_occlusion_query*: proc(id: bgfx_view_id_t; program: bgfx_program_handle_t; occlusionQuery: bgfx_occlusion_query_handle_t; depth: uint32; flags: uint8) {.cdecl.}
     submit_indirect*: proc(id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; num: uint32; depth: uint32; flags: uint8) {.cdecl.}
     submit_indirect_count*: proc(id: bgfx_view_id_t; program: bgfx_program_handle_t; indirectHandle: bgfx_indirect_buffer_handle_t; start: uint32; numHandle: bgfx_index_buffer_handle_t; numIndex: uint32; numMax: uint32; depth: uint32; flags: uint8) {.cdecl.}
-    set_compute_index_buffer*: proc(stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
-    set_compute_vertex_buffer*: proc(stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
-    set_compute_dynamic_index_buffer*: proc(stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
-    set_compute_dynamic_vertex_buffer*: proc(stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
+    set_compute_index_buffer*: proc(stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
+    set_compute_vertex_buffer*: proc(stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
+    set_compute_dynamic_index_buffer*: proc(stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
+    set_compute_dynamic_vertex_buffer*: proc(stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.cdecl.}
     set_compute_indirect_buffer*: proc(stage: uint8; handle: bgfx_indirect_buffer_handle_t; access: bgfx_access_t) {.cdecl.}
     set_image*: proc(stage: uint8; handle: bgfx_texture_handle_t; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.cdecl.}
     set_image_view*: proc(stage: uint8; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; mip: uint8; access: bgfx_access_t; format: bgfx_texture_format_t) {.cdecl.}
@@ -336,6 +346,7 @@ type
     maxTransientVbSize*: uint32
     maxTransientIbSize*: uint32
     minUniformBufferSize*: uint32
+    minUniformCacheSize*: uint32
     blitRowPitchAlign*: uint32
     blitOffsetAlign*: uint32
   bgfx_caps_s* {.importc: "bgfx_caps_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
@@ -372,10 +383,12 @@ type
     maxEncoders*: uint16
     numDrawCalls*: uint32
     numDrawCallPeakFrames*: uint32
+    minViews*: uint32
     minResourceCbSize*: uint32
     maxTransientVbSize*: uint32
     maxTransientIbSize*: uint32
     minUniformBufferSize*: uint32
+    minUniformCacheSize*: uint32
   bgfx_init_s* {.importc: "bgfx_init_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     `type`*: bgfx_renderer_type_t
     vendorId*: uint16
@@ -466,7 +479,7 @@ type
     mip*: uint16
     layer*: uint16
     numLayers*: uint16
-    resolve*: uint8
+    flags*: uint8
   bgfx_transform_s* {.importc: "bgfx_transform_t", header: "bgfx/c99/bgfx.h", completeStruct, bycopy.} = object
     data*: ptr cfloat
     num*: uint16
@@ -491,6 +504,13 @@ type
     gpuTimerFreq*: int64
     waitRender*: int64
     waitSubmit*: int64
+    latencySleep*: int64
+    latencyTotal*: int64
+    latencySimulation*: int64
+    latencyRenderSubmit*: int64
+    latencyPresent*: int64
+    latencyQueue*: int64
+    latencyGpu*: int64
     numDraw*: uint32
     numCompute*: uint32
     numBlit*: uint32
@@ -959,112 +979,122 @@ type
     BGFX_FUNCTION_ID_SET_VIEW_RECT = 107
     BGFX_FUNCTION_ID_SET_VIEW_RECT_RATIO = 108
     BGFX_FUNCTION_ID_SET_VIEW_SCISSOR = 109
-    BGFX_FUNCTION_ID_SET_VIEW_CLEAR = 110
-    BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT = 111
-    BGFX_FUNCTION_ID_SET_VIEW_MODE = 112
-    BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER = 113
-    BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM = 114
-    BGFX_FUNCTION_ID_SET_VIEW_ORDER = 115
-    BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE = 116
-    BGFX_FUNCTION_ID_RESET_VIEW = 117
-    BGFX_FUNCTION_ID_ENCODER_BEGIN = 118
-    BGFX_FUNCTION_ID_ENCODER_END = 119
-    BGFX_FUNCTION_ID_ENCODER_SET_MARKER = 120
-    BGFX_FUNCTION_ID_ENCODER_SET_STATE = 121
-    BGFX_FUNCTION_ID_ENCODER_SET_CONDITION = 122
-    BGFX_FUNCTION_ID_ENCODER_SET_STENCIL = 123
-    BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR = 124
-    BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED = 125
-    BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM = 126
-    BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED = 127
-    BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM = 128
-    BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM = 129
-    BGFX_FUNCTION_ID_SET_VIEW_UNIFORM = 130
-    BGFX_FUNCTION_ID_SET_FRAME_UNIFORM = 131
-    BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER = 132
-    BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER = 133
-    BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER = 134
-    BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER = 135
-    BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT = 136
-    BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER = 137
-    BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT = 138
-    BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER = 139
-    BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT = 140
-    BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT = 141
-    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER = 142
-    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER = 143
-    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER = 144
-    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT = 145
-    BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE = 146
-    BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW = 147
-    BGFX_FUNCTION_ID_ENCODER_TOUCH = 148
-    BGFX_FUNCTION_ID_ENCODER_SUBMIT = 149
-    BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY = 150
-    BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT = 151
-    BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT = 152
-    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER = 153
-    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER = 154
-    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER = 155
-    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER = 156
-    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER = 157
-    BGFX_FUNCTION_ID_ENCODER_SET_IMAGE = 158
-    BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW = 159
-    BGFX_FUNCTION_ID_ENCODER_DISPATCH = 160
-    BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT = 161
-    BGFX_FUNCTION_ID_ENCODER_DISCARD = 162
-    BGFX_FUNCTION_ID_ENCODER_BLIT = 163
-    BGFX_FUNCTION_ID_ENCODER_BLIT_BUFFER = 164
-    BGFX_FUNCTION_ID_ENCODER_BLIT_TO_BUFFER = 165
-    BGFX_FUNCTION_ID_ENCODER_BLIT_FROM_BUFFER = 166
-    BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT = 167
-    BGFX_FUNCTION_ID_RENDER_FRAME = 168
-    BGFX_FUNCTION_ID_GET_INTERNAL_DATA = 169
-    BGFX_FUNCTION_ID_SET_MARKER = 170
-    BGFX_FUNCTION_ID_SET_STATE = 171
-    BGFX_FUNCTION_ID_SET_CONDITION = 172
-    BGFX_FUNCTION_ID_SET_STENCIL = 173
-    BGFX_FUNCTION_ID_SET_SCISSOR = 174
-    BGFX_FUNCTION_ID_SET_SCISSOR_CACHED = 175
-    BGFX_FUNCTION_ID_SET_TRANSFORM = 176
-    BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED = 177
-    BGFX_FUNCTION_ID_ALLOC_TRANSFORM = 178
-    BGFX_FUNCTION_ID_SET_UNIFORM = 179
-    BGFX_FUNCTION_ID_SET_INDEX_BUFFER = 180
-    BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER = 181
-    BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER = 182
-    BGFX_FUNCTION_ID_SET_VERTEX_BUFFER = 183
-    BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT = 184
-    BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER = 185
-    BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT = 186
-    BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER = 187
-    BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT = 188
-    BGFX_FUNCTION_ID_SET_VERTEX_COUNT = 189
-    BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER = 190
-    BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER = 191
-    BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER = 192
-    BGFX_FUNCTION_ID_SET_INSTANCE_COUNT = 193
-    BGFX_FUNCTION_ID_SET_TEXTURE = 194
-    BGFX_FUNCTION_ID_SET_TEXTURE_VIEW = 195
-    BGFX_FUNCTION_ID_TOUCH = 196
-    BGFX_FUNCTION_ID_SUBMIT = 197
-    BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY = 198
-    BGFX_FUNCTION_ID_SUBMIT_INDIRECT = 199
-    BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT = 200
-    BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER = 201
-    BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER = 202
-    BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER = 203
-    BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER = 204
-    BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER = 205
-    BGFX_FUNCTION_ID_SET_IMAGE = 206
-    BGFX_FUNCTION_ID_SET_IMAGE_VIEW = 207
-    BGFX_FUNCTION_ID_DISPATCH = 208
-    BGFX_FUNCTION_ID_DISPATCH_INDIRECT = 209
-    BGFX_FUNCTION_ID_DISCARD = 210
-    BGFX_FUNCTION_ID_BLIT = 211
-    BGFX_FUNCTION_ID_BLIT_BUFFER = 212
-    BGFX_FUNCTION_ID_BLIT_TO_BUFFER = 213
-    BGFX_FUNCTION_ID_BLIT_FROM_BUFFER = 214
-    BGFX_FUNCTION_ID_COUNT = 215
+    BGFX_FUNCTION_ID_SET_VIEW_DEPTH_BIAS = 110
+    BGFX_FUNCTION_ID_SET_VIEW_SAMPLE_MASK = 111
+    BGFX_FUNCTION_ID_SET_VIEW_CLEAR = 112
+    BGFX_FUNCTION_ID_SET_VIEW_CLEAR_MRT = 113
+    BGFX_FUNCTION_ID_SET_VIEW_MODE = 114
+    BGFX_FUNCTION_ID_SET_VIEW_FRAME_BUFFER = 115
+    BGFX_FUNCTION_ID_SET_VIEW_TRANSFORM = 116
+    BGFX_FUNCTION_ID_SET_VIEW_ORDER = 117
+    BGFX_FUNCTION_ID_SET_VIEW_SHADING_RATE = 118
+    BGFX_FUNCTION_ID_RESET_VIEW = 119
+    BGFX_FUNCTION_ID_ENCODER_BEGIN = 120
+    BGFX_FUNCTION_ID_ENCODER_END = 121
+    BGFX_FUNCTION_ID_ENCODER_SET_MARKER = 122
+    BGFX_FUNCTION_ID_ENCODER_SET_STATE = 123
+    BGFX_FUNCTION_ID_ENCODER_SET_CONDITION = 124
+    BGFX_FUNCTION_ID_ENCODER_SET_STENCIL = 125
+    BGFX_FUNCTION_ID_ENCODER_SET_SAMPLE_MASK = 126
+    BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR = 127
+    BGFX_FUNCTION_ID_ENCODER_SET_SCISSOR_CACHED = 128
+    BGFX_FUNCTION_ID_ENCODER_SET_DEPTH_CONTROL = 129
+    BGFX_FUNCTION_ID_ENCODER_SET_DEPTH_CONTROL_CACHED = 130
+    BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM = 131
+    BGFX_FUNCTION_ID_ENCODER_SET_TRANSFORM_CACHED = 132
+    BGFX_FUNCTION_ID_ENCODER_ALLOC_TRANSFORM = 133
+    BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM = 134
+    BGFX_FUNCTION_ID_ENCODER_SET_UNIFORM_REF = 135
+    BGFX_FUNCTION_ID_SET_VIEW_UNIFORM = 136
+    BGFX_FUNCTION_ID_SET_FRAME_UNIFORM = 137
+    BGFX_FUNCTION_ID_ENCODER_SET_INDEX_BUFFER = 138
+    BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_INDEX_BUFFER = 139
+    BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_INDEX_BUFFER = 140
+    BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER = 141
+    BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_BUFFER_WITH_LAYOUT = 142
+    BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER = 143
+    BGFX_FUNCTION_ID_ENCODER_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT = 144
+    BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER = 145
+    BGFX_FUNCTION_ID_ENCODER_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT = 146
+    BGFX_FUNCTION_ID_ENCODER_SET_VERTEX_COUNT = 147
+    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_BUFFER = 148
+    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER = 149
+    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER = 150
+    BGFX_FUNCTION_ID_ENCODER_SET_INSTANCE_COUNT = 151
+    BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE = 152
+    BGFX_FUNCTION_ID_ENCODER_SET_TEXTURE_VIEW = 153
+    BGFX_FUNCTION_ID_ENCODER_TOUCH = 154
+    BGFX_FUNCTION_ID_ENCODER_SUBMIT = 155
+    BGFX_FUNCTION_ID_ENCODER_SUBMIT_OCCLUSION_QUERY = 156
+    BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT = 157
+    BGFX_FUNCTION_ID_ENCODER_SUBMIT_INDIRECT_COUNT = 158
+    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDEX_BUFFER = 159
+    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_VERTEX_BUFFER = 160
+    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_INDEX_BUFFER = 161
+    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER = 162
+    BGFX_FUNCTION_ID_ENCODER_SET_COMPUTE_INDIRECT_BUFFER = 163
+    BGFX_FUNCTION_ID_ENCODER_SET_IMAGE = 164
+    BGFX_FUNCTION_ID_ENCODER_SET_IMAGE_VIEW = 165
+    BGFX_FUNCTION_ID_ENCODER_DISPATCH = 166
+    BGFX_FUNCTION_ID_ENCODER_DISPATCH_INDIRECT = 167
+    BGFX_FUNCTION_ID_ENCODER_DISCARD = 168
+    BGFX_FUNCTION_ID_ENCODER_BLIT = 169
+    BGFX_FUNCTION_ID_ENCODER_BLIT_BUFFER = 170
+    BGFX_FUNCTION_ID_ENCODER_BLIT_TO_BUFFER = 171
+    BGFX_FUNCTION_ID_ENCODER_BLIT_FROM_BUFFER = 172
+    BGFX_FUNCTION_ID_REQUEST_SCREEN_SHOT = 173
+    BGFX_FUNCTION_ID_RENDER_FRAME = 174
+    BGFX_FUNCTION_ID_GET_INTERNAL_DATA = 175
+    BGFX_FUNCTION_ID_SET_MARKER = 176
+    BGFX_FUNCTION_ID_SET_STATE = 177
+    BGFX_FUNCTION_ID_SET_CONDITION = 178
+    BGFX_FUNCTION_ID_SET_STENCIL = 179
+    BGFX_FUNCTION_ID_SET_SAMPLE_MASK = 180
+    BGFX_FUNCTION_ID_SET_SCISSOR = 181
+    BGFX_FUNCTION_ID_SET_SCISSOR_CACHED = 182
+    BGFX_FUNCTION_ID_SET_DEPTH_CONTROL = 183
+    BGFX_FUNCTION_ID_SET_DEPTH_CONTROL_CACHED = 184
+    BGFX_FUNCTION_ID_SET_TRANSFORM = 185
+    BGFX_FUNCTION_ID_SET_TRANSFORM_CACHED = 186
+    BGFX_FUNCTION_ID_ALLOC_TRANSFORM = 187
+    BGFX_FUNCTION_ID_SET_UNIFORM = 188
+    BGFX_FUNCTION_ID_SET_UNIFORM_REF = 189
+    BGFX_FUNCTION_ID_SET_INDEX_BUFFER = 190
+    BGFX_FUNCTION_ID_SET_DYNAMIC_INDEX_BUFFER = 191
+    BGFX_FUNCTION_ID_SET_TRANSIENT_INDEX_BUFFER = 192
+    BGFX_FUNCTION_ID_SET_VERTEX_BUFFER = 193
+    BGFX_FUNCTION_ID_SET_VERTEX_BUFFER_WITH_LAYOUT = 194
+    BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER = 195
+    BGFX_FUNCTION_ID_SET_DYNAMIC_VERTEX_BUFFER_WITH_LAYOUT = 196
+    BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER = 197
+    BGFX_FUNCTION_ID_SET_TRANSIENT_VERTEX_BUFFER_WITH_LAYOUT = 198
+    BGFX_FUNCTION_ID_SET_VERTEX_COUNT = 199
+    BGFX_FUNCTION_ID_SET_INSTANCE_DATA_BUFFER = 200
+    BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_VERTEX_BUFFER = 201
+    BGFX_FUNCTION_ID_SET_INSTANCE_DATA_FROM_DYNAMIC_VERTEX_BUFFER = 202
+    BGFX_FUNCTION_ID_SET_INSTANCE_COUNT = 203
+    BGFX_FUNCTION_ID_SET_TEXTURE = 204
+    BGFX_FUNCTION_ID_SET_TEXTURE_VIEW = 205
+    BGFX_FUNCTION_ID_TOUCH = 206
+    BGFX_FUNCTION_ID_SUBMIT = 207
+    BGFX_FUNCTION_ID_SUBMIT_OCCLUSION_QUERY = 208
+    BGFX_FUNCTION_ID_SUBMIT_INDIRECT = 209
+    BGFX_FUNCTION_ID_SUBMIT_INDIRECT_COUNT = 210
+    BGFX_FUNCTION_ID_SET_COMPUTE_INDEX_BUFFER = 211
+    BGFX_FUNCTION_ID_SET_COMPUTE_VERTEX_BUFFER = 212
+    BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_INDEX_BUFFER = 213
+    BGFX_FUNCTION_ID_SET_COMPUTE_DYNAMIC_VERTEX_BUFFER = 214
+    BGFX_FUNCTION_ID_SET_COMPUTE_INDIRECT_BUFFER = 215
+    BGFX_FUNCTION_ID_SET_IMAGE = 216
+    BGFX_FUNCTION_ID_SET_IMAGE_VIEW = 217
+    BGFX_FUNCTION_ID_DISPATCH = 218
+    BGFX_FUNCTION_ID_DISPATCH_INDIRECT = 219
+    BGFX_FUNCTION_ID_DISCARD = 220
+    BGFX_FUNCTION_ID_BLIT = 221
+    BGFX_FUNCTION_ID_BLIT_BUFFER = 222
+    BGFX_FUNCTION_ID_BLIT_TO_BUFFER = 223
+    BGFX_FUNCTION_ID_BLIT_FROM_BUFFER = 224
+    BGFX_FUNCTION_ID_COUNT = 225
   bgfx_function_id_t* = bgfx_function_id
   PFN_BGFX_GET_INTERFACE* = proc(version: uint32): ptr bgfx_interface_vtbl_t {.cdecl.}
 
@@ -1091,7 +1121,7 @@ proc texture_region_init*(_: type BGFX; this: ptr bgfx_texture_region_t; handle:
 
 proc buffer_region_init_texture*(_: type BGFX; this: ptr bgfx_buffer_region_t; texture: ptr bgfx_texture_region_t) {.importc: "bgfx_buffer_region_init_texture", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Fill `rowPitch`, `slicePitch` and `size` with the layout the backend copies
-  ## fastest for `texture`, and round `offset` up to `Caps::Limits::blitOffsetAlign`.
+  ## fastest for `texture`, and round `offset` up to `bgfx_caps_limits_t.blitOffsetAlign`.
   ## `handle` is left untouched, so `size` can be used to create the buffer the
   ## region will point at.
   ##
@@ -1110,7 +1140,7 @@ proc buffer_region_init_buffer*(_: type BGFX; this: ptr bgfx_buffer_region_t; ha
   ## - `offset` (in): Byte offset into the buffer.
   ## - `size` (in): Number of bytes. 0 uses the rest of the buffer.
 
-proc attachment_init*(_: type BGFX; this: ptr bgfx_attachment_t; handle: bgfx_texture_handle_t; access: bgfx_access_t; layer: uint16; numLayers: uint16; mip: uint16; resolve: uint8) {.importc: "bgfx_attachment_init", cdecl, header: "bgfx/c99/bgfx.h".}
+proc attachment_init*(_: type BGFX; this: ptr bgfx_attachment_t; handle: bgfx_texture_handle_t; access: bgfx_access_t; layer: uint16; numLayers: uint16; mip: uint16; flags: uint8) {.importc: "bgfx_attachment_init", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Init attachment.
   ##
   ## **Parameters:**
@@ -1120,7 +1150,7 @@ proc attachment_init*(_: type BGFX; this: ptr bgfx_attachment_t; handle: bgfx_te
   ## - `layer` (in): Cubemap side or depth layer/slice to use.
   ## - `numLayers` (in): Number of texture layer/slice(s) in array to use.
   ## - `mip` (in): Mip level.
-  ## - `resolve` (in): Resolve flags. See: `BGFX_RESOLVE_*`
+  ## - `flags` (in): Attachment flags. See: `BGFX_ATTACHMENT_*`
 
 proc vertex_layout_begin*(_: type BGFX; this: ptr bgfx_vertex_layout_t; rendererType: bgfx_renderer_type_t): ptr bgfx_vertex_layout_t {.importc: "bgfx_vertex_layout_begin", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Start VertexLayout.
@@ -1334,6 +1364,12 @@ proc reset*(_: type BGFX; flags: uint32; swapChain: ptr bgfx_swap_chain_t) {.imp
   ##   \- `BGFX_RESET_FLIP_AFTER_RENDER` - This flag  specifies where flip
   ##   occurs. Default behaviour is that flip occurs before rendering new
   ##   frame. This flag only has effect when `BGFX_CONFIG_MULTITHREADED=0`.
+  ##   \- `BGFX_RESET_LOW_LATENCY_ON` - Enable low latency mode (NVIDIA Reflex).
+  ##   Availability depends on: `BGFX_CAPS_LOW_LATENCY`.
+  ##   \- `BGFX_RESET_LOW_LATENCY_BOOST` - Enable low latency mode, and keep GPU
+  ##   clocks high even when GPU is mostly idle. Availability depends on:
+  ##   `BGFX_CAPS_LOW_LATENCY`. Set either `BGFX_RESET_LOW_LATENCY_ON` or
+  ##   `BGFX_RESET_LOW_LATENCY_BOOST`, not both.
   ##   Per-surface settings are not here. `BGFX_SWAP_CHAIN_*` flags belong
   ##   on `SwapChain::flags`, and are ignored if passed here.
   ## - `swapChain` (in): Main window swap chain. When `NULL` the main window is left
@@ -1545,6 +1581,8 @@ proc read_buffer*(_: type BGFX; src: ptr bgfx_buffer_region_t; data: pointer): u
   ##
   ## **Returns:**
   ## Frame number when the result will be available. See: `BGFX.frame`.
+  ## If the device is lost before then, `bgfx_callback_interface_t.fatal` reports
+  ## `Fatal::DeviceLost` in that frame, and `data` is left untouched.
   ##
   ## **Remarks:**
   ## Read back is asynchronous, and the result is available at the returned frame.
@@ -1978,6 +2016,7 @@ proc create_texture_2d*(_: type BGFX; width: uint16; height: uint16; hasMips: bo
   ## - `width` (in): Width.
   ## - `height` (in): Height.
   ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ##   Ignored when `BGFX_TEXTURE_MIP_COUNT` is set in flags.
   ## - `numLayers` (in): Number of layers in texture array.
   ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
   ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
@@ -2001,6 +2040,7 @@ proc create_texture_2d_scaled*(_: type BGFX; ratio: bgfx_backbuffer_ratio_t; has
   ## **Parameters:**
   ## - `ratio` (in): Texture size in respect to back-buffer size. See: `bgfx_backbuffer_ratio_t`.
   ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ##   Ignored when `BGFX_TEXTURE_MIP_COUNT` is set in flags.
   ## - `numLayers` (in): Number of layers in texture array.
   ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
   ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
@@ -2021,6 +2061,7 @@ proc create_texture_3d*(_: type BGFX; width: uint16; height: uint16; depth: uint
   ## - `height` (in): Height.
   ## - `depth` (in): Depth.
   ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ##   Ignored when `BGFX_TEXTURE_MIP_COUNT` is set in flags.
   ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
   ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
   ##   flags. Default texture sampling mode is linear, and wrap mode is repeat.
@@ -2042,6 +2083,7 @@ proc create_texture_cube*(_: type BGFX; size: uint16; hasMips: bool; numLayers: 
   ## **Parameters:**
   ## - `size` (in): Cube side size.
   ## - `hasMips` (in): Indicates that texture contains full mip-map chain.
+  ##   Ignored when `BGFX_TEXTURE_MIP_COUNT` is set in flags.
   ## - `numLayers` (in): Number of layers in texture array.
   ## - `format` (in): Texture format. See: `bgfx_texture_format_t`.
   ## - `flags` (in): Texture creation (see `BGFX_TEXTURE_*`.), and sampler (see `BGFX_SAMPLER_*`)
@@ -2147,6 +2189,8 @@ proc read_texture*(_: type BGFX; src: ptr bgfx_texture_region_t; data: pointer):
   ##
   ## **Returns:**
   ## Frame number when the result will be available. See: `BGFX.frame`.
+  ## If the device is lost before then, `bgfx_callback_interface_t.fatal` reports
+  ## `Fatal::DeviceLost` in that frame, and `data` is left untouched.
   ##
   ## **Remarks:**
   ## Read back is asynchronous, and the result is available at the returned frame.
@@ -2449,12 +2493,12 @@ proc set_view_name*(_: type BGFX; id: bgfx_view_id_t; name: cstring; len: int32)
   ##
   ## In graphics debugger view name will appear as:
   ##
-  ## "nnnc <view name>"
-  ## \^  ^ ^
-  ## \|  +--- compute (C)
-  ## \+------ view id
+  ## "nnnnc <view name>"
+  ## \^   ^ ^
+  ## \|   +--- compute (C)
+  ## \+------- view id
 
-proc set_view_rect*(_: type BGFX; id: bgfx_view_id_t; x: int16; y: int16; width: uint16; height: uint16) {.importc: "bgfx_set_view_rect", cdecl, header: "bgfx/c99/bgfx.h".}
+proc set_view_rect*(_: type BGFX; id: bgfx_view_id_t; x: int16; y: int16; width: uint16; height: uint16; minDepth: cfloat; maxDepth: cfloat) {.importc: "bgfx_set_view_rect", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set view rectangle. Draw primitive outside view will be clipped.
   ##
   ## **Parameters:**
@@ -2465,6 +2509,8 @@ proc set_view_rect*(_: type BGFX; id: bgfx_view_id_t; x: int16; y: int16; width:
   ##   negative to place view origin outside of the window.
   ## - `width` (in): Width of view port region.
   ## - `height` (in): Height of view port region.
+  ## - `minDepth` (in): Viewport minimum depth (maps clip-space z=0).
+  ## - `maxDepth` (in): Viewport maximum depth (maps clip-space z=1).
 
 proc set_view_rect_ratio*(_: type BGFX; id: bgfx_view_id_t; x: int16; y: int16; ratio: bgfx_backbuffer_ratio_t) {.importc: "bgfx_set_view_rect_ratio", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set view rectangle. Draw primitive outside view will be clipped.
@@ -2489,6 +2535,24 @@ proc set_view_scissor*(_: type BGFX; id: bgfx_view_id_t; x: uint16; y: uint16; w
   ## - `width` (in): Width of view scissor region.
   ## - `height` (in): Height of view scissor region.
 
+proc set_view_depth_bias*(_: type BGFX; id: bgfx_view_id_t; constant: int32; slopeScale: cfloat; clamp: cfloat) {.importc: "bgfx_set_view_depth_bias", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set view depth bias. Applies to all draws in the view unless overridden per-draw
+  ## with `BGFX.set_depth_control`.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `constant` (in): Constant depth bias.
+  ## - `slopeScale` (in): Slope-scaled depth bias.
+  ## - `clamp` (in): Depth bias clamp.
+
+proc set_view_sample_mask*(_: type BGFX; id: bgfx_view_id_t; mask: uint32) {.importc: "bgfx_set_view_sample_mask", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set view multisample coverage mask. Combined with the per-draw mask set by
+  ## `BGFX.set_sample_mask`, so a draw can narrow the view's mask but not widen it.
+  ##
+  ## **Parameters:**
+  ## - `id` (in): View id.
+  ## - `mask` (in): Sample coverage mask.
+
 proc set_view_clear*(_: type BGFX; id: bgfx_view_id_t; flags: uint16; rgba: uint32; depth: cfloat; stencil: uint8) {.importc: "bgfx_set_view_clear", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set view clear flags.
   ##
@@ -2503,7 +2567,8 @@ proc set_view_clear*(_: type BGFX; id: bgfx_view_id_t; flags: uint16; rgba: uint
 proc set_view_clear_mrt*(_: type BGFX; id: bgfx_view_id_t; flags: uint16; depth: cfloat; stencil: uint8; c0: uint8; c1: uint8; c2: uint8; c3: uint8; c4: uint8; c5: uint8; c6: uint8; c7: uint8) {.importc: "bgfx_set_view_clear_mrt", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set view clear flags with different clear color for each
   ## frame buffer texture. `BGFX.set_palette_color` must be used to set up a
-  ## clear color palette.
+  ## clear color palette. Frame buffer attachment with palette index set to
+  ## `UINT8_MAX` is not cleared.
   ##
   ## **Parameters:**
   ## - `id` (in): View id.
@@ -2552,7 +2617,9 @@ proc set_view_transform*(_: type BGFX; id: bgfx_view_id_t; view: pointer; proj: 
   ## - `proj` (in): Projection matrix.
 
 proc set_view_order*(_: type BGFX; id: bgfx_view_id_t; num: uint16; order: ptr bgfx_view_id_t) {.importc: "bgfx_set_view_order", cdecl, header: "bgfx/c99/bgfx.h".}
-  ## Post submit view reordering.
+  ## Post submit view reordering. A view in `order` that currently renders
+  ## outside the remapped range swaps places with the view it displaces, so the
+  ## order stays a permutation of all view ids.
   ##
   ## **Parameters:**
   ## - `id` (in): First view id.
@@ -2571,7 +2638,7 @@ proc set_view_shading_rate*(_: type BGFX; id: bgfx_view_id_t; shadingRate: bgfx_
   ## Availability depends on: `BGFX_CAPS_VARIABLE_RATE_SHADING`.
 
 proc reset_view*(_: type BGFX; id: bgfx_view_id_t) {.importc: "bgfx_reset_view", cdecl, header: "bgfx/c99/bgfx.h".}
-  ## Reset all view settings to default.
+  ## Reset all view settings to default, including the view name.
   ##
   ## **Parameters:**
   ## - `id` (in): id View id.
@@ -2682,6 +2749,15 @@ proc encoder_set_stencil*(_: type BGFX; this: ptr bgfx_encoder_t; fstencil: uint
   ## - `bstencil` (in): Back stencil state. If back is set to `BGFX_STENCIL_NONE`
   ##   fstencil is applied to both front and back facing primitives.
 
+proc encoder_set_sample_mask*(_: type BGFX; this: ptr bgfx_encoder_t; mask: uint32) {.importc: "bgfx_encoder_set_sample_mask", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set multisample coverage mask for draw primitive. Samples whose bit is clear
+  ## in the mask are never written, regardless of the coverage the rasterizer
+  ## computes. Only has an effect when rendering to a multisampled target.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `mask` (in): Sample coverage mask.
+
 proc encoder_set_scissor*(_: type BGFX; this: ptr bgfx_encoder_t; x: uint16; y: uint16; width: uint16; height: uint16): uint16 {.importc: "bgfx_encoder_set_scissor", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set scissor for draw primitive.
   ##
@@ -2707,6 +2783,27 @@ proc encoder_set_scissor_cached*(_: type BGFX; this: ptr bgfx_encoder_t; cache: 
   ##
   ## **Remarks:**
   ## To scissor for all primitives in view see `BGFX.set_view_scissor`.
+
+proc encoder_set_depth_control*(_: type BGFX; this: ptr bgfx_encoder_t; constant: int32; slopeScale: cfloat; clamp: cfloat; depthClamp: bool): uint16 {.importc: "bgfx_encoder_set_depth_control", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set depth control (depth bias and depth clip) for draw primitive. Overrides the
+  ## view depth bias for this draw.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `constant` (in): Constant depth bias.
+  ## - `slopeScale` (in): Slope-scaled depth bias.
+  ## - `clamp` (in): Depth bias clamp.
+  ## - `depthClamp` (in): Disable depth clipping and clamp NDC depth to the \[0,1\] range instead.
+  ##
+  ## **Returns:**
+  ## Depth control cache index.
+
+proc encoder_set_depth_control_cached*(_: type BGFX; this: ptr bgfx_encoder_t; cache: uint16) {.importc: "bgfx_encoder_set_depth_control_cached", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set depth control from depth-control cache for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `cache` (in): Index in depth control cache.
 
 proc encoder_set_transform*(_: type BGFX; this: ptr bgfx_encoder_t; mtx: pointer; num: uint16): uint32 {.importc: "bgfx_encoder_set_transform", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set model matrix for draw primitive. If it is not called,
@@ -2750,6 +2847,19 @@ proc encoder_set_uniform*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_u
   ## - `this` (in): Encoder instance.
   ## - `handle` (in): Uniform.
   ## - `value` (in): Pointer to uniform data.
+  ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
+  ##   use the num passed on uniform creation.
+
+proc encoder_set_uniform_ref*(_: type BGFX; this: ptr bgfx_encoder_t; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.importc: "bgfx_encoder_set_uniform_ref", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set shader uniform parameter by reference. Unlike `Encoder::setUniform`, the data
+  ## is not copied immediately; the renderer reads it from `value` at frame render
+  ## time. The pointer must remain valid and unchanged until the frame is rendered
+  ## (up to two `BGFX.frame` calls with multithreaded submission).
+  ##
+  ## **Parameters:**
+  ## - `this` (in): Encoder instance.
+  ## - `handle` (in): Uniform.
+  ## - `value` (in): Pointer to uniform data. Must stay valid until the frame is rendered.
   ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
   ##   use the num passed on uniform creation.
 
@@ -2932,7 +3042,7 @@ proc encoder_set_texture*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; 
   ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
   ##   sampling.
 
-proc encoder_set_texture_view*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32) {.importc: "bgfx_encoder_set_texture_view", cdecl, header: "bgfx/c99/bgfx.h".}
+proc encoder_set_texture_view*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32; lodMin: uint8; lodMax: uint8) {.importc: "bgfx_encoder_set_texture_view", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set texture stage for draw primitive, selecting a sub-range of the
   ## texture's array layers and mip levels.
   ##
@@ -2951,6 +3061,11 @@ proc encoder_set_texture_view*(_: type BGFX; this: ptr bgfx_encoder_t; stage: ui
   ##   mode.
   ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
   ##   sampling.
+  ## - `lodMin` (in): Lowest (most detailed) level of detail the sampler may use, in
+  ##   quarter-mip steps, relative to `firstMip`.
+  ## - `lodMax` (in): Highest (least detailed) level of detail the sampler may use, in
+  ##   quarter-mip steps, relative to `firstMip`. `UINT8_MAX` leaves it
+  ##   unclamped.
 
 proc encoder_touch*(_: type BGFX; this: ptr bgfx_encoder_t; id: bgfx_view_id_t) {.importc: "bgfx_encoder_touch", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Submit an empty primitive for rendering. Uniforms and draw state
@@ -3023,7 +3138,7 @@ proc encoder_submit_indirect_count*(_: type BGFX; this: ptr bgfx_encoder_t; id: 
   ## **Attention:**
   ## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT_COUNT`.
 
-proc encoder_set_compute_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc encoder_set_compute_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_encoder_set_compute_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute index buffer.
   ##
   ## **Parameters:**
@@ -3031,8 +3146,11 @@ proc encoder_set_compute_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; s
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Index buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
-proc encoder_set_compute_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc encoder_set_compute_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_encoder_set_compute_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute vertex buffer.
   ##
   ## **Parameters:**
@@ -3040,8 +3158,11 @@ proc encoder_set_compute_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; 
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Vertex buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
-proc encoder_set_compute_dynamic_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc encoder_set_compute_dynamic_index_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_encoder_set_compute_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute dynamic index buffer.
   ##
   ## **Parameters:**
@@ -3049,8 +3170,11 @@ proc encoder_set_compute_dynamic_index_buffer*(_: type BGFX; this: ptr bgfx_enco
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Dynamic index buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
-proc encoder_set_compute_dynamic_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc encoder_set_compute_dynamic_vertex_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_encoder_set_compute_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute dynamic vertex buffer.
   ##
   ## **Parameters:**
@@ -3058,6 +3182,9 @@ proc encoder_set_compute_dynamic_vertex_buffer*(_: type BGFX; this: ptr bgfx_enc
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Dynamic vertex buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
 proc encoder_set_compute_indirect_buffer*(_: type BGFX; this: ptr bgfx_encoder_t; stage: uint8; handle: bgfx_indirect_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_encoder_set_compute_indirect_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute indirect buffer.
@@ -3224,6 +3351,9 @@ proc request_screen_shot*(_: type BGFX; handle: bgfx_frame_buffer_handle_t; file
   ## - `handle` (in): Frame buffer handle. If handle is `BGFX_INVALID_HANDLE` request will be
   ##   made for main window back buffer.
   ## - `filePath` (in): Will be passed to `bgfx_callback_interface_t.screen_shot` callback.
+  ##   If the device is lost before the screenshot is taken,
+  ##   `bgfx_callback_interface_t.fatal` reports `Fatal::DeviceLost` in that frame
+  ##   and `screenShot` is not called for this request.
   ##
   ## **Remarks:**
   ## `bgfx_callback_interface_t.screen_shot` must be implemented.
@@ -3339,6 +3469,14 @@ proc set_stencil*(_: type BGFX; fstencil: uint32; bstencil: uint32) {.importc: "
   ## - `bstencil` (in): Back stencil state. If back is set to `BGFX_STENCIL_NONE`
   ##   fstencil is applied to both front and back facing primitives.
 
+proc set_sample_mask*(_: type BGFX; mask: uint32) {.importc: "bgfx_set_sample_mask", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set multisample coverage mask for draw primitive. Samples whose bit is clear
+  ## in the mask are never written, regardless of the coverage the rasterizer
+  ## computes. Only has an effect when rendering to a multisampled target.
+  ##
+  ## **Parameters:**
+  ## - `mask` (in): Sample coverage mask.
+
 proc set_scissor*(_: type BGFX; x: uint16; y: uint16; width: uint16; height: uint16): uint16 {.importc: "bgfx_set_scissor", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set scissor for draw primitive.
   ##
@@ -3362,6 +3500,25 @@ proc set_scissor_cached*(_: type BGFX; cache: uint16) {.importc: "bgfx_set_sciss
   ##
   ## **Remarks:**
   ## To scissor for all primitives in view see `BGFX.set_view_scissor`.
+
+proc set_depth_control*(_: type BGFX; constant: int32; slopeScale: cfloat; clamp: cfloat; depthClamp: bool): uint16 {.importc: "bgfx_set_depth_control", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set depth control (depth bias and depth clip) for draw primitive. Overrides the
+  ## view depth bias for this draw.
+  ##
+  ## **Parameters:**
+  ## - `constant` (in): Constant depth bias.
+  ## - `slopeScale` (in): Slope-scaled depth bias.
+  ## - `clamp` (in): Depth bias clamp.
+  ## - `depthClamp` (in): Disable depth clipping and clamp NDC depth to the \[0,1\] range instead.
+  ##
+  ## **Returns:**
+  ## Depth control cache index.
+
+proc set_depth_control_cached*(_: type BGFX; cache: uint16) {.importc: "bgfx_set_depth_control_cached", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set depth control from depth-control cache for draw primitive.
+  ##
+  ## **Parameters:**
+  ## - `cache` (in): Index in depth control cache.
 
 proc set_transform*(_: type BGFX; mtx: pointer; num: uint16): uint32 {.importc: "bgfx_set_transform", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set model matrix for draw primitive. If it is not called,
@@ -3401,6 +3558,18 @@ proc set_uniform*(_: type BGFX; handle: bgfx_uniform_handle_t; value: pointer; n
   ## **Parameters:**
   ## - `handle` (in): Uniform.
   ## - `value` (in): Pointer to uniform data.
+  ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
+  ##   use the num passed on uniform creation.
+
+proc set_uniform_ref*(_: type BGFX; handle: bgfx_uniform_handle_t; value: pointer; num: uint16) {.importc: "bgfx_set_uniform_ref", cdecl, header: "bgfx/c99/bgfx.h".}
+  ## Set shader uniform parameter by reference. Unlike `BGFX.set_uniform`, the data
+  ## is not copied immediately; the renderer reads it from `value` at frame render
+  ## time. The pointer must remain valid and unchanged until the frame is rendered
+  ## (up to two `BGFX.frame` calls with multithreaded submission).
+  ##
+  ## **Parameters:**
+  ## - `handle` (in): Uniform.
+  ## - `value` (in): Pointer to uniform data. Must stay valid until the frame is rendered.
   ## - `num` (in): Number of elements. Passing `UINT16_MAX` will
   ##   use the num passed on uniform creation.
 
@@ -3543,7 +3712,7 @@ proc set_texture*(_: type BGFX; stage: uint8; sampler: bgfx_uniform_handle_t; ha
   ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
   ##   sampling.
 
-proc set_texture_view*(_: type BGFX; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32) {.importc: "bgfx_set_texture_view", cdecl, header: "bgfx/c99/bgfx.h".}
+proc set_texture_view*(_: type BGFX; stage: uint8; sampler: bgfx_uniform_handle_t; handle: bgfx_texture_handle_t; firstLayer: uint16; numLayers: uint16; firstMip: uint8; numMips: uint8; flags: uint32; lodMin: uint8; lodMax: uint8) {.importc: "bgfx_set_texture_view", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set texture stage for draw primitive, selecting a sub-range of the
   ## texture's array layers and mip levels.
   ##
@@ -3561,6 +3730,11 @@ proc set_texture_view*(_: type BGFX; stage: uint8; sampler: bgfx_uniform_handle_
   ##   mode.
   ##   \- `BGFX_SAMPLER_[MIN/MAG/MIP]_[POINT/ANISOTROPIC]` - Point or anisotropic
   ##   sampling.
+  ## - `lodMin` (in): Lowest (most detailed) level of detail the sampler may use, in
+  ##   quarter-mip steps, relative to `firstMip`.
+  ## - `lodMax` (in): Highest (least detailed) level of detail the sampler may use, in
+  ##   quarter-mip steps, relative to `firstMip`. `UINT8_MAX` leaves it
+  ##   unclamped.
 
 proc touch*(_: type BGFX; id: bgfx_view_id_t) {.importc: "bgfx_touch", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Submit an empty primitive for rendering. Uniforms and draw state
@@ -3626,37 +3800,49 @@ proc submit_indirect_count*(_: type BGFX; id: bgfx_view_id_t; program: bgfx_prog
   ## **Attention:**
   ## Availability depends on: `BGFX_CAPS_DRAW_INDIRECT_COUNT`.
 
-proc set_compute_index_buffer*(_: type BGFX; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc set_compute_index_buffer*(_: type BGFX; stage: uint8; handle: bgfx_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_set_compute_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute index buffer.
   ##
   ## **Parameters:**
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Index buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
-proc set_compute_vertex_buffer*(_: type BGFX; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc set_compute_vertex_buffer*(_: type BGFX; stage: uint8; handle: bgfx_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_set_compute_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute vertex buffer.
   ##
   ## **Parameters:**
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Vertex buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
-proc set_compute_dynamic_index_buffer*(_: type BGFX; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc set_compute_dynamic_index_buffer*(_: type BGFX; stage: uint8; handle: bgfx_dynamic_index_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_set_compute_dynamic_index_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute dynamic index buffer.
   ##
   ## **Parameters:**
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Dynamic index buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
-proc set_compute_dynamic_vertex_buffer*(_: type BGFX; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
+proc set_compute_dynamic_vertex_buffer*(_: type BGFX; stage: uint8; handle: bgfx_dynamic_vertex_buffer_handle_t; access: bgfx_access_t; offset: uint32; size: uint32) {.importc: "bgfx_set_compute_dynamic_vertex_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute dynamic vertex buffer.
   ##
   ## **Parameters:**
   ## - `stage` (in): Compute stage.
   ## - `handle` (in): Dynamic vertex buffer handle.
   ## - `access` (in): Buffer access. See `bgfx_access_t`.
+  ## - `offset` (in): Byte offset the shader's view of the buffer starts at.
+  ##   Must be a multiple of 256 bytes.
+  ## - `size` (in): Bytes bound from the offset, `UINT32_MAX` for the rest of the buffer.
 
 proc set_compute_indirect_buffer*(_: type BGFX; stage: uint8; handle: bgfx_indirect_buffer_handle_t; access: bgfx_access_t) {.importc: "bgfx_set_compute_indirect_buffer", cdecl, header: "bgfx/c99/bgfx.h".}
   ## Set compute indirect buffer.
@@ -4146,6 +4332,12 @@ template bgfx_set_view_rect_ratio*(_: type BGFX; args: varargs[untyped]): untype
 template bgfx_set_view_scissor*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_view_scissor(args)
 
+template bgfx_set_view_depth_bias*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.set_view_depth_bias(args)
+
+template bgfx_set_view_sample_mask*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.set_view_sample_mask(args)
+
 template bgfx_set_view_clear*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_view_clear(args)
 
@@ -4188,11 +4380,20 @@ template bgfx_encoder_set_condition*(_: type BGFX; args: varargs[untyped]): unty
 template bgfx_encoder_set_stencil*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.encoder_set_stencil(args)
 
+template bgfx_encoder_set_sample_mask*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.encoder_set_sample_mask(args)
+
 template bgfx_encoder_set_scissor*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.encoder_set_scissor(args)
 
 template bgfx_encoder_set_scissor_cached*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.encoder_set_scissor_cached(args)
+
+template bgfx_encoder_set_depth_control*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.encoder_set_depth_control(args)
+
+template bgfx_encoder_set_depth_control_cached*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.encoder_set_depth_control_cached(args)
 
 template bgfx_encoder_set_transform*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.encoder_set_transform(args)
@@ -4205,6 +4406,9 @@ template bgfx_encoder_alloc_transform*(_: type BGFX; args: varargs[untyped]): un
 
 template bgfx_encoder_set_uniform*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.encoder_set_uniform(args)
+
+template bgfx_encoder_set_uniform_ref*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.encoder_set_uniform_ref(args)
 
 template bgfx_set_view_uniform*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_view_uniform(args)
@@ -4338,11 +4542,20 @@ template bgfx_set_condition*(_: type BGFX; args: varargs[untyped]): untyped =
 template bgfx_set_stencil*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_stencil(args)
 
+template bgfx_set_sample_mask*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.set_sample_mask(args)
+
 template bgfx_set_scissor*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_scissor(args)
 
 template bgfx_set_scissor_cached*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_scissor_cached(args)
+
+template bgfx_set_depth_control*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.set_depth_control(args)
+
+template bgfx_set_depth_control_cached*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.set_depth_control_cached(args)
 
 template bgfx_set_transform*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_transform(args)
@@ -4355,6 +4568,9 @@ template bgfx_alloc_transform*(_: type BGFX; args: varargs[untyped]): untyped =
 
 template bgfx_set_uniform*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_uniform(args)
+
+template bgfx_set_uniform_ref*(_: type BGFX; args: varargs[untyped]): untyped =
+  BGFX.set_uniform_ref(args)
 
 template bgfx_set_index_buffer*(_: type BGFX; args: varargs[untyped]): untyped =
   BGFX.set_index_buffer(args)

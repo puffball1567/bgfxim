@@ -44,6 +44,7 @@ run_test test_api "$@"
 run_test test_abi "$@"
 run_test test_values "$@"
 run_test test_runtime "$@"
+run_test test_api166 "$@"
 run_test test_errors "$@"
 
 "$python" tests/test_generators.py

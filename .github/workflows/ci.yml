@@ -13,9 +13,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BGFX_REVISION: 8c8b6b5692be5054e89d2a59640c50b9319c9425
-  BX_REVISION: 98ad3bec2a7ee1a5cbabdcabc25252572dcb1d88
-  BIMG_REVISION: ddbeeae05779f84f97694553eb41605a60f86f0a
+  BGFX_REVISION: 8f451e9102b1845b29dfe500116611ad283632ec
+  BX_REVISION: 36b2b6943f7c62276d96ff7a34d59db8057a5d24
+  BIMG_REVISION: 671fe06dd7012a1ab85aa931019ed16112909756
   SDL_REVISION: 147a8ee32dbf9ac02f3794964490687b6bbda1bc
 
 jobs:
@@ -170,19 +170,21 @@ jobs:
           tests/run_validation.sh _deps/bgfx _deps/bx
           ${{ matrix.options }}
 
-      - name: Run error paths under address and undefined-behavior sanitizers
+      - name: Run error and updated FFI paths under sanitizers
         if: matrix.sanitizers == true
         env:
           ASAN_OPTIONS: detect_leaks=0
-        run: >-
-          nim c -r --path:. --cc:clang --mm:arc
-          --nimcache:${{ runner.temp }}/bgfxim-errors-sanitized
-          -o:${{ runner.temp }}/bgfxim-errors-sanitized-bin
-          --passC:-I_deps/bgfx/include --passC:-I_deps/bx/include
-          --passC:-fsanitize=address,undefined
-          --passC:-fno-omit-frame-pointer
-          --passL:-fsanitize=address,undefined
-          tests/test_errors.nim
+        run: |
+          for test in test_errors test_runtime test_api166; do
+            nim c -r --path:. --cc:clang --mm:arc \
+              --nimcache:${{ runner.temp }}/bgfxim-${test}-sanitized \
+              -o:${{ runner.temp }}/bgfxim-${test}-sanitized-bin \
+              --passC:-I_deps/bgfx/include --passC:-I_deps/bx/include \
+              --passC:-fsanitize=address,undefined \
+              --passC:-fno-omit-frame-pointer \
+              --passL:-fsanitize=address,undefined \
+              tests/${test}.nim
+          done
 
   cpp-header:
     name: C++20 header ABI and values
