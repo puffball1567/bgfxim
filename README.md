@@ -46,13 +46,13 @@ detailed scope and contribution criteria.
 
 ## Status
 
-The development version targets bgfx API version 166 at revision
+Version `0.4.1` targets bgfx API version 166 at revision
 `8f451e9102b1845b29dfe500116611ad283632ec`.
 
-The latest stable release, `0.4.0`, targets API 159. Use the development branch
-and the exact revisions below for API 166.
+Version `0.4.0` targets API 159. See the migration guide below when upgrading,
+and use the exact native dependency revisions recorded here for API 166.
 
-The development binding has been exercised with:
+The release has been exercised with:
 
 - Nim 2.2.10 on Linux x86_64;
 - bx revision `36b2b6943f7c62276d96ff7a34d59db8057a5d24`;
@@ -87,7 +87,7 @@ directories must be visible to the C compiler.
 ### 2. Install the binding
 
 ```sh
-nimble install https://github.com/puffball1567/bgfxim@#devel
+nimble install https://github.com/puffball1567/bgfxim@#v0.4.1
 ```
 
 The repository contains the source bindings, generators, documentation, tests,

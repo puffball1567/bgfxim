@@ -48,7 +48,7 @@ def decorate_html(source: str, asset_prefix: str) -> str:
     )
     source = source.replace("</head>", stylesheet + "\n</head>", 1)
     source = source.replace(
-        "<body>", '<body class="bgfxim-docs" data-api-version="155">', 1
+        "<body>", '<body class="bgfxim-docs" data-api-version="166">', 1
     )
     script = f'<script defer src="{asset_prefix}api-docs.js"></script>'
     source = source.replace("</body>", script + "\n</body>", 1)
