@@ -4,6 +4,8 @@ All notable changes to bgfxim are documented in this file.
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-11
+
 ### Changed
 
 - Updated the pinned bgfx C99 binding from API 159 to API 166, with matching

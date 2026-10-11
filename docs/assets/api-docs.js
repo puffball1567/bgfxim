@@ -115,7 +115,7 @@
       "p",
       "hero-description",
       moduleName === "bgfx"
-        ? "The complete, typed Nim surface for bgfx C99 API version 159."
+        ? "The complete, typed Nim surface for bgfx C99 API version 166."
         : "Flags, masks, capabilities, and state helpers exposed by bgfxim."
     ));
 
