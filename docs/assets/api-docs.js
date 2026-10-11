@@ -63,7 +63,7 @@
 
     const actions = element("nav", "topbar-actions");
     actions.setAttribute("aria-label", "Documentation links");
-    const version = element("span", "version-badge", "API 159");
+    const version = element("span", "version-badge", "API 166");
     const source = element("a", "topbar-link", "GitHub");
     source.href = githubUrl;
     source.target = "_blank";
@@ -115,14 +115,14 @@
       "p",
       "hero-description",
       moduleName === "bgfx"
-        ? "The complete, typed Nim surface for bgfx C99 API version 159."
+        ? "The complete, typed Nim surface for bgfx C99 API version 166."
         : "Flags, masks, capabilities, and state helpers exposed by bgfxim."
     ));
 
     const metrics = element("div", "hero-metrics");
     const values = moduleName === "bgfx"
-      ? [["216", "public calls"], ["43", "ABI types"], ["159", "bgfx API"]]
-      : [["334", "constants"], ["17", "state helpers"], ["159", "bgfx API"]];
+      ? [["226", "public calls"], ["43", "ABI types"], ["166", "bgfx API"]]
+      : [["346", "constants"], ["18", "state helpers"], ["166", "bgfx API"]];
     values.forEach(([value, label]) => {
       const metric = element("div", "hero-metric");
       metric.append(element("strong", "", value));

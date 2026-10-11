@@ -19,7 +19,7 @@ OBJECT = re.compile(
 )
 FIELD = re.compile(r"^    (?P<name>`?[A-Za-z0-9_]+`?)\*:")
 EXPECTED_OBJECTS = 43
-EXPECTED_FIELDS = 443
+EXPECTED_FIELDS = 463
 
 
 @dataclass(frozen=True)

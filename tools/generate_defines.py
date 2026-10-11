@@ -92,6 +92,7 @@ def nim_literal(value: int, size: int, signed: bool) -> str:
 
 
 FUNCTION_WIDTHS = {
+    "BGFX_TEXTURE_MIP_COUNT": 64,
     "BGFX_STATE_ALPHA_REF": 64,
     "BGFX_STATE_POINT_SIZE": 64,
     "BGFX_STENCIL_FUNC_REF": 32,
@@ -142,6 +143,9 @@ def generate(header: Path, output: Path) -> None:
         lines.append(f"  {name}* = {nim_literal(value, size, signed)}")
     lines.extend(
         [
+            "",
+            "template BGFX_TEXTURE_MIP_COUNT*(value: SomeInteger): uint64 =",
+            "  (uint64(value) shl BGFX_TEXTURE_MIP_COUNT_SHIFT) and BGFX_TEXTURE_MIP_COUNT_MASK",
             "",
             "template BGFX_STATE_ALPHA_REF*(value: SomeInteger): uint64 =",
             "  (uint64(value) shl BGFX_STATE_ALPHA_REF_SHIFT) and BGFX_STATE_ALPHA_REF_MASK",

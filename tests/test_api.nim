@@ -49,7 +49,10 @@ var allocatorVtable: bgfx_allocator_vtbl_t
 allocatorVtable.realloc = reallocCallback
 
 static:
-  doAssert BGFX_API_VERSION == 159'u32
+  doAssert BGFX_API_VERSION == 166'u32
+  doAssert BGFX_TEXTURE_MIP_COUNT(0) == 0'u64
+  doAssert BGFX_TEXTURE_MIP_COUNT(31) == BGFX_TEXTURE_MIP_COUNT_MASK
+  doAssert BGFX_TEXTURE_MIP_COUNT(32) == 0'u64
   doAssert BGFX_STATE_DEFAULT == 0x010000500000001f'u64
   doAssert BGFX_STATE_BLEND_ALPHA ==
     BGFX_STATE_BLEND_FUNC(BGFX_STATE_BLEND_SRC_ALPHA,

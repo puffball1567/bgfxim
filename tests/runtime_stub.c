@@ -47,6 +47,8 @@ void bgfx_init_ctor(bgfx_init_t* init)
     init->vendorId = UINT16_C(0x1234);
     init->swapChain.width = UINT32_C(640);
     init->swapChain.height = UINT32_C(480);
+    init->limits.minViews = UINT32_C(128);
+    init->limits.minUniformCacheSize = UINT32_C(0x12345678);
 }
 
 bool bgfx_init(const bgfx_init_t* init)
@@ -55,7 +57,9 @@ bool bgfx_init(const bgfx_init_t* init)
         && BGFX_RENDERER_TYPE_NOOP == init->type
         && UINT16_C(0x1234) == init->vendorId
         && UINT32_C(640) == init->swapChain.width
-        && UINT32_C(480) == init->swapChain.height;
+        && UINT32_C(480) == init->swapChain.height
+        && UINT32_C(128) == init->limits.minViews
+        && UINT32_C(0x12345678) == init->limits.minUniformCacheSize;
     return s_init_validated;
 }
 
@@ -146,7 +150,21 @@ const bgfx_caps_t* bgfx_get_caps(void)
     caps.rendererType = BGFX_RENDERER_TYPE_NOOP;
     caps.vendorId = UINT16_C(0xbeef);
     caps.limits.maxDrawCalls = UINT32_C(321);
+    caps.limits.minUniformCacheSize = UINT32_C(0x87654321);
     return &caps;
+}
+
+const bgfx_stats_t* bgfx_get_stats(void)
+{
+    static bgfx_stats_t stats;
+    stats.latencySleep = INT64_C(0x123456789);
+    stats.latencyTotal = INT64_C(0x23456789a);
+    stats.latencySimulation = INT64_C(0x3456789ab);
+    stats.latencyRenderSubmit = INT64_C(0x456789abc);
+    stats.latencyPresent = INT64_C(0x56789abcd);
+    stats.latencyQueue = INT64_C(0x6789abcde);
+    stats.latencyGpu = INT64_C(0x789abcdef);
+    return &stats;
 }
 
 const bgfx_memory_t* bgfx_alloc(uint32_t size)

@@ -28,7 +28,9 @@ try:
   doAssert caps.rendererType == renderer
 
   BGFX.setViewName(0, "noop-basic", 10)
-  BGFX.setViewRect(0, 0, 0, 64, 64)
+  BGFX.setViewRect(0, 0, 0, 64, 64, 0.0, 1.0)
+  BGFX.setViewDepthBias(0, 0, 0.0, 0.0)
+  BGFX.setViewSampleMask(0, high(uint32))
   BGFX.setViewClear(0, BGFX_CLEAR_COLOR, 0x303050ff'u32, 1.0, 0)
   BGFX.touch(0)
   let frameNumber = BGFX.frame(BGFX_FRAME_NONE)

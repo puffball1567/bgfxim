@@ -14,10 +14,11 @@ from pathlib import Path
 
 CONSTANT = re.compile(r"^  (?P<name>BGFX_[A-Z0-9_]+)\*\s*=")
 ENUM = re.compile(r"^    (?P<name>BGFX_[A-Z0-9_]+)\s*=\s*")
-EXPECTED_CONSTANTS = 334
-EXPECTED_ENUM_VALUES = 458
+EXPECTED_CONSTANTS = 346
+EXPECTED_ENUM_VALUES = 468
 
 HELPERS = (
+    ("BGFX_TEXTURE_MIP_COUNT", "5"),
     ("BGFX_STATE_ALPHA_REF", "0x5a"),
     ("BGFX_STATE_POINT_SIZE", "7"),
     ("BGFX_STENCIL_FUNC_REF", "0x6b"),

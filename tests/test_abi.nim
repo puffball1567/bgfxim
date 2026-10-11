@@ -253,867 +253,907 @@ const nimOffset113 = offsetOf(bgfx_interface_vtbl, `set_view_rect_ratio`)
 {.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_rect_ratio) == ", nimOffset113, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_rect_ratio\");"].}
 const nimOffset114 = offsetOf(bgfx_interface_vtbl, `set_view_scissor`)
 {.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_scissor) == ", nimOffset114, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_scissor\");"].}
-const nimOffset115 = offsetOf(bgfx_interface_vtbl, `set_view_clear`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_clear) == ", nimOffset115, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_clear\");"].}
-const nimOffset116 = offsetOf(bgfx_interface_vtbl, `set_view_clear_mrt`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_clear_mrt) == ", nimOffset116, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_clear_mrt\");"].}
-const nimOffset117 = offsetOf(bgfx_interface_vtbl, `set_view_mode`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_mode) == ", nimOffset117, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_mode\");"].}
-const nimOffset118 = offsetOf(bgfx_interface_vtbl, `set_view_frame_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_frame_buffer) == ", nimOffset118, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_frame_buffer\");"].}
-const nimOffset119 = offsetOf(bgfx_interface_vtbl, `set_view_transform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_transform) == ", nimOffset119, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_transform\");"].}
-const nimOffset120 = offsetOf(bgfx_interface_vtbl, `set_view_order`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_order) == ", nimOffset120, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_order\");"].}
-const nimOffset121 = offsetOf(bgfx_interface_vtbl, `set_view_shading_rate`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_shading_rate) == ", nimOffset121, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_shading_rate\");"].}
-const nimOffset122 = offsetOf(bgfx_interface_vtbl, `reset_view`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, reset_view) == ", nimOffset122, ", \"offset mismatch: bgfx_interface_vtbl_t.reset_view\");"].}
-const nimOffset123 = offsetOf(bgfx_interface_vtbl, `encoder_begin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_begin) == ", nimOffset123, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_begin\");"].}
-const nimOffset124 = offsetOf(bgfx_interface_vtbl, `encoder_end`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_end) == ", nimOffset124, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_end\");"].}
-const nimOffset125 = offsetOf(bgfx_interface_vtbl, `encoder_set_marker`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_marker) == ", nimOffset125, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_marker\");"].}
-const nimOffset126 = offsetOf(bgfx_interface_vtbl, `encoder_set_state`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_state) == ", nimOffset126, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_state\");"].}
-const nimOffset127 = offsetOf(bgfx_interface_vtbl, `encoder_set_condition`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_condition) == ", nimOffset127, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_condition\");"].}
-const nimOffset128 = offsetOf(bgfx_interface_vtbl, `encoder_set_stencil`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_stencil) == ", nimOffset128, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_stencil\");"].}
-const nimOffset129 = offsetOf(bgfx_interface_vtbl, `encoder_set_scissor`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_scissor) == ", nimOffset129, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_scissor\");"].}
-const nimOffset130 = offsetOf(bgfx_interface_vtbl, `encoder_set_scissor_cached`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_scissor_cached) == ", nimOffset130, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_scissor_cached\");"].}
-const nimOffset131 = offsetOf(bgfx_interface_vtbl, `encoder_set_transform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transform) == ", nimOffset131, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transform\");"].}
-const nimOffset132 = offsetOf(bgfx_interface_vtbl, `encoder_set_transform_cached`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transform_cached) == ", nimOffset132, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transform_cached\");"].}
-const nimOffset133 = offsetOf(bgfx_interface_vtbl, `encoder_alloc_transform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_alloc_transform) == ", nimOffset133, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_alloc_transform\");"].}
-const nimOffset134 = offsetOf(bgfx_interface_vtbl, `encoder_set_uniform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_uniform) == ", nimOffset134, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_uniform\");"].}
-const nimOffset135 = offsetOf(bgfx_interface_vtbl, `set_view_uniform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_uniform) == ", nimOffset135, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_uniform\");"].}
-const nimOffset136 = offsetOf(bgfx_interface_vtbl, `set_frame_uniform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_frame_uniform) == ", nimOffset136, ", \"offset mismatch: bgfx_interface_vtbl_t.set_frame_uniform\");"].}
-const nimOffset137 = offsetOf(bgfx_interface_vtbl, `encoder_set_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_index_buffer) == ", nimOffset137, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_index_buffer\");"].}
-const nimOffset138 = offsetOf(bgfx_interface_vtbl, `encoder_set_dynamic_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_dynamic_index_buffer) == ", nimOffset138, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_dynamic_index_buffer\");"].}
-const nimOffset139 = offsetOf(bgfx_interface_vtbl, `encoder_set_transient_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transient_index_buffer) == ", nimOffset139, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transient_index_buffer\");"].}
-const nimOffset140 = offsetOf(bgfx_interface_vtbl, `encoder_set_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_vertex_buffer) == ", nimOffset140, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_vertex_buffer\");"].}
-const nimOffset141 = offsetOf(bgfx_interface_vtbl, `encoder_set_vertex_buffer_with_layout`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_vertex_buffer_with_layout) == ", nimOffset141, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_vertex_buffer_with_layout\");"].}
-const nimOffset142 = offsetOf(bgfx_interface_vtbl, `encoder_set_dynamic_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_dynamic_vertex_buffer) == ", nimOffset142, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_dynamic_vertex_buffer\");"].}
-const nimOffset143 = offsetOf(bgfx_interface_vtbl, `encoder_set_dynamic_vertex_buffer_with_layout`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_dynamic_vertex_buffer_with_layout) == ", nimOffset143, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_dynamic_vertex_buffer_with_layout\");"].}
-const nimOffset144 = offsetOf(bgfx_interface_vtbl, `encoder_set_transient_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transient_vertex_buffer) == ", nimOffset144, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transient_vertex_buffer\");"].}
-const nimOffset145 = offsetOf(bgfx_interface_vtbl, `encoder_set_transient_vertex_buffer_with_layout`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transient_vertex_buffer_with_layout) == ", nimOffset145, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transient_vertex_buffer_with_layout\");"].}
-const nimOffset146 = offsetOf(bgfx_interface_vtbl, `encoder_set_vertex_count`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_vertex_count) == ", nimOffset146, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_vertex_count\");"].}
-const nimOffset147 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_data_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_data_buffer) == ", nimOffset147, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_data_buffer\");"].}
-const nimOffset148 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_data_from_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_data_from_vertex_buffer) == ", nimOffset148, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_data_from_vertex_buffer\");"].}
-const nimOffset149 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_data_from_dynamic_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_data_from_dynamic_vertex_buffer) == ", nimOffset149, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_data_from_dynamic_vertex_buffer\");"].}
-const nimOffset150 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_count`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_count) == ", nimOffset150, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_count\");"].}
-const nimOffset151 = offsetOf(bgfx_interface_vtbl, `encoder_set_texture`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_texture) == ", nimOffset151, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_texture\");"].}
-const nimOffset152 = offsetOf(bgfx_interface_vtbl, `encoder_set_texture_view`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_texture_view) == ", nimOffset152, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_texture_view\");"].}
-const nimOffset153 = offsetOf(bgfx_interface_vtbl, `encoder_touch`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_touch) == ", nimOffset153, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_touch\");"].}
-const nimOffset154 = offsetOf(bgfx_interface_vtbl, `encoder_submit`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit) == ", nimOffset154, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit\");"].}
-const nimOffset155 = offsetOf(bgfx_interface_vtbl, `encoder_submit_occlusion_query`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit_occlusion_query) == ", nimOffset155, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit_occlusion_query\");"].}
-const nimOffset156 = offsetOf(bgfx_interface_vtbl, `encoder_submit_indirect`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit_indirect) == ", nimOffset156, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit_indirect\");"].}
-const nimOffset157 = offsetOf(bgfx_interface_vtbl, `encoder_submit_indirect_count`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit_indirect_count) == ", nimOffset157, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit_indirect_count\");"].}
-const nimOffset158 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_index_buffer) == ", nimOffset158, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_index_buffer\");"].}
-const nimOffset159 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_vertex_buffer) == ", nimOffset159, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_vertex_buffer\");"].}
-const nimOffset160 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_dynamic_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_dynamic_index_buffer) == ", nimOffset160, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_dynamic_index_buffer\");"].}
-const nimOffset161 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_dynamic_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_dynamic_vertex_buffer) == ", nimOffset161, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_dynamic_vertex_buffer\");"].}
-const nimOffset162 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_indirect_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_indirect_buffer) == ", nimOffset162, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_indirect_buffer\");"].}
-const nimOffset163 = offsetOf(bgfx_interface_vtbl, `encoder_set_image`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_image) == ", nimOffset163, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_image\");"].}
-const nimOffset164 = offsetOf(bgfx_interface_vtbl, `encoder_set_image_view`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_image_view) == ", nimOffset164, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_image_view\");"].}
-const nimOffset165 = offsetOf(bgfx_interface_vtbl, `encoder_dispatch`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_dispatch) == ", nimOffset165, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_dispatch\");"].}
-const nimOffset166 = offsetOf(bgfx_interface_vtbl, `encoder_dispatch_indirect`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_dispatch_indirect) == ", nimOffset166, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_dispatch_indirect\");"].}
-const nimOffset167 = offsetOf(bgfx_interface_vtbl, `encoder_discard`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_discard) == ", nimOffset167, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_discard\");"].}
-const nimOffset168 = offsetOf(bgfx_interface_vtbl, `encoder_blit`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit) == ", nimOffset168, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit\");"].}
-const nimOffset169 = offsetOf(bgfx_interface_vtbl, `encoder_blit_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit_buffer) == ", nimOffset169, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit_buffer\");"].}
-const nimOffset170 = offsetOf(bgfx_interface_vtbl, `encoder_blit_to_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit_to_buffer) == ", nimOffset170, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit_to_buffer\");"].}
-const nimOffset171 = offsetOf(bgfx_interface_vtbl, `encoder_blit_from_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit_from_buffer) == ", nimOffset171, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit_from_buffer\");"].}
-const nimOffset172 = offsetOf(bgfx_interface_vtbl, `request_screen_shot`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, request_screen_shot) == ", nimOffset172, ", \"offset mismatch: bgfx_interface_vtbl_t.request_screen_shot\");"].}
-const nimOffset173 = offsetOf(bgfx_interface_vtbl, `render_frame`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, render_frame) == ", nimOffset173, ", \"offset mismatch: bgfx_interface_vtbl_t.render_frame\");"].}
-const nimOffset174 = offsetOf(bgfx_interface_vtbl, `get_internal_data`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, get_internal_data) == ", nimOffset174, ", \"offset mismatch: bgfx_interface_vtbl_t.get_internal_data\");"].}
-const nimOffset175 = offsetOf(bgfx_interface_vtbl, `set_marker`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_marker) == ", nimOffset175, ", \"offset mismatch: bgfx_interface_vtbl_t.set_marker\");"].}
-const nimOffset176 = offsetOf(bgfx_interface_vtbl, `set_state`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_state) == ", nimOffset176, ", \"offset mismatch: bgfx_interface_vtbl_t.set_state\");"].}
-const nimOffset177 = offsetOf(bgfx_interface_vtbl, `set_condition`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_condition) == ", nimOffset177, ", \"offset mismatch: bgfx_interface_vtbl_t.set_condition\");"].}
-const nimOffset178 = offsetOf(bgfx_interface_vtbl, `set_stencil`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_stencil) == ", nimOffset178, ", \"offset mismatch: bgfx_interface_vtbl_t.set_stencil\");"].}
-const nimOffset179 = offsetOf(bgfx_interface_vtbl, `set_scissor`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_scissor) == ", nimOffset179, ", \"offset mismatch: bgfx_interface_vtbl_t.set_scissor\");"].}
-const nimOffset180 = offsetOf(bgfx_interface_vtbl, `set_scissor_cached`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_scissor_cached) == ", nimOffset180, ", \"offset mismatch: bgfx_interface_vtbl_t.set_scissor_cached\");"].}
-const nimOffset181 = offsetOf(bgfx_interface_vtbl, `set_transform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transform) == ", nimOffset181, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transform\");"].}
-const nimOffset182 = offsetOf(bgfx_interface_vtbl, `set_transform_cached`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transform_cached) == ", nimOffset182, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transform_cached\");"].}
-const nimOffset183 = offsetOf(bgfx_interface_vtbl, `alloc_transform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, alloc_transform) == ", nimOffset183, ", \"offset mismatch: bgfx_interface_vtbl_t.alloc_transform\");"].}
-const nimOffset184 = offsetOf(bgfx_interface_vtbl, `set_uniform`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_uniform) == ", nimOffset184, ", \"offset mismatch: bgfx_interface_vtbl_t.set_uniform\");"].}
-const nimOffset185 = offsetOf(bgfx_interface_vtbl, `set_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_index_buffer) == ", nimOffset185, ", \"offset mismatch: bgfx_interface_vtbl_t.set_index_buffer\");"].}
-const nimOffset186 = offsetOf(bgfx_interface_vtbl, `set_dynamic_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_dynamic_index_buffer) == ", nimOffset186, ", \"offset mismatch: bgfx_interface_vtbl_t.set_dynamic_index_buffer\");"].}
-const nimOffset187 = offsetOf(bgfx_interface_vtbl, `set_transient_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transient_index_buffer) == ", nimOffset187, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transient_index_buffer\");"].}
-const nimOffset188 = offsetOf(bgfx_interface_vtbl, `set_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_vertex_buffer) == ", nimOffset188, ", \"offset mismatch: bgfx_interface_vtbl_t.set_vertex_buffer\");"].}
-const nimOffset189 = offsetOf(bgfx_interface_vtbl, `set_vertex_buffer_with_layout`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_vertex_buffer_with_layout) == ", nimOffset189, ", \"offset mismatch: bgfx_interface_vtbl_t.set_vertex_buffer_with_layout\");"].}
-const nimOffset190 = offsetOf(bgfx_interface_vtbl, `set_dynamic_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_dynamic_vertex_buffer) == ", nimOffset190, ", \"offset mismatch: bgfx_interface_vtbl_t.set_dynamic_vertex_buffer\");"].}
-const nimOffset191 = offsetOf(bgfx_interface_vtbl, `set_dynamic_vertex_buffer_with_layout`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_dynamic_vertex_buffer_with_layout) == ", nimOffset191, ", \"offset mismatch: bgfx_interface_vtbl_t.set_dynamic_vertex_buffer_with_layout\");"].}
-const nimOffset192 = offsetOf(bgfx_interface_vtbl, `set_transient_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transient_vertex_buffer) == ", nimOffset192, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transient_vertex_buffer\");"].}
-const nimOffset193 = offsetOf(bgfx_interface_vtbl, `set_transient_vertex_buffer_with_layout`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transient_vertex_buffer_with_layout) == ", nimOffset193, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transient_vertex_buffer_with_layout\");"].}
-const nimOffset194 = offsetOf(bgfx_interface_vtbl, `set_vertex_count`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_vertex_count) == ", nimOffset194, ", \"offset mismatch: bgfx_interface_vtbl_t.set_vertex_count\");"].}
-const nimOffset195 = offsetOf(bgfx_interface_vtbl, `set_instance_data_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_data_buffer) == ", nimOffset195, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_data_buffer\");"].}
-const nimOffset196 = offsetOf(bgfx_interface_vtbl, `set_instance_data_from_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_data_from_vertex_buffer) == ", nimOffset196, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_data_from_vertex_buffer\");"].}
-const nimOffset197 = offsetOf(bgfx_interface_vtbl, `set_instance_data_from_dynamic_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_data_from_dynamic_vertex_buffer) == ", nimOffset197, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_data_from_dynamic_vertex_buffer\");"].}
-const nimOffset198 = offsetOf(bgfx_interface_vtbl, `set_instance_count`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_count) == ", nimOffset198, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_count\");"].}
-const nimOffset199 = offsetOf(bgfx_interface_vtbl, `set_texture`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_texture) == ", nimOffset199, ", \"offset mismatch: bgfx_interface_vtbl_t.set_texture\");"].}
-const nimOffset200 = offsetOf(bgfx_interface_vtbl, `set_texture_view`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_texture_view) == ", nimOffset200, ", \"offset mismatch: bgfx_interface_vtbl_t.set_texture_view\");"].}
-const nimOffset201 = offsetOf(bgfx_interface_vtbl, `touch`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, touch) == ", nimOffset201, ", \"offset mismatch: bgfx_interface_vtbl_t.touch\");"].}
-const nimOffset202 = offsetOf(bgfx_interface_vtbl, `submit`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit) == ", nimOffset202, ", \"offset mismatch: bgfx_interface_vtbl_t.submit\");"].}
-const nimOffset203 = offsetOf(bgfx_interface_vtbl, `submit_occlusion_query`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit_occlusion_query) == ", nimOffset203, ", \"offset mismatch: bgfx_interface_vtbl_t.submit_occlusion_query\");"].}
-const nimOffset204 = offsetOf(bgfx_interface_vtbl, `submit_indirect`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit_indirect) == ", nimOffset204, ", \"offset mismatch: bgfx_interface_vtbl_t.submit_indirect\");"].}
-const nimOffset205 = offsetOf(bgfx_interface_vtbl, `submit_indirect_count`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit_indirect_count) == ", nimOffset205, ", \"offset mismatch: bgfx_interface_vtbl_t.submit_indirect_count\");"].}
-const nimOffset206 = offsetOf(bgfx_interface_vtbl, `set_compute_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_index_buffer) == ", nimOffset206, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_index_buffer\");"].}
-const nimOffset207 = offsetOf(bgfx_interface_vtbl, `set_compute_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_vertex_buffer) == ", nimOffset207, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_vertex_buffer\");"].}
-const nimOffset208 = offsetOf(bgfx_interface_vtbl, `set_compute_dynamic_index_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_dynamic_index_buffer) == ", nimOffset208, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_dynamic_index_buffer\");"].}
-const nimOffset209 = offsetOf(bgfx_interface_vtbl, `set_compute_dynamic_vertex_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_dynamic_vertex_buffer) == ", nimOffset209, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_dynamic_vertex_buffer\");"].}
-const nimOffset210 = offsetOf(bgfx_interface_vtbl, `set_compute_indirect_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_indirect_buffer) == ", nimOffset210, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_indirect_buffer\");"].}
-const nimOffset211 = offsetOf(bgfx_interface_vtbl, `set_image`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_image) == ", nimOffset211, ", \"offset mismatch: bgfx_interface_vtbl_t.set_image\");"].}
-const nimOffset212 = offsetOf(bgfx_interface_vtbl, `set_image_view`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_image_view) == ", nimOffset212, ", \"offset mismatch: bgfx_interface_vtbl_t.set_image_view\");"].}
-const nimOffset213 = offsetOf(bgfx_interface_vtbl, `dispatch`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, dispatch) == ", nimOffset213, ", \"offset mismatch: bgfx_interface_vtbl_t.dispatch\");"].}
-const nimOffset214 = offsetOf(bgfx_interface_vtbl, `dispatch_indirect`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, dispatch_indirect) == ", nimOffset214, ", \"offset mismatch: bgfx_interface_vtbl_t.dispatch_indirect\");"].}
-const nimOffset215 = offsetOf(bgfx_interface_vtbl, `discard`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, discard) == ", nimOffset215, ", \"offset mismatch: bgfx_interface_vtbl_t.discard\");"].}
-const nimOffset216 = offsetOf(bgfx_interface_vtbl, `blit`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit) == ", nimOffset216, ", \"offset mismatch: bgfx_interface_vtbl_t.blit\");"].}
-const nimOffset217 = offsetOf(bgfx_interface_vtbl, `blit_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit_buffer) == ", nimOffset217, ", \"offset mismatch: bgfx_interface_vtbl_t.blit_buffer\");"].}
-const nimOffset218 = offsetOf(bgfx_interface_vtbl, `blit_to_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit_to_buffer) == ", nimOffset218, ", \"offset mismatch: bgfx_interface_vtbl_t.blit_to_buffer\");"].}
-const nimOffset219 = offsetOf(bgfx_interface_vtbl, `blit_from_buffer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit_from_buffer) == ", nimOffset219, ", \"offset mismatch: bgfx_interface_vtbl_t.blit_from_buffer\");"].}
+const nimOffset115 = offsetOf(bgfx_interface_vtbl, `set_view_depth_bias`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_depth_bias) == ", nimOffset115, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_depth_bias\");"].}
+const nimOffset116 = offsetOf(bgfx_interface_vtbl, `set_view_sample_mask`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_sample_mask) == ", nimOffset116, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_sample_mask\");"].}
+const nimOffset117 = offsetOf(bgfx_interface_vtbl, `set_view_clear`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_clear) == ", nimOffset117, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_clear\");"].}
+const nimOffset118 = offsetOf(bgfx_interface_vtbl, `set_view_clear_mrt`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_clear_mrt) == ", nimOffset118, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_clear_mrt\");"].}
+const nimOffset119 = offsetOf(bgfx_interface_vtbl, `set_view_mode`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_mode) == ", nimOffset119, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_mode\");"].}
+const nimOffset120 = offsetOf(bgfx_interface_vtbl, `set_view_frame_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_frame_buffer) == ", nimOffset120, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_frame_buffer\");"].}
+const nimOffset121 = offsetOf(bgfx_interface_vtbl, `set_view_transform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_transform) == ", nimOffset121, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_transform\");"].}
+const nimOffset122 = offsetOf(bgfx_interface_vtbl, `set_view_order`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_order) == ", nimOffset122, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_order\");"].}
+const nimOffset123 = offsetOf(bgfx_interface_vtbl, `set_view_shading_rate`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_shading_rate) == ", nimOffset123, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_shading_rate\");"].}
+const nimOffset124 = offsetOf(bgfx_interface_vtbl, `reset_view`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, reset_view) == ", nimOffset124, ", \"offset mismatch: bgfx_interface_vtbl_t.reset_view\");"].}
+const nimOffset125 = offsetOf(bgfx_interface_vtbl, `encoder_begin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_begin) == ", nimOffset125, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_begin\");"].}
+const nimOffset126 = offsetOf(bgfx_interface_vtbl, `encoder_end`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_end) == ", nimOffset126, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_end\");"].}
+const nimOffset127 = offsetOf(bgfx_interface_vtbl, `encoder_set_marker`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_marker) == ", nimOffset127, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_marker\");"].}
+const nimOffset128 = offsetOf(bgfx_interface_vtbl, `encoder_set_state`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_state) == ", nimOffset128, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_state\");"].}
+const nimOffset129 = offsetOf(bgfx_interface_vtbl, `encoder_set_condition`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_condition) == ", nimOffset129, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_condition\");"].}
+const nimOffset130 = offsetOf(bgfx_interface_vtbl, `encoder_set_stencil`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_stencil) == ", nimOffset130, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_stencil\");"].}
+const nimOffset131 = offsetOf(bgfx_interface_vtbl, `encoder_set_sample_mask`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_sample_mask) == ", nimOffset131, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_sample_mask\");"].}
+const nimOffset132 = offsetOf(bgfx_interface_vtbl, `encoder_set_scissor`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_scissor) == ", nimOffset132, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_scissor\");"].}
+const nimOffset133 = offsetOf(bgfx_interface_vtbl, `encoder_set_scissor_cached`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_scissor_cached) == ", nimOffset133, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_scissor_cached\");"].}
+const nimOffset134 = offsetOf(bgfx_interface_vtbl, `encoder_set_depth_control`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_depth_control) == ", nimOffset134, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_depth_control\");"].}
+const nimOffset135 = offsetOf(bgfx_interface_vtbl, `encoder_set_depth_control_cached`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_depth_control_cached) == ", nimOffset135, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_depth_control_cached\");"].}
+const nimOffset136 = offsetOf(bgfx_interface_vtbl, `encoder_set_transform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transform) == ", nimOffset136, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transform\");"].}
+const nimOffset137 = offsetOf(bgfx_interface_vtbl, `encoder_set_transform_cached`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transform_cached) == ", nimOffset137, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transform_cached\");"].}
+const nimOffset138 = offsetOf(bgfx_interface_vtbl, `encoder_alloc_transform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_alloc_transform) == ", nimOffset138, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_alloc_transform\");"].}
+const nimOffset139 = offsetOf(bgfx_interface_vtbl, `encoder_set_uniform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_uniform) == ", nimOffset139, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_uniform\");"].}
+const nimOffset140 = offsetOf(bgfx_interface_vtbl, `encoder_set_uniform_ref`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_uniform_ref) == ", nimOffset140, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_uniform_ref\");"].}
+const nimOffset141 = offsetOf(bgfx_interface_vtbl, `set_view_uniform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_view_uniform) == ", nimOffset141, ", \"offset mismatch: bgfx_interface_vtbl_t.set_view_uniform\");"].}
+const nimOffset142 = offsetOf(bgfx_interface_vtbl, `set_frame_uniform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_frame_uniform) == ", nimOffset142, ", \"offset mismatch: bgfx_interface_vtbl_t.set_frame_uniform\");"].}
+const nimOffset143 = offsetOf(bgfx_interface_vtbl, `encoder_set_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_index_buffer) == ", nimOffset143, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_index_buffer\");"].}
+const nimOffset144 = offsetOf(bgfx_interface_vtbl, `encoder_set_dynamic_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_dynamic_index_buffer) == ", nimOffset144, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_dynamic_index_buffer\");"].}
+const nimOffset145 = offsetOf(bgfx_interface_vtbl, `encoder_set_transient_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transient_index_buffer) == ", nimOffset145, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transient_index_buffer\");"].}
+const nimOffset146 = offsetOf(bgfx_interface_vtbl, `encoder_set_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_vertex_buffer) == ", nimOffset146, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_vertex_buffer\");"].}
+const nimOffset147 = offsetOf(bgfx_interface_vtbl, `encoder_set_vertex_buffer_with_layout`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_vertex_buffer_with_layout) == ", nimOffset147, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_vertex_buffer_with_layout\");"].}
+const nimOffset148 = offsetOf(bgfx_interface_vtbl, `encoder_set_dynamic_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_dynamic_vertex_buffer) == ", nimOffset148, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_dynamic_vertex_buffer\");"].}
+const nimOffset149 = offsetOf(bgfx_interface_vtbl, `encoder_set_dynamic_vertex_buffer_with_layout`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_dynamic_vertex_buffer_with_layout) == ", nimOffset149, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_dynamic_vertex_buffer_with_layout\");"].}
+const nimOffset150 = offsetOf(bgfx_interface_vtbl, `encoder_set_transient_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transient_vertex_buffer) == ", nimOffset150, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transient_vertex_buffer\");"].}
+const nimOffset151 = offsetOf(bgfx_interface_vtbl, `encoder_set_transient_vertex_buffer_with_layout`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_transient_vertex_buffer_with_layout) == ", nimOffset151, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_transient_vertex_buffer_with_layout\");"].}
+const nimOffset152 = offsetOf(bgfx_interface_vtbl, `encoder_set_vertex_count`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_vertex_count) == ", nimOffset152, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_vertex_count\");"].}
+const nimOffset153 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_data_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_data_buffer) == ", nimOffset153, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_data_buffer\");"].}
+const nimOffset154 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_data_from_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_data_from_vertex_buffer) == ", nimOffset154, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_data_from_vertex_buffer\");"].}
+const nimOffset155 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_data_from_dynamic_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_data_from_dynamic_vertex_buffer) == ", nimOffset155, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_data_from_dynamic_vertex_buffer\");"].}
+const nimOffset156 = offsetOf(bgfx_interface_vtbl, `encoder_set_instance_count`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_instance_count) == ", nimOffset156, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_instance_count\");"].}
+const nimOffset157 = offsetOf(bgfx_interface_vtbl, `encoder_set_texture`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_texture) == ", nimOffset157, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_texture\");"].}
+const nimOffset158 = offsetOf(bgfx_interface_vtbl, `encoder_set_texture_view`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_texture_view) == ", nimOffset158, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_texture_view\");"].}
+const nimOffset159 = offsetOf(bgfx_interface_vtbl, `encoder_touch`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_touch) == ", nimOffset159, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_touch\");"].}
+const nimOffset160 = offsetOf(bgfx_interface_vtbl, `encoder_submit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit) == ", nimOffset160, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit\");"].}
+const nimOffset161 = offsetOf(bgfx_interface_vtbl, `encoder_submit_occlusion_query`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit_occlusion_query) == ", nimOffset161, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit_occlusion_query\");"].}
+const nimOffset162 = offsetOf(bgfx_interface_vtbl, `encoder_submit_indirect`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit_indirect) == ", nimOffset162, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit_indirect\");"].}
+const nimOffset163 = offsetOf(bgfx_interface_vtbl, `encoder_submit_indirect_count`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_submit_indirect_count) == ", nimOffset163, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_submit_indirect_count\");"].}
+const nimOffset164 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_index_buffer) == ", nimOffset164, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_index_buffer\");"].}
+const nimOffset165 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_vertex_buffer) == ", nimOffset165, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_vertex_buffer\");"].}
+const nimOffset166 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_dynamic_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_dynamic_index_buffer) == ", nimOffset166, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_dynamic_index_buffer\");"].}
+const nimOffset167 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_dynamic_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_dynamic_vertex_buffer) == ", nimOffset167, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_dynamic_vertex_buffer\");"].}
+const nimOffset168 = offsetOf(bgfx_interface_vtbl, `encoder_set_compute_indirect_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_compute_indirect_buffer) == ", nimOffset168, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_compute_indirect_buffer\");"].}
+const nimOffset169 = offsetOf(bgfx_interface_vtbl, `encoder_set_image`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_image) == ", nimOffset169, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_image\");"].}
+const nimOffset170 = offsetOf(bgfx_interface_vtbl, `encoder_set_image_view`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_set_image_view) == ", nimOffset170, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_set_image_view\");"].}
+const nimOffset171 = offsetOf(bgfx_interface_vtbl, `encoder_dispatch`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_dispatch) == ", nimOffset171, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_dispatch\");"].}
+const nimOffset172 = offsetOf(bgfx_interface_vtbl, `encoder_dispatch_indirect`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_dispatch_indirect) == ", nimOffset172, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_dispatch_indirect\");"].}
+const nimOffset173 = offsetOf(bgfx_interface_vtbl, `encoder_discard`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_discard) == ", nimOffset173, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_discard\");"].}
+const nimOffset174 = offsetOf(bgfx_interface_vtbl, `encoder_blit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit) == ", nimOffset174, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit\");"].}
+const nimOffset175 = offsetOf(bgfx_interface_vtbl, `encoder_blit_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit_buffer) == ", nimOffset175, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit_buffer\");"].}
+const nimOffset176 = offsetOf(bgfx_interface_vtbl, `encoder_blit_to_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit_to_buffer) == ", nimOffset176, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit_to_buffer\");"].}
+const nimOffset177 = offsetOf(bgfx_interface_vtbl, `encoder_blit_from_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, encoder_blit_from_buffer) == ", nimOffset177, ", \"offset mismatch: bgfx_interface_vtbl_t.encoder_blit_from_buffer\");"].}
+const nimOffset178 = offsetOf(bgfx_interface_vtbl, `request_screen_shot`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, request_screen_shot) == ", nimOffset178, ", \"offset mismatch: bgfx_interface_vtbl_t.request_screen_shot\");"].}
+const nimOffset179 = offsetOf(bgfx_interface_vtbl, `render_frame`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, render_frame) == ", nimOffset179, ", \"offset mismatch: bgfx_interface_vtbl_t.render_frame\");"].}
+const nimOffset180 = offsetOf(bgfx_interface_vtbl, `get_internal_data`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, get_internal_data) == ", nimOffset180, ", \"offset mismatch: bgfx_interface_vtbl_t.get_internal_data\");"].}
+const nimOffset181 = offsetOf(bgfx_interface_vtbl, `set_marker`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_marker) == ", nimOffset181, ", \"offset mismatch: bgfx_interface_vtbl_t.set_marker\");"].}
+const nimOffset182 = offsetOf(bgfx_interface_vtbl, `set_state`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_state) == ", nimOffset182, ", \"offset mismatch: bgfx_interface_vtbl_t.set_state\");"].}
+const nimOffset183 = offsetOf(bgfx_interface_vtbl, `set_condition`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_condition) == ", nimOffset183, ", \"offset mismatch: bgfx_interface_vtbl_t.set_condition\");"].}
+const nimOffset184 = offsetOf(bgfx_interface_vtbl, `set_stencil`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_stencil) == ", nimOffset184, ", \"offset mismatch: bgfx_interface_vtbl_t.set_stencil\");"].}
+const nimOffset185 = offsetOf(bgfx_interface_vtbl, `set_sample_mask`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_sample_mask) == ", nimOffset185, ", \"offset mismatch: bgfx_interface_vtbl_t.set_sample_mask\");"].}
+const nimOffset186 = offsetOf(bgfx_interface_vtbl, `set_scissor`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_scissor) == ", nimOffset186, ", \"offset mismatch: bgfx_interface_vtbl_t.set_scissor\");"].}
+const nimOffset187 = offsetOf(bgfx_interface_vtbl, `set_scissor_cached`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_scissor_cached) == ", nimOffset187, ", \"offset mismatch: bgfx_interface_vtbl_t.set_scissor_cached\");"].}
+const nimOffset188 = offsetOf(bgfx_interface_vtbl, `set_depth_control`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_depth_control) == ", nimOffset188, ", \"offset mismatch: bgfx_interface_vtbl_t.set_depth_control\");"].}
+const nimOffset189 = offsetOf(bgfx_interface_vtbl, `set_depth_control_cached`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_depth_control_cached) == ", nimOffset189, ", \"offset mismatch: bgfx_interface_vtbl_t.set_depth_control_cached\");"].}
+const nimOffset190 = offsetOf(bgfx_interface_vtbl, `set_transform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transform) == ", nimOffset190, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transform\");"].}
+const nimOffset191 = offsetOf(bgfx_interface_vtbl, `set_transform_cached`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transform_cached) == ", nimOffset191, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transform_cached\");"].}
+const nimOffset192 = offsetOf(bgfx_interface_vtbl, `alloc_transform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, alloc_transform) == ", nimOffset192, ", \"offset mismatch: bgfx_interface_vtbl_t.alloc_transform\");"].}
+const nimOffset193 = offsetOf(bgfx_interface_vtbl, `set_uniform`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_uniform) == ", nimOffset193, ", \"offset mismatch: bgfx_interface_vtbl_t.set_uniform\");"].}
+const nimOffset194 = offsetOf(bgfx_interface_vtbl, `set_uniform_ref`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_uniform_ref) == ", nimOffset194, ", \"offset mismatch: bgfx_interface_vtbl_t.set_uniform_ref\");"].}
+const nimOffset195 = offsetOf(bgfx_interface_vtbl, `set_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_index_buffer) == ", nimOffset195, ", \"offset mismatch: bgfx_interface_vtbl_t.set_index_buffer\");"].}
+const nimOffset196 = offsetOf(bgfx_interface_vtbl, `set_dynamic_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_dynamic_index_buffer) == ", nimOffset196, ", \"offset mismatch: bgfx_interface_vtbl_t.set_dynamic_index_buffer\");"].}
+const nimOffset197 = offsetOf(bgfx_interface_vtbl, `set_transient_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transient_index_buffer) == ", nimOffset197, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transient_index_buffer\");"].}
+const nimOffset198 = offsetOf(bgfx_interface_vtbl, `set_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_vertex_buffer) == ", nimOffset198, ", \"offset mismatch: bgfx_interface_vtbl_t.set_vertex_buffer\");"].}
+const nimOffset199 = offsetOf(bgfx_interface_vtbl, `set_vertex_buffer_with_layout`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_vertex_buffer_with_layout) == ", nimOffset199, ", \"offset mismatch: bgfx_interface_vtbl_t.set_vertex_buffer_with_layout\");"].}
+const nimOffset200 = offsetOf(bgfx_interface_vtbl, `set_dynamic_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_dynamic_vertex_buffer) == ", nimOffset200, ", \"offset mismatch: bgfx_interface_vtbl_t.set_dynamic_vertex_buffer\");"].}
+const nimOffset201 = offsetOf(bgfx_interface_vtbl, `set_dynamic_vertex_buffer_with_layout`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_dynamic_vertex_buffer_with_layout) == ", nimOffset201, ", \"offset mismatch: bgfx_interface_vtbl_t.set_dynamic_vertex_buffer_with_layout\");"].}
+const nimOffset202 = offsetOf(bgfx_interface_vtbl, `set_transient_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transient_vertex_buffer) == ", nimOffset202, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transient_vertex_buffer\");"].}
+const nimOffset203 = offsetOf(bgfx_interface_vtbl, `set_transient_vertex_buffer_with_layout`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_transient_vertex_buffer_with_layout) == ", nimOffset203, ", \"offset mismatch: bgfx_interface_vtbl_t.set_transient_vertex_buffer_with_layout\");"].}
+const nimOffset204 = offsetOf(bgfx_interface_vtbl, `set_vertex_count`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_vertex_count) == ", nimOffset204, ", \"offset mismatch: bgfx_interface_vtbl_t.set_vertex_count\");"].}
+const nimOffset205 = offsetOf(bgfx_interface_vtbl, `set_instance_data_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_data_buffer) == ", nimOffset205, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_data_buffer\");"].}
+const nimOffset206 = offsetOf(bgfx_interface_vtbl, `set_instance_data_from_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_data_from_vertex_buffer) == ", nimOffset206, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_data_from_vertex_buffer\");"].}
+const nimOffset207 = offsetOf(bgfx_interface_vtbl, `set_instance_data_from_dynamic_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_data_from_dynamic_vertex_buffer) == ", nimOffset207, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_data_from_dynamic_vertex_buffer\");"].}
+const nimOffset208 = offsetOf(bgfx_interface_vtbl, `set_instance_count`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_instance_count) == ", nimOffset208, ", \"offset mismatch: bgfx_interface_vtbl_t.set_instance_count\");"].}
+const nimOffset209 = offsetOf(bgfx_interface_vtbl, `set_texture`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_texture) == ", nimOffset209, ", \"offset mismatch: bgfx_interface_vtbl_t.set_texture\");"].}
+const nimOffset210 = offsetOf(bgfx_interface_vtbl, `set_texture_view`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_texture_view) == ", nimOffset210, ", \"offset mismatch: bgfx_interface_vtbl_t.set_texture_view\");"].}
+const nimOffset211 = offsetOf(bgfx_interface_vtbl, `touch`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, touch) == ", nimOffset211, ", \"offset mismatch: bgfx_interface_vtbl_t.touch\");"].}
+const nimOffset212 = offsetOf(bgfx_interface_vtbl, `submit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit) == ", nimOffset212, ", \"offset mismatch: bgfx_interface_vtbl_t.submit\");"].}
+const nimOffset213 = offsetOf(bgfx_interface_vtbl, `submit_occlusion_query`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit_occlusion_query) == ", nimOffset213, ", \"offset mismatch: bgfx_interface_vtbl_t.submit_occlusion_query\");"].}
+const nimOffset214 = offsetOf(bgfx_interface_vtbl, `submit_indirect`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit_indirect) == ", nimOffset214, ", \"offset mismatch: bgfx_interface_vtbl_t.submit_indirect\");"].}
+const nimOffset215 = offsetOf(bgfx_interface_vtbl, `submit_indirect_count`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, submit_indirect_count) == ", nimOffset215, ", \"offset mismatch: bgfx_interface_vtbl_t.submit_indirect_count\");"].}
+const nimOffset216 = offsetOf(bgfx_interface_vtbl, `set_compute_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_index_buffer) == ", nimOffset216, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_index_buffer\");"].}
+const nimOffset217 = offsetOf(bgfx_interface_vtbl, `set_compute_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_vertex_buffer) == ", nimOffset217, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_vertex_buffer\");"].}
+const nimOffset218 = offsetOf(bgfx_interface_vtbl, `set_compute_dynamic_index_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_dynamic_index_buffer) == ", nimOffset218, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_dynamic_index_buffer\");"].}
+const nimOffset219 = offsetOf(bgfx_interface_vtbl, `set_compute_dynamic_vertex_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_dynamic_vertex_buffer) == ", nimOffset219, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_dynamic_vertex_buffer\");"].}
+const nimOffset220 = offsetOf(bgfx_interface_vtbl, `set_compute_indirect_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_compute_indirect_buffer) == ", nimOffset220, ", \"offset mismatch: bgfx_interface_vtbl_t.set_compute_indirect_buffer\");"].}
+const nimOffset221 = offsetOf(bgfx_interface_vtbl, `set_image`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_image) == ", nimOffset221, ", \"offset mismatch: bgfx_interface_vtbl_t.set_image\");"].}
+const nimOffset222 = offsetOf(bgfx_interface_vtbl, `set_image_view`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, set_image_view) == ", nimOffset222, ", \"offset mismatch: bgfx_interface_vtbl_t.set_image_view\");"].}
+const nimOffset223 = offsetOf(bgfx_interface_vtbl, `dispatch`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, dispatch) == ", nimOffset223, ", \"offset mismatch: bgfx_interface_vtbl_t.dispatch\");"].}
+const nimOffset224 = offsetOf(bgfx_interface_vtbl, `dispatch_indirect`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, dispatch_indirect) == ", nimOffset224, ", \"offset mismatch: bgfx_interface_vtbl_t.dispatch_indirect\");"].}
+const nimOffset225 = offsetOf(bgfx_interface_vtbl, `discard`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, discard) == ", nimOffset225, ", \"offset mismatch: bgfx_interface_vtbl_t.discard\");"].}
+const nimOffset226 = offsetOf(bgfx_interface_vtbl, `blit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit) == ", nimOffset226, ", \"offset mismatch: bgfx_interface_vtbl_t.blit\");"].}
+const nimOffset227 = offsetOf(bgfx_interface_vtbl, `blit_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit_buffer) == ", nimOffset227, ", \"offset mismatch: bgfx_interface_vtbl_t.blit_buffer\");"].}
+const nimOffset228 = offsetOf(bgfx_interface_vtbl, `blit_to_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit_to_buffer) == ", nimOffset228, ", \"offset mismatch: bgfx_interface_vtbl_t.blit_to_buffer\");"].}
+const nimOffset229 = offsetOf(bgfx_interface_vtbl, `blit_from_buffer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_interface_vtbl_t, blit_from_buffer) == ", nimOffset229, ", \"offset mismatch: bgfx_interface_vtbl_t.blit_from_buffer\");"].}
 
-const nimSize220 = sizeof(bgfx_callback_interface_s)
-const nimAlign220 = alignof(bgfx_callback_interface_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_callback_interface_t) == ", nimSize220, ", \"size mismatch: bgfx_callback_interface_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_callback_interface_t) == ", nimAlign220, ", \"alignment mismatch: bgfx_callback_interface_t\");"].}
-const nimOffset221 = offsetOf(bgfx_callback_interface_s, `vtbl`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_interface_t, vtbl) == ", nimOffset221, ", \"offset mismatch: bgfx_callback_interface_t.vtbl\");"].}
+const nimSize230 = sizeof(bgfx_callback_interface_s)
+const nimAlign230 = alignof(bgfx_callback_interface_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_callback_interface_t) == ", nimSize230, ", \"size mismatch: bgfx_callback_interface_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_callback_interface_t) == ", nimAlign230, ", \"alignment mismatch: bgfx_callback_interface_t\");"].}
+const nimOffset231 = offsetOf(bgfx_callback_interface_s, `vtbl`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_interface_t, vtbl) == ", nimOffset231, ", \"offset mismatch: bgfx_callback_interface_t.vtbl\");"].}
 
-const nimSize222 = sizeof(bgfx_callback_vtbl_s)
-const nimAlign222 = alignof(bgfx_callback_vtbl_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_callback_vtbl_t) == ", nimSize222, ", \"size mismatch: bgfx_callback_vtbl_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_callback_vtbl_t) == ", nimAlign222, ", \"alignment mismatch: bgfx_callback_vtbl_t\");"].}
-const nimOffset223 = offsetOf(bgfx_callback_vtbl_s, `fatal`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, fatal) == ", nimOffset223, ", \"offset mismatch: bgfx_callback_vtbl_t.fatal\");"].}
-const nimOffset224 = offsetOf(bgfx_callback_vtbl_s, `trace_vargs`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, trace_vargs) == ", nimOffset224, ", \"offset mismatch: bgfx_callback_vtbl_t.trace_vargs\");"].}
-const nimOffset225 = offsetOf(bgfx_callback_vtbl_s, `profiler_begin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, profiler_begin) == ", nimOffset225, ", \"offset mismatch: bgfx_callback_vtbl_t.profiler_begin\");"].}
-const nimOffset226 = offsetOf(bgfx_callback_vtbl_s, `profiler_begin_literal`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, profiler_begin_literal) == ", nimOffset226, ", \"offset mismatch: bgfx_callback_vtbl_t.profiler_begin_literal\");"].}
-const nimOffset227 = offsetOf(bgfx_callback_vtbl_s, `profiler_end`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, profiler_end) == ", nimOffset227, ", \"offset mismatch: bgfx_callback_vtbl_t.profiler_end\");"].}
-const nimOffset228 = offsetOf(bgfx_callback_vtbl_s, `cache_read_size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, cache_read_size) == ", nimOffset228, ", \"offset mismatch: bgfx_callback_vtbl_t.cache_read_size\");"].}
-const nimOffset229 = offsetOf(bgfx_callback_vtbl_s, `cache_read`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, cache_read) == ", nimOffset229, ", \"offset mismatch: bgfx_callback_vtbl_t.cache_read\");"].}
-const nimOffset230 = offsetOf(bgfx_callback_vtbl_s, `cache_write`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, cache_write) == ", nimOffset230, ", \"offset mismatch: bgfx_callback_vtbl_t.cache_write\");"].}
-const nimOffset231 = offsetOf(bgfx_callback_vtbl_s, `screen_shot`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, screen_shot) == ", nimOffset231, ", \"offset mismatch: bgfx_callback_vtbl_t.screen_shot\");"].}
-const nimOffset232 = offsetOf(bgfx_callback_vtbl_s, `capture_begin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, capture_begin) == ", nimOffset232, ", \"offset mismatch: bgfx_callback_vtbl_t.capture_begin\");"].}
-const nimOffset233 = offsetOf(bgfx_callback_vtbl_s, `capture_end`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, capture_end) == ", nimOffset233, ", \"offset mismatch: bgfx_callback_vtbl_t.capture_end\");"].}
-const nimOffset234 = offsetOf(bgfx_callback_vtbl_s, `capture_frame`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, capture_frame) == ", nimOffset234, ", \"offset mismatch: bgfx_callback_vtbl_t.capture_frame\");"].}
+const nimSize232 = sizeof(bgfx_callback_vtbl_s)
+const nimAlign232 = alignof(bgfx_callback_vtbl_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_callback_vtbl_t) == ", nimSize232, ", \"size mismatch: bgfx_callback_vtbl_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_callback_vtbl_t) == ", nimAlign232, ", \"alignment mismatch: bgfx_callback_vtbl_t\");"].}
+const nimOffset233 = offsetOf(bgfx_callback_vtbl_s, `fatal`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, fatal) == ", nimOffset233, ", \"offset mismatch: bgfx_callback_vtbl_t.fatal\");"].}
+const nimOffset234 = offsetOf(bgfx_callback_vtbl_s, `trace_vargs`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, trace_vargs) == ", nimOffset234, ", \"offset mismatch: bgfx_callback_vtbl_t.trace_vargs\");"].}
+const nimOffset235 = offsetOf(bgfx_callback_vtbl_s, `profiler_begin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, profiler_begin) == ", nimOffset235, ", \"offset mismatch: bgfx_callback_vtbl_t.profiler_begin\");"].}
+const nimOffset236 = offsetOf(bgfx_callback_vtbl_s, `profiler_begin_literal`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, profiler_begin_literal) == ", nimOffset236, ", \"offset mismatch: bgfx_callback_vtbl_t.profiler_begin_literal\");"].}
+const nimOffset237 = offsetOf(bgfx_callback_vtbl_s, `profiler_end`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, profiler_end) == ", nimOffset237, ", \"offset mismatch: bgfx_callback_vtbl_t.profiler_end\");"].}
+const nimOffset238 = offsetOf(bgfx_callback_vtbl_s, `cache_read_size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, cache_read_size) == ", nimOffset238, ", \"offset mismatch: bgfx_callback_vtbl_t.cache_read_size\");"].}
+const nimOffset239 = offsetOf(bgfx_callback_vtbl_s, `cache_read`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, cache_read) == ", nimOffset239, ", \"offset mismatch: bgfx_callback_vtbl_t.cache_read\");"].}
+const nimOffset240 = offsetOf(bgfx_callback_vtbl_s, `cache_write`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, cache_write) == ", nimOffset240, ", \"offset mismatch: bgfx_callback_vtbl_t.cache_write\");"].}
+const nimOffset241 = offsetOf(bgfx_callback_vtbl_s, `screen_shot`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, screen_shot) == ", nimOffset241, ", \"offset mismatch: bgfx_callback_vtbl_t.screen_shot\");"].}
+const nimOffset242 = offsetOf(bgfx_callback_vtbl_s, `capture_begin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, capture_begin) == ", nimOffset242, ", \"offset mismatch: bgfx_callback_vtbl_t.capture_begin\");"].}
+const nimOffset243 = offsetOf(bgfx_callback_vtbl_s, `capture_end`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, capture_end) == ", nimOffset243, ", \"offset mismatch: bgfx_callback_vtbl_t.capture_end\");"].}
+const nimOffset244 = offsetOf(bgfx_callback_vtbl_s, `capture_frame`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_callback_vtbl_t, capture_frame) == ", nimOffset244, ", \"offset mismatch: bgfx_callback_vtbl_t.capture_frame\");"].}
 
-const nimSize235 = sizeof(bgfx_dynamic_index_buffer_handle_s)
-const nimAlign235 = alignof(bgfx_dynamic_index_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_dynamic_index_buffer_handle_t) == ", nimSize235, ", \"size mismatch: bgfx_dynamic_index_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_dynamic_index_buffer_handle_t) == ", nimAlign235, ", \"alignment mismatch: bgfx_dynamic_index_buffer_handle_t\");"].}
-const nimOffset236 = offsetOf(bgfx_dynamic_index_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_dynamic_index_buffer_handle_t, idx) == ", nimOffset236, ", \"offset mismatch: bgfx_dynamic_index_buffer_handle_t.idx\");"].}
+const nimSize245 = sizeof(bgfx_dynamic_index_buffer_handle_s)
+const nimAlign245 = alignof(bgfx_dynamic_index_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_dynamic_index_buffer_handle_t) == ", nimSize245, ", \"size mismatch: bgfx_dynamic_index_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_dynamic_index_buffer_handle_t) == ", nimAlign245, ", \"alignment mismatch: bgfx_dynamic_index_buffer_handle_t\");"].}
+const nimOffset246 = offsetOf(bgfx_dynamic_index_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_dynamic_index_buffer_handle_t, idx) == ", nimOffset246, ", \"offset mismatch: bgfx_dynamic_index_buffer_handle_t.idx\");"].}
 
-const nimSize237 = sizeof(bgfx_dynamic_vertex_buffer_handle_s)
-const nimAlign237 = alignof(bgfx_dynamic_vertex_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_dynamic_vertex_buffer_handle_t) == ", nimSize237, ", \"size mismatch: bgfx_dynamic_vertex_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_dynamic_vertex_buffer_handle_t) == ", nimAlign237, ", \"alignment mismatch: bgfx_dynamic_vertex_buffer_handle_t\");"].}
-const nimOffset238 = offsetOf(bgfx_dynamic_vertex_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_dynamic_vertex_buffer_handle_t, idx) == ", nimOffset238, ", \"offset mismatch: bgfx_dynamic_vertex_buffer_handle_t.idx\");"].}
+const nimSize247 = sizeof(bgfx_dynamic_vertex_buffer_handle_s)
+const nimAlign247 = alignof(bgfx_dynamic_vertex_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_dynamic_vertex_buffer_handle_t) == ", nimSize247, ", \"size mismatch: bgfx_dynamic_vertex_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_dynamic_vertex_buffer_handle_t) == ", nimAlign247, ", \"alignment mismatch: bgfx_dynamic_vertex_buffer_handle_t\");"].}
+const nimOffset248 = offsetOf(bgfx_dynamic_vertex_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_dynamic_vertex_buffer_handle_t, idx) == ", nimOffset248, ", \"offset mismatch: bgfx_dynamic_vertex_buffer_handle_t.idx\");"].}
 
-const nimSize239 = sizeof(bgfx_frame_buffer_handle_s)
-const nimAlign239 = alignof(bgfx_frame_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_frame_buffer_handle_t) == ", nimSize239, ", \"size mismatch: bgfx_frame_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_frame_buffer_handle_t) == ", nimAlign239, ", \"alignment mismatch: bgfx_frame_buffer_handle_t\");"].}
-const nimOffset240 = offsetOf(bgfx_frame_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_frame_buffer_handle_t, idx) == ", nimOffset240, ", \"offset mismatch: bgfx_frame_buffer_handle_t.idx\");"].}
+const nimSize249 = sizeof(bgfx_frame_buffer_handle_s)
+const nimAlign249 = alignof(bgfx_frame_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_frame_buffer_handle_t) == ", nimSize249, ", \"size mismatch: bgfx_frame_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_frame_buffer_handle_t) == ", nimAlign249, ", \"alignment mismatch: bgfx_frame_buffer_handle_t\");"].}
+const nimOffset250 = offsetOf(bgfx_frame_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_frame_buffer_handle_t, idx) == ", nimOffset250, ", \"offset mismatch: bgfx_frame_buffer_handle_t.idx\");"].}
 
-const nimSize241 = sizeof(bgfx_index_buffer_handle_s)
-const nimAlign241 = alignof(bgfx_index_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_index_buffer_handle_t) == ", nimSize241, ", \"size mismatch: bgfx_index_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_index_buffer_handle_t) == ", nimAlign241, ", \"alignment mismatch: bgfx_index_buffer_handle_t\");"].}
-const nimOffset242 = offsetOf(bgfx_index_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_index_buffer_handle_t, idx) == ", nimOffset242, ", \"offset mismatch: bgfx_index_buffer_handle_t.idx\");"].}
+const nimSize251 = sizeof(bgfx_index_buffer_handle_s)
+const nimAlign251 = alignof(bgfx_index_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_index_buffer_handle_t) == ", nimSize251, ", \"size mismatch: bgfx_index_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_index_buffer_handle_t) == ", nimAlign251, ", \"alignment mismatch: bgfx_index_buffer_handle_t\");"].}
+const nimOffset252 = offsetOf(bgfx_index_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_index_buffer_handle_t, idx) == ", nimOffset252, ", \"offset mismatch: bgfx_index_buffer_handle_t.idx\");"].}
 
-const nimSize243 = sizeof(bgfx_indirect_buffer_handle_s)
-const nimAlign243 = alignof(bgfx_indirect_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_indirect_buffer_handle_t) == ", nimSize243, ", \"size mismatch: bgfx_indirect_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_indirect_buffer_handle_t) == ", nimAlign243, ", \"alignment mismatch: bgfx_indirect_buffer_handle_t\");"].}
-const nimOffset244 = offsetOf(bgfx_indirect_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_indirect_buffer_handle_t, idx) == ", nimOffset244, ", \"offset mismatch: bgfx_indirect_buffer_handle_t.idx\");"].}
+const nimSize253 = sizeof(bgfx_indirect_buffer_handle_s)
+const nimAlign253 = alignof(bgfx_indirect_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_indirect_buffer_handle_t) == ", nimSize253, ", \"size mismatch: bgfx_indirect_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_indirect_buffer_handle_t) == ", nimAlign253, ", \"alignment mismatch: bgfx_indirect_buffer_handle_t\");"].}
+const nimOffset254 = offsetOf(bgfx_indirect_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_indirect_buffer_handle_t, idx) == ", nimOffset254, ", \"offset mismatch: bgfx_indirect_buffer_handle_t.idx\");"].}
 
-const nimSize245 = sizeof(bgfx_occlusion_query_handle_s)
-const nimAlign245 = alignof(bgfx_occlusion_query_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_occlusion_query_handle_t) == ", nimSize245, ", \"size mismatch: bgfx_occlusion_query_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_occlusion_query_handle_t) == ", nimAlign245, ", \"alignment mismatch: bgfx_occlusion_query_handle_t\");"].}
-const nimOffset246 = offsetOf(bgfx_occlusion_query_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_occlusion_query_handle_t, idx) == ", nimOffset246, ", \"offset mismatch: bgfx_occlusion_query_handle_t.idx\");"].}
+const nimSize255 = sizeof(bgfx_occlusion_query_handle_s)
+const nimAlign255 = alignof(bgfx_occlusion_query_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_occlusion_query_handle_t) == ", nimSize255, ", \"size mismatch: bgfx_occlusion_query_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_occlusion_query_handle_t) == ", nimAlign255, ", \"alignment mismatch: bgfx_occlusion_query_handle_t\");"].}
+const nimOffset256 = offsetOf(bgfx_occlusion_query_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_occlusion_query_handle_t, idx) == ", nimOffset256, ", \"offset mismatch: bgfx_occlusion_query_handle_t.idx\");"].}
 
-const nimSize247 = sizeof(bgfx_program_handle_s)
-const nimAlign247 = alignof(bgfx_program_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_program_handle_t) == ", nimSize247, ", \"size mismatch: bgfx_program_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_program_handle_t) == ", nimAlign247, ", \"alignment mismatch: bgfx_program_handle_t\");"].}
-const nimOffset248 = offsetOf(bgfx_program_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_program_handle_t, idx) == ", nimOffset248, ", \"offset mismatch: bgfx_program_handle_t.idx\");"].}
+const nimSize257 = sizeof(bgfx_program_handle_s)
+const nimAlign257 = alignof(bgfx_program_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_program_handle_t) == ", nimSize257, ", \"size mismatch: bgfx_program_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_program_handle_t) == ", nimAlign257, ", \"alignment mismatch: bgfx_program_handle_t\");"].}
+const nimOffset258 = offsetOf(bgfx_program_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_program_handle_t, idx) == ", nimOffset258, ", \"offset mismatch: bgfx_program_handle_t.idx\");"].}
 
-const nimSize249 = sizeof(bgfx_shader_handle_s)
-const nimAlign249 = alignof(bgfx_shader_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_shader_handle_t) == ", nimSize249, ", \"size mismatch: bgfx_shader_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_shader_handle_t) == ", nimAlign249, ", \"alignment mismatch: bgfx_shader_handle_t\");"].}
-const nimOffset250 = offsetOf(bgfx_shader_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_shader_handle_t, idx) == ", nimOffset250, ", \"offset mismatch: bgfx_shader_handle_t.idx\");"].}
+const nimSize259 = sizeof(bgfx_shader_handle_s)
+const nimAlign259 = alignof(bgfx_shader_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_shader_handle_t) == ", nimSize259, ", \"size mismatch: bgfx_shader_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_shader_handle_t) == ", nimAlign259, ", \"alignment mismatch: bgfx_shader_handle_t\");"].}
+const nimOffset260 = offsetOf(bgfx_shader_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_shader_handle_t, idx) == ", nimOffset260, ", \"offset mismatch: bgfx_shader_handle_t.idx\");"].}
 
-const nimSize251 = sizeof(bgfx_texture_handle_s)
-const nimAlign251 = alignof(bgfx_texture_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_texture_handle_t) == ", nimSize251, ", \"size mismatch: bgfx_texture_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_texture_handle_t) == ", nimAlign251, ", \"alignment mismatch: bgfx_texture_handle_t\");"].}
-const nimOffset252 = offsetOf(bgfx_texture_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_handle_t, idx) == ", nimOffset252, ", \"offset mismatch: bgfx_texture_handle_t.idx\");"].}
+const nimSize261 = sizeof(bgfx_texture_handle_s)
+const nimAlign261 = alignof(bgfx_texture_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_texture_handle_t) == ", nimSize261, ", \"size mismatch: bgfx_texture_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_texture_handle_t) == ", nimAlign261, ", \"alignment mismatch: bgfx_texture_handle_t\");"].}
+const nimOffset262 = offsetOf(bgfx_texture_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_handle_t, idx) == ", nimOffset262, ", \"offset mismatch: bgfx_texture_handle_t.idx\");"].}
 
-const nimSize253 = sizeof(bgfx_uniform_handle_s)
-const nimAlign253 = alignof(bgfx_uniform_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_uniform_handle_t) == ", nimSize253, ", \"size mismatch: bgfx_uniform_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_uniform_handle_t) == ", nimAlign253, ", \"alignment mismatch: bgfx_uniform_handle_t\");"].}
-const nimOffset254 = offsetOf(bgfx_uniform_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_handle_t, idx) == ", nimOffset254, ", \"offset mismatch: bgfx_uniform_handle_t.idx\");"].}
+const nimSize263 = sizeof(bgfx_uniform_handle_s)
+const nimAlign263 = alignof(bgfx_uniform_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_uniform_handle_t) == ", nimSize263, ", \"size mismatch: bgfx_uniform_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_uniform_handle_t) == ", nimAlign263, ", \"alignment mismatch: bgfx_uniform_handle_t\");"].}
+const nimOffset264 = offsetOf(bgfx_uniform_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_handle_t, idx) == ", nimOffset264, ", \"offset mismatch: bgfx_uniform_handle_t.idx\");"].}
 
-const nimSize255 = sizeof(bgfx_vertex_buffer_handle_s)
-const nimAlign255 = alignof(bgfx_vertex_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_vertex_buffer_handle_t) == ", nimSize255, ", \"size mismatch: bgfx_vertex_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_vertex_buffer_handle_t) == ", nimAlign255, ", \"alignment mismatch: bgfx_vertex_buffer_handle_t\");"].}
-const nimOffset256 = offsetOf(bgfx_vertex_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_buffer_handle_t, idx) == ", nimOffset256, ", \"offset mismatch: bgfx_vertex_buffer_handle_t.idx\");"].}
+const nimSize265 = sizeof(bgfx_vertex_buffer_handle_s)
+const nimAlign265 = alignof(bgfx_vertex_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_vertex_buffer_handle_t) == ", nimSize265, ", \"size mismatch: bgfx_vertex_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_vertex_buffer_handle_t) == ", nimAlign265, ", \"alignment mismatch: bgfx_vertex_buffer_handle_t\");"].}
+const nimOffset266 = offsetOf(bgfx_vertex_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_buffer_handle_t, idx) == ", nimOffset266, ", \"offset mismatch: bgfx_vertex_buffer_handle_t.idx\");"].}
 
-const nimSize257 = sizeof(bgfx_vertex_layout_handle_s)
-const nimAlign257 = alignof(bgfx_vertex_layout_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_vertex_layout_handle_t) == ", nimSize257, ", \"size mismatch: bgfx_vertex_layout_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_vertex_layout_handle_t) == ", nimAlign257, ", \"alignment mismatch: bgfx_vertex_layout_handle_t\");"].}
-const nimOffset258 = offsetOf(bgfx_vertex_layout_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_handle_t, idx) == ", nimOffset258, ", \"offset mismatch: bgfx_vertex_layout_handle_t.idx\");"].}
+const nimSize267 = sizeof(bgfx_vertex_layout_handle_s)
+const nimAlign267 = alignof(bgfx_vertex_layout_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_vertex_layout_handle_t) == ", nimSize267, ", \"size mismatch: bgfx_vertex_layout_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_vertex_layout_handle_t) == ", nimAlign267, ", \"alignment mismatch: bgfx_vertex_layout_handle_t\");"].}
+const nimOffset268 = offsetOf(bgfx_vertex_layout_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_handle_t, idx) == ", nimOffset268, ", \"offset mismatch: bgfx_vertex_layout_handle_t.idx\");"].}
 
-const nimSize259 = sizeof(bgfx_buffer_handle_s)
-const nimAlign259 = alignof(bgfx_buffer_handle_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_buffer_handle_t) == ", nimSize259, ", \"size mismatch: bgfx_buffer_handle_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_buffer_handle_t) == ", nimAlign259, ", \"alignment mismatch: bgfx_buffer_handle_t\");"].}
-const nimOffset260 = offsetOf(bgfx_buffer_handle_s, `idx`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_handle_t, idx) == ", nimOffset260, ", \"offset mismatch: bgfx_buffer_handle_t.idx\");"].}
-const nimOffset261 = offsetOf(bgfx_buffer_handle_s, `type`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_handle_t, type) == ", nimOffset261, ", \"offset mismatch: bgfx_buffer_handle_t.type\");"].}
+const nimSize269 = sizeof(bgfx_buffer_handle_s)
+const nimAlign269 = alignof(bgfx_buffer_handle_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_buffer_handle_t) == ", nimSize269, ", \"size mismatch: bgfx_buffer_handle_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_buffer_handle_t) == ", nimAlign269, ", \"alignment mismatch: bgfx_buffer_handle_t\");"].}
+const nimOffset270 = offsetOf(bgfx_buffer_handle_s, `idx`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_handle_t, idx) == ", nimOffset270, ", \"offset mismatch: bgfx_buffer_handle_t.idx\");"].}
+const nimOffset271 = offsetOf(bgfx_buffer_handle_s, `type`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_handle_t, type) == ", nimOffset271, ", \"offset mismatch: bgfx_buffer_handle_t.type\");"].}
 
-const nimSize262 = sizeof(bgfx_caps_gpu_s)
-const nimAlign262 = alignof(bgfx_caps_gpu_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_caps_gpu_t) == ", nimSize262, ", \"size mismatch: bgfx_caps_gpu_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_caps_gpu_t) == ", nimAlign262, ", \"alignment mismatch: bgfx_caps_gpu_t\");"].}
-const nimOffset263 = offsetOf(bgfx_caps_gpu_s, `vendorId`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_gpu_t, vendorId) == ", nimOffset263, ", \"offset mismatch: bgfx_caps_gpu_t.vendorId\");"].}
-const nimOffset264 = offsetOf(bgfx_caps_gpu_s, `deviceId`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_gpu_t, deviceId) == ", nimOffset264, ", \"offset mismatch: bgfx_caps_gpu_t.deviceId\");"].}
+const nimSize272 = sizeof(bgfx_caps_gpu_s)
+const nimAlign272 = alignof(bgfx_caps_gpu_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_caps_gpu_t) == ", nimSize272, ", \"size mismatch: bgfx_caps_gpu_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_caps_gpu_t) == ", nimAlign272, ", \"alignment mismatch: bgfx_caps_gpu_t\");"].}
+const nimOffset273 = offsetOf(bgfx_caps_gpu_s, `vendorId`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_gpu_t, vendorId) == ", nimOffset273, ", \"offset mismatch: bgfx_caps_gpu_t.vendorId\");"].}
+const nimOffset274 = offsetOf(bgfx_caps_gpu_s, `deviceId`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_gpu_t, deviceId) == ", nimOffset274, ", \"offset mismatch: bgfx_caps_gpu_t.deviceId\");"].}
 
-const nimSize265 = sizeof(bgfx_caps_limits_s)
-const nimAlign265 = alignof(bgfx_caps_limits_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_caps_limits_t) == ", nimSize265, ", \"size mismatch: bgfx_caps_limits_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_caps_limits_t) == ", nimAlign265, ", \"alignment mismatch: bgfx_caps_limits_t\");"].}
-const nimOffset266 = offsetOf(bgfx_caps_limits_s, `maxDrawCalls`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxDrawCalls) == ", nimOffset266, ", \"offset mismatch: bgfx_caps_limits_t.maxDrawCalls\");"].}
-const nimOffset267 = offsetOf(bgfx_caps_limits_s, `maxBlits`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxBlits) == ", nimOffset267, ", \"offset mismatch: bgfx_caps_limits_t.maxBlits\");"].}
-const nimOffset268 = offsetOf(bgfx_caps_limits_s, `maxTextureSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextureSize) == ", nimOffset268, ", \"offset mismatch: bgfx_caps_limits_t.maxTextureSize\");"].}
-const nimOffset269 = offsetOf(bgfx_caps_limits_s, `maxTextureLayers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextureLayers) == ", nimOffset269, ", \"offset mismatch: bgfx_caps_limits_t.maxTextureLayers\");"].}
-const nimOffset270 = offsetOf(bgfx_caps_limits_s, `maxViews`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxViews) == ", nimOffset270, ", \"offset mismatch: bgfx_caps_limits_t.maxViews\");"].}
-const nimOffset271 = offsetOf(bgfx_caps_limits_s, `maxFrameBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxFrameBuffers) == ", nimOffset271, ", \"offset mismatch: bgfx_caps_limits_t.maxFrameBuffers\");"].}
-const nimOffset272 = offsetOf(bgfx_caps_limits_s, `maxFBAttachments`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxFBAttachments) == ", nimOffset272, ", \"offset mismatch: bgfx_caps_limits_t.maxFBAttachments\");"].}
-const nimOffset273 = offsetOf(bgfx_caps_limits_s, `maxPrograms`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxPrograms) == ", nimOffset273, ", \"offset mismatch: bgfx_caps_limits_t.maxPrograms\");"].}
-const nimOffset274 = offsetOf(bgfx_caps_limits_s, `maxShaders`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxShaders) == ", nimOffset274, ", \"offset mismatch: bgfx_caps_limits_t.maxShaders\");"].}
-const nimOffset275 = offsetOf(bgfx_caps_limits_s, `maxTextures`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextures) == ", nimOffset275, ", \"offset mismatch: bgfx_caps_limits_t.maxTextures\");"].}
-const nimOffset276 = offsetOf(bgfx_caps_limits_s, `maxTextureSamplers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextureSamplers) == ", nimOffset276, ", \"offset mismatch: bgfx_caps_limits_t.maxTextureSamplers\");"].}
-const nimOffset277 = offsetOf(bgfx_caps_limits_s, `maxComputeBindings`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxComputeBindings) == ", nimOffset277, ", \"offset mismatch: bgfx_caps_limits_t.maxComputeBindings\");"].}
-const nimOffset278 = offsetOf(bgfx_caps_limits_s, `maxVertexLayouts`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexLayouts) == ", nimOffset278, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexLayouts\");"].}
-const nimOffset279 = offsetOf(bgfx_caps_limits_s, `maxVertexStreams`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexStreams) == ", nimOffset279, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexStreams\");"].}
-const nimOffset280 = offsetOf(bgfx_caps_limits_s, `maxVertexAttributes`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexAttributes) == ", nimOffset280, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexAttributes\");"].}
-const nimOffset281 = offsetOf(bgfx_caps_limits_s, `maxInstanceData`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxInstanceData) == ", nimOffset281, ", \"offset mismatch: bgfx_caps_limits_t.maxInstanceData\");"].}
-const nimOffset282 = offsetOf(bgfx_caps_limits_s, `maxIndexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxIndexBuffers) == ", nimOffset282, ", \"offset mismatch: bgfx_caps_limits_t.maxIndexBuffers\");"].}
-const nimOffset283 = offsetOf(bgfx_caps_limits_s, `maxVertexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexBuffers) == ", nimOffset283, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexBuffers\");"].}
-const nimOffset284 = offsetOf(bgfx_caps_limits_s, `maxDynamicIndexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxDynamicIndexBuffers) == ", nimOffset284, ", \"offset mismatch: bgfx_caps_limits_t.maxDynamicIndexBuffers\");"].}
-const nimOffset285 = offsetOf(bgfx_caps_limits_s, `maxDynamicVertexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxDynamicVertexBuffers) == ", nimOffset285, ", \"offset mismatch: bgfx_caps_limits_t.maxDynamicVertexBuffers\");"].}
-const nimOffset286 = offsetOf(bgfx_caps_limits_s, `maxUniforms`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxUniforms) == ", nimOffset286, ", \"offset mismatch: bgfx_caps_limits_t.maxUniforms\");"].}
-const nimOffset287 = offsetOf(bgfx_caps_limits_s, `maxOcclusionQueries`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxOcclusionQueries) == ", nimOffset287, ", \"offset mismatch: bgfx_caps_limits_t.maxOcclusionQueries\");"].}
-const nimOffset288 = offsetOf(bgfx_caps_limits_s, `maxEncoders`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxEncoders) == ", nimOffset288, ", \"offset mismatch: bgfx_caps_limits_t.maxEncoders\");"].}
-const nimOffset289 = offsetOf(bgfx_caps_limits_s, `minResourceCbSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, minResourceCbSize) == ", nimOffset289, ", \"offset mismatch: bgfx_caps_limits_t.minResourceCbSize\");"].}
-const nimOffset290 = offsetOf(bgfx_caps_limits_s, `maxTransientVbSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTransientVbSize) == ", nimOffset290, ", \"offset mismatch: bgfx_caps_limits_t.maxTransientVbSize\");"].}
-const nimOffset291 = offsetOf(bgfx_caps_limits_s, `maxTransientIbSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTransientIbSize) == ", nimOffset291, ", \"offset mismatch: bgfx_caps_limits_t.maxTransientIbSize\");"].}
-const nimOffset292 = offsetOf(bgfx_caps_limits_s, `minUniformBufferSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, minUniformBufferSize) == ", nimOffset292, ", \"offset mismatch: bgfx_caps_limits_t.minUniformBufferSize\");"].}
-const nimOffset293 = offsetOf(bgfx_caps_limits_s, `blitRowPitchAlign`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, blitRowPitchAlign) == ", nimOffset293, ", \"offset mismatch: bgfx_caps_limits_t.blitRowPitchAlign\");"].}
-const nimOffset294 = offsetOf(bgfx_caps_limits_s, `blitOffsetAlign`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, blitOffsetAlign) == ", nimOffset294, ", \"offset mismatch: bgfx_caps_limits_t.blitOffsetAlign\");"].}
+const nimSize275 = sizeof(bgfx_caps_limits_s)
+const nimAlign275 = alignof(bgfx_caps_limits_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_caps_limits_t) == ", nimSize275, ", \"size mismatch: bgfx_caps_limits_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_caps_limits_t) == ", nimAlign275, ", \"alignment mismatch: bgfx_caps_limits_t\");"].}
+const nimOffset276 = offsetOf(bgfx_caps_limits_s, `maxDrawCalls`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxDrawCalls) == ", nimOffset276, ", \"offset mismatch: bgfx_caps_limits_t.maxDrawCalls\");"].}
+const nimOffset277 = offsetOf(bgfx_caps_limits_s, `maxBlits`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxBlits) == ", nimOffset277, ", \"offset mismatch: bgfx_caps_limits_t.maxBlits\");"].}
+const nimOffset278 = offsetOf(bgfx_caps_limits_s, `maxTextureSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextureSize) == ", nimOffset278, ", \"offset mismatch: bgfx_caps_limits_t.maxTextureSize\");"].}
+const nimOffset279 = offsetOf(bgfx_caps_limits_s, `maxTextureLayers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextureLayers) == ", nimOffset279, ", \"offset mismatch: bgfx_caps_limits_t.maxTextureLayers\");"].}
+const nimOffset280 = offsetOf(bgfx_caps_limits_s, `maxViews`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxViews) == ", nimOffset280, ", \"offset mismatch: bgfx_caps_limits_t.maxViews\");"].}
+const nimOffset281 = offsetOf(bgfx_caps_limits_s, `maxFrameBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxFrameBuffers) == ", nimOffset281, ", \"offset mismatch: bgfx_caps_limits_t.maxFrameBuffers\");"].}
+const nimOffset282 = offsetOf(bgfx_caps_limits_s, `maxFBAttachments`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxFBAttachments) == ", nimOffset282, ", \"offset mismatch: bgfx_caps_limits_t.maxFBAttachments\");"].}
+const nimOffset283 = offsetOf(bgfx_caps_limits_s, `maxPrograms`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxPrograms) == ", nimOffset283, ", \"offset mismatch: bgfx_caps_limits_t.maxPrograms\");"].}
+const nimOffset284 = offsetOf(bgfx_caps_limits_s, `maxShaders`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxShaders) == ", nimOffset284, ", \"offset mismatch: bgfx_caps_limits_t.maxShaders\");"].}
+const nimOffset285 = offsetOf(bgfx_caps_limits_s, `maxTextures`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextures) == ", nimOffset285, ", \"offset mismatch: bgfx_caps_limits_t.maxTextures\");"].}
+const nimOffset286 = offsetOf(bgfx_caps_limits_s, `maxTextureSamplers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTextureSamplers) == ", nimOffset286, ", \"offset mismatch: bgfx_caps_limits_t.maxTextureSamplers\");"].}
+const nimOffset287 = offsetOf(bgfx_caps_limits_s, `maxComputeBindings`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxComputeBindings) == ", nimOffset287, ", \"offset mismatch: bgfx_caps_limits_t.maxComputeBindings\");"].}
+const nimOffset288 = offsetOf(bgfx_caps_limits_s, `maxVertexLayouts`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexLayouts) == ", nimOffset288, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexLayouts\");"].}
+const nimOffset289 = offsetOf(bgfx_caps_limits_s, `maxVertexStreams`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexStreams) == ", nimOffset289, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexStreams\");"].}
+const nimOffset290 = offsetOf(bgfx_caps_limits_s, `maxVertexAttributes`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexAttributes) == ", nimOffset290, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexAttributes\");"].}
+const nimOffset291 = offsetOf(bgfx_caps_limits_s, `maxInstanceData`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxInstanceData) == ", nimOffset291, ", \"offset mismatch: bgfx_caps_limits_t.maxInstanceData\");"].}
+const nimOffset292 = offsetOf(bgfx_caps_limits_s, `maxIndexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxIndexBuffers) == ", nimOffset292, ", \"offset mismatch: bgfx_caps_limits_t.maxIndexBuffers\");"].}
+const nimOffset293 = offsetOf(bgfx_caps_limits_s, `maxVertexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxVertexBuffers) == ", nimOffset293, ", \"offset mismatch: bgfx_caps_limits_t.maxVertexBuffers\");"].}
+const nimOffset294 = offsetOf(bgfx_caps_limits_s, `maxDynamicIndexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxDynamicIndexBuffers) == ", nimOffset294, ", \"offset mismatch: bgfx_caps_limits_t.maxDynamicIndexBuffers\");"].}
+const nimOffset295 = offsetOf(bgfx_caps_limits_s, `maxDynamicVertexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxDynamicVertexBuffers) == ", nimOffset295, ", \"offset mismatch: bgfx_caps_limits_t.maxDynamicVertexBuffers\");"].}
+const nimOffset296 = offsetOf(bgfx_caps_limits_s, `maxUniforms`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxUniforms) == ", nimOffset296, ", \"offset mismatch: bgfx_caps_limits_t.maxUniforms\");"].}
+const nimOffset297 = offsetOf(bgfx_caps_limits_s, `maxOcclusionQueries`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxOcclusionQueries) == ", nimOffset297, ", \"offset mismatch: bgfx_caps_limits_t.maxOcclusionQueries\");"].}
+const nimOffset298 = offsetOf(bgfx_caps_limits_s, `maxEncoders`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxEncoders) == ", nimOffset298, ", \"offset mismatch: bgfx_caps_limits_t.maxEncoders\");"].}
+const nimOffset299 = offsetOf(bgfx_caps_limits_s, `minResourceCbSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, minResourceCbSize) == ", nimOffset299, ", \"offset mismatch: bgfx_caps_limits_t.minResourceCbSize\");"].}
+const nimOffset300 = offsetOf(bgfx_caps_limits_s, `maxTransientVbSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTransientVbSize) == ", nimOffset300, ", \"offset mismatch: bgfx_caps_limits_t.maxTransientVbSize\");"].}
+const nimOffset301 = offsetOf(bgfx_caps_limits_s, `maxTransientIbSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, maxTransientIbSize) == ", nimOffset301, ", \"offset mismatch: bgfx_caps_limits_t.maxTransientIbSize\");"].}
+const nimOffset302 = offsetOf(bgfx_caps_limits_s, `minUniformBufferSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, minUniformBufferSize) == ", nimOffset302, ", \"offset mismatch: bgfx_caps_limits_t.minUniformBufferSize\");"].}
+const nimOffset303 = offsetOf(bgfx_caps_limits_s, `minUniformCacheSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, minUniformCacheSize) == ", nimOffset303, ", \"offset mismatch: bgfx_caps_limits_t.minUniformCacheSize\");"].}
+const nimOffset304 = offsetOf(bgfx_caps_limits_s, `blitRowPitchAlign`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, blitRowPitchAlign) == ", nimOffset304, ", \"offset mismatch: bgfx_caps_limits_t.blitRowPitchAlign\");"].}
+const nimOffset305 = offsetOf(bgfx_caps_limits_s, `blitOffsetAlign`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_limits_t, blitOffsetAlign) == ", nimOffset305, ", \"offset mismatch: bgfx_caps_limits_t.blitOffsetAlign\");"].}
 
-const nimSize295 = sizeof(bgfx_caps_s)
-const nimAlign295 = alignof(bgfx_caps_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_caps_t) == ", nimSize295, ", \"size mismatch: bgfx_caps_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_caps_t) == ", nimAlign295, ", \"alignment mismatch: bgfx_caps_t\");"].}
-const nimOffset296 = offsetOf(bgfx_caps_s, `rendererType`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, rendererType) == ", nimOffset296, ", \"offset mismatch: bgfx_caps_t.rendererType\");"].}
-const nimOffset297 = offsetOf(bgfx_caps_s, `supported`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, supported) == ", nimOffset297, ", \"offset mismatch: bgfx_caps_t.supported\");"].}
-const nimOffset298 = offsetOf(bgfx_caps_s, `vendorId`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, vendorId) == ", nimOffset298, ", \"offset mismatch: bgfx_caps_t.vendorId\");"].}
-const nimOffset299 = offsetOf(bgfx_caps_s, `deviceId`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, deviceId) == ", nimOffset299, ", \"offset mismatch: bgfx_caps_t.deviceId\");"].}
-const nimOffset300 = offsetOf(bgfx_caps_s, `homogeneousDepth`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, homogeneousDepth) == ", nimOffset300, ", \"offset mismatch: bgfx_caps_t.homogeneousDepth\");"].}
-const nimOffset301 = offsetOf(bgfx_caps_s, `originBottomLeft`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, originBottomLeft) == ", nimOffset301, ", \"offset mismatch: bgfx_caps_t.originBottomLeft\");"].}
-const nimOffset302 = offsetOf(bgfx_caps_s, `numGPUs`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, numGPUs) == ", nimOffset302, ", \"offset mismatch: bgfx_caps_t.numGPUs\");"].}
-const nimOffset303 = offsetOf(bgfx_caps_s, `gpu`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, gpu) == ", nimOffset303, ", \"offset mismatch: bgfx_caps_t.gpu\");"].}
-const nimOffset304 = offsetOf(bgfx_caps_s, `limits`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, limits) == ", nimOffset304, ", \"offset mismatch: bgfx_caps_t.limits\");"].}
-const nimOffset305 = offsetOf(bgfx_caps_s, `formats`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, formats) == ", nimOffset305, ", \"offset mismatch: bgfx_caps_t.formats\");"].}
-const nimOffset306 = offsetOf(bgfx_caps_s, `codecs`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, codecs) == ", nimOffset306, ", \"offset mismatch: bgfx_caps_t.codecs\");"].}
+const nimSize306 = sizeof(bgfx_caps_s)
+const nimAlign306 = alignof(bgfx_caps_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_caps_t) == ", nimSize306, ", \"size mismatch: bgfx_caps_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_caps_t) == ", nimAlign306, ", \"alignment mismatch: bgfx_caps_t\");"].}
+const nimOffset307 = offsetOf(bgfx_caps_s, `rendererType`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, rendererType) == ", nimOffset307, ", \"offset mismatch: bgfx_caps_t.rendererType\");"].}
+const nimOffset308 = offsetOf(bgfx_caps_s, `supported`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, supported) == ", nimOffset308, ", \"offset mismatch: bgfx_caps_t.supported\");"].}
+const nimOffset309 = offsetOf(bgfx_caps_s, `vendorId`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, vendorId) == ", nimOffset309, ", \"offset mismatch: bgfx_caps_t.vendorId\");"].}
+const nimOffset310 = offsetOf(bgfx_caps_s, `deviceId`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, deviceId) == ", nimOffset310, ", \"offset mismatch: bgfx_caps_t.deviceId\");"].}
+const nimOffset311 = offsetOf(bgfx_caps_s, `homogeneousDepth`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, homogeneousDepth) == ", nimOffset311, ", \"offset mismatch: bgfx_caps_t.homogeneousDepth\");"].}
+const nimOffset312 = offsetOf(bgfx_caps_s, `originBottomLeft`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, originBottomLeft) == ", nimOffset312, ", \"offset mismatch: bgfx_caps_t.originBottomLeft\");"].}
+const nimOffset313 = offsetOf(bgfx_caps_s, `numGPUs`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, numGPUs) == ", nimOffset313, ", \"offset mismatch: bgfx_caps_t.numGPUs\");"].}
+const nimOffset314 = offsetOf(bgfx_caps_s, `gpu`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, gpu) == ", nimOffset314, ", \"offset mismatch: bgfx_caps_t.gpu\");"].}
+const nimOffset315 = offsetOf(bgfx_caps_s, `limits`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, limits) == ", nimOffset315, ", \"offset mismatch: bgfx_caps_t.limits\");"].}
+const nimOffset316 = offsetOf(bgfx_caps_s, `formats`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, formats) == ", nimOffset316, ", \"offset mismatch: bgfx_caps_t.formats\");"].}
+const nimOffset317 = offsetOf(bgfx_caps_s, `codecs`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_caps_t, codecs) == ", nimOffset317, ", \"offset mismatch: bgfx_caps_t.codecs\");"].}
 
-const nimSize307 = sizeof(bgfx_internal_data_s)
-const nimAlign307 = alignof(bgfx_internal_data_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_internal_data_t) == ", nimSize307, ", \"size mismatch: bgfx_internal_data_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_internal_data_t) == ", nimAlign307, ", \"alignment mismatch: bgfx_internal_data_t\");"].}
-const nimOffset308 = offsetOf(bgfx_internal_data_s, `caps`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_internal_data_t, caps) == ", nimOffset308, ", \"offset mismatch: bgfx_internal_data_t.caps\");"].}
-const nimOffset309 = offsetOf(bgfx_internal_data_s, `context`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_internal_data_t, context) == ", nimOffset309, ", \"offset mismatch: bgfx_internal_data_t.context\");"].}
+const nimSize318 = sizeof(bgfx_internal_data_s)
+const nimAlign318 = alignof(bgfx_internal_data_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_internal_data_t) == ", nimSize318, ", \"size mismatch: bgfx_internal_data_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_internal_data_t) == ", nimAlign318, ", \"alignment mismatch: bgfx_internal_data_t\");"].}
+const nimOffset319 = offsetOf(bgfx_internal_data_s, `caps`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_internal_data_t, caps) == ", nimOffset319, ", \"offset mismatch: bgfx_internal_data_t.caps\");"].}
+const nimOffset320 = offsetOf(bgfx_internal_data_s, `context`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_internal_data_t, context) == ", nimOffset320, ", \"offset mismatch: bgfx_internal_data_t.context\");"].}
 
-const nimSize310 = sizeof(bgfx_platform_data_s)
-const nimAlign310 = alignof(bgfx_platform_data_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_platform_data_t) == ", nimSize310, ", \"size mismatch: bgfx_platform_data_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_platform_data_t) == ", nimAlign310, ", \"alignment mismatch: bgfx_platform_data_t\");"].}
-const nimOffset311 = offsetOf(bgfx_platform_data_s, `context`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_platform_data_t, context) == ", nimOffset311, ", \"offset mismatch: bgfx_platform_data_t.context\");"].}
-const nimOffset312 = offsetOf(bgfx_platform_data_s, `queue`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_platform_data_t, queue) == ", nimOffset312, ", \"offset mismatch: bgfx_platform_data_t.queue\");"].}
-const nimOffset313 = offsetOf(bgfx_platform_data_s, `type`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_platform_data_t, type) == ", nimOffset313, ", \"offset mismatch: bgfx_platform_data_t.type\");"].}
+const nimSize321 = sizeof(bgfx_platform_data_s)
+const nimAlign321 = alignof(bgfx_platform_data_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_platform_data_t) == ", nimSize321, ", \"size mismatch: bgfx_platform_data_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_platform_data_t) == ", nimAlign321, ", \"alignment mismatch: bgfx_platform_data_t\");"].}
+const nimOffset322 = offsetOf(bgfx_platform_data_s, `context`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_platform_data_t, context) == ", nimOffset322, ", \"offset mismatch: bgfx_platform_data_t.context\");"].}
+const nimOffset323 = offsetOf(bgfx_platform_data_s, `queue`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_platform_data_t, queue) == ", nimOffset323, ", \"offset mismatch: bgfx_platform_data_t.queue\");"].}
+const nimOffset324 = offsetOf(bgfx_platform_data_s, `type`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_platform_data_t, type) == ", nimOffset324, ", \"offset mismatch: bgfx_platform_data_t.type\");"].}
 
-const nimSize314 = sizeof(bgfx_swap_chain_s)
-const nimAlign314 = alignof(bgfx_swap_chain_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_swap_chain_t) == ", nimSize314, ", \"size mismatch: bgfx_swap_chain_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_swap_chain_t) == ", nimAlign314, ", \"alignment mismatch: bgfx_swap_chain_t\");"].}
-const nimOffset315 = offsetOf(bgfx_swap_chain_s, `nwh`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, nwh) == ", nimOffset315, ", \"offset mismatch: bgfx_swap_chain_t.nwh\");"].}
-const nimOffset316 = offsetOf(bgfx_swap_chain_s, `ndt`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, ndt) == ", nimOffset316, ", \"offset mismatch: bgfx_swap_chain_t.ndt\");"].}
-const nimOffset317 = offsetOf(bgfx_swap_chain_s, `width`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, width) == ", nimOffset317, ", \"offset mismatch: bgfx_swap_chain_t.width\");"].}
-const nimOffset318 = offsetOf(bgfx_swap_chain_s, `height`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, height) == ", nimOffset318, ", \"offset mismatch: bgfx_swap_chain_t.height\");"].}
-const nimOffset319 = offsetOf(bgfx_swap_chain_s, `flags`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, flags) == ", nimOffset319, ", \"offset mismatch: bgfx_swap_chain_t.flags\");"].}
-const nimOffset320 = offsetOf(bgfx_swap_chain_s, `formatColor`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, formatColor) == ", nimOffset320, ", \"offset mismatch: bgfx_swap_chain_t.formatColor\");"].}
-const nimOffset321 = offsetOf(bgfx_swap_chain_s, `formatDepthStencil`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, formatDepthStencil) == ", nimOffset321, ", \"offset mismatch: bgfx_swap_chain_t.formatDepthStencil\");"].}
-const nimOffset322 = offsetOf(bgfx_swap_chain_s, `depth`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, depth) == ", nimOffset322, ", \"offset mismatch: bgfx_swap_chain_t.depth\");"].}
-const nimOffset323 = offsetOf(bgfx_swap_chain_s, `numBackBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, numBackBuffers) == ", nimOffset323, ", \"offset mismatch: bgfx_swap_chain_t.numBackBuffers\");"].}
-const nimOffset324 = offsetOf(bgfx_swap_chain_s, `maxFrameLatency`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, maxFrameLatency) == ", nimOffset324, ", \"offset mismatch: bgfx_swap_chain_t.maxFrameLatency\");"].}
+const nimSize325 = sizeof(bgfx_swap_chain_s)
+const nimAlign325 = alignof(bgfx_swap_chain_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_swap_chain_t) == ", nimSize325, ", \"size mismatch: bgfx_swap_chain_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_swap_chain_t) == ", nimAlign325, ", \"alignment mismatch: bgfx_swap_chain_t\");"].}
+const nimOffset326 = offsetOf(bgfx_swap_chain_s, `nwh`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, nwh) == ", nimOffset326, ", \"offset mismatch: bgfx_swap_chain_t.nwh\");"].}
+const nimOffset327 = offsetOf(bgfx_swap_chain_s, `ndt`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, ndt) == ", nimOffset327, ", \"offset mismatch: bgfx_swap_chain_t.ndt\");"].}
+const nimOffset328 = offsetOf(bgfx_swap_chain_s, `width`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, width) == ", nimOffset328, ", \"offset mismatch: bgfx_swap_chain_t.width\");"].}
+const nimOffset329 = offsetOf(bgfx_swap_chain_s, `height`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, height) == ", nimOffset329, ", \"offset mismatch: bgfx_swap_chain_t.height\");"].}
+const nimOffset330 = offsetOf(bgfx_swap_chain_s, `flags`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, flags) == ", nimOffset330, ", \"offset mismatch: bgfx_swap_chain_t.flags\");"].}
+const nimOffset331 = offsetOf(bgfx_swap_chain_s, `formatColor`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, formatColor) == ", nimOffset331, ", \"offset mismatch: bgfx_swap_chain_t.formatColor\");"].}
+const nimOffset332 = offsetOf(bgfx_swap_chain_s, `formatDepthStencil`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, formatDepthStencil) == ", nimOffset332, ", \"offset mismatch: bgfx_swap_chain_t.formatDepthStencil\");"].}
+const nimOffset333 = offsetOf(bgfx_swap_chain_s, `depth`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, depth) == ", nimOffset333, ", \"offset mismatch: bgfx_swap_chain_t.depth\");"].}
+const nimOffset334 = offsetOf(bgfx_swap_chain_s, `numBackBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, numBackBuffers) == ", nimOffset334, ", \"offset mismatch: bgfx_swap_chain_t.numBackBuffers\");"].}
+const nimOffset335 = offsetOf(bgfx_swap_chain_s, `maxFrameLatency`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_swap_chain_t, maxFrameLatency) == ", nimOffset335, ", \"offset mismatch: bgfx_swap_chain_t.maxFrameLatency\");"].}
 
-const nimSize325 = sizeof(bgfx_init_limits_s)
-const nimAlign325 = alignof(bgfx_init_limits_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_init_limits_t) == ", nimSize325, ", \"size mismatch: bgfx_init_limits_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_init_limits_t) == ", nimAlign325, ", \"alignment mismatch: bgfx_init_limits_t\");"].}
-const nimOffset326 = offsetOf(bgfx_init_limits_s, `maxEncoders`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, maxEncoders) == ", nimOffset326, ", \"offset mismatch: bgfx_init_limits_t.maxEncoders\");"].}
-const nimOffset327 = offsetOf(bgfx_init_limits_s, `numDrawCalls`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, numDrawCalls) == ", nimOffset327, ", \"offset mismatch: bgfx_init_limits_t.numDrawCalls\");"].}
-const nimOffset328 = offsetOf(bgfx_init_limits_s, `numDrawCallPeakFrames`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, numDrawCallPeakFrames) == ", nimOffset328, ", \"offset mismatch: bgfx_init_limits_t.numDrawCallPeakFrames\");"].}
-const nimOffset329 = offsetOf(bgfx_init_limits_s, `minResourceCbSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, minResourceCbSize) == ", nimOffset329, ", \"offset mismatch: bgfx_init_limits_t.minResourceCbSize\");"].}
-const nimOffset330 = offsetOf(bgfx_init_limits_s, `maxTransientVbSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, maxTransientVbSize) == ", nimOffset330, ", \"offset mismatch: bgfx_init_limits_t.maxTransientVbSize\");"].}
-const nimOffset331 = offsetOf(bgfx_init_limits_s, `maxTransientIbSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, maxTransientIbSize) == ", nimOffset331, ", \"offset mismatch: bgfx_init_limits_t.maxTransientIbSize\");"].}
-const nimOffset332 = offsetOf(bgfx_init_limits_s, `minUniformBufferSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, minUniformBufferSize) == ", nimOffset332, ", \"offset mismatch: bgfx_init_limits_t.minUniformBufferSize\");"].}
+const nimSize336 = sizeof(bgfx_init_limits_s)
+const nimAlign336 = alignof(bgfx_init_limits_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_init_limits_t) == ", nimSize336, ", \"size mismatch: bgfx_init_limits_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_init_limits_t) == ", nimAlign336, ", \"alignment mismatch: bgfx_init_limits_t\");"].}
+const nimOffset337 = offsetOf(bgfx_init_limits_s, `maxEncoders`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, maxEncoders) == ", nimOffset337, ", \"offset mismatch: bgfx_init_limits_t.maxEncoders\");"].}
+const nimOffset338 = offsetOf(bgfx_init_limits_s, `numDrawCalls`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, numDrawCalls) == ", nimOffset338, ", \"offset mismatch: bgfx_init_limits_t.numDrawCalls\");"].}
+const nimOffset339 = offsetOf(bgfx_init_limits_s, `numDrawCallPeakFrames`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, numDrawCallPeakFrames) == ", nimOffset339, ", \"offset mismatch: bgfx_init_limits_t.numDrawCallPeakFrames\");"].}
+const nimOffset340 = offsetOf(bgfx_init_limits_s, `minViews`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, minViews) == ", nimOffset340, ", \"offset mismatch: bgfx_init_limits_t.minViews\");"].}
+const nimOffset341 = offsetOf(bgfx_init_limits_s, `minResourceCbSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, minResourceCbSize) == ", nimOffset341, ", \"offset mismatch: bgfx_init_limits_t.minResourceCbSize\");"].}
+const nimOffset342 = offsetOf(bgfx_init_limits_s, `maxTransientVbSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, maxTransientVbSize) == ", nimOffset342, ", \"offset mismatch: bgfx_init_limits_t.maxTransientVbSize\");"].}
+const nimOffset343 = offsetOf(bgfx_init_limits_s, `maxTransientIbSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, maxTransientIbSize) == ", nimOffset343, ", \"offset mismatch: bgfx_init_limits_t.maxTransientIbSize\");"].}
+const nimOffset344 = offsetOf(bgfx_init_limits_s, `minUniformBufferSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, minUniformBufferSize) == ", nimOffset344, ", \"offset mismatch: bgfx_init_limits_t.minUniformBufferSize\");"].}
+const nimOffset345 = offsetOf(bgfx_init_limits_s, `minUniformCacheSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_limits_t, minUniformCacheSize) == ", nimOffset345, ", \"offset mismatch: bgfx_init_limits_t.minUniformCacheSize\");"].}
 
-const nimSize333 = sizeof(bgfx_init_s)
-const nimAlign333 = alignof(bgfx_init_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_init_t) == ", nimSize333, ", \"size mismatch: bgfx_init_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_init_t) == ", nimAlign333, ", \"alignment mismatch: bgfx_init_t\");"].}
-const nimOffset334 = offsetOf(bgfx_init_s, `type`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, type) == ", nimOffset334, ", \"offset mismatch: bgfx_init_t.type\");"].}
-const nimOffset335 = offsetOf(bgfx_init_s, `vendorId`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, vendorId) == ", nimOffset335, ", \"offset mismatch: bgfx_init_t.vendorId\");"].}
-const nimOffset336 = offsetOf(bgfx_init_s, `deviceId`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, deviceId) == ", nimOffset336, ", \"offset mismatch: bgfx_init_t.deviceId\");"].}
-const nimOffset337 = offsetOf(bgfx_init_s, `capabilities`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, capabilities) == ", nimOffset337, ", \"offset mismatch: bgfx_init_t.capabilities\");"].}
-const nimOffset338 = offsetOf(bgfx_init_s, `debug`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, debug) == ", nimOffset338, ", \"offset mismatch: bgfx_init_t.debug\");"].}
-const nimOffset339 = offsetOf(bgfx_init_s, `profile`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, profile) == ", nimOffset339, ", \"offset mismatch: bgfx_init_t.profile\");"].}
-const nimOffset340 = offsetOf(bgfx_init_s, `fallback`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, fallback) == ", nimOffset340, ", \"offset mismatch: bgfx_init_t.fallback\");"].}
-const nimOffset341 = offsetOf(bgfx_init_s, `videoDecode`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, videoDecode) == ", nimOffset341, ", \"offset mismatch: bgfx_init_t.videoDecode\");"].}
-const nimOffset342 = offsetOf(bgfx_init_s, `platformData`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, platformData) == ", nimOffset342, ", \"offset mismatch: bgfx_init_t.platformData\");"].}
-const nimOffset343 = offsetOf(bgfx_init_s, `swapChain`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, swapChain) == ", nimOffset343, ", \"offset mismatch: bgfx_init_t.swapChain\");"].}
-const nimOffset344 = offsetOf(bgfx_init_s, `reset`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, reset) == ", nimOffset344, ", \"offset mismatch: bgfx_init_t.reset\");"].}
-const nimOffset345 = offsetOf(bgfx_init_s, `limits`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, limits) == ", nimOffset345, ", \"offset mismatch: bgfx_init_t.limits\");"].}
-const nimOffset346 = offsetOf(bgfx_init_s, `callback`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, callback) == ", nimOffset346, ", \"offset mismatch: bgfx_init_t.callback\");"].}
-const nimOffset347 = offsetOf(bgfx_init_s, `allocator`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, allocator) == ", nimOffset347, ", \"offset mismatch: bgfx_init_t.allocator\");"].}
+const nimSize346 = sizeof(bgfx_init_s)
+const nimAlign346 = alignof(bgfx_init_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_init_t) == ", nimSize346, ", \"size mismatch: bgfx_init_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_init_t) == ", nimAlign346, ", \"alignment mismatch: bgfx_init_t\");"].}
+const nimOffset347 = offsetOf(bgfx_init_s, `type`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, type) == ", nimOffset347, ", \"offset mismatch: bgfx_init_t.type\");"].}
+const nimOffset348 = offsetOf(bgfx_init_s, `vendorId`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, vendorId) == ", nimOffset348, ", \"offset mismatch: bgfx_init_t.vendorId\");"].}
+const nimOffset349 = offsetOf(bgfx_init_s, `deviceId`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, deviceId) == ", nimOffset349, ", \"offset mismatch: bgfx_init_t.deviceId\");"].}
+const nimOffset350 = offsetOf(bgfx_init_s, `capabilities`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, capabilities) == ", nimOffset350, ", \"offset mismatch: bgfx_init_t.capabilities\");"].}
+const nimOffset351 = offsetOf(bgfx_init_s, `debug`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, debug) == ", nimOffset351, ", \"offset mismatch: bgfx_init_t.debug\");"].}
+const nimOffset352 = offsetOf(bgfx_init_s, `profile`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, profile) == ", nimOffset352, ", \"offset mismatch: bgfx_init_t.profile\");"].}
+const nimOffset353 = offsetOf(bgfx_init_s, `fallback`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, fallback) == ", nimOffset353, ", \"offset mismatch: bgfx_init_t.fallback\");"].}
+const nimOffset354 = offsetOf(bgfx_init_s, `videoDecode`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, videoDecode) == ", nimOffset354, ", \"offset mismatch: bgfx_init_t.videoDecode\");"].}
+const nimOffset355 = offsetOf(bgfx_init_s, `platformData`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, platformData) == ", nimOffset355, ", \"offset mismatch: bgfx_init_t.platformData\");"].}
+const nimOffset356 = offsetOf(bgfx_init_s, `swapChain`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, swapChain) == ", nimOffset356, ", \"offset mismatch: bgfx_init_t.swapChain\");"].}
+const nimOffset357 = offsetOf(bgfx_init_s, `reset`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, reset) == ", nimOffset357, ", \"offset mismatch: bgfx_init_t.reset\");"].}
+const nimOffset358 = offsetOf(bgfx_init_s, `limits`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, limits) == ", nimOffset358, ", \"offset mismatch: bgfx_init_t.limits\");"].}
+const nimOffset359 = offsetOf(bgfx_init_s, `callback`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, callback) == ", nimOffset359, ", \"offset mismatch: bgfx_init_t.callback\");"].}
+const nimOffset360 = offsetOf(bgfx_init_s, `allocator`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_init_t, allocator) == ", nimOffset360, ", \"offset mismatch: bgfx_init_t.allocator\");"].}
 
-const nimSize348 = sizeof(bgfx_memory_s)
-const nimAlign348 = alignof(bgfx_memory_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_memory_t) == ", nimSize348, ", \"size mismatch: bgfx_memory_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_memory_t) == ", nimAlign348, ", \"alignment mismatch: bgfx_memory_t\");"].}
-const nimOffset349 = offsetOf(bgfx_memory_s, `data`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_memory_t, data) == ", nimOffset349, ", \"offset mismatch: bgfx_memory_t.data\");"].}
-const nimOffset350 = offsetOf(bgfx_memory_s, `size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_memory_t, size) == ", nimOffset350, ", \"offset mismatch: bgfx_memory_t.size\");"].}
+const nimSize361 = sizeof(bgfx_memory_s)
+const nimAlign361 = alignof(bgfx_memory_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_memory_t) == ", nimSize361, ", \"size mismatch: bgfx_memory_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_memory_t) == ", nimAlign361, ", \"alignment mismatch: bgfx_memory_t\");"].}
+const nimOffset362 = offsetOf(bgfx_memory_s, `data`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_memory_t, data) == ", nimOffset362, ", \"offset mismatch: bgfx_memory_t.data\");"].}
+const nimOffset363 = offsetOf(bgfx_memory_s, `size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_memory_t, size) == ", nimOffset363, ", \"offset mismatch: bgfx_memory_t.size\");"].}
 
-const nimSize351 = sizeof(bgfx_transient_index_buffer_s)
-const nimAlign351 = alignof(bgfx_transient_index_buffer_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_transient_index_buffer_t) == ", nimSize351, ", \"size mismatch: bgfx_transient_index_buffer_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_transient_index_buffer_t) == ", nimAlign351, ", \"alignment mismatch: bgfx_transient_index_buffer_t\");"].}
-const nimOffset352 = offsetOf(bgfx_transient_index_buffer_s, `data`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, data) == ", nimOffset352, ", \"offset mismatch: bgfx_transient_index_buffer_t.data\");"].}
-const nimOffset353 = offsetOf(bgfx_transient_index_buffer_s, `size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, size) == ", nimOffset353, ", \"offset mismatch: bgfx_transient_index_buffer_t.size\");"].}
-const nimOffset354 = offsetOf(bgfx_transient_index_buffer_s, `startIndex`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, startIndex) == ", nimOffset354, ", \"offset mismatch: bgfx_transient_index_buffer_t.startIndex\");"].}
-const nimOffset355 = offsetOf(bgfx_transient_index_buffer_s, `handle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, handle) == ", nimOffset355, ", \"offset mismatch: bgfx_transient_index_buffer_t.handle\");"].}
-const nimOffset356 = offsetOf(bgfx_transient_index_buffer_s, `isIndex16`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, isIndex16) == ", nimOffset356, ", \"offset mismatch: bgfx_transient_index_buffer_t.isIndex16\");"].}
+const nimSize364 = sizeof(bgfx_transient_index_buffer_s)
+const nimAlign364 = alignof(bgfx_transient_index_buffer_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_transient_index_buffer_t) == ", nimSize364, ", \"size mismatch: bgfx_transient_index_buffer_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_transient_index_buffer_t) == ", nimAlign364, ", \"alignment mismatch: bgfx_transient_index_buffer_t\");"].}
+const nimOffset365 = offsetOf(bgfx_transient_index_buffer_s, `data`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, data) == ", nimOffset365, ", \"offset mismatch: bgfx_transient_index_buffer_t.data\");"].}
+const nimOffset366 = offsetOf(bgfx_transient_index_buffer_s, `size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, size) == ", nimOffset366, ", \"offset mismatch: bgfx_transient_index_buffer_t.size\");"].}
+const nimOffset367 = offsetOf(bgfx_transient_index_buffer_s, `startIndex`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, startIndex) == ", nimOffset367, ", \"offset mismatch: bgfx_transient_index_buffer_t.startIndex\");"].}
+const nimOffset368 = offsetOf(bgfx_transient_index_buffer_s, `handle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, handle) == ", nimOffset368, ", \"offset mismatch: bgfx_transient_index_buffer_t.handle\");"].}
+const nimOffset369 = offsetOf(bgfx_transient_index_buffer_s, `isIndex16`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_index_buffer_t, isIndex16) == ", nimOffset369, ", \"offset mismatch: bgfx_transient_index_buffer_t.isIndex16\");"].}
 
-const nimSize357 = sizeof(bgfx_transient_vertex_buffer_s)
-const nimAlign357 = alignof(bgfx_transient_vertex_buffer_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_transient_vertex_buffer_t) == ", nimSize357, ", \"size mismatch: bgfx_transient_vertex_buffer_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_transient_vertex_buffer_t) == ", nimAlign357, ", \"alignment mismatch: bgfx_transient_vertex_buffer_t\");"].}
-const nimOffset358 = offsetOf(bgfx_transient_vertex_buffer_s, `data`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, data) == ", nimOffset358, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.data\");"].}
-const nimOffset359 = offsetOf(bgfx_transient_vertex_buffer_s, `size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, size) == ", nimOffset359, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.size\");"].}
-const nimOffset360 = offsetOf(bgfx_transient_vertex_buffer_s, `startVertex`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, startVertex) == ", nimOffset360, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.startVertex\");"].}
-const nimOffset361 = offsetOf(bgfx_transient_vertex_buffer_s, `stride`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, stride) == ", nimOffset361, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.stride\");"].}
-const nimOffset362 = offsetOf(bgfx_transient_vertex_buffer_s, `handle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, handle) == ", nimOffset362, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.handle\");"].}
-const nimOffset363 = offsetOf(bgfx_transient_vertex_buffer_s, `layoutHandle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, layoutHandle) == ", nimOffset363, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.layoutHandle\");"].}
+const nimSize370 = sizeof(bgfx_transient_vertex_buffer_s)
+const nimAlign370 = alignof(bgfx_transient_vertex_buffer_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_transient_vertex_buffer_t) == ", nimSize370, ", \"size mismatch: bgfx_transient_vertex_buffer_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_transient_vertex_buffer_t) == ", nimAlign370, ", \"alignment mismatch: bgfx_transient_vertex_buffer_t\");"].}
+const nimOffset371 = offsetOf(bgfx_transient_vertex_buffer_s, `data`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, data) == ", nimOffset371, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.data\");"].}
+const nimOffset372 = offsetOf(bgfx_transient_vertex_buffer_s, `size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, size) == ", nimOffset372, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.size\");"].}
+const nimOffset373 = offsetOf(bgfx_transient_vertex_buffer_s, `startVertex`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, startVertex) == ", nimOffset373, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.startVertex\");"].}
+const nimOffset374 = offsetOf(bgfx_transient_vertex_buffer_s, `stride`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, stride) == ", nimOffset374, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.stride\");"].}
+const nimOffset375 = offsetOf(bgfx_transient_vertex_buffer_s, `handle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, handle) == ", nimOffset375, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.handle\");"].}
+const nimOffset376 = offsetOf(bgfx_transient_vertex_buffer_s, `layoutHandle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transient_vertex_buffer_t, layoutHandle) == ", nimOffset376, ", \"offset mismatch: bgfx_transient_vertex_buffer_t.layoutHandle\");"].}
 
-const nimSize364 = sizeof(bgfx_instance_data_buffer_s)
-const nimAlign364 = alignof(bgfx_instance_data_buffer_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_instance_data_buffer_t) == ", nimSize364, ", \"size mismatch: bgfx_instance_data_buffer_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_instance_data_buffer_t) == ", nimAlign364, ", \"alignment mismatch: bgfx_instance_data_buffer_t\");"].}
-const nimOffset365 = offsetOf(bgfx_instance_data_buffer_s, `data`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, data) == ", nimOffset365, ", \"offset mismatch: bgfx_instance_data_buffer_t.data\");"].}
-const nimOffset366 = offsetOf(bgfx_instance_data_buffer_s, `size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, size) == ", nimOffset366, ", \"offset mismatch: bgfx_instance_data_buffer_t.size\");"].}
-const nimOffset367 = offsetOf(bgfx_instance_data_buffer_s, `offset`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, offset) == ", nimOffset367, ", \"offset mismatch: bgfx_instance_data_buffer_t.offset\");"].}
-const nimOffset368 = offsetOf(bgfx_instance_data_buffer_s, `num`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, num) == ", nimOffset368, ", \"offset mismatch: bgfx_instance_data_buffer_t.num\");"].}
-const nimOffset369 = offsetOf(bgfx_instance_data_buffer_s, `stride`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, stride) == ", nimOffset369, ", \"offset mismatch: bgfx_instance_data_buffer_t.stride\");"].}
-const nimOffset370 = offsetOf(bgfx_instance_data_buffer_s, `handle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, handle) == ", nimOffset370, ", \"offset mismatch: bgfx_instance_data_buffer_t.handle\");"].}
+const nimSize377 = sizeof(bgfx_instance_data_buffer_s)
+const nimAlign377 = alignof(bgfx_instance_data_buffer_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_instance_data_buffer_t) == ", nimSize377, ", \"size mismatch: bgfx_instance_data_buffer_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_instance_data_buffer_t) == ", nimAlign377, ", \"alignment mismatch: bgfx_instance_data_buffer_t\");"].}
+const nimOffset378 = offsetOf(bgfx_instance_data_buffer_s, `data`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, data) == ", nimOffset378, ", \"offset mismatch: bgfx_instance_data_buffer_t.data\");"].}
+const nimOffset379 = offsetOf(bgfx_instance_data_buffer_s, `size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, size) == ", nimOffset379, ", \"offset mismatch: bgfx_instance_data_buffer_t.size\");"].}
+const nimOffset380 = offsetOf(bgfx_instance_data_buffer_s, `offset`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, offset) == ", nimOffset380, ", \"offset mismatch: bgfx_instance_data_buffer_t.offset\");"].}
+const nimOffset381 = offsetOf(bgfx_instance_data_buffer_s, `num`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, num) == ", nimOffset381, ", \"offset mismatch: bgfx_instance_data_buffer_t.num\");"].}
+const nimOffset382 = offsetOf(bgfx_instance_data_buffer_s, `stride`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, stride) == ", nimOffset382, ", \"offset mismatch: bgfx_instance_data_buffer_t.stride\");"].}
+const nimOffset383 = offsetOf(bgfx_instance_data_buffer_s, `handle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_instance_data_buffer_t, handle) == ", nimOffset383, ", \"offset mismatch: bgfx_instance_data_buffer_t.handle\");"].}
 
-const nimSize371 = sizeof(bgfx_texture_region_s)
-const nimAlign371 = alignof(bgfx_texture_region_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_texture_region_t) == ", nimSize371, ", \"size mismatch: bgfx_texture_region_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_texture_region_t) == ", nimAlign371, ", \"alignment mismatch: bgfx_texture_region_t\");"].}
-const nimOffset372 = offsetOf(bgfx_texture_region_s, `handle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, handle) == ", nimOffset372, ", \"offset mismatch: bgfx_texture_region_t.handle\");"].}
-const nimOffset373 = offsetOf(bgfx_texture_region_s, `mip`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, mip) == ", nimOffset373, ", \"offset mismatch: bgfx_texture_region_t.mip\");"].}
-const nimOffset374 = offsetOf(bgfx_texture_region_s, `x`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, x) == ", nimOffset374, ", \"offset mismatch: bgfx_texture_region_t.x\");"].}
-const nimOffset375 = offsetOf(bgfx_texture_region_s, `y`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, y) == ", nimOffset375, ", \"offset mismatch: bgfx_texture_region_t.y\");"].}
-const nimOffset376 = offsetOf(bgfx_texture_region_s, `z`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, z) == ", nimOffset376, ", \"offset mismatch: bgfx_texture_region_t.z\");"].}
-const nimOffset377 = offsetOf(bgfx_texture_region_s, `width`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, width) == ", nimOffset377, ", \"offset mismatch: bgfx_texture_region_t.width\");"].}
-const nimOffset378 = offsetOf(bgfx_texture_region_s, `height`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, height) == ", nimOffset378, ", \"offset mismatch: bgfx_texture_region_t.height\");"].}
-const nimOffset379 = offsetOf(bgfx_texture_region_s, `depth`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, depth) == ", nimOffset379, ", \"offset mismatch: bgfx_texture_region_t.depth\");"].}
+const nimSize384 = sizeof(bgfx_texture_region_s)
+const nimAlign384 = alignof(bgfx_texture_region_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_texture_region_t) == ", nimSize384, ", \"size mismatch: bgfx_texture_region_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_texture_region_t) == ", nimAlign384, ", \"alignment mismatch: bgfx_texture_region_t\");"].}
+const nimOffset385 = offsetOf(bgfx_texture_region_s, `handle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, handle) == ", nimOffset385, ", \"offset mismatch: bgfx_texture_region_t.handle\");"].}
+const nimOffset386 = offsetOf(bgfx_texture_region_s, `mip`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, mip) == ", nimOffset386, ", \"offset mismatch: bgfx_texture_region_t.mip\");"].}
+const nimOffset387 = offsetOf(bgfx_texture_region_s, `x`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, x) == ", nimOffset387, ", \"offset mismatch: bgfx_texture_region_t.x\");"].}
+const nimOffset388 = offsetOf(bgfx_texture_region_s, `y`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, y) == ", nimOffset388, ", \"offset mismatch: bgfx_texture_region_t.y\");"].}
+const nimOffset389 = offsetOf(bgfx_texture_region_s, `z`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, z) == ", nimOffset389, ", \"offset mismatch: bgfx_texture_region_t.z\");"].}
+const nimOffset390 = offsetOf(bgfx_texture_region_s, `width`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, width) == ", nimOffset390, ", \"offset mismatch: bgfx_texture_region_t.width\");"].}
+const nimOffset391 = offsetOf(bgfx_texture_region_s, `height`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, height) == ", nimOffset391, ", \"offset mismatch: bgfx_texture_region_t.height\");"].}
+const nimOffset392 = offsetOf(bgfx_texture_region_s, `depth`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_region_t, depth) == ", nimOffset392, ", \"offset mismatch: bgfx_texture_region_t.depth\");"].}
 
-const nimSize380 = sizeof(bgfx_buffer_region_s)
-const nimAlign380 = alignof(bgfx_buffer_region_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_buffer_region_t) == ", nimSize380, ", \"size mismatch: bgfx_buffer_region_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_buffer_region_t) == ", nimAlign380, ", \"alignment mismatch: bgfx_buffer_region_t\");"].}
-const nimOffset381 = offsetOf(bgfx_buffer_region_s, `handle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, handle) == ", nimOffset381, ", \"offset mismatch: bgfx_buffer_region_t.handle\");"].}
-const nimOffset382 = offsetOf(bgfx_buffer_region_s, `offset`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, offset) == ", nimOffset382, ", \"offset mismatch: bgfx_buffer_region_t.offset\");"].}
-const nimOffset383 = offsetOf(bgfx_buffer_region_s, `size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, size) == ", nimOffset383, ", \"offset mismatch: bgfx_buffer_region_t.size\");"].}
-const nimOffset384 = offsetOf(bgfx_buffer_region_s, `rowPitch`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, rowPitch) == ", nimOffset384, ", \"offset mismatch: bgfx_buffer_region_t.rowPitch\");"].}
-const nimOffset385 = offsetOf(bgfx_buffer_region_s, `slicePitch`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, slicePitch) == ", nimOffset385, ", \"offset mismatch: bgfx_buffer_region_t.slicePitch\");"].}
+const nimSize393 = sizeof(bgfx_buffer_region_s)
+const nimAlign393 = alignof(bgfx_buffer_region_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_buffer_region_t) == ", nimSize393, ", \"size mismatch: bgfx_buffer_region_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_buffer_region_t) == ", nimAlign393, ", \"alignment mismatch: bgfx_buffer_region_t\");"].}
+const nimOffset394 = offsetOf(bgfx_buffer_region_s, `handle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, handle) == ", nimOffset394, ", \"offset mismatch: bgfx_buffer_region_t.handle\");"].}
+const nimOffset395 = offsetOf(bgfx_buffer_region_s, `offset`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, offset) == ", nimOffset395, ", \"offset mismatch: bgfx_buffer_region_t.offset\");"].}
+const nimOffset396 = offsetOf(bgfx_buffer_region_s, `size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, size) == ", nimOffset396, ", \"offset mismatch: bgfx_buffer_region_t.size\");"].}
+const nimOffset397 = offsetOf(bgfx_buffer_region_s, `rowPitch`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, rowPitch) == ", nimOffset397, ", \"offset mismatch: bgfx_buffer_region_t.rowPitch\");"].}
+const nimOffset398 = offsetOf(bgfx_buffer_region_s, `slicePitch`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_buffer_region_t, slicePitch) == ", nimOffset398, ", \"offset mismatch: bgfx_buffer_region_t.slicePitch\");"].}
 
-const nimSize386 = sizeof(bgfx_texture_info_s)
-const nimAlign386 = alignof(bgfx_texture_info_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_texture_info_t) == ", nimSize386, ", \"size mismatch: bgfx_texture_info_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_texture_info_t) == ", nimAlign386, ", \"alignment mismatch: bgfx_texture_info_t\");"].}
-const nimOffset387 = offsetOf(bgfx_texture_info_s, `format`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, format) == ", nimOffset387, ", \"offset mismatch: bgfx_texture_info_t.format\");"].}
-const nimOffset388 = offsetOf(bgfx_texture_info_s, `storageSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, storageSize) == ", nimOffset388, ", \"offset mismatch: bgfx_texture_info_t.storageSize\");"].}
-const nimOffset389 = offsetOf(bgfx_texture_info_s, `width`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, width) == ", nimOffset389, ", \"offset mismatch: bgfx_texture_info_t.width\");"].}
-const nimOffset390 = offsetOf(bgfx_texture_info_s, `height`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, height) == ", nimOffset390, ", \"offset mismatch: bgfx_texture_info_t.height\");"].}
-const nimOffset391 = offsetOf(bgfx_texture_info_s, `depth`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, depth) == ", nimOffset391, ", \"offset mismatch: bgfx_texture_info_t.depth\");"].}
-const nimOffset392 = offsetOf(bgfx_texture_info_s, `numLayers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, numLayers) == ", nimOffset392, ", \"offset mismatch: bgfx_texture_info_t.numLayers\");"].}
-const nimOffset393 = offsetOf(bgfx_texture_info_s, `numMips`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, numMips) == ", nimOffset393, ", \"offset mismatch: bgfx_texture_info_t.numMips\");"].}
-const nimOffset394 = offsetOf(bgfx_texture_info_s, `bitsPerPixel`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, bitsPerPixel) == ", nimOffset394, ", \"offset mismatch: bgfx_texture_info_t.bitsPerPixel\");"].}
-const nimOffset395 = offsetOf(bgfx_texture_info_s, `cubeMap`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, cubeMap) == ", nimOffset395, ", \"offset mismatch: bgfx_texture_info_t.cubeMap\");"].}
+const nimSize399 = sizeof(bgfx_texture_info_s)
+const nimAlign399 = alignof(bgfx_texture_info_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_texture_info_t) == ", nimSize399, ", \"size mismatch: bgfx_texture_info_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_texture_info_t) == ", nimAlign399, ", \"alignment mismatch: bgfx_texture_info_t\");"].}
+const nimOffset400 = offsetOf(bgfx_texture_info_s, `format`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, format) == ", nimOffset400, ", \"offset mismatch: bgfx_texture_info_t.format\");"].}
+const nimOffset401 = offsetOf(bgfx_texture_info_s, `storageSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, storageSize) == ", nimOffset401, ", \"offset mismatch: bgfx_texture_info_t.storageSize\");"].}
+const nimOffset402 = offsetOf(bgfx_texture_info_s, `width`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, width) == ", nimOffset402, ", \"offset mismatch: bgfx_texture_info_t.width\");"].}
+const nimOffset403 = offsetOf(bgfx_texture_info_s, `height`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, height) == ", nimOffset403, ", \"offset mismatch: bgfx_texture_info_t.height\");"].}
+const nimOffset404 = offsetOf(bgfx_texture_info_s, `depth`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, depth) == ", nimOffset404, ", \"offset mismatch: bgfx_texture_info_t.depth\");"].}
+const nimOffset405 = offsetOf(bgfx_texture_info_s, `numLayers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, numLayers) == ", nimOffset405, ", \"offset mismatch: bgfx_texture_info_t.numLayers\");"].}
+const nimOffset406 = offsetOf(bgfx_texture_info_s, `numMips`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, numMips) == ", nimOffset406, ", \"offset mismatch: bgfx_texture_info_t.numMips\");"].}
+const nimOffset407 = offsetOf(bgfx_texture_info_s, `bitsPerPixel`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, bitsPerPixel) == ", nimOffset407, ", \"offset mismatch: bgfx_texture_info_t.bitsPerPixel\");"].}
+const nimOffset408 = offsetOf(bgfx_texture_info_s, `cubeMap`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_texture_info_t, cubeMap) == ", nimOffset408, ", \"offset mismatch: bgfx_texture_info_t.cubeMap\");"].}
 
-const nimSize396 = sizeof(bgfx_video_decoder_init_s)
-const nimAlign396 = alignof(bgfx_video_decoder_init_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_video_decoder_init_t) == ", nimSize396, ", \"size mismatch: bgfx_video_decoder_init_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_video_decoder_init_t) == ", nimAlign396, ", \"alignment mismatch: bgfx_video_decoder_init_t\");"].}
-const nimOffset397 = offsetOf(bgfx_video_decoder_init_s, `magic`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, magic) == ", nimOffset397, ", \"offset mismatch: bgfx_video_decoder_init_t.magic\");"].}
-const nimOffset398 = offsetOf(bgfx_video_decoder_init_s, `codec`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, codec) == ", nimOffset398, ", \"offset mismatch: bgfx_video_decoder_init_t.codec\");"].}
-const nimOffset399 = offsetOf(bgfx_video_decoder_init_s, `parameterSets`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, parameterSets) == ", nimOffset399, ", \"offset mismatch: bgfx_video_decoder_init_t.parameterSets\");"].}
-const nimOffset400 = offsetOf(bgfx_video_decoder_init_s, `parameterSetsSize`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, parameterSetsSize) == ", nimOffset400, ", \"offset mismatch: bgfx_video_decoder_init_t.parameterSetsSize\");"].}
-const nimOffset401 = offsetOf(bgfx_video_decoder_init_s, `cachedAuBytes`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, cachedAuBytes) == ", nimOffset401, ", \"offset mismatch: bgfx_video_decoder_init_t.cachedAuBytes\");"].}
-const nimOffset402 = offsetOf(bgfx_video_decoder_init_s, `flags`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, flags) == ", nimOffset402, ", \"offset mismatch: bgfx_video_decoder_init_t.flags\");"].}
+const nimSize409 = sizeof(bgfx_video_decoder_init_s)
+const nimAlign409 = alignof(bgfx_video_decoder_init_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_video_decoder_init_t) == ", nimSize409, ", \"size mismatch: bgfx_video_decoder_init_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_video_decoder_init_t) == ", nimAlign409, ", \"alignment mismatch: bgfx_video_decoder_init_t\");"].}
+const nimOffset410 = offsetOf(bgfx_video_decoder_init_s, `magic`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, magic) == ", nimOffset410, ", \"offset mismatch: bgfx_video_decoder_init_t.magic\");"].}
+const nimOffset411 = offsetOf(bgfx_video_decoder_init_s, `codec`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, codec) == ", nimOffset411, ", \"offset mismatch: bgfx_video_decoder_init_t.codec\");"].}
+const nimOffset412 = offsetOf(bgfx_video_decoder_init_s, `parameterSets`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, parameterSets) == ", nimOffset412, ", \"offset mismatch: bgfx_video_decoder_init_t.parameterSets\");"].}
+const nimOffset413 = offsetOf(bgfx_video_decoder_init_s, `parameterSetsSize`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, parameterSetsSize) == ", nimOffset413, ", \"offset mismatch: bgfx_video_decoder_init_t.parameterSetsSize\");"].}
+const nimOffset414 = offsetOf(bgfx_video_decoder_init_s, `cachedAuBytes`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, cachedAuBytes) == ", nimOffset414, ", \"offset mismatch: bgfx_video_decoder_init_t.cachedAuBytes\");"].}
+const nimOffset415 = offsetOf(bgfx_video_decoder_init_s, `flags`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_init_t, flags) == ", nimOffset415, ", \"offset mismatch: bgfx_video_decoder_init_t.flags\");"].}
 
-const nimSize403 = sizeof(bgfx_video_decoder_au_s)
-const nimAlign403 = alignof(bgfx_video_decoder_au_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_video_decoder_au_t) == ", nimSize403, ", \"size mismatch: bgfx_video_decoder_au_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_video_decoder_au_t) == ", nimAlign403, ", \"alignment mismatch: bgfx_video_decoder_au_t\");"].}
-const nimOffset404 = offsetOf(bgfx_video_decoder_au_s, `size`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_au_t, size) == ", nimOffset404, ", \"offset mismatch: bgfx_video_decoder_au_t.size\");"].}
-const nimOffset405 = offsetOf(bgfx_video_decoder_au_s, `ptsUs`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_au_t, ptsUs) == ", nimOffset405, ", \"offset mismatch: bgfx_video_decoder_au_t.ptsUs\");"].}
+const nimSize416 = sizeof(bgfx_video_decoder_au_s)
+const nimAlign416 = alignof(bgfx_video_decoder_au_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_video_decoder_au_t) == ", nimSize416, ", \"size mismatch: bgfx_video_decoder_au_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_video_decoder_au_t) == ", nimAlign416, ", \"alignment mismatch: bgfx_video_decoder_au_t\");"].}
+const nimOffset417 = offsetOf(bgfx_video_decoder_au_s, `size`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_au_t, size) == ", nimOffset417, ", \"offset mismatch: bgfx_video_decoder_au_t.size\");"].}
+const nimOffset418 = offsetOf(bgfx_video_decoder_au_s, `ptsUs`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_au_t, ptsUs) == ", nimOffset418, ", \"offset mismatch: bgfx_video_decoder_au_t.ptsUs\");"].}
 
-const nimSize406 = sizeof(bgfx_video_decoder_frame_s)
-const nimAlign406 = alignof(bgfx_video_decoder_frame_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_video_decoder_frame_t) == ", nimSize406, ", \"size mismatch: bgfx_video_decoder_frame_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_video_decoder_frame_t) == ", nimAlign406, ", \"alignment mismatch: bgfx_video_decoder_frame_t\");"].}
-const nimOffset407 = offsetOf(bgfx_video_decoder_frame_s, `magic`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, magic) == ", nimOffset407, ", \"offset mismatch: bgfx_video_decoder_frame_t.magic\");"].}
-const nimOffset408 = offsetOf(bgfx_video_decoder_frame_s, `bitstream`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, bitstream) == ", nimOffset408, ", \"offset mismatch: bgfx_video_decoder_frame_t.bitstream\");"].}
-const nimOffset409 = offsetOf(bgfx_video_decoder_frame_s, `aus`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, aus) == ", nimOffset409, ", \"offset mismatch: bgfx_video_decoder_frame_t.aus\");"].}
-const nimOffset410 = offsetOf(bgfx_video_decoder_frame_s, `numAus`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, numAus) == ", nimOffset410, ", \"offset mismatch: bgfx_video_decoder_frame_t.numAus\");"].}
-const nimOffset411 = offsetOf(bgfx_video_decoder_frame_s, `presentationTimeUs`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, presentationTimeUs) == ", nimOffset411, ", \"offset mismatch: bgfx_video_decoder_frame_t.presentationTimeUs\");"].}
-const nimOffset412 = offsetOf(bgfx_video_decoder_frame_s, `flags`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, flags) == ", nimOffset412, ", \"offset mismatch: bgfx_video_decoder_frame_t.flags\");"].}
+const nimSize419 = sizeof(bgfx_video_decoder_frame_s)
+const nimAlign419 = alignof(bgfx_video_decoder_frame_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_video_decoder_frame_t) == ", nimSize419, ", \"size mismatch: bgfx_video_decoder_frame_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_video_decoder_frame_t) == ", nimAlign419, ", \"alignment mismatch: bgfx_video_decoder_frame_t\");"].}
+const nimOffset420 = offsetOf(bgfx_video_decoder_frame_s, `magic`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, magic) == ", nimOffset420, ", \"offset mismatch: bgfx_video_decoder_frame_t.magic\");"].}
+const nimOffset421 = offsetOf(bgfx_video_decoder_frame_s, `bitstream`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, bitstream) == ", nimOffset421, ", \"offset mismatch: bgfx_video_decoder_frame_t.bitstream\");"].}
+const nimOffset422 = offsetOf(bgfx_video_decoder_frame_s, `aus`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, aus) == ", nimOffset422, ", \"offset mismatch: bgfx_video_decoder_frame_t.aus\");"].}
+const nimOffset423 = offsetOf(bgfx_video_decoder_frame_s, `numAus`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, numAus) == ", nimOffset423, ", \"offset mismatch: bgfx_video_decoder_frame_t.numAus\");"].}
+const nimOffset424 = offsetOf(bgfx_video_decoder_frame_s, `presentationTimeUs`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, presentationTimeUs) == ", nimOffset424, ", \"offset mismatch: bgfx_video_decoder_frame_t.presentationTimeUs\");"].}
+const nimOffset425 = offsetOf(bgfx_video_decoder_frame_s, `flags`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_video_decoder_frame_t, flags) == ", nimOffset425, ", \"offset mismatch: bgfx_video_decoder_frame_t.flags\");"].}
 
-const nimSize413 = sizeof(bgfx_uniform_info_s)
-const nimAlign413 = alignof(bgfx_uniform_info_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_uniform_info_t) == ", nimSize413, ", \"size mismatch: bgfx_uniform_info_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_uniform_info_t) == ", nimAlign413, ", \"alignment mismatch: bgfx_uniform_info_t\");"].}
-const nimOffset414 = offsetOf(bgfx_uniform_info_s, `name`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_info_t, name) == ", nimOffset414, ", \"offset mismatch: bgfx_uniform_info_t.name\");"].}
-const nimOffset415 = offsetOf(bgfx_uniform_info_s, `type`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_info_t, type) == ", nimOffset415, ", \"offset mismatch: bgfx_uniform_info_t.type\");"].}
-const nimOffset416 = offsetOf(bgfx_uniform_info_s, `num`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_info_t, num) == ", nimOffset416, ", \"offset mismatch: bgfx_uniform_info_t.num\");"].}
+const nimSize426 = sizeof(bgfx_uniform_info_s)
+const nimAlign426 = alignof(bgfx_uniform_info_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_uniform_info_t) == ", nimSize426, ", \"size mismatch: bgfx_uniform_info_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_uniform_info_t) == ", nimAlign426, ", \"alignment mismatch: bgfx_uniform_info_t\");"].}
+const nimOffset427 = offsetOf(bgfx_uniform_info_s, `name`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_info_t, name) == ", nimOffset427, ", \"offset mismatch: bgfx_uniform_info_t.name\");"].}
+const nimOffset428 = offsetOf(bgfx_uniform_info_s, `type`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_info_t, type) == ", nimOffset428, ", \"offset mismatch: bgfx_uniform_info_t.type\");"].}
+const nimOffset429 = offsetOf(bgfx_uniform_info_s, `num`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_uniform_info_t, num) == ", nimOffset429, ", \"offset mismatch: bgfx_uniform_info_t.num\");"].}
 
-const nimSize417 = sizeof(bgfx_attachment_s)
-const nimAlign417 = alignof(bgfx_attachment_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_attachment_t) == ", nimSize417, ", \"size mismatch: bgfx_attachment_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_attachment_t) == ", nimAlign417, ", \"alignment mismatch: bgfx_attachment_t\");"].}
-const nimOffset418 = offsetOf(bgfx_attachment_s, `access`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, access) == ", nimOffset418, ", \"offset mismatch: bgfx_attachment_t.access\");"].}
-const nimOffset419 = offsetOf(bgfx_attachment_s, `handle`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, handle) == ", nimOffset419, ", \"offset mismatch: bgfx_attachment_t.handle\");"].}
-const nimOffset420 = offsetOf(bgfx_attachment_s, `mip`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, mip) == ", nimOffset420, ", \"offset mismatch: bgfx_attachment_t.mip\");"].}
-const nimOffset421 = offsetOf(bgfx_attachment_s, `layer`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, layer) == ", nimOffset421, ", \"offset mismatch: bgfx_attachment_t.layer\");"].}
-const nimOffset422 = offsetOf(bgfx_attachment_s, `numLayers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, numLayers) == ", nimOffset422, ", \"offset mismatch: bgfx_attachment_t.numLayers\");"].}
-const nimOffset423 = offsetOf(bgfx_attachment_s, `resolve`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, resolve) == ", nimOffset423, ", \"offset mismatch: bgfx_attachment_t.resolve\");"].}
+const nimSize430 = sizeof(bgfx_attachment_s)
+const nimAlign430 = alignof(bgfx_attachment_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_attachment_t) == ", nimSize430, ", \"size mismatch: bgfx_attachment_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_attachment_t) == ", nimAlign430, ", \"alignment mismatch: bgfx_attachment_t\");"].}
+const nimOffset431 = offsetOf(bgfx_attachment_s, `access`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, access) == ", nimOffset431, ", \"offset mismatch: bgfx_attachment_t.access\");"].}
+const nimOffset432 = offsetOf(bgfx_attachment_s, `handle`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, handle) == ", nimOffset432, ", \"offset mismatch: bgfx_attachment_t.handle\");"].}
+const nimOffset433 = offsetOf(bgfx_attachment_s, `mip`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, mip) == ", nimOffset433, ", \"offset mismatch: bgfx_attachment_t.mip\");"].}
+const nimOffset434 = offsetOf(bgfx_attachment_s, `layer`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, layer) == ", nimOffset434, ", \"offset mismatch: bgfx_attachment_t.layer\");"].}
+const nimOffset435 = offsetOf(bgfx_attachment_s, `numLayers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, numLayers) == ", nimOffset435, ", \"offset mismatch: bgfx_attachment_t.numLayers\");"].}
+const nimOffset436 = offsetOf(bgfx_attachment_s, `flags`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_attachment_t, flags) == ", nimOffset436, ", \"offset mismatch: bgfx_attachment_t.flags\");"].}
 
-const nimSize424 = sizeof(bgfx_transform_s)
-const nimAlign424 = alignof(bgfx_transform_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_transform_t) == ", nimSize424, ", \"size mismatch: bgfx_transform_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_transform_t) == ", nimAlign424, ", \"alignment mismatch: bgfx_transform_t\");"].}
-const nimOffset425 = offsetOf(bgfx_transform_s, `data`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transform_t, data) == ", nimOffset425, ", \"offset mismatch: bgfx_transform_t.data\");"].}
-const nimOffset426 = offsetOf(bgfx_transform_s, `num`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transform_t, num) == ", nimOffset426, ", \"offset mismatch: bgfx_transform_t.num\");"].}
+const nimSize437 = sizeof(bgfx_transform_s)
+const nimAlign437 = alignof(bgfx_transform_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_transform_t) == ", nimSize437, ", \"size mismatch: bgfx_transform_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_transform_t) == ", nimAlign437, ", \"alignment mismatch: bgfx_transform_t\");"].}
+const nimOffset438 = offsetOf(bgfx_transform_s, `data`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transform_t, data) == ", nimOffset438, ", \"offset mismatch: bgfx_transform_t.data\");"].}
+const nimOffset439 = offsetOf(bgfx_transform_s, `num`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_transform_t, num) == ", nimOffset439, ", \"offset mismatch: bgfx_transform_t.num\");"].}
 
-const nimSize427 = sizeof(bgfx_view_stats_s)
-const nimAlign427 = alignof(bgfx_view_stats_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_view_stats_t) == ", nimSize427, ", \"size mismatch: bgfx_view_stats_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_view_stats_t) == ", nimAlign427, ", \"alignment mismatch: bgfx_view_stats_t\");"].}
-const nimOffset428 = offsetOf(bgfx_view_stats_s, `name`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, name) == ", nimOffset428, ", \"offset mismatch: bgfx_view_stats_t.name\");"].}
-const nimOffset429 = offsetOf(bgfx_view_stats_s, `view`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, view) == ", nimOffset429, ", \"offset mismatch: bgfx_view_stats_t.view\");"].}
-const nimOffset430 = offsetOf(bgfx_view_stats_s, `cpuTimeBegin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, cpuTimeBegin) == ", nimOffset430, ", \"offset mismatch: bgfx_view_stats_t.cpuTimeBegin\");"].}
-const nimOffset431 = offsetOf(bgfx_view_stats_s, `cpuTimeEnd`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, cpuTimeEnd) == ", nimOffset431, ", \"offset mismatch: bgfx_view_stats_t.cpuTimeEnd\");"].}
-const nimOffset432 = offsetOf(bgfx_view_stats_s, `gpuTimeBegin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, gpuTimeBegin) == ", nimOffset432, ", \"offset mismatch: bgfx_view_stats_t.gpuTimeBegin\");"].}
-const nimOffset433 = offsetOf(bgfx_view_stats_s, `gpuTimeEnd`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, gpuTimeEnd) == ", nimOffset433, ", \"offset mismatch: bgfx_view_stats_t.gpuTimeEnd\");"].}
-const nimOffset434 = offsetOf(bgfx_view_stats_s, `gpuFrameNum`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, gpuFrameNum) == ", nimOffset434, ", \"offset mismatch: bgfx_view_stats_t.gpuFrameNum\");"].}
+const nimSize440 = sizeof(bgfx_view_stats_s)
+const nimAlign440 = alignof(bgfx_view_stats_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_view_stats_t) == ", nimSize440, ", \"size mismatch: bgfx_view_stats_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_view_stats_t) == ", nimAlign440, ", \"alignment mismatch: bgfx_view_stats_t\");"].}
+const nimOffset441 = offsetOf(bgfx_view_stats_s, `name`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, name) == ", nimOffset441, ", \"offset mismatch: bgfx_view_stats_t.name\");"].}
+const nimOffset442 = offsetOf(bgfx_view_stats_s, `view`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, view) == ", nimOffset442, ", \"offset mismatch: bgfx_view_stats_t.view\");"].}
+const nimOffset443 = offsetOf(bgfx_view_stats_s, `cpuTimeBegin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, cpuTimeBegin) == ", nimOffset443, ", \"offset mismatch: bgfx_view_stats_t.cpuTimeBegin\");"].}
+const nimOffset444 = offsetOf(bgfx_view_stats_s, `cpuTimeEnd`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, cpuTimeEnd) == ", nimOffset444, ", \"offset mismatch: bgfx_view_stats_t.cpuTimeEnd\");"].}
+const nimOffset445 = offsetOf(bgfx_view_stats_s, `gpuTimeBegin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, gpuTimeBegin) == ", nimOffset445, ", \"offset mismatch: bgfx_view_stats_t.gpuTimeBegin\");"].}
+const nimOffset446 = offsetOf(bgfx_view_stats_s, `gpuTimeEnd`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, gpuTimeEnd) == ", nimOffset446, ", \"offset mismatch: bgfx_view_stats_t.gpuTimeEnd\");"].}
+const nimOffset447 = offsetOf(bgfx_view_stats_s, `gpuFrameNum`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_view_stats_t, gpuFrameNum) == ", nimOffset447, ", \"offset mismatch: bgfx_view_stats_t.gpuFrameNum\");"].}
 
-const nimSize435 = sizeof(bgfx_encoder_stats_s)
-const nimAlign435 = alignof(bgfx_encoder_stats_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_encoder_stats_t) == ", nimSize435, ", \"size mismatch: bgfx_encoder_stats_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_encoder_stats_t) == ", nimAlign435, ", \"alignment mismatch: bgfx_encoder_stats_t\");"].}
-const nimOffset436 = offsetOf(bgfx_encoder_stats_s, `cpuTimeBegin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_encoder_stats_t, cpuTimeBegin) == ", nimOffset436, ", \"offset mismatch: bgfx_encoder_stats_t.cpuTimeBegin\");"].}
-const nimOffset437 = offsetOf(bgfx_encoder_stats_s, `cpuTimeEnd`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_encoder_stats_t, cpuTimeEnd) == ", nimOffset437, ", \"offset mismatch: bgfx_encoder_stats_t.cpuTimeEnd\");"].}
+const nimSize448 = sizeof(bgfx_encoder_stats_s)
+const nimAlign448 = alignof(bgfx_encoder_stats_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_encoder_stats_t) == ", nimSize448, ", \"size mismatch: bgfx_encoder_stats_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_encoder_stats_t) == ", nimAlign448, ", \"alignment mismatch: bgfx_encoder_stats_t\");"].}
+const nimOffset449 = offsetOf(bgfx_encoder_stats_s, `cpuTimeBegin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_encoder_stats_t, cpuTimeBegin) == ", nimOffset449, ", \"offset mismatch: bgfx_encoder_stats_t.cpuTimeBegin\");"].}
+const nimOffset450 = offsetOf(bgfx_encoder_stats_s, `cpuTimeEnd`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_encoder_stats_t, cpuTimeEnd) == ", nimOffset450, ", \"offset mismatch: bgfx_encoder_stats_t.cpuTimeEnd\");"].}
 
-const nimSize438 = sizeof(bgfx_stats_s)
-const nimAlign438 = alignof(bgfx_stats_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_stats_t) == ", nimSize438, ", \"size mismatch: bgfx_stats_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_stats_t) == ", nimAlign438, ", \"alignment mismatch: bgfx_stats_t\");"].}
-const nimOffset439 = offsetOf(bgfx_stats_s, `cpuTimeFrame`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimeFrame) == ", nimOffset439, ", \"offset mismatch: bgfx_stats_t.cpuTimeFrame\");"].}
-const nimOffset440 = offsetOf(bgfx_stats_s, `cpuTimeBegin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimeBegin) == ", nimOffset440, ", \"offset mismatch: bgfx_stats_t.cpuTimeBegin\");"].}
-const nimOffset441 = offsetOf(bgfx_stats_s, `cpuTimeEnd`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimeEnd) == ", nimOffset441, ", \"offset mismatch: bgfx_stats_t.cpuTimeEnd\");"].}
-const nimOffset442 = offsetOf(bgfx_stats_s, `cpuTimerFreq`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimerFreq) == ", nimOffset442, ", \"offset mismatch: bgfx_stats_t.cpuTimerFreq\");"].}
-const nimOffset443 = offsetOf(bgfx_stats_s, `gpuTimeBegin`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuTimeBegin) == ", nimOffset443, ", \"offset mismatch: bgfx_stats_t.gpuTimeBegin\");"].}
-const nimOffset444 = offsetOf(bgfx_stats_s, `gpuTimeEnd`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuTimeEnd) == ", nimOffset444, ", \"offset mismatch: bgfx_stats_t.gpuTimeEnd\");"].}
-const nimOffset445 = offsetOf(bgfx_stats_s, `gpuTimerFreq`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuTimerFreq) == ", nimOffset445, ", \"offset mismatch: bgfx_stats_t.gpuTimerFreq\");"].}
-const nimOffset446 = offsetOf(bgfx_stats_s, `waitRender`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, waitRender) == ", nimOffset446, ", \"offset mismatch: bgfx_stats_t.waitRender\");"].}
-const nimOffset447 = offsetOf(bgfx_stats_s, `waitSubmit`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, waitSubmit) == ", nimOffset447, ", \"offset mismatch: bgfx_stats_t.waitSubmit\");"].}
-const nimOffset448 = offsetOf(bgfx_stats_s, `numDraw`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDraw) == ", nimOffset448, ", \"offset mismatch: bgfx_stats_t.numDraw\");"].}
-const nimOffset449 = offsetOf(bgfx_stats_s, `numCompute`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numCompute) == ", nimOffset449, ", \"offset mismatch: bgfx_stats_t.numCompute\");"].}
-const nimOffset450 = offsetOf(bgfx_stats_s, `numBlit`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numBlit) == ", nimOffset450, ", \"offset mismatch: bgfx_stats_t.numBlit\");"].}
-const nimOffset451 = offsetOf(bgfx_stats_s, `numBlitRepack`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numBlitRepack) == ", nimOffset451, ", \"offset mismatch: bgfx_stats_t.numBlitRepack\");"].}
-const nimOffset452 = offsetOf(bgfx_stats_s, `numDrawCallsPeak`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDrawCallsPeak) == ", nimOffset452, ", \"offset mismatch: bgfx_stats_t.numDrawCallsPeak\");"].}
-const nimOffset453 = offsetOf(bgfx_stats_s, `maxGpuLatency`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, maxGpuLatency) == ", nimOffset453, ", \"offset mismatch: bgfx_stats_t.maxGpuLatency\");"].}
-const nimOffset454 = offsetOf(bgfx_stats_s, `gpuFrameNum`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuFrameNum) == ", nimOffset454, ", \"offset mismatch: bgfx_stats_t.gpuFrameNum\");"].}
-const nimOffset455 = offsetOf(bgfx_stats_s, `numDynamicIndexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDynamicIndexBuffers) == ", nimOffset455, ", \"offset mismatch: bgfx_stats_t.numDynamicIndexBuffers\");"].}
-const nimOffset456 = offsetOf(bgfx_stats_s, `numDynamicVertexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDynamicVertexBuffers) == ", nimOffset456, ", \"offset mismatch: bgfx_stats_t.numDynamicVertexBuffers\");"].}
-const nimOffset457 = offsetOf(bgfx_stats_s, `numFrameBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numFrameBuffers) == ", nimOffset457, ", \"offset mismatch: bgfx_stats_t.numFrameBuffers\");"].}
-const nimOffset458 = offsetOf(bgfx_stats_s, `numIndexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numIndexBuffers) == ", nimOffset458, ", \"offset mismatch: bgfx_stats_t.numIndexBuffers\");"].}
-const nimOffset459 = offsetOf(bgfx_stats_s, `numOcclusionQueries`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numOcclusionQueries) == ", nimOffset459, ", \"offset mismatch: bgfx_stats_t.numOcclusionQueries\");"].}
-const nimOffset460 = offsetOf(bgfx_stats_s, `numPrograms`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numPrograms) == ", nimOffset460, ", \"offset mismatch: bgfx_stats_t.numPrograms\");"].}
-const nimOffset461 = offsetOf(bgfx_stats_s, `numShaders`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numShaders) == ", nimOffset461, ", \"offset mismatch: bgfx_stats_t.numShaders\");"].}
-const nimOffset462 = offsetOf(bgfx_stats_s, `numTextures`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numTextures) == ", nimOffset462, ", \"offset mismatch: bgfx_stats_t.numTextures\");"].}
-const nimOffset463 = offsetOf(bgfx_stats_s, `numUniforms`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numUniforms) == ", nimOffset463, ", \"offset mismatch: bgfx_stats_t.numUniforms\");"].}
-const nimOffset464 = offsetOf(bgfx_stats_s, `numVertexBuffers`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numVertexBuffers) == ", nimOffset464, ", \"offset mismatch: bgfx_stats_t.numVertexBuffers\");"].}
-const nimOffset465 = offsetOf(bgfx_stats_s, `numVertexLayouts`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numVertexLayouts) == ", nimOffset465, ", \"offset mismatch: bgfx_stats_t.numVertexLayouts\");"].}
-const nimOffset466 = offsetOf(bgfx_stats_s, `textureMemoryUsed`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, textureMemoryUsed) == ", nimOffset466, ", \"offset mismatch: bgfx_stats_t.textureMemoryUsed\");"].}
-const nimOffset467 = offsetOf(bgfx_stats_s, `rtMemoryUsed`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, rtMemoryUsed) == ", nimOffset467, ", \"offset mismatch: bgfx_stats_t.rtMemoryUsed\");"].}
-const nimOffset468 = offsetOf(bgfx_stats_s, `transientVbUsed`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, transientVbUsed) == ", nimOffset468, ", \"offset mismatch: bgfx_stats_t.transientVbUsed\");"].}
-const nimOffset469 = offsetOf(bgfx_stats_s, `transientIbUsed`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, transientIbUsed) == ", nimOffset469, ", \"offset mismatch: bgfx_stats_t.transientIbUsed\");"].}
-const nimOffset470 = offsetOf(bgfx_stats_s, `numPrims`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numPrims) == ", nimOffset470, ", \"offset mismatch: bgfx_stats_t.numPrims\");"].}
-const nimOffset471 = offsetOf(bgfx_stats_s, `gpuMemoryMax`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuMemoryMax) == ", nimOffset471, ", \"offset mismatch: bgfx_stats_t.gpuMemoryMax\");"].}
-const nimOffset472 = offsetOf(bgfx_stats_s, `gpuMemoryUsed`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuMemoryUsed) == ", nimOffset472, ", \"offset mismatch: bgfx_stats_t.gpuMemoryUsed\");"].}
-const nimOffset473 = offsetOf(bgfx_stats_s, `width`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, width) == ", nimOffset473, ", \"offset mismatch: bgfx_stats_t.width\");"].}
-const nimOffset474 = offsetOf(bgfx_stats_s, `height`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, height) == ", nimOffset474, ", \"offset mismatch: bgfx_stats_t.height\");"].}
-const nimOffset475 = offsetOf(bgfx_stats_s, `textWidth`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, textWidth) == ", nimOffset475, ", \"offset mismatch: bgfx_stats_t.textWidth\");"].}
-const nimOffset476 = offsetOf(bgfx_stats_s, `textHeight`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, textHeight) == ", nimOffset476, ", \"offset mismatch: bgfx_stats_t.textHeight\");"].}
-const nimOffset477 = offsetOf(bgfx_stats_s, `numViews`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numViews) == ", nimOffset477, ", \"offset mismatch: bgfx_stats_t.numViews\");"].}
-const nimOffset478 = offsetOf(bgfx_stats_s, `viewStats`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, viewStats) == ", nimOffset478, ", \"offset mismatch: bgfx_stats_t.viewStats\");"].}
-const nimOffset479 = offsetOf(bgfx_stats_s, `numEncoders`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numEncoders) == ", nimOffset479, ", \"offset mismatch: bgfx_stats_t.numEncoders\");"].}
-const nimOffset480 = offsetOf(bgfx_stats_s, `encoderStats`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, encoderStats) == ", nimOffset480, ", \"offset mismatch: bgfx_stats_t.encoderStats\");"].}
+const nimSize451 = sizeof(bgfx_stats_s)
+const nimAlign451 = alignof(bgfx_stats_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_stats_t) == ", nimSize451, ", \"size mismatch: bgfx_stats_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_stats_t) == ", nimAlign451, ", \"alignment mismatch: bgfx_stats_t\");"].}
+const nimOffset452 = offsetOf(bgfx_stats_s, `cpuTimeFrame`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimeFrame) == ", nimOffset452, ", \"offset mismatch: bgfx_stats_t.cpuTimeFrame\");"].}
+const nimOffset453 = offsetOf(bgfx_stats_s, `cpuTimeBegin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimeBegin) == ", nimOffset453, ", \"offset mismatch: bgfx_stats_t.cpuTimeBegin\");"].}
+const nimOffset454 = offsetOf(bgfx_stats_s, `cpuTimeEnd`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimeEnd) == ", nimOffset454, ", \"offset mismatch: bgfx_stats_t.cpuTimeEnd\");"].}
+const nimOffset455 = offsetOf(bgfx_stats_s, `cpuTimerFreq`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, cpuTimerFreq) == ", nimOffset455, ", \"offset mismatch: bgfx_stats_t.cpuTimerFreq\");"].}
+const nimOffset456 = offsetOf(bgfx_stats_s, `gpuTimeBegin`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuTimeBegin) == ", nimOffset456, ", \"offset mismatch: bgfx_stats_t.gpuTimeBegin\");"].}
+const nimOffset457 = offsetOf(bgfx_stats_s, `gpuTimeEnd`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuTimeEnd) == ", nimOffset457, ", \"offset mismatch: bgfx_stats_t.gpuTimeEnd\");"].}
+const nimOffset458 = offsetOf(bgfx_stats_s, `gpuTimerFreq`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuTimerFreq) == ", nimOffset458, ", \"offset mismatch: bgfx_stats_t.gpuTimerFreq\");"].}
+const nimOffset459 = offsetOf(bgfx_stats_s, `waitRender`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, waitRender) == ", nimOffset459, ", \"offset mismatch: bgfx_stats_t.waitRender\");"].}
+const nimOffset460 = offsetOf(bgfx_stats_s, `waitSubmit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, waitSubmit) == ", nimOffset460, ", \"offset mismatch: bgfx_stats_t.waitSubmit\");"].}
+const nimOffset461 = offsetOf(bgfx_stats_s, `latencySleep`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencySleep) == ", nimOffset461, ", \"offset mismatch: bgfx_stats_t.latencySleep\");"].}
+const nimOffset462 = offsetOf(bgfx_stats_s, `latencyTotal`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencyTotal) == ", nimOffset462, ", \"offset mismatch: bgfx_stats_t.latencyTotal\");"].}
+const nimOffset463 = offsetOf(bgfx_stats_s, `latencySimulation`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencySimulation) == ", nimOffset463, ", \"offset mismatch: bgfx_stats_t.latencySimulation\");"].}
+const nimOffset464 = offsetOf(bgfx_stats_s, `latencyRenderSubmit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencyRenderSubmit) == ", nimOffset464, ", \"offset mismatch: bgfx_stats_t.latencyRenderSubmit\");"].}
+const nimOffset465 = offsetOf(bgfx_stats_s, `latencyPresent`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencyPresent) == ", nimOffset465, ", \"offset mismatch: bgfx_stats_t.latencyPresent\");"].}
+const nimOffset466 = offsetOf(bgfx_stats_s, `latencyQueue`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencyQueue) == ", nimOffset466, ", \"offset mismatch: bgfx_stats_t.latencyQueue\");"].}
+const nimOffset467 = offsetOf(bgfx_stats_s, `latencyGpu`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, latencyGpu) == ", nimOffset467, ", \"offset mismatch: bgfx_stats_t.latencyGpu\");"].}
+const nimOffset468 = offsetOf(bgfx_stats_s, `numDraw`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDraw) == ", nimOffset468, ", \"offset mismatch: bgfx_stats_t.numDraw\");"].}
+const nimOffset469 = offsetOf(bgfx_stats_s, `numCompute`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numCompute) == ", nimOffset469, ", \"offset mismatch: bgfx_stats_t.numCompute\");"].}
+const nimOffset470 = offsetOf(bgfx_stats_s, `numBlit`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numBlit) == ", nimOffset470, ", \"offset mismatch: bgfx_stats_t.numBlit\");"].}
+const nimOffset471 = offsetOf(bgfx_stats_s, `numBlitRepack`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numBlitRepack) == ", nimOffset471, ", \"offset mismatch: bgfx_stats_t.numBlitRepack\");"].}
+const nimOffset472 = offsetOf(bgfx_stats_s, `numDrawCallsPeak`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDrawCallsPeak) == ", nimOffset472, ", \"offset mismatch: bgfx_stats_t.numDrawCallsPeak\");"].}
+const nimOffset473 = offsetOf(bgfx_stats_s, `maxGpuLatency`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, maxGpuLatency) == ", nimOffset473, ", \"offset mismatch: bgfx_stats_t.maxGpuLatency\");"].}
+const nimOffset474 = offsetOf(bgfx_stats_s, `gpuFrameNum`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuFrameNum) == ", nimOffset474, ", \"offset mismatch: bgfx_stats_t.gpuFrameNum\");"].}
+const nimOffset475 = offsetOf(bgfx_stats_s, `numDynamicIndexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDynamicIndexBuffers) == ", nimOffset475, ", \"offset mismatch: bgfx_stats_t.numDynamicIndexBuffers\");"].}
+const nimOffset476 = offsetOf(bgfx_stats_s, `numDynamicVertexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numDynamicVertexBuffers) == ", nimOffset476, ", \"offset mismatch: bgfx_stats_t.numDynamicVertexBuffers\");"].}
+const nimOffset477 = offsetOf(bgfx_stats_s, `numFrameBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numFrameBuffers) == ", nimOffset477, ", \"offset mismatch: bgfx_stats_t.numFrameBuffers\");"].}
+const nimOffset478 = offsetOf(bgfx_stats_s, `numIndexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numIndexBuffers) == ", nimOffset478, ", \"offset mismatch: bgfx_stats_t.numIndexBuffers\");"].}
+const nimOffset479 = offsetOf(bgfx_stats_s, `numOcclusionQueries`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numOcclusionQueries) == ", nimOffset479, ", \"offset mismatch: bgfx_stats_t.numOcclusionQueries\");"].}
+const nimOffset480 = offsetOf(bgfx_stats_s, `numPrograms`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numPrograms) == ", nimOffset480, ", \"offset mismatch: bgfx_stats_t.numPrograms\");"].}
+const nimOffset481 = offsetOf(bgfx_stats_s, `numShaders`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numShaders) == ", nimOffset481, ", \"offset mismatch: bgfx_stats_t.numShaders\");"].}
+const nimOffset482 = offsetOf(bgfx_stats_s, `numTextures`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numTextures) == ", nimOffset482, ", \"offset mismatch: bgfx_stats_t.numTextures\");"].}
+const nimOffset483 = offsetOf(bgfx_stats_s, `numUniforms`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numUniforms) == ", nimOffset483, ", \"offset mismatch: bgfx_stats_t.numUniforms\");"].}
+const nimOffset484 = offsetOf(bgfx_stats_s, `numVertexBuffers`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numVertexBuffers) == ", nimOffset484, ", \"offset mismatch: bgfx_stats_t.numVertexBuffers\");"].}
+const nimOffset485 = offsetOf(bgfx_stats_s, `numVertexLayouts`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numVertexLayouts) == ", nimOffset485, ", \"offset mismatch: bgfx_stats_t.numVertexLayouts\");"].}
+const nimOffset486 = offsetOf(bgfx_stats_s, `textureMemoryUsed`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, textureMemoryUsed) == ", nimOffset486, ", \"offset mismatch: bgfx_stats_t.textureMemoryUsed\");"].}
+const nimOffset487 = offsetOf(bgfx_stats_s, `rtMemoryUsed`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, rtMemoryUsed) == ", nimOffset487, ", \"offset mismatch: bgfx_stats_t.rtMemoryUsed\");"].}
+const nimOffset488 = offsetOf(bgfx_stats_s, `transientVbUsed`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, transientVbUsed) == ", nimOffset488, ", \"offset mismatch: bgfx_stats_t.transientVbUsed\");"].}
+const nimOffset489 = offsetOf(bgfx_stats_s, `transientIbUsed`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, transientIbUsed) == ", nimOffset489, ", \"offset mismatch: bgfx_stats_t.transientIbUsed\");"].}
+const nimOffset490 = offsetOf(bgfx_stats_s, `numPrims`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numPrims) == ", nimOffset490, ", \"offset mismatch: bgfx_stats_t.numPrims\");"].}
+const nimOffset491 = offsetOf(bgfx_stats_s, `gpuMemoryMax`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuMemoryMax) == ", nimOffset491, ", \"offset mismatch: bgfx_stats_t.gpuMemoryMax\");"].}
+const nimOffset492 = offsetOf(bgfx_stats_s, `gpuMemoryUsed`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, gpuMemoryUsed) == ", nimOffset492, ", \"offset mismatch: bgfx_stats_t.gpuMemoryUsed\");"].}
+const nimOffset493 = offsetOf(bgfx_stats_s, `width`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, width) == ", nimOffset493, ", \"offset mismatch: bgfx_stats_t.width\");"].}
+const nimOffset494 = offsetOf(bgfx_stats_s, `height`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, height) == ", nimOffset494, ", \"offset mismatch: bgfx_stats_t.height\");"].}
+const nimOffset495 = offsetOf(bgfx_stats_s, `textWidth`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, textWidth) == ", nimOffset495, ", \"offset mismatch: bgfx_stats_t.textWidth\");"].}
+const nimOffset496 = offsetOf(bgfx_stats_s, `textHeight`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, textHeight) == ", nimOffset496, ", \"offset mismatch: bgfx_stats_t.textHeight\");"].}
+const nimOffset497 = offsetOf(bgfx_stats_s, `numViews`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numViews) == ", nimOffset497, ", \"offset mismatch: bgfx_stats_t.numViews\");"].}
+const nimOffset498 = offsetOf(bgfx_stats_s, `viewStats`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, viewStats) == ", nimOffset498, ", \"offset mismatch: bgfx_stats_t.viewStats\");"].}
+const nimOffset499 = offsetOf(bgfx_stats_s, `numEncoders`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, numEncoders) == ", nimOffset499, ", \"offset mismatch: bgfx_stats_t.numEncoders\");"].}
+const nimOffset500 = offsetOf(bgfx_stats_s, `encoderStats`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_stats_t, encoderStats) == ", nimOffset500, ", \"offset mismatch: bgfx_stats_t.encoderStats\");"].}
 
-const nimSize481 = sizeof(bgfx_vertex_layout_s)
-const nimAlign481 = alignof(bgfx_vertex_layout_s)
-{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_vertex_layout_t) == ", nimSize481, ", \"size mismatch: bgfx_vertex_layout_t\");"].}
-{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_vertex_layout_t) == ", nimAlign481, ", \"alignment mismatch: bgfx_vertex_layout_t\");"].}
-const nimOffset482 = offsetOf(bgfx_vertex_layout_s, `hash`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, hash) == ", nimOffset482, ", \"offset mismatch: bgfx_vertex_layout_t.hash\");"].}
-const nimOffset483 = offsetOf(bgfx_vertex_layout_s, `stride`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, stride) == ", nimOffset483, ", \"offset mismatch: bgfx_vertex_layout_t.stride\");"].}
-const nimOffset484 = offsetOf(bgfx_vertex_layout_s, `offset`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, offset) == ", nimOffset484, ", \"offset mismatch: bgfx_vertex_layout_t.offset\");"].}
-const nimOffset485 = offsetOf(bgfx_vertex_layout_s, `attributes`)
-{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, attributes) == ", nimOffset485, ", \"offset mismatch: bgfx_vertex_layout_t.attributes\");"].}
+const nimSize501 = sizeof(bgfx_vertex_layout_s)
+const nimAlign501 = alignof(bgfx_vertex_layout_s)
+{.emit: ["BGFXIM_STATIC_ASSERT(sizeof(bgfx_vertex_layout_t) == ", nimSize501, ", \"size mismatch: bgfx_vertex_layout_t\");"].}
+{.emit: ["BGFXIM_STATIC_ASSERT(BGFXIM_ALIGNOF(bgfx_vertex_layout_t) == ", nimAlign501, ", \"alignment mismatch: bgfx_vertex_layout_t\");"].}
+const nimOffset502 = offsetOf(bgfx_vertex_layout_s, `hash`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, hash) == ", nimOffset502, ", \"offset mismatch: bgfx_vertex_layout_t.hash\");"].}
+const nimOffset503 = offsetOf(bgfx_vertex_layout_s, `stride`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, stride) == ", nimOffset503, ", \"offset mismatch: bgfx_vertex_layout_t.stride\");"].}
+const nimOffset504 = offsetOf(bgfx_vertex_layout_s, `offset`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, offset) == ", nimOffset504, ", \"offset mismatch: bgfx_vertex_layout_t.offset\");"].}
+const nimOffset505 = offsetOf(bgfx_vertex_layout_s, `attributes`)
+{.emit: ["BGFXIM_STATIC_ASSERT(offsetof(bgfx_vertex_layout_t, attributes) == ", nimOffset505, ", \"offset mismatch: bgfx_vertex_layout_t.attributes\");"].}
 
-echo "ABI layout checks passed: 43 types, 443 fields"
+echo "ABI layout checks passed: 43 types, 463 fields"
